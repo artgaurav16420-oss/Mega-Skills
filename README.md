@@ -92,6 +92,9 @@ The full library contains 59 composable skills, ordered by utility:
 
 ### 🏗️ Advanced Developer Tools
 
+- **sequential-thinking** - Deep reasoning loop for complex problem solving
+- **memory-management** - State persistence and context optimization
+- **browser-automation** - Web interaction and UI verification
 - **mcp-builder** - Model Context Protocol server creation assistant
 - **claude-api** - Anthropic SDK and prompt optimization
 - **webapp-testing** - Playwright-based frontend testing
