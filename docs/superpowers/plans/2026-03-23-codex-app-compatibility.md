@@ -15,7 +15,7 @@
 ## File Structure
 
 | File | Responsibility | Action |
-|::::::::::::---|::::::::::::---|::::::::::::---|
+|:::::::::::::---|:::::::::::::---|:::::::::::::---|
 | `skills/using-git-worktrees/SKILL.md` | Worktree creation + isolation | Add Step 0 detection + sandbox fallback |
 | `skills/finishing-a-development-branch/SKILL.md` | Branch finishing workflow | Add Step 1.5 detection + cleanup guard |
 | `skills/subagent-driven-development/SKILL.md` | Plan execution with subagents | Update Integration description |
@@ -159,7 +159,7 @@ Then present this to the user (do NOT present the 4-option menu):
 ```
 
 Implementation complete. All tests passing.
-Current HEAD: <full-commit-sha>
+Current HEAD: `<full-commit-sha>`
 
 This workspace is externally managed (detached HEAD).
 I cannot create branches, push, or open PRs from here.
@@ -173,7 +173,7 @@ If your host application provides these controls:
 1. "Hand off to local" — to move changes to your local checkout
 
 Suggested branch name: <ticket-id/short-description>
-Suggested commit message: <summary-of-work>
+Suggested commit message: `<summary-of-work>`
 
 ```text
 
@@ -236,7 +236,7 @@ git worktree list | grep $(git branch --show-current)
 If yes:
 ```
 
-git worktree remove <worktree-path>
+git worktree remove `<worktree-path>`
 
 ```text
 
@@ -273,7 +273,7 @@ git worktree list | grep $(git branch --show-current)
 If yes:
 ```
 
-git worktree remove <worktree-path>
+git worktree remove `<worktree-path>`
 
 ```text
 

@@ -45,7 +45,7 @@ Task tool (general-purpose):
 ## What to Check
 
     | Category | What to Look For |
-    |::::::::::::---::::::::::::---::::::::::::----|::::::::::::---::::::::::::---::::::::::::---::::::::::::---::::::::::::---::::::::::::---|
+    |:::::::::::::---:::::::::::::---:::::::::::::----|:::::::::::::---:::::::::::::---:::::::::::::---:::::::::::::---:::::::::::::---:::::::::::::---|
     | Completeness | TODOs, placeholders, "TBD", incomplete sections |
     | Coverage | Missing error handling, edge cases, integration points |
     | Consistency | Internal contradictions, conflicting requirements |
@@ -171,7 +171,7 @@ Task tool (general-purpose):
 ## What to Check (2)
 
     | Category | What to Look For |
-    |::::::::::::---::::::::::::---::::::::::::----|::::::::::::---::::::::::::---::::::::::::---::::::::::::---::::::::::::---::::::::::::---|
+    |:::::::::::::---:::::::::::::---:::::::::::::----|:::::::::::::---:::::::::::::---:::::::::::::---:::::::::::::---:::::::::::::---:::::::::::::---|
     | Completeness | TODOs, placeholders, incomplete tasks, missing steps |
     | Spec Alignment | Chunk covers relevant spec requirements, no scope creep |
     | Task Decomposition | Tasks atomic, clear boundaries, steps actionable |

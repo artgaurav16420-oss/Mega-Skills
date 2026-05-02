@@ -152,7 +152,7 @@ LLMs respond to the same persuasion principles as humans. Understanding this psy
 ## Principle Combinations by Skill Type
 
 | Skill Type | Use | Avoid |
-|::::::::::::---::::::::::::---::::::::::::---::::::::::::---|::::::::::::-----|::::::::::::---::::::::::::----|
+|:::::::::::::---:::::::::::::---:::::::::::::---:::::::::::::---|:::::::::::::-----|:::::::::::::---:::::::::::::----|
 | Discipline-enforcing | Authority + Commitment + Social Proof | Liking, Reciprocity |
 | Guidance/technique | Moderate Authority + Unity | Heavy authority |
 | Collaborative | Unity + Commitment | Authority, Liking |

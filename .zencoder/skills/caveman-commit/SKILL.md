@@ -15,7 +15,7 @@ Write commit messages terse and exact. Conventional Commits format. No fluff. Wh
 
 ### Subject line
 
-1. `<type>(<scope>): <imperative summary>` — `<scope>` optional
+1. `<type>(`<scope>`): <imperative summary>` — `<scope>` optional
 
 1. Types: `feat`, `fix`, `refactor`, `perf`, `docs`, `test`, `chore`, `build`, `ci`, `style`, `revert`
 

@@ -461,12 +461,12 @@ Event types:
 
 <div class="options">
   <button data-choice="optionA">
-    <h3>Option A</h3>
-    <p>Description</p>
+    `<h3>`Option A</h3>
+    `<p>`Description</p>
   </button>
   <button data-choice="optionB">
-    <h3>Option B</h3>
-    <p>Description</p>
+    `<h3>`Option B</h3>
+    `<p>`Description</p>
   </button>
 </div>
 
@@ -488,8 +488,8 @@ Event types:
 
 ```
 
-<form>
-  <label>Priority: <input type="range" name="priority" min="1" max="5"></label>
+`<form>`
+  `<label>`Priority: <input type="range" name="priority" min="1" max="5"></label>
   <textarea name="notes" placeholder="Additional thoughts..."></textarea>
   <button type="submit">Submit</button>
 </form>

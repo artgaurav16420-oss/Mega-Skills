@@ -899,7 +899,7 @@ Before finalizing your Node/TypeScript MCP server implementation, ensure:
 1. [ ] TypeScript interfaces are defined for all data structures
 1. [ ] Strict TypeScript is enabled in tsconfig.json
 1. [ ] No use of `any` type - use `unknown` or proper types instead
-1. [ ] All async functions have explicit Promise<T> return types
+1. [ ] All async functions have explicit Promise`<T>` return types
 1. [ ] Error handling uses proper type guards (e.g., `axios.isAxiosError`, `z.ZodError`)
 
 ### Advanced Features (where applicable)

@@ -5,7 +5,7 @@
 ### Server tools vs client tools
 
 | Type | Who runs it | How it works |
-|::::::::::::---|::::::::::::---|::::::::::::---|
+|:::::::::::::---|:::::::::::::---|:::::::::::::---|
 | **Prebuilt Claude Agent tools** (`agent_toolset_20260401`) | Anthropic, on the session's container | File ops, bash, web search, etc. Enable all at once or configure individually with `enabled: true/false`. |
 | **MCP tools** (`mcp_toolset`) | Anthropic, on the session's container | Capabilities exposed by connected MCP servers. Grant access per-server via the toolset. |
 | **Custom tools** | **You** — your application handles the call and returns results | Agent emits a `agent.custom_tool_use` event, session goes `idle`, you send back a `user.custom_tool_result` event. |
@@ -19,7 +19,7 @@
 The `agent_toolset_20260401` provides these built-in tools:
 
 | Tool                   | Description                              |
-| ::::::::::::---::::::::::::---::::::::::::---::::::::::::---::::::::::::---::::::::::::---::::::::::::---- | ::::::::::::---::::::::::::---::::::::::::---::::::::::::---::::::::::::---::::::::::::---::::::::::::---::::::::::::---::::::::::::---::::::::::::---::::::::::::---::::::::::::---::::::::::::---- |
+| :::::::::::::---:::::::::::::---:::::::::::::---:::::::::::::---:::::::::::::---:::::::::::::---:::::::::::::---- | :::::::::::::---:::::::::::::---:::::::::::::---:::::::::::::---:::::::::::::---:::::::::::::---:::::::::::::---:::::::::::::---:::::::::::::---:::::::::::::---:::::::::::::---:::::::::::::---:::::::::::::---- |
 | `bash` | Execute bash commands in a shell session |
 | `read` | Read a file from the local filesystem, including text, images, PDFs, and Jupyter notebooks |
 | `write` | Write a file to the local filesystem |
@@ -58,7 +58,7 @@ Override defaults for individual tools. This example enables everything except b
 ```
 
 | Field | Required | Description |
-|::::::::::::---|::::::::::::---|::::::::::::---|
+|:::::::::::::---|:::::::::::::---|:::::::::::::---|
 | `type` | ✅ | `"agent_toolset_20260401"` |
 | `default_config` | ❌ | Applied to all tools. `{ "enabled": bool, "permission_policy": {...} }` |
 | `configs` | ❌ | Per-tool overrides: `[{ "name": "...", "enabled": bool, "permission_policy": {...} }]` |
@@ -68,7 +68,7 @@ Override defaults for individual tools. This example enables everything except b
 Control when server-executed tools (agent toolset + MCP) run automatically vs wait for approval. Does not apply to custom tools.
 
 | Policy | Behavior |
-|::::::::::::---|::::::::::::---|
+|:::::::::::::---|:::::::::::::---|
 | `always_allow` | Tool executes automatically (default) |
 | `always_ask` | Session emits `session.status_idle` and pauses until you send a `tool_confirmation` event |
 
@@ -154,7 +154,7 @@ This keeps secrets out of reusable agent definitions. Each vault credential is t
 #### Agent side — declare servers (no auth)
 
 | Field | Required | Description |
-|::::::::::::---|::::::::::::---|::::::::::::---|
+|:::::::::::::---|:::::::::::::---|:::::::::::::---|
 | `type` | ✅ | `"url"` |
 | `name` | ✅ | Unique name — referenced by `mcp_toolset.mcp_server_name` |
 | `url` | ✅ | The MCP server's endpoint URL (Streamable HTTP transport) |
@@ -234,7 +234,7 @@ Vaults store credentials; those credentials **never enter the sandbox**. This is
 The `refresh` block is what enables auto-refresh — `token_endpoint` is where Anthropic posts the `refresh_token` grant. `token_endpoint_auth` is a discriminated union:
 
 | `type` | Shape | Use when |
-|::::::::::::---|::::::::::::---|::::::::::::---|
+|:::::::::::::---|:::::::::::::---|:::::::::::::---|
 | `"none"` | `{type: "none"}` | Public OAuth client (no secret) |
 | `"client_secret_basic"` | `{type: "client_secret_basic", client_secret: "..."}` | Confidential client, secret via HTTP Basic auth |
 | `"client_secret_post"` | `{type: "client_secret_post", client_secret: "..."}` | Confidential client, secret in request body |
@@ -254,7 +254,7 @@ Skills are reusable, filesystem-based resources that provide your agent with dom
 Two types — both work the same way; the agent automatically uses them when relevant to the task at hand:
 
 | Type | What it is |
-|::::::::::::---|::::::::::::---|
+|:::::::::::::---|:::::::::::::---|
 | **Pre-built Anthropic skills** | Common document tasks (PowerPoint, Excel, Word, PDF). Reference by name (e.g. `xlsx`). |
 | **Custom skills** | Skills you've created in your organization via the Skills API. Reference by `skill_id` + optional `version`. |
 
@@ -295,7 +295,7 @@ agent = client.beta.agents.create(
 #### Skill reference fields
 
 | Field | Anthropic skill | Custom skill |
-|::::::::::::---|::::::::::::---|::::::::::::---|
+|:::::::::::::---|:::::::::::::---|:::::::::::::---|
 | `type` | `"anthropic"` | `"custom"` |
 | `skill_id` | Skill name (e.g. `"xlsx"`, `"docx"`, `"pptx"`, `"pdf"`) | Skill ID from Skills API (e.g. `"skill_abc123"`) |
 | `version` | — | `"latest"` or a specific version number |
@@ -303,7 +303,7 @@ agent = client.beta.agents.create(
 ### Skills API
 
 | Operation             | Method   | Path                                            |
-| ::::::::::::---::::::::::::---::::::::::::---::::::::::::---::::::::::::---::::::::::::---::::::::::::--- | ::::::::::::---::::::::::::----- | ::::::::::::---::::::::::::---::::::::::::---::::::::::::---::::::::::::---::::::::::::---::::::::::::---::::::::::::---::::::::::::---::::::::::::---::::::::::::---::::::::::::---::::::::::::---::::::::::::---::::::::::::----- |
+| :::::::::::::---:::::::::::::---:::::::::::::---:::::::::::::---:::::::::::::---:::::::::::::---:::::::::::::--- | :::::::::::::---:::::::::::::----- | :::::::::::::---:::::::::::::---:::::::::::::---:::::::::::::---:::::::::::::---:::::::::::::---:::::::::::::---:::::::::::::---:::::::::::::---:::::::::::::---:::::::::::::---:::::::::::::---:::::::::::::---:::::::::::::---:::::::::::::----- |
 | Create Skill          | `POST`   | `/v1/skills`                                    |
 | List Skills           | `GET`    | `/v1/skills`                                    |
 | Get Skill             | `GET`    | `/v1/skills/{id}`                               |

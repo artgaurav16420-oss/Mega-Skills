@@ -9,7 +9,7 @@ Every mutation to a memory produces an immutable **memory version** (`memver_...
 ## Object model
 
 | Object | ID prefix | Scope | Notes |
-| ::::::::::::--- | ::::::::::::--- | ::::::::::::--- | ::::::::::::--- |
+| :::::::::::::--- | :::::::::::::--- | :::::::::::::--- | :::::::::::::--- |
 | Memory store | `memstore_...` | Workspace | Attach to sessions via `resources[]` |
 | Memory | `mem_...` | Store | One text file, addressed by `path` (≤ 100KB each — prefer many small files) |
 | Memory version | `memver_...` | Memory | Immutable snapshot per mutation; `operation` ∈ `created` / `modified` / `deleted` |
@@ -62,7 +62,7 @@ session = client.beta.sessions.create(
 ```
 
 | Field | Required | Notes |
-| ::::::::::::--- | ::::::::::::--- | ::::::::::::--- |
+| :::::::::::::--- | :::::::::::::--- | :::::::::::::--- |
 | `type` | ✅ | `"memory_store"` |
 | `memory_store_id` | ✅ | `memstore_...` |
 | `access` | — | `"read_write"` (default) or `"read_only"` — enforced at the filesystem level on the mount |
@@ -72,7 +72,7 @@ session = client.beta.sessions.create(
 
 ### How the agent sees it (FUSE mount)
 
-Each attached store is mounted in the session container at `/mnt/memory/<store-name>/`. The agent interacts with it using the standard file tools (`bash`, `read`, `write`, `edit`, `glob`, `grep`) — there are no dedicated memory tools. `access: "read_only"` makes the mount read-only at the filesystem level; `"read_write"` allows the agent to create, edit, and delete files under it. A short description of each mount (name, path, `instructions`, access) is automatically injected into the system prompt so the agent knows the store exists without you having to mention it.
+Each attached store is mounted in the session container at `/mnt/memory/`<store-name>`/`. The agent interacts with it using the standard file tools (`bash`, `read`, `write`, `edit`, `glob`, `grep`) — there are no dedicated memory tools. `access: "read_only"` makes the mount read-only at the filesystem level; `"read_write"` allows the agent to create, edit, and delete files under it. A short description of each mount (name, path, `instructions`, access) is automatically injected into the system prompt so the agent knows the store exists without you having to mention it.
 
 Writes the agent makes under the mount are persisted back to the store and produce memory versions just like host-side `memories.update` calls.
 
@@ -104,7 +104,7 @@ print(mem.content)
 ### Create vs. update
 
 | Operation | Addressed by | Semantics |
-| ::::::::::::--- | ::::::::::::--- | ::::::::::::--- |
+| :::::::::::::--- | :::::::::::::--- | :::::::::::::--- |
 | `memories.create(store_id, path=..., content=...)` | **Path** | Create at `path`. `409` (`memory_path_conflict_error`, includes `conflicting_memory_id`) if the path is already occupied. |
 | `memories.update(mem_id, memory_store_id=..., path=..., content=...)` | **`mem_...` ID** | Mutate existing memory. Change `content`, `path` (rename), or both. Renaming onto an occupied path returns the same `409 memory_path_conflict_error`. |
 
@@ -148,7 +148,7 @@ Pass `expected_content_sha256` for a conditional delete.
 Every mutation creates an immutable `memver_...` snapshot. Versions accumulate for the lifetime of the parent memory; `memories.retrieve` always returns the current head, the version endpoints give you history.
 
 | Operation that triggers it | `operation` field on the version |
-| ::::::::::::--- | ::::::::::::--- |
+| :::::::::::::--- | :::::::::::::--- |
 | `memories.create` at a new path | `"created"` |
 | `memories.update` changing `content`, `path`, or both (or an agent-side write to the mount) | `"modified"` |
 | `memories.delete` | `"deleted"` |

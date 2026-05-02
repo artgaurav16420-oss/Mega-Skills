@@ -239,7 +239,7 @@ MCP servers support multiple transport mechanisms for different deployment scena
 ### Transport Selection Criteria
 
 | Criterion | Stdio | HTTP | SSE |
-|::::::::::::---::::::::::::---::::::::::::-----|::::::::::::---::::::::::::----|::::::::::::---::::::::::::---|::::::::::::-----|
+|:::::::::::::---:::::::::::::---:::::::::::::-----|:::::::::::::---:::::::::::::----|:::::::::::::---:::::::::::::---|:::::::::::::-----|
 | **Deployment** | Local | Remote | Remote |
 | **Clients** | Single | Multiple | Multiple |
 | **Communication** | Bidirectional | Request-Response | Server-Push |
@@ -465,7 +465,7 @@ These best practices represent the comprehensive guidelines for building secure,
 
 Tools are a powerful primitive in the Model Context Protocol (MCP) that enable servers to expose executable functionality to clients. Through tools, LLMs can interact with external systems, perform computations, and take actions in the real world.
 
-<Note>
+`<Note>`
   Tools are designed to be **model-controlled**, meaning that tools are exposed from servers to clients with the intention of the AI model being able to automatically invoke them (with a human in the loop to grant approval).
 </Note>
 
@@ -505,7 +505,7 @@ Each tool is defined with the following structure:
 
 Here's an example of implementing a basic tool in an MCP server:
 
-<Tabs>
+`<Tabs>`
   <Tab title="TypeScript">
 
 ```typescript
@@ -730,7 +730,7 @@ Tool errors should be reported within the result object, not as MCP protocol-lev
 
 Here's an example of proper error handling for tools:
 
-<Tabs>
+`<Tabs>`
   <Tab title="TypeScript">
 
 ```typescript
@@ -809,7 +809,7 @@ Tool annotations serve several key purposes:
 The MCP specification defines the following annotations for tools:
 
 | Annotation        | Type    | Default | Description                                                                                                                          |
-| ::::::::::::---::::::::::::---::::::::::::---::::::::::::---::::::::::::----- | ::::::::::::---::::::::::::---- | ::::::::::::---::::::::::::---- | ::::::::::::---::::::::::::---::::::::::::---::::::::::::---::::::::::::---::::::::::::---::::::::::::---::::::::::::---::::::::::::---::::::::::::---::::::::::::---::::::::::::---::::::::::::---::::::::::::---::::::::::::---::::::::::::---::::::::::::---::::::::::::---::::::::::::---::::::::::::---::::::::::::---::::::::::::---::::::::::::---::::::::::::---::::::::::::---::::::::::::---::::::::::::---::::::::::::---::::::::::::---::::::::::::---::::::::::::---::::::::::::---::::::::::::---::::::::::::---::::::::::::---::::::::::::---::::::::::::---::::::::::::---::::::::::::---::::::::::::---::::::::::::---::::::::::::---::::::::::::---::::::::::::--- |
+| :::::::::::::---:::::::::::::---:::::::::::::---:::::::::::::---:::::::::::::----- | :::::::::::::---:::::::::::::---- | :::::::::::::---:::::::::::::---- | :::::::::::::---:::::::::::::---:::::::::::::---:::::::::::::---:::::::::::::---:::::::::::::---:::::::::::::---:::::::::::::---:::::::::::::---:::::::::::::---:::::::::::::---:::::::::::::---:::::::::::::---:::::::::::::---:::::::::::::---:::::::::::::---:::::::::::::---:::::::::::::---:::::::::::::---:::::::::::::---:::::::::::::---:::::::::::::---:::::::::::::---:::::::::::::---:::::::::::::---:::::::::::::---:::::::::::::---:::::::::::::---:::::::::::::---:::::::::::::---:::::::::::::---:::::::::::::---:::::::::::::---:::::::::::::---:::::::::::::---:::::::::::::---:::::::::::::---:::::::::::::---:::::::::::::---:::::::::::::---:::::::::::::---:::::::::::::---:::::::::::::---:::::::::::::--- |
 | `title`           | string  | -       | A human-readable title for the tool, useful for UI display                                                                           |
 | `readOnlyHint`    | boolean | false   | If true, indicates the tool does not modify its environment                                                                          |
 | `destructiveHint` | boolean | true    | If true, the tool may perform destructive updates (only meaningful when `readOnlyHint` is false)                                     |
@@ -883,7 +883,7 @@ Here's how to define tools with annotations for different scenarios:
 
 ### Integrating annotations in server implementation
 
-<Tabs>
+`<Tabs>`
   <Tab title="TypeScript">
 
 ```typescript

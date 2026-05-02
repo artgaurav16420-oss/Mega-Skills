@@ -1,13 +1,13 @@
 # 
 
 <p align="center">
-  <img src="[https://em-content.zobj.net/source/apple/391/rock_1faa8.png"]([https://em-content.zobj.net/source/apple/391/rock_1faa8.png")]([https://em-content.zobj.net/source/apple/391/rock_1faa8.png"))]([https://em-content.zobj.net/source/apple/391/rock_1faa8.png")))]([https://em-content.zobj.net/source/apple/391/rock_1faa8.png"))))]([https://em-content.zobj.net/source/apple/391/rock_1faa8.png")))))]([https://em-content.zobj.net/source/apple/391/rock_1faa8.png"))))))]([https://em-content.zobj.net/source/apple/391/rock_1faa8.png")))))))]([https://em-content.zobj.net/source/apple/391/rock_1faa8.png"))))))))]([https://em-content.zobj.net/source/apple/391/rock_1faa8.png")))))))))]([https://em-content.zobj.net/source/apple/391/rock_1faa8.png"))))))))))]([https://em-content.zobj.net/source/apple/391/rock_1faa8.png")))))))))))](https://em-content.zobj.net/source/apple/391/rock_1faa8.png")))))))))))) width="80" />
+  <img src="[https://em-content.zobj.net/source/apple/391/rock_1faa8.png"]([https://em-content.zobj.net/source/apple/391/rock_1faa8.png")]([https://em-content.zobj.net/source/apple/391/rock_1faa8.png"))]([https://em-content.zobj.net/source/apple/391/rock_1faa8.png")))]([https://em-content.zobj.net/source/apple/391/rock_1faa8.png"))))]([https://em-content.zobj.net/source/apple/391/rock_1faa8.png")))))]([https://em-content.zobj.net/source/apple/391/rock_1faa8.png"))))))]([https://em-content.zobj.net/source/apple/391/rock_1faa8.png")))))))]([https://em-content.zobj.net/source/apple/391/rock_1faa8.png"))))))))]([https://em-content.zobj.net/source/apple/391/rock_1faa8.png")))))))))]([https://em-content.zobj.net/source/apple/391/rock_1faa8.png"))))))))))]([https://em-content.zobj.net/source/apple/391/rock_1faa8.png")))))))))))]([https://em-content.zobj.net/source/apple/391/rock_1faa8.png"))))))))))))](https://em-content.zobj.net/source/apple/391/rock_1faa8.png"))))))))))))) width="80" />
 </p>
 
 <h1 align="center">caveman-compress</h1>
 
 <p align="center">
-  <strong>shrink memory file. save token every session.</strong>
+  `<strong>`shrink memory file. save token every session.</strong>
 </p>
 
 ---
@@ -34,7 +34,7 @@ Original never lost. You can read and edit `.original.md`. Run skill again to re
 Real results on real project files:
 
 | File | Original | Compressed | Saved |
-|::::::::::::---::::::::::::---|::::::::::::---::::::::::::---::::::::::::----:|::::::::::::---::::::::::::---::::::::::::----:|::::::::::::---::::::::::::---:|
+|:::::::::::::---:::::::::::::---|:::::::::::::---:::::::::::::---:::::::::::::----:|:::::::::::::---:::::::::::::---:::::::::::::----:|:::::::::::::---:::::::::::::---:|
 | `claude-md-preferences.md` | 706 | 285 | **59.6%** |
 | `project-notes.md` | 1145 | 535 | **53.3%** |
 | `claude-md-project.md` | 1122 | 636 | **43.3%** |
@@ -46,8 +46,8 @@ All validations passed ✅ — headings, code blocks, URLs, file paths preserved
 
 ## Before / After
 
-<table>
-<tr>
+`<table>`
+`<tr>`
 <td width="50%">
 
 ### 📄 Original (706 tokens)
@@ -100,7 +100,7 @@ Examples:
 ### What files work
 
 | Type | Compress? |
-|::::::::::::---::::::::::::---|::::::::::::---::::::::::::---::::::::::::-----|
+|:::::::::::::---:::::::::::::---|:::::::::::::---:::::::::::::---:::::::::::::-----|
 | `.md`, `.txt`, `.rst`, `.typ`, `.typst`, `.tex` | ✅ Yes |
 | Extensionless natural language | ✅ Yes |
 | `.py`, `.js`, `.ts`, `.json`, `.yaml` | ❌ Skip (code/config) |
@@ -160,7 +160,7 @@ Caveman cut that by ~46% on average. Same instructions. Same accuracy. Less wast
 
 ## Part of Caveman
 
-This skill is part of the [caveman]([https://github.com/JuliusBrussee/caveman)]([https://github.com/JuliusBrussee/caveman))]([https://github.com/JuliusBrussee/caveman)))]([https://github.com/JuliusBrussee/caveman))))]([https://github.com/JuliusBrussee/caveman)))))]([https://github.com/JuliusBrussee/caveman))))))]([https://github.com/JuliusBrussee/caveman)))))))]([https://github.com/JuliusBrussee/caveman))))))))]([https://github.com/JuliusBrussee/caveman)))))))))]([https://github.com/JuliusBrussee/caveman))))))))))]([https://github.com/JuliusBrussee/caveman)))))))))))]([https://github.com/JuliusBrussee/caveman))))))))))))](https://github.com/JuliusBrussee/caveman))))))))))))) toolkit — making Claude use fewer tokens without losing accuracy.
+This skill is part of the [caveman]([https://github.com/JuliusBrussee/caveman)]([https://github.com/JuliusBrussee/caveman))]([https://github.com/JuliusBrussee/caveman)))]([https://github.com/JuliusBrussee/caveman))))]([https://github.com/JuliusBrussee/caveman)))))]([https://github.com/JuliusBrussee/caveman))))))]([https://github.com/JuliusBrussee/caveman)))))))]([https://github.com/JuliusBrussee/caveman))))))))]([https://github.com/JuliusBrussee/caveman)))))))))]([https://github.com/JuliusBrussee/caveman))))))))))]([https://github.com/JuliusBrussee/caveman)))))))))))]([https://github.com/JuliusBrussee/caveman))))))))))))]([https://github.com/JuliusBrussee/caveman)))))))))))))](https://github.com/JuliusBrussee/caveman)))))))))))))) toolkit — making Claude use fewer tokens without losing accuracy.
 
 1. **caveman** — make Claude *speak* like caveman (cuts response tokens ~65%)
 1. **caveman-compress** — make Claude *read* less (cuts context tokens ~46%)

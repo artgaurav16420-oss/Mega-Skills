@@ -110,7 +110,7 @@ foreach (var block in response.Content)
 
 > **Deprecated:** `new ThinkingConfigEnabled { BudgetTokens = N }` (fixed-budget extended thinking) still works on Claude 4.6 but is deprecated. Use adaptive thinking above.
 
-Alternative to `TryPick*`: `.Select(b => b.Value).OfType<ThinkingBlock>()` (same LINQ pattern as the Basic Message example).
+Alternative to `TryPick*`: `.Select(b => b.Value).OfType`<ThinkingBlock>`()` (same LINQ pattern as the Basic Message example).
 
 ---
 

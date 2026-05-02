@@ -108,11 +108,14 @@ function fixMarkdown(filePath) {
         // MD034: Bare URLs
         if (!line.includes('`')) line = line.replace(/(?<![<\[])(https?:\/\/[^\s>\]]+)(?![>\]])/g, '[$1]($1)');
 
-        // MD033: details/summary
-        if (line.includes('<details>') && line.includes('<summary>')) {
-            line = line.replace(/<details>\s*<summary>(.*?)<\/summary>/gs, '> **$1**\n>');
-        }
-        line = line.replace(/<\/details>/g, '');
+    // MD033: details/summary
+    if (line.includes('<details>') && line.includes('<summary>')) {
+        line = line.replace(/<details>\s*<summary>(.*?)<\/summary>/gs, '> **$1**\n>');
+    }
+    line = line.replace(/<\/details>/g, '');
+
+    // MD033: Wrap <placeholder> in backticks to avoid HTML trigger
+    line = line.replace(/(?<![`])<([a-zA-Z0-9_-]+)>(?![`])/g, '`<$1>`');
 
         // MD007/MD060: List Normalization
         const listMatch = line.match(/^(\s*)([-*+]|\d+\.)\s+(.*)/);

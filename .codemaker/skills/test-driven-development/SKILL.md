@@ -82,7 +82,7 @@ digraph tdd_cycle {
 
 Write one minimal test showing what should happen.
 
-<Good>
+`<Good>`
 
 ```typescript
 test('retries failed operations 3 times', async () => {
@@ -101,7 +101,7 @@ test('retries failed operations 3 times', async () => {
 Clear name, tests real behavior, one thing
 </Good>
 
-<Bad>
+`<Bad>`
 
 ```typescript
 test('retry works', async () => {
@@ -149,7 +149,7 @@ Confirm:
 
 Write simplest code to pass the test.
 
-<Good>
+`<Good>`
 
 ```typescript
 async function retryOperation<T>(fn: () => Promise<T>): Promise<T> {
@@ -167,7 +167,7 @@ async function retryOperation<T>(fn: () => Promise<T>): Promise<T> {
 Just enough to pass
 </Good>
 
-<Bad>
+`<Bad>`
 
 ```typescript
 async function retryOperation<T>(
@@ -226,7 +226,7 @@ Next failing test for next feature.
 ## Good Tests
 
 | Quality | Good | Bad |
-|::::::::::::::::::::::::::::::---::::::::::::::::::::::::::::::---::::::::::::::::::::::::::::::---|::::::::::::::::::::::::::::::---::::::::::::::::::::::::::::::---|::::::::::::::::::::::::::::::-----|
+|:::::::::::::::::::::::::::::::---:::::::::::::::::::::::::::::::---:::::::::::::::::::::::::::::::---|:::::::::::::::::::::::::::::::---:::::::::::::::::::::::::::::::---|:::::::::::::::::::::::::::::::-----|
 | **Minimal** | One thing. "and" in name? Split it. | `test('validates email and domain and whitespace')` |
 
 | **Clear** | Name describes behavior | `test('test1')` |
@@ -300,7 +300,7 @@ Tests-first force edge case discovery before implementing. Tests-after verify yo
 ## Common Rationalizations
 
 | Excuse | Reality |
-|::::::::::::::::::::::::::::::---::::::::::::::::::::::::::::::-----|::::::::::::::::::::::::::::::---::::::::::::::::::::::::::::::---::::::::::::::::::::::::::::::---|
+|:::::::::::::::::::::::::::::::---:::::::::::::::::::::::::::::::-----|:::::::::::::::::::::::::::::::---:::::::::::::::::::::::::::::::---:::::::::::::::::::::::::::::::---|
 | "Too simple to test" | Simple code breaks. Test takes 30 seconds. |
 | "I'll test after" | Tests passing immediately prove nothing. |
 | "Tests after achieve same goals" | Tests-after = "what does this do?" Tests-first = "what should this do?" |
@@ -410,7 +410,7 @@ Can't check all boxes? You skipped TDD. Start over.
 ## When Stuck
 
 | Problem | Solution |
-|::::::::::::::::::::::::::::::---::::::::::::::::::::::::::::::---::::::::::::::::::::::::::::::---|::::::::::::::::::::::::::::::---::::::::::::::::::::::::::::::---::::::::::::::::::::::::::::::----|
+|:::::::::::::::::::::::::::::::---:::::::::::::::::::::::::::::::---:::::::::::::::::::::::::::::::---|:::::::::::::::::::::::::::::::---:::::::::::::::::::::::::::::::---:::::::::::::::::::::::::::::::----|
 | Don't know how to test | Write wished-for API. Write assertion first. Ask your human partner. |
 | Test too complicated | Design too complicated. Simplify interface. |
 | Must mock everything | Code too coupled. Use dependency injection. |

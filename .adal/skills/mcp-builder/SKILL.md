@@ -278,7 +278,7 @@ For each tool in the plan:
 
 1. No `any` types - use proper types
 
-1. Explicit Promise<T> return types
+1. Explicit Promise`<T>` return types
 
 1. Build process configured (`npm run build`)
 

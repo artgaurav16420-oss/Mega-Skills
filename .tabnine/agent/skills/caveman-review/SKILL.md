@@ -13,7 +13,7 @@ Write code review comments terse and actionable. One line per finding. Location,
 
 ## Rules
 
-**Format:** `L<line>: <problem>. <fix>.` — or `<file>:L<line>: ...` when reviewing multi-file diffs.
+**Format:** `L`<line>`: `<problem>`. `<fix>`.` — or `<file>:L`<line>`: ...` when reviewing multi-file diffs.
 
 ### Severity prefix (optional, when mixed)
 

@@ -5,11 +5,11 @@ description: Use when starting any conversation - establishes how to find and us
 
 # Using Mega Skills
 
-<SUBAGENT-STOP>
+`<SUBAGENT-STOP>`
 If you were dispatched as a subagent to execute a specific task, skip this skill.
 </SUBAGENT-STOP>
 
-<EXTREMELY-IMPORTANT>
+`<EXTREMELY-IMPORTANT>`
 If you think there is even a 1% chance a skill might apply to what you are doing, you ABSOLUTELY MUST invoke the skill.
 
 IF A SKILL APPLIES TO YOUR TASK, YOU DO NOT HAVE A CHOICE. YOU MUST USE IT.
@@ -84,7 +84,7 @@ digraph skill_flow {
 These thoughts mean STOP—you're rationalizing:
 
 |Thought|Reality|
-|:::::::::::::::::::::::::::::::---|:::::::::::::::::::::::::::::::---|
+|::::::::::::::::::::::::::::::::---|::::::::::::::::::::::::::::::::---|
 |"This is just a simple question"|Questions are tasks. Check for skills.|
 |"I need more context first"|Skill check comes BEFORE clarifying questions.|
 |"Let me explore the codebase first"|Skills tell you HOW to explore. Check first.|

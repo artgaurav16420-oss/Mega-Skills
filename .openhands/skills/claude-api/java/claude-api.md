@@ -214,7 +214,7 @@ For manual tool loops, handle `tool_use` blocks in the response, send `tool_resu
 
 ### Building `MessageParam` with Content Blocks (Tool Result Round-Trip)
 
-`MessageParam.Content` is an inner union class (string | list). Use the builder's `.contentOfBlockParams(List<ContentBlockParam>)` alias — there is NO separate `MessageParamContent` class with a static `ofBlockParams`:
+`MessageParam.Content` is an inner union class (string | list). Use the builder's `.contentOfBlockParams(List`<ContentBlockParam>`)` alias — there is NO separate `MessageParamContent` class with a static `ofBlockParams`:
 
 ```java
 import com.anthropic.models.messages.MessageParam;

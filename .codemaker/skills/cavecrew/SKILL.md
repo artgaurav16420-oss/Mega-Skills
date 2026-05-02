@@ -21,7 +21,7 @@ Cavecrew = three subagent presets that emit caveman output. Same job as Anthropi
 ## When to use cavecrew vs alternatives
 
 | Task | Use |
-|::::::::::::::::::::::::::::::---|::::::::::::::::::::::::::::::---|
+|:::::::::::::::::::::::::::::::---|:::::::::::::::::::::::::::::::---|
 | "Where is X defined / what calls Y / list uses of Z" | `cavecrew-investigator` |
 
 | Same but you also want suggestions/architecture commentary | `Explore` (vanilla) |

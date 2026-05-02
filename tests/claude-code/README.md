@@ -130,11 +130,11 @@ Full workflow execution test (~10-30 minutes):
 
 ## Adding New Tests
 
-1. Create new test file: `test-<skill-name>.sh`
+1. Create new test file: `test-`<skill-name>`.sh`
 1. Source test-helpers.sh
 1. Write tests using `run_claude` and assertions
 1. Add to test list in `run-skill-tests.sh`
-1. Make executable: `chmod +x test-<skill-name>.sh`
+1. Make executable: `chmod +x test-`<skill-name>`.sh`
 
 ## Timeout Considerations
 
