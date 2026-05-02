@@ -26,25 +26,34 @@ Most AI agents fail because they lack a **methodology**. They guess, they halluc
 ## 🌟 Trending Skills Spotlight
 
 These are the most-used skills that are changing how developers interact with AI:
-
 ### 🦴 Caveman Mode (`caveman`)
-
-**The ultimate token-saver.** Caveman Mode forces the agent to communicate in ultra-compressed, technical-only language. It cuts token usage by ~75% while maintaining 100% technical accuracy.
+**The ultimate token-saver.** Forces agents to communicate in ultra-compressed, technical language. Cuts token usage by ~75% while maintaining 100% precision.
 > "Why use many word when few word do trick?"
 
-### 🧠 Sequential Thinking (`sequential-thinking`)
+### 🛡️ Security Auditor (`security-auditor`)
+**Red-Team in your pocket.** Automatically performs static analysis to detect SQLi, XSS, and mobile-specific vulnerabilities before they ever hit a branch.
 
-A multi-step reasoning loop that forces agents to "think out loud" across multiple turns. It prevents premature coding by requiring the agent to explore hypotheses, verify assumptions, and map out edge cases before touching the editor.
-
-### 🤖 Subagent Orchestration (`subagent-driven-development`)
-
-Dispatches specialized, short-lived subagents to handle complex sub-tasks. Each subagent is benchmarked for spec compliance and code quality, allowing the main agent to maintain high-level focus without getting lost in implementation details.
+### 🧠 Paper-to-Code (`paper-to-code`)
+**Academic implementation on autopilot.** A high-fidelity workflow that extracts math from arXiv PDFs and implements it into production-ready PyTorch or NumPy code.
 
 ### 📊 Excel Mastery (`xlsx`)
-
-Not just simple CSV writing. Includes a full **LibreOffice-powered recalculation engine** that ensures formula integrity and reports `#REF!` or `#DIV/0!` errors before the agent claims success.
+**Industrial spreadsheet engineering.** Includes a full LibreOffice-powered recalculation engine to ensure formula integrity before the agent claims success.
 
 ---
+
+## ⚡ Unbeatable Skill Combos
+
+Mega-Skills are designed to be **stacked**. Combine these skills to turn your agent into an elite engineering team:
+
+| Combo Name | Skills Stack | Result |
+| :--- | :--- | :--- |
+| **The "Fortress"** | `security-auditor` + `test-driven-development` | Zero-vulnerability code with 100% test coverage. |
+| **The "Scientist"** | `paper-to-code` + `advanced-rag-optimizer` | Implement state-of-the-art research with perfect retrieval grounding. |
+| **The "Architect"** | `brainstorming` + `writing-plans` + `subagent-driven-development` | Orchestrate a swarm of agents to build entire multi-file systems from one prompt. |
+| **The "Ghost"** | `caveman` + `memory-management` + `sequential-thinking` | Run massive 100+ turn sessions with zero context drift and minimal token cost. |
+
+---
+
 
 ## 🏗️ The Methodology: "The Golden Path"
 
