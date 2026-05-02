@@ -73,7 +73,9 @@ For the core Superpowers experience on Claude Code:
 Mega Superpowers includes three major skill libraries:
 
 ### 1. Superpowers Methodology (Core)
+
 The original software development lifecycle skills:
+
 - **test-driven-development**
 - **systematic-debugging**
 - **brainstorming**
@@ -82,14 +84,18 @@ The original software development lifecycle skills:
 - ... and more.
 
 ### 2. Anthropic Skills Library
+
 Essential tools for file manipulation and analysis:
+
 - **pdf**, **docx**, **xlsx**, **pptx** - Professional document handling
 - **frontend-design**, **canvas-design** - UI/UX and visual design
 - **claude-api** - Anthropic SDK optimization
 - **mcp-builder** - Tool creation assistant
 
 ### 3. Composio "Awesome Claude" Skills
+
 Advanced automation and integration skills:
+
 - **connect** & **connect-apps** - Connect to 1000+ external services
 - **lead-research-assistant**, **content-research-writer** - Research automation
 - **youtube-downloader**, **twitter-algorithm-optimizer** - Social media tools
