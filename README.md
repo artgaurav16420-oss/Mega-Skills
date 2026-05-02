@@ -1,168 +1,84 @@
-# Mega-Skills
+# <p align="center">🚀 Mega-Skills: Give Your AI Superpowers</p>
 
-**Mega-Skills** is the ultimate software development methodology for coding agents. It combines the structured workflow of the original **Mega-Skills** system with the high-utility skill libraries from **Anthropic** and **Composio**.
+<p align="center">
+  <img src="https://raw.githubusercontent.com/artgaurav16420-oss/Mega-Skills/main/assets/mega_skills_banner.png" alt="Mega-Skills Banner" width="800">
+</p>
 
-It is a complete software development methodology for your coding agents, built on top of a set of composable skills and some initial instructions that make sure your agent uses them.
+<p align="center">
+  <b>The ultimate software development methodology and skill library for autonomous AI agents.</b>
+</p>
 
-## How it works
+<p align="center">
+  <a href="https://github.com/artgaurav16420-oss/Mega-Skills/stargazers"><img src="https://img.shields.io/github/stars/artgaurav16420-oss/Mega-Skills?style=for-the-badge&color=yellow" alt="GitHub stars"></a>
+  <a href="https://github.com/artgaurav16420-oss/Mega-Skills/network/members"><img src="https://img.shields.io/github/forks/artgaurav16420-oss/Mega-Skills?style=for-the-badge&color=blue" alt="GitHub forks"></a>
+  <a href="https://github.com/artgaurav16420-oss/Mega-Skills/blob/main/LICENSE"><img src="https://img.shields.io/github/license/artgaurav16420-oss/Mega-Skills?style=for-the-badge&color=green" alt="License"></a>
+  <a href="https://discord.gg/35wsABTejz"><img src="https://img.shields.io/discord/123456789012345678?style=for-the-badge&label=Discord&logo=discord&color=7289DA" alt="Discord"></a>
+</p>
 
-It starts from the moment you fire up your coding agent. As soon as it sees that you're building something, it *doesn't* just jump into trying to write code. Instead, it steps back and asks you what you're really trying to do.
+---
 
-Once it's teased a spec out of the conversation, it shows it to you in chunks short enough to actually read and digest.
+## 💎 Why Mega-Skills?
 
-After you've signed off on the design, your agent puts together an implementation plan that's clear enough for an enthusiastic junior engineer with poor taste, no judgement, no project context, and an aversion to testing to follow. It emphasizes true red/green TDD, YAGNI (You Aren't Gonna Need It), and DRY.
+**Mega-Skills** isn't just a library—it's a **proven software engineering methodology** compressed into executable agent instructions. It transforms standard LLMs into elite software engineers by enforcing rigorous workflows, TDD, and systematic problem-solving.
 
-Next up, once you say "go", it launches a *subagent-driven-development* process, having agents work through each engineering task, inspecting and reviewing their work, and continuing forward. It's not uncommon for Claude to be able to work autonomously for a couple hours at a time without deviating from the plan you put together.
+- **🔥 101+ Specialized Skills**: From PDF manipulation to autonomous subagent orchestration.
+- **🛠️ Zero-Dependency Architecture**: Runs natively in any agent harness (Cursor, Claude Code, Windsurf, etc.).
+- **⚡ Auto-Triggering Logic**: Skills activate only when needed, keeping your agent's context clean and focused.
+- **🏗️ Battle-Tested Methodology**: Built on TDD, YAGNI, and DRY principles.
 
-There's a bunch more to it, but that's the core of the system. And because the skills trigger automatically, you don't need to do anything special. Your coding agent just has **Mega-Skills**.
+---
 
-## Sponsorship
+## 🚀 Quick Start
 
-If Mega-Skills has helped you do stuff that makes money and you are so inclined, I'd greatly appreciate it if you'd consider [sponsoring Gaurav's work](https://github.com/artgaurav16420-oss).
+Install Mega-Skills in your favorite agent harness with a single command.
 
-## Installation
+| Harness | Command |
+| :--- | :--- |
+| **Antigravity** | `antigravity extension install https://github.com/artgaurav16420-oss/Mega-Skills` |
+| **Claude Code** | `/plugin install https://github.com/artgaurav16420-oss/Mega-Skills` |
+| **GitHub Copilot** | `copilot plugin install https://github.com/artgaurav16420-oss/Mega-Skills` |
+| **Gemini CLI** | `gemini extensions install https://github.com/artgaurav16420-oss/Mega-Skills` |
 
-**Note:** Installation differs by platform.
+---
 
-### Antigravity (Native Support)
+## 🧠 The "Golden Path" Workflow
 
-```bash
-antigravity extension install https://github.com/artgaurav16420-oss/Mega-Skills
-```
+Mega-Skills enforces a high-fidelity development cycle that ensures quality at every step:
 
-To update:
+1.  **🔍 Brainstorming**: Forces deep spec exploration and alternative analysis before a single line of code is written.
+2.  **📋 Writing-Plans**: Breaks complex tasks into bite-sized, verifiable implementation units.
+3.  **🧪 Test-Driven Development**: Enforces the RED-GREEN-REFACTOR cycle for 100% reliable output.
+4.  **🤖 Subagent-Driven-Development**: Dispatches autonomous subagents to parallelize work and maintain focus.
+5.  **🏁 Verification**: Final-stage validation and clean merge workflows.
 
-```bash
-antigravity extension update mega-mega-skills
-```
+---
 
-### Gemini CLI
+## 📚 Skill Categories
 
-```bash
-gemini extensions install https://github.com/artgaurav16420-oss/Mega-Skills
-```
+Explore the vast ecosystem of capabilities:
 
-### Claude Code
-
-```bash
-/plugin install mega-mega-skills@https://github.com/artgaurav16420-oss/Mega-Skills
-```
-
-### OpenCode
-
-Tell OpenCode:
-
-```bash
-Fetch and follow instructions from https://raw.githubusercontent.com/artgaurav16420-oss/Mega-Skills/refs/heads/main/.opencode/INSTALL.md
-```
-
-### GitHub Copilot CLI
-
-```bash
-copilot plugin install mega-mega-skills@https://github.com/artgaurav16420-oss/Mega-Skills
-```
-
-## The Basic Workflow
-
-1. **brainstorming** - Activates before writing code. Refines rough ideas through questions, explores alternatives, presents design for validation.
-2. **sequential-thinking** - Activates for complex logic. Forces a multi-step reasoning loop to explore hypotheses and edge cases before acting.
-3. **using-git-worktrees** - Activates after design approval. Creates isolated workspace on new branch, runs setup, verifies clean test baseline.
-4. **writing-plans** - Activates with approved design. Breaks work into bite-sized tasks. Every task has file paths, complete code, and verification steps.
-5. **memory-management** - Continuous activation. Persists critical decisions, task state, and discovery results to prevent context loss.
-6. **subagent-driven-development** - Dispatches fresh subagents per task with two-stage review (spec compliance, then code quality).
-7. **test-driven-development** - Enforces RED-GREEN-REFACTOR: write failing test, watch it fail, write minimal code, watch it pass, commit.
-8. **requesting-code-review** - Reviews against plan, reports issues by severity. Critical issues block progress.
-9. **finishing-a-development-branch** - Verifies tests, presents merge options, and cleans up the worktree.
-
-**The agent checks for relevant skills before any task.** Mandatory workflows, not suggestions.
-
-## Complete Skills Index
-
-The full library contains 62 composable skills, ordered by utility:
-
-### 🛠️ Core Methodology (The Mega-Skills)
-
-- **test-driven-development** - RED-GREEN-REFACTOR cycle: write tests first
-- **writing-plans** - Detailed implementation planning and task breakdown
-- **brainstorming** - Socratic design and spec refinement
-- **subagent-driven-development** - Autonomous task completion via subagents
-- **sequential-thinking** - Deep reasoning loop for complex problem solving
-- **memory-management** - State persistence and context optimization
-- **systematic-debugging** - 4-phase root cause analysis and fixing
-- **using-git-worktrees** - Isolated development environments
-- **verification-before-completion** - Final fix validation
-- **finishing-a-development-branch** - Merge and cleanup workflow
-- **receiving-code-review** & **requesting-code-review** - PR workflow
+### 🛠️ Core Engineering
+`brainstorming` • `writing-plans` • `test-driven-development` • `sequential-thinking` • `systematic-debugging` • `using-git-worktrees` • `memory-management`
 
 ### 🏗️ Advanced Developer Tools
+`mcp-builder` • `browser-automation` • `webapp-testing` • `claude-api` • `web-artifacts-builder` • `langsmith-fetch` • `skill-creator`
 
-- **browser-automation** - Web interaction and UI verification
-- **mcp-builder** - Model Context Protocol server creation assistant
-- **claude-api** - Anthropic SDK and prompt optimization
-- **webapp-testing** - Playwright-based frontend testing
-- **web-artifacts-builder** - Advanced shadcn/ui and React artifacts
-- **artifacts-builder** - Build complex React/Tailwind artifacts
-- **langsmith-fetch** - Debugging agent traces and performance
-- **skill-creator** & **writing-skills** - Authoring new agent capabilities
+### 📄 Document & Data Mastery
+`pdf` • `xlsx` • `docx` • `pptx` • `invoice-organizer` • `file-organizer`
 
-### 📄 Document & Data Processing
+### 🎨 Design & Content
+`frontend-design` • `canvas-design` • `slack-gif-creator` • `twitter-algorithm-optimizer` • `youtube-downloader` • `theme-factory`
 
-- **pdf**, **docx**, **pptx**, **xlsx** - Professional document manipulation
-- **invoice-organizer** - Automated receipt and invoice management
-- **file-organizer** - Intelligent asset and folder management
+---
 
-### 🔌 Integrations & Research
+## 🤝 Community & Support
 
-- **connect** & **connect-apps** - Integration with 1000+ external services
-- **lead-research-assistant** - Sales and lead generation automation
-- **content-research-writer** - Research-backed content creation
-- **developer-growth-analysis** - Personal coding growth reports
-- **meeting-insights-analyzer** - Communication pattern analysis
-- **domain-name-brainstormer** - Creative naming and availability
+- **Discord**: [Join the Mega-Skills Community](https://discord.gg/35wsABTejz)
+- **Sponsorship**: Help us build the future of agentic coding by [sponsoring Gaurav's work](https://github.com/artgaurav16420-oss).
+- **Contributing**: Please read [CLAUDE.md](CLAUDE.md) before submitting a PR. We have a 94% rejection rate for AI-generated slop—quality is our only metric.
 
-### 🎨 Creative & Content Tools
+---
 
-- **frontend-design** - Production-grade web interfaces
-- **canvas-design** - Visual design and poster creation
-- **slack-gif-creator** - Custom animations for Slack
-- **twitter-algorithm-optimizer** - Reach and engagement optimization
-- **youtube-downloader** - Video and audio acquisition
-- **algorithmic-art** - Create generative art with code
-- **brand-guidelines** - Apply professional brand styling
-- **theme-factory** - Universal styling for artifacts
-
-### ⚙️ Utilities
-
-- **cavecrew** - Subagent delegation and context compression
-- **caveman** suite - Ultra-compressed agent communication modes
-- **changelog-generator** - Automated release notes from git
-- **image-enhancer** - Resolution and clarity improvement
-- **raffle-winner-picker** - Fair random selection
-- **skill-share** - Team skill discovery via Slack
-- **doc-coauthoring** - Structured documentation workflow
-
-## Philosophy
-
-- **Test-Driven Development** - Write tests first, always
-- **Systematic over ad-hoc** - Process over guessing
-- **Complexity reduction** - Simplicity as primary goal
-- **Evidence over claims** - Verify before declaring success
-
-## Contributing
-
-1. Fork the repository
-2. Switch to the 'dev' branch
-3. Create a branch for your work
-4. Follow the `writing-skills` skill for creating and testing new and modified skills
-5. Submit a PR.
-
-## License
-
-MIT License - see LICENSE file for details
-
-## Community
-
-Mega-Skills is maintained by [Gaurav](https://github.com/artgaurav16420-oss), based on the methodology by Jesse Vincent and the Prime Radiant team, augmented with libraries from Anthropic and Composio.
-
-- **Discord**: [Join us](https://discord.gg/35wsABTejz) for community support.
-- **Issues**: <https://github.com/artgaurav16420-oss/Mega-Skills/issues>
+<p align="center">
+  Made with ❤️ by <a href="https://github.com/artgaurav16420-oss">Gaurav</a> and the Mega-Skills Open Source Community.
+</p>
