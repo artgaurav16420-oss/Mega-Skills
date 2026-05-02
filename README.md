@@ -146,7 +146,7 @@ All skills are high-fidelity, but some define the very nature of agentic enginee
 
 ### 🏮 Extended Library
 
-*(And 30+ more specialized skills inside the repo...)*
+(And 30+ more specialized skills inside the repo...)
 
 ---
 
