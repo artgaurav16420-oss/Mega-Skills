@@ -36,10 +36,16 @@ To update:
 antigravity extension update mega-superpowers
 ```
 
-### Gemini CLI / Claude Code
+### Gemini CLI
 
 ```bash
 gemini extensions install https://github.com/artgaurav16420-oss/Superpowers-including-Antigravity
+```
+
+### Claude Code
+
+```bash
+/plugin install mega-superpowers@https://github.com/artgaurav16420-oss/Superpowers-including-Antigravity
 ```
 
 ### OpenCode
