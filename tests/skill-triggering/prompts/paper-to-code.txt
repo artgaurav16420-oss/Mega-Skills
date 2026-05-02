@@ -1,0 +1,1 @@
+I need to implement a new algorithm from a research paper I just read. The paper is "Attention Is All You Need" (Vaswani et al.). Can you help me write the PyTorch code for the Multi-Head Attention layer? Please ensure the implementation matches the paper's specs exactly, including the scaling factor and the specific initialization values they mentioned.

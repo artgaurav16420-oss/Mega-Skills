@@ -19,7 +19,8 @@ const command = args[0] || 'help';
 const scripts = {
     sync: path.join(rootDir, 'scripts', 'sync_skills.cjs'),
     validate: path.join(rootDir, 'scripts', 'validator.cjs'),
-    harden: path.join(rootDir, 'scripts', 'mega_hardener.cjs')
+    harden: path.join(rootDir, 'scripts', 'mega_hardener.cjs'),
+    doctor: path.join(rootDir, 'scripts', 'doctor.cjs')
 };
 
 function runScript(scriptPath) {
@@ -41,6 +42,7 @@ Commands:
   sync      Synchronize all agent harnesses with directory symlinks
   validate  Check skill completeness and harness synchronization
   harden    Apply "Mega-Hardening" to skill markdown files
+  doctor    Run system diagnostics to check "Beast Mode" dependencies
   help      Show this help message
 
 Example:
@@ -59,6 +61,9 @@ switch (command) {
         break;
     case 'harden':
         runScript(scripts.harden);
+        break;
+    case 'doctor':
+        runScript(scripts.doctor);
         break;
     case 'help':
     case '--help':
