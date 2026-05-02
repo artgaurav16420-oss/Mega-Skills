@@ -16,6 +16,7 @@ This skill provides elite-level presentation capabilities. It transforms the age
 ## Technical Workflows
 
 ### 1. Marp Cinematic Engine (Recommended)
+
 Use Marp for lightning-fast, highly styled markdown slides.
 
 ```bash
@@ -27,6 +28,7 @@ powershell -ExecutionPolicy Bypass -Command "marp --pptx --pptx-editable present
 ```
 
 ### 2. PptxGenJS (Granular Control)
+
 Use for complex, programmatic layouts that require precise shape and table positioning.
 
 ```javascript
