@@ -98,7 +98,7 @@ response = client.messages.create(
                 "type": "image",
                 "source": {
                     "type": "url",
-                    "url": "[https://example.com/image.png"]([https://example.com/image.png")]([https://example.com/image.png"))]([https://example.com/image.png")))]([https://example.com/image.png"))))]([https://example.com/image.png")))))]([https://example.com/image.png"))))))]([https://example.com/image.png")))))))](https://example.com/image.png"))))))))
+                    "url": "[https://example.com/image.png"](https://e)xample.com/image.png")]([https://example.com/image.png"))](https://e)xample.com/image.png")))]([https://example.com/image.png"))))](https://e)xample.com/image.png")))))]([https://example.com/image.png"))))))](https://e)xample.com/image.png")))))))](https://example.com/image.png")
                 }
             },
             {"type": "text", "text": "Describe this image"}
@@ -314,7 +314,7 @@ print(chat("Now add rate limiting and error handling"))
 The `stop_reason` field in the response indicates why the model stopped generating:
 
 | Value | Meaning |
-|:::::::::::::---:::::::::::::----|:::::::::::::---:::::::::::::---:::::::::::::---|
+|:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::---:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::----|:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::---:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::---:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::---|
 | `end_turn` | Claude finished its response naturally |
 | `max_tokens` | Hit the `max_tokens` limit — increase it or use streaming |
 | `stop_sequence` | Hit a custom stop sequence |
@@ -414,7 +414,4 @@ def call_with_retry(
 
         delay = min(base_delay * (2 ** attempt) + random.uniform(0, 1), max_delay)
         print(f"Retry {attempt + 1}/{max_retries} after {delay:.1f}s")
-        time.sleep(delay)
-
-    raise last_exception
-```
+ 

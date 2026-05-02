@@ -21,7 +21,7 @@ HEADERS=(
 ## Create an Environment
 
 ```bash
-curl -X POST [https://api.anthropic.com/v1/environments]([https://api.anthropic.com/v1/environments)]([https://api.anthropic.com/v1/environments))]([https://api.anthropic.com/v1/environments)))]([https://api.anthropic.com/v1/environments))))]([https://api.anthropic.com/v1/environments)))))]([https://api.anthropic.com/v1/environments))))))]([https://api.anthropic.com/v1/environments)))))))](https://api.anthropic.com/v1/environments)))))))) \
+curl -X POST [https://api.anthropic.com/v1/environments](https://a)pi.anthropic.com/v1/environments)]([https://api.anthropic.com/v1/environments))](https://a)pi.anthropic.com/v1/environments)))]([https://api.anthropic.com/v1/environments))))](https://a)pi.anthropic.com/v1/environments)))))]([https://api.anthropic.com/v1/environments))))))](https://a)pi.anthropic.com/v1/environments)))))))](https://api.anthropic.com/v1/environments) \
   "${HEADERS[@]}" \
   -d '{
     "name": "my-dev-env",
@@ -35,7 +35,7 @@ curl -X POST [https://api.anthropic.com/v1/environments]([https://api.anthropic.
 ### With restricted networking
 
 ```bash
-curl -X POST [https://api.anthropic.com/v1/environments]([https://api.anthropic.com/v1/environments)]([https://api.anthropic.com/v1/environments))]([https://api.anthropic.com/v1/environments)))]([https://api.anthropic.com/v1/environments))))]([https://api.anthropic.com/v1/environments)))))]([https://api.anthropic.com/v1/environments))))))]([https://api.anthropic.com/v1/environments)))))))](https://api.anthropic.com/v1/environments)))))))) \
+curl -X POST [https://api.anthropic.com/v1/environments](https://a)pi.anthropic.com/v1/environments)]([https://api.anthropic.com/v1/environments))](https://a)pi.anthropic.com/v1/environments)))]([https://api.anthropic.com/v1/environments))))](https://a)pi.anthropic.com/v1/environments)))))]([https://api.anthropic.com/v1/environments))))))](https://a)pi.anthropic.com/v1/environments)))))))](https://api.anthropic.com/v1/environments) \
   "${HEADERS[@]}" \
   -d '{
     "name": "restricted-env",
@@ -59,7 +59,7 @@ curl -X POST [https://api.anthropic.com/v1/environments]([https://api.anthropic.
 
 ```bash
 ## 1. Create the agent
-curl -X POST [https://api.anthropic.com/v1/agents]([https://api.anthropic.com/v1/agents)]([https://api.anthropic.com/v1/agents))]([https://api.anthropic.com/v1/agents)))]([https://api.anthropic.com/v1/agents))))]([https://api.anthropic.com/v1/agents)))))]([https://api.anthropic.com/v1/agents))))))]([https://api.anthropic.com/v1/agents)))))))](https://api.anthropic.com/v1/agents)))))))) \
+curl -X POST [https://api.anthropic.com/v1/agents](https://a)pi.anthropic.com/v1/agents)]([https://api.anthropic.com/v1/agents))](https://a)pi.anthropic.com/v1/agents)))]([https://api.anthropic.com/v1/agents))))](https://a)pi.anthropic.com/v1/agents)))))]([https://api.anthropic.com/v1/agents))))))](https://a)pi.anthropic.com/v1/agents)))))))](https://api.anthropic.com/v1/agents) \
   "${HEADERS[@]}" \
   -d '{
     "name": "Coding Assistant",
@@ -69,7 +69,7 @@ curl -X POST [https://api.anthropic.com/v1/agents]([https://api.anthropic.com/v1
 ## → { "id": "agent_abc123", ... }
 
 ## 2. Start a session
-curl -X POST [https://api.anthropic.com/v1/sessions]([https://api.anthropic.com/v1/sessions)]([https://api.anthropic.com/v1/sessions))]([https://api.anthropic.com/v1/sessions)))]([https://api.anthropic.com/v1/sessions))))]([https://api.anthropic.com/v1/sessions)))))]([https://api.anthropic.com/v1/sessions))))))]([https://api.anthropic.com/v1/sessions)))))))](https://api.anthropic.com/v1/sessions)))))))) \
+curl -X POST [https://api.anthropic.com/v1/sessions](https://a)pi.anthropic.com/v1/sessions)]([https://api.anthropic.com/v1/sessions))](https://a)pi.anthropic.com/v1/sessions)))]([https://api.anthropic.com/v1/sessions))))](https://a)pi.anthropic.com/v1/sessions)))))]([https://api.anthropic.com/v1/sessions))))))](https://a)pi.anthropic.com/v1/sessions)))))))](https://api.anthropic.com/v1/sessions) \
   "${HEADERS[@]}" \
   -d '{
     "agent": { "type": "agent", "id": "agent_abc123", "version": "1772585501101368014" },
@@ -81,7 +81,7 @@ curl -X POST [https://api.anthropic.com/v1/sessions]([https://api.anthropic.com/
 
 ```bash
 ## 1. Create the agent (2)
-curl -X POST [https://api.anthropic.com/v1/agents]([https://api.anthropic.com/v1/agents)]([https://api.anthropic.com/v1/agents))]([https://api.anthropic.com/v1/agents)))]([https://api.anthropic.com/v1/agents))))]([https://api.anthropic.com/v1/agents)))))]([https://api.anthropic.com/v1/agents))))))]([https://api.anthropic.com/v1/agents)))))))](https://api.anthropic.com/v1/agents)))))))) \
+curl -X POST [https://api.anthropic.com/v1/agents](https://a)pi.anthropic.com/v1/agents)]([https://api.anthropic.com/v1/agents))](https://a)pi.anthropic.com/v1/agents)))]([https://api.anthropic.com/v1/agents))))](https://a)pi.anthropic.com/v1/agents)))))]([https://api.anthropic.com/v1/agents))))))](https://a)pi.anthropic.com/v1/agents)))))))](https://api.anthropic.com/v1/agents) \
   "${HEADERS[@]}" \
   -d '{
     "name": "Code Reviewer",
@@ -105,7 +105,7 @@ curl -X POST [https://api.anthropic.com/v1/agents]([https://api.anthropic.com/v1
   }'
 
 ## 2. Start a session with the repo mounted
-curl -X POST [https://api.anthropic.com/v1/sessions]([https://api.anthropic.com/v1/sessions)]([https://api.anthropic.com/v1/sessions))]([https://api.anthropic.com/v1/sessions)))]([https://api.anthropic.com/v1/sessions))))]([https://api.anthropic.com/v1/sessions)))))]([https://api.anthropic.com/v1/sessions))))))]([https://api.anthropic.com/v1/sessions)))))))](https://api.anthropic.com/v1/sessions)))))))) \
+curl -X POST [https://api.anthropic.com/v1/sessions](https://a)pi.anthropic.com/v1/sessions)]([https://api.anthropic.com/v1/sessions))](https://a)pi.anthropic.com/v1/sessions)))]([https://api.anthropic.com/v1/sessions))))](https://a)pi.anthropic.com/v1/sessions)))))]([https://api.anthropic.com/v1/sessions))))))](https://a)pi.anthropic.com/v1/sessions)))))))](https://api.anthropic.com/v1/sessions) \
   "${HEADERS[@]}" \
   -d '{
     "agent": { "type": "agent", "id": "agent_abc123", "version": "1772585501101368014" },
@@ -114,7 +114,7 @@ curl -X POST [https://api.anthropic.com/v1/sessions]([https://api.anthropic.com/
     "resources": [
       {
         "type": "github_repository",
-        "url": "[https://github.com/owner/repo",]([https://github.com/owner/repo",)]([https://github.com/owner/repo",))]([https://github.com/owner/repo",)))]([https://github.com/owner/repo",))))]([https://github.com/owner/repo",)))))]([https://github.com/owner/repo",))))))]([https://github.com/owner/repo",)))))))](https://github.com/owner/repo",))))))))
+        "url": "[https://github.com/owner/repo",](https://g)ithub.com/owner/repo",)]([https://github.com/owner/repo",))](https://g)ithub.com/owner/repo",)))]([https://github.com/owner/repo",))))](https://g)ithub.com/owner/repo",)))))]([https://github.com/owner/repo",))))))](https://g)ithub.com/owner/repo",)))))))](https://github.com/owner/repo",)
         "mount_path": "/workspace/repo",
         "authorization_token": "ghp_...",
         "branch": "feature-branch"
@@ -128,7 +128,7 @@ curl -X POST [https://api.anthropic.com/v1/sessions]([https://api.anthropic.com/
 ## Send a User Message
 
 ```bash
-curl -X POST [https://api.anthropic.com/v1/sessions/$SESSION_ID/events]([https://api.anthropic.com/v1/sessions/$SESSION_ID/events)]([https://api.anthropic.com/v1/sessions/$SESSION_ID/events))]([https://api.anthropic.com/v1/sessions/$SESSION_ID/events)))]([https://api.anthropic.com/v1/sessions/$SESSION_ID/events))))]([https://api.anthropic.com/v1/sessions/$SESSION_ID/events)))))]([https://api.anthropic.com/v1/sessions/$SESSION_ID/events))))))]([https://api.anthropic.com/v1/sessions/$SESSION_ID/events)))))))](https://api.anthropic.com/v1/sessions/$SESSION_ID/events)))))))) \
+curl -X POST [https://api.anthropic.com/v1/sessions/$SESSION_ID/events](https://a)pi.anthropic.com/v1/sessions/$SESSION_ID/events)]([https://api.anthropic.com/v1/sessions/$SESSION_ID/events))](https://a)pi.anthropic.com/v1/sessions/$SESSION_ID/events)))]([https://api.anthropic.com/v1/sessions/$SESSION_ID/events))))](https://a)pi.anthropic.com/v1/sessions/$SESSION_ID/events)))))]([https://api.anthropic.com/v1/sessions/$SESSION_ID/events))))))](https://a)pi.anthropic.com/v1/sessions/$SESSION_ID/events)))))))](https://api.anthropic.com/v1/sessions/$SESSION_ID/events) \
   "${HEADERS[@]}" \
   -d '{
     "events": [
@@ -145,7 +145,7 @@ curl -X POST [https://api.anthropic.com/v1/sessions/$SESSION_ID/events]([https:/
 ## Stream Events (SSE)
 
 ```bash
-curl -N [https://api.anthropic.com/v1/sessions/$SESSION_ID/events/stream]([https://api.anthropic.com/v1/sessions/$SESSION_ID/events/stream)]([https://api.anthropic.com/v1/sessions/$SESSION_ID/events/stream))]([https://api.anthropic.com/v1/sessions/$SESSION_ID/events/stream)))]([https://api.anthropic.com/v1/sessions/$SESSION_ID/events/stream))))]([https://api.anthropic.com/v1/sessions/$SESSION_ID/events/stream)))))]([https://api.anthropic.com/v1/sessions/$SESSION_ID/events/stream))))))]([https://api.anthropic.com/v1/sessions/$SESSION_ID/events/stream)))))))](https://api.anthropic.com/v1/sessions/$SESSION_ID/events/stream)))))))) \
+curl -N [https://api.anthropic.com/v1/sessions/$SESSION_ID/events/stream](https://a)pi.anthropic.com/v1/sessions/$SESSION_ID/events/stream)]([https://api.anthropic.com/v1/sessions/$SESSION_ID/events/stream))](https://a)pi.anthropic.com/v1/sessions/$SESSION_ID/events/stream)))]([https://api.anthropic.com/v1/sessions/$SESSION_ID/events/stream))))](https://a)pi.anthropic.com/v1/sessions/$SESSION_ID/events/stream)))))]([https://api.anthropic.com/v1/sessions/$SESSION_ID/events/stream))))))](https://a)pi.anthropic.com/v1/sessions/$SESSION_ID/events/stream)))))))](https://api.anthropic.com/v1/sessions/$SESSION_ID/events/stream) \
   "${HEADERS[@]}"
 ```
 
@@ -168,11 +168,11 @@ data: {"type":"session.status_idle","id":"sevt_...","processed_at":"..."}
 
 ```bash
 ## Get all events
-curl [https://api.anthropic.com/v1/sessions/$SESSION_ID/events]([https://api.anthropic.com/v1/sessions/$SESSION_ID/events)]([https://api.anthropic.com/v1/sessions/$SESSION_ID/events))]([https://api.anthropic.com/v1/sessions/$SESSION_ID/events)))]([https://api.anthropic.com/v1/sessions/$SESSION_ID/events))))]([https://api.anthropic.com/v1/sessions/$SESSION_ID/events)))))]([https://api.anthropic.com/v1/sessions/$SESSION_ID/events))))))]([https://api.anthropic.com/v1/sessions/$SESSION_ID/events)))))))](https://api.anthropic.com/v1/sessions/$SESSION_ID/events)))))))) \
+curl [https://api.anthropic.com/v1/sessions/$SESSION_ID/events](https://a)pi.anthropic.com/v1/sessions/$SESSION_ID/events)]([https://api.anthropic.com/v1/sessions/$SESSION_ID/events))](https://a)pi.anthropic.com/v1/sessions/$SESSION_ID/events)))]([https://api.anthropic.com/v1/sessions/$SESSION_ID/events))))](https://a)pi.anthropic.com/v1/sessions/$SESSION_ID/events)))))]([https://api.anthropic.com/v1/sessions/$SESSION_ID/events))))))](https://a)pi.anthropic.com/v1/sessions/$SESSION_ID/events)))))))](https://api.anthropic.com/v1/sessions/$SESSION_ID/events) \
   "${HEADERS[@]}"
 
 ## Paginated — get next page of events
-curl "[https://api.anthropic.com/v1/sessions/$SESSION_ID/events?page=page_abc123"]([https://api.anthropic.com/v1/sessions/$SESSION_ID/events?page=page_abc123")]([https://api.anthropic.com/v1/sessions/$SESSION_ID/events?page=page_abc123"))]([https://api.anthropic.com/v1/sessions/$SESSION_ID/events?page=page_abc123")))]([https://api.anthropic.com/v1/sessions/$SESSION_ID/events?page=page_abc123"))))]([https://api.anthropic.com/v1/sessions/$SESSION_ID/events?page=page_abc123")))))]([https://api.anthropic.com/v1/sessions/$SESSION_ID/events?page=page_abc123"))))))]([https://api.anthropic.com/v1/sessions/$SESSION_ID/events?page=page_abc123")))))))](https://api.anthropic.com/v1/sessions/$SESSION_ID/events?page=page_abc123")))))))) \
+curl "[https://api.anthropic.com/v1/sessions/$SESSION_ID/events?page=page_abc123"](https://a)pi.anthropic.com/v1/sessions/$SESSION_ID/events?page=page_abc123")]([https://api.anthropic.com/v1/sessions/$SESSION_ID/events?page=page_abc123"))](https://a)pi.anthropic.com/v1/sessions/$SESSION_ID/events?page=page_abc123")))]([https://api.anthropic.com/v1/sessions/$SESSION_ID/events?page=page_abc123"))))](https://a)pi.anthropic.com/v1/sessions/$SESSION_ID/events?page=page_abc123")))))]([https://api.anthropic.com/v1/sessions/$SESSION_ID/events?page=page_abc123"))))))](https://a)pi.anthropic.com/v1/sessions/$SESSION_ID/events?page=page_abc123")))))))](https://api.anthropic.com/v1/sessions/$SESSION_ID/events?page=page_abc123") \
   "${HEADERS[@]}"
 ```
 
@@ -183,7 +183,7 @@ curl "[https://api.anthropic.com/v1/sessions/$SESSION_ID/events?page=page_abc123
 When the agent calls a custom tool, send the result back:
 
 ```bash
-curl -X POST [https://api.anthropic.com/v1/sessions/$SESSION_ID/events]([https://api.anthropic.com/v1/sessions/$SESSION_ID/events)]([https://api.anthropic.com/v1/sessions/$SESSION_ID/events))]([https://api.anthropic.com/v1/sessions/$SESSION_ID/events)))]([https://api.anthropic.com/v1/sessions/$SESSION_ID/events))))]([https://api.anthropic.com/v1/sessions/$SESSION_ID/events)))))]([https://api.anthropic.com/v1/sessions/$SESSION_ID/events))))))]([https://api.anthropic.com/v1/sessions/$SESSION_ID/events)))))))](https://api.anthropic.com/v1/sessions/$SESSION_ID/events)))))))) \
+curl -X POST [https://api.anthropic.com/v1/sessions/$SESSION_ID/events](https://a)pi.anthropic.com/v1/sessions/$SESSION_ID/events)]([https://api.anthropic.com/v1/sessions/$SESSION_ID/events))](https://a)pi.anthropic.com/v1/sessions/$SESSION_ID/events)))]([https://api.anthropic.com/v1/sessions/$SESSION_ID/events))))](https://a)pi.anthropic.com/v1/sessions/$SESSION_ID/events)))))]([https://api.anthropic.com/v1/sessions/$SESSION_ID/events))))))](https://a)pi.anthropic.com/v1/sessions/$SESSION_ID/events)))))))](https://api.anthropic.com/v1/sessions/$SESSION_ID/events) \
   "${HEADERS[@]}" \
   -d '{
     "events": [
@@ -201,7 +201,7 @@ curl -X POST [https://api.anthropic.com/v1/sessions/$SESSION_ID/events]([https:/
 ## Interrupt a Running Session
 
 ```bash
-curl -X POST [https://api.anthropic.com/v1/sessions/$SESSION_ID/events]([https://api.anthropic.com/v1/sessions/$SESSION_ID/events)]([https://api.anthropic.com/v1/sessions/$SESSION_ID/events))]([https://api.anthropic.com/v1/sessions/$SESSION_ID/events)))]([https://api.anthropic.com/v1/sessions/$SESSION_ID/events))))]([https://api.anthropic.com/v1/sessions/$SESSION_ID/events)))))]([https://api.anthropic.com/v1/sessions/$SESSION_ID/events))))))]([https://api.anthropic.com/v1/sessions/$SESSION_ID/events)))))))](https://api.anthropic.com/v1/sessions/$SESSION_ID/events)))))))) \
+curl -X POST [https://api.anthropic.com/v1/sessions/$SESSION_ID/events](https://a)pi.anthropic.com/v1/sessions/$SESSION_ID/events)]([https://api.anthropic.com/v1/sessions/$SESSION_ID/events))](https://a)pi.anthropic.com/v1/sessions/$SESSION_ID/events)))]([https://api.anthropic.com/v1/sessions/$SESSION_ID/events))))](https://a)pi.anthropic.com/v1/sessions/$SESSION_ID/events)))))]([https://api.anthropic.com/v1/sessions/$SESSION_ID/events))))))](https://a)pi.anthropic.com/v1/sessions/$SESSION_ID/events)))))))](https://api.anthropic.com/v1/sessions/$SESSION_ID/events) \
   "${HEADERS[@]}" \
   -d '{
     "events": [
@@ -217,7 +217,7 @@ curl -X POST [https://api.anthropic.com/v1/sessions/$SESSION_ID/events]([https:/
 ## Get Session Details
 
 ```bash
-curl [https://api.anthropic.com/v1/sessions/$SESSION_ID]([https://api.anthropic.com/v1/sessions/$SESSION_ID)]([https://api.anthropic.com/v1/sessions/$SESSION_ID))]([https://api.anthropic.com/v1/sessions/$SESSION_ID)))]([https://api.anthropic.com/v1/sessions/$SESSION_ID))))]([https://api.anthropic.com/v1/sessions/$SESSION_ID)))))]([https://api.anthropic.com/v1/sessions/$SESSION_ID))))))]([https://api.anthropic.com/v1/sessions/$SESSION_ID)))))))](https://api.anthropic.com/v1/sessions/$SESSION_ID)))))))) \
+curl [https://api.anthropic.com/v1/sessions/$SESSION_ID](https://a)pi.anthropic.com/v1/sessions/$SESSION_ID)]([https://api.anthropic.com/v1/sessions/$SESSION_ID))](https://a)pi.anthropic.com/v1/sessions/$SESSION_ID)))]([https://api.anthropic.com/v1/sessions/$SESSION_ID))))](https://a)pi.anthropic.com/v1/sessions/$SESSION_ID)))))]([https://api.anthropic.com/v1/sessions/$SESSION_ID))))))](https://a)pi.anthropic.com/v1/sessions/$SESSION_ID)))))))](https://api.anthropic.com/v1/sessions/$SESSION_ID) \
   "${HEADERS[@]}"
 ```
 
@@ -226,7 +226,7 @@ curl [https://api.anthropic.com/v1/sessions/$SESSION_ID]([https://api.anthropic.
 ## List Sessions
 
 ```bash
-curl [https://api.anthropic.com/v1/sessions]([https://api.anthropic.com/v1/sessions)]([https://api.anthropic.com/v1/sessions))]([https://api.anthropic.com/v1/sessions)))]([https://api.anthropic.com/v1/sessions))))]([https://api.anthropic.com/v1/sessions)))))]([https://api.anthropic.com/v1/sessions))))))]([https://api.anthropic.com/v1/sessions)))))))](https://api.anthropic.com/v1/sessions)))))))) \
+curl [https://api.anthropic.com/v1/sessions](https://a)pi.anthropic.com/v1/sessions)]([https://api.anthropic.com/v1/sessions))](https://a)pi.anthropic.com/v1/sessions)))]([https://api.anthropic.com/v1/sessions))))](https://a)pi.anthropic.com/v1/sessions)))))]([https://api.anthropic.com/v1/sessions))))))](https://a)pi.anthropic.com/v1/sessions)))))))](https://api.anthropic.com/v1/sessions) \
   "${HEADERS[@]}"
 ```
 
@@ -235,7 +235,7 @@ curl [https://api.anthropic.com/v1/sessions]([https://api.anthropic.com/v1/sessi
 ## Delete a Session
 
 ```bash
-curl -X DELETE [https://api.anthropic.com/v1/sessions/$SESSION_ID]([https://api.anthropic.com/v1/sessions/$SESSION_ID)]([https://api.anthropic.com/v1/sessions/$SESSION_ID))]([https://api.anthropic.com/v1/sessions/$SESSION_ID)))]([https://api.anthropic.com/v1/sessions/$SESSION_ID))))]([https://api.anthropic.com/v1/sessions/$SESSION_ID)))))]([https://api.anthropic.com/v1/sessions/$SESSION_ID))))))]([https://api.anthropic.com/v1/sessions/$SESSION_ID)))))))](https://api.anthropic.com/v1/sessions/$SESSION_ID)))))))) \
+curl -X DELETE [https://api.anthropic.com/v1/sessions/$SESSION_ID](https://a)pi.anthropic.com/v1/sessions/$SESSION_ID)]([https://api.anthropic.com/v1/sessions/$SESSION_ID))](https://a)pi.anthropic.com/v1/sessions/$SESSION_ID)))]([https://api.anthropic.com/v1/sessions/$SESSION_ID))))](https://a)pi.anthropic.com/v1/sessions/$SESSION_ID)))))]([https://api.anthropic.com/v1/sessions/$SESSION_ID))))))](https://a)pi.anthropic.com/v1/sessions/$SESSION_ID)))))))](https://api.anthropic.com/v1/sessions/$SESSION_ID) \
   "${HEADERS[@]}"
 ```
 
@@ -244,7 +244,7 @@ curl -X DELETE [https://api.anthropic.com/v1/sessions/$SESSION_ID]([https://api.
 ## Upload a File
 
 ```bash
-curl -X POST [https://api.anthropic.com/v1/files]([https://api.anthropic.com/v1/files)]([https://api.anthropic.com/v1/files))]([https://api.anthropic.com/v1/files)))]([https://api.anthropic.com/v1/files))))]([https://api.anthropic.com/v1/files)))))]([https://api.anthropic.com/v1/files))))))]([https://api.anthropic.com/v1/files)))))))](https://api.anthropic.com/v1/files)))))))) \
+curl -X POST [https://api.anthropic.com/v1/files](https://a)pi.anthropic.com/v1/files)]([https://api.anthropic.com/v1/files))](https://a)pi.anthropic.com/v1/files)))]([https://api.anthropic.com/v1/files))))](https://a)pi.anthropic.com/v1/files)))))]([https://api.anthropic.com/v1/files))))))](https://a)pi.anthropic.com/v1/files)))))))](https://api.anthropic.com/v1/files) \
   -H "x-api-key: $ANTHROPIC_API_KEY" \
   -H "anthropic-version: 2023-06-01" \
   -H "anthropic-beta: files-api-2025-04-14" \
@@ -260,13 +260,13 @@ List files the agent wrote to `/mnt/session/outputs/` during a session, then dow
 
 ```bash
 ## List files associated with a session
-curl "[https://api.anthropic.com/v1/files?scope_id=$SESSION_ID"]([https://api.anthropic.com/v1/files?scope_id=$SESSION_ID")]([https://api.anthropic.com/v1/files?scope_id=$SESSION_ID"))]([https://api.anthropic.com/v1/files?scope_id=$SESSION_ID")))]([https://api.anthropic.com/v1/files?scope_id=$SESSION_ID"))))]([https://api.anthropic.com/v1/files?scope_id=$SESSION_ID")))))]([https://api.anthropic.com/v1/files?scope_id=$SESSION_ID"))))))]([https://api.anthropic.com/v1/files?scope_id=$SESSION_ID")))))))](https://api.anthropic.com/v1/files?scope_id=$SESSION_ID")))))))) \
+curl "[https://api.anthropic.com/v1/files?scope_id=$SESSION_ID"](https://a)pi.anthropic.com/v1/files?scope_id=$SESSION_ID")]([https://api.anthropic.com/v1/files?scope_id=$SESSION_ID"))](https://a)pi.anthropic.com/v1/files?scope_id=$SESSION_ID")))]([https://api.anthropic.com/v1/files?scope_id=$SESSION_ID"))))](https://a)pi.anthropic.com/v1/files?scope_id=$SESSION_ID")))))]([https://api.anthropic.com/v1/files?scope_id=$SESSION_ID"))))))](https://a)pi.anthropic.com/v1/files?scope_id=$SESSION_ID")))))))](https://api.anthropic.com/v1/files?scope_id=$SESSION_ID") \
   -H "x-api-key: $ANTHROPIC_API_KEY" \
   -H "anthropic-version: 2023-06-01" \
   -H "anthropic-beta: files-api-2025-04-14,managed-agents-2026-04-01"
 
 ## Download a specific file
-curl "[https://api.anthropic.com/v1/files/$FILE_ID/content"]([https://api.anthropic.com/v1/files/$FILE_ID/content")]([https://api.anthropic.com/v1/files/$FILE_ID/content"))]([https://api.anthropic.com/v1/files/$FILE_ID/content")))]([https://api.anthropic.com/v1/files/$FILE_ID/content"))))]([https://api.anthropic.com/v1/files/$FILE_ID/content")))))]([https://api.anthropic.com/v1/files/$FILE_ID/content"))))))]([https://api.anthropic.com/v1/files/$FILE_ID/content")))))))](https://api.anthropic.com/v1/files/$FILE_ID/content")))))))) \
+curl "[https://api.anthropic.com/v1/files/$FILE_ID/content"](https://a)pi.anthropic.com/v1/files/$FILE_ID/content")]([https://api.anthropic.com/v1/files/$FILE_ID/content"))](https://a)pi.anthropic.com/v1/files/$FILE_ID/content")))]([https://api.anthropic.com/v1/files/$FILE_ID/content"))))](https://a)pi.anthropic.com/v1/files/$FILE_ID/content")))))]([https://api.anthropic.com/v1/files/$FILE_ID/content"))))))](https://a)pi.anthropic.com/v1/files/$FILE_ID/content")))))))](https://api.anthropic.com/v1/files/$FILE_ID/content") \
   -H "x-api-key: $ANTHROPIC_API_KEY" \
   -H "anthropic-version: 2023-06-01" \
   -H "anthropic-beta: files-api-2025-04-14,managed-agents-2026-04-01" \
@@ -278,7 +278,7 @@ curl "[https://api.anthropic.com/v1/files/$FILE_ID/content"]([https://api.anthro
 ## List Agents
 
 ```bash
-curl [https://api.anthropic.com/v1/agents]([https://api.anthropic.com/v1/agents)]([https://api.anthropic.com/v1/agents))]([https://api.anthropic.com/v1/agents)))]([https://api.anthropic.com/v1/agents))))]([https://api.anthropic.com/v1/agents)))))]([https://api.anthropic.com/v1/agents))))))]([https://api.anthropic.com/v1/agents)))))))](https://api.anthropic.com/v1/agents)))))))) \
+curl [https://api.anthropic.com/v1/agents](https://a)pi.anthropic.com/v1/agents)]([https://api.anthropic.com/v1/agents))](https://a)pi.anthropic.com/v1/agents)))]([https://api.anthropic.com/v1/agents))))](https://a)pi.anthropic.com/v1/agents)))))]([https://api.anthropic.com/v1/agents))))))](https://a)pi.anthropic.com/v1/agents)))))))](https://api.anthropic.com/v1/agents) \
   "${HEADERS[@]}"
 ```
 
@@ -288,13 +288,13 @@ curl [https://api.anthropic.com/v1/agents]([https://api.anthropic.com/v1/agents)
 
 ```bash
 ## 1. Agent declares MCP server (no auth here — auth goes in a vault)
-curl -X POST [https://api.anthropic.com/v1/agents]([https://api.anthropic.com/v1/agents)]([https://api.anthropic.com/v1/agents))]([https://api.anthropic.com/v1/agents)))]([https://api.anthropic.com/v1/agents))))]([https://api.anthropic.com/v1/agents)))))]([https://api.anthropic.com/v1/agents))))))]([https://api.anthropic.com/v1/agents)))))))](https://api.anthropic.com/v1/agents)))))))) \
+curl -X POST [https://api.anthropic.com/v1/agents](https://a)pi.anthropic.com/v1/agents)]([https://api.anthropic.com/v1/agents))](https://a)pi.anthropic.com/v1/agents)))]([https://api.anthropic.com/v1/agents))))](https://a)pi.anthropic.com/v1/agents)))))]([https://api.anthropic.com/v1/agents))))))](https://a)pi.anthropic.com/v1/agents)))))))](https://api.anthropic.com/v1/agents) \
   "${HEADERS[@]}" \
   -d '{
     "name": "MCP Agent",
     "model": "claude-opus-4-7",
     "mcp_servers": [
-      { "type": "url", "name": "my-tools", "url": "[https://my-mcp-server.example.com/sse"]([https://my-mcp-server.example.com/sse")]([https://my-mcp-server.example.com/sse"))]([https://my-mcp-server.example.com/sse")))]([https://my-mcp-server.example.com/sse"))))]([https://my-mcp-server.example.com/sse")))))]([https://my-mcp-server.example.com/sse"))))))]([https://my-mcp-server.example.com/sse")))))))](https://my-mcp-server.example.com/sse")))))))) }
+      { "type": "url", "name": "my-tools", "url": "[https://my-mcp-server.example.com/sse"](https://m)y-mcp-server.example.com/sse")]([https://my-mcp-server.example.com/sse"))](https://m)y-mcp-server.example.com/sse")))]([https://my-mcp-server.example.com/sse"))))](https://m)y-mcp-server.example.com/sse")))))]([https://my-mcp-server.example.com/sse"))))))](https://m)y-mcp-server.example.com/sse")))))))](https://my-mcp-server.example.com/sse") }
     ],
     "tools": [
       { "type": "agent_toolset_20260401" },
@@ -303,7 +303,7 @@ curl -X POST [https://api.anthropic.com/v1/agents]([https://api.anthropic.com/v1
   }'
 
 ## 2. Session attaches vault containing credentials for that MCP server URL
-curl -X POST [https://api.anthropic.com/v1/sessions]([https://api.anthropic.com/v1/sessions)]([https://api.anthropic.com/v1/sessions))]([https://api.anthropic.com/v1/sessions)))]([https://api.anthropic.com/v1/sessions))))]([https://api.anthropic.com/v1/sessions)))))]([https://api.anthropic.com/v1/sessions))))))]([https://api.anthropic.com/v1/sessions)))))))](https://api.anthropic.com/v1/sessions)))))))) \
+curl -X POST [https://api.anthropic.com/v1/sessions](https://a)pi.anthropic.com/v1/sessions)]([https://api.anthropic.com/v1/sessions))](https://a)pi.anthropic.com/v1/sessions)))]([https://api.anthropic.com/v1/sessions))))](https://a)pi.anthropic.com/v1/sessions)))))]([https://api.anthropic.com/v1/sessions))))))](https://a)pi.anthropic.com/v1/sessions)))))))](https://api.anthropic.com/v1/sessions) \
   "${HEADERS[@]}" \
   -d '{
     "agent": "agent_abc123",
@@ -319,7 +319,7 @@ See `shared/managed-agents-tools.md` §Vaults for creating vaults and adding cre
 ## Tool Configuration
 
 ```bash
-curl -X POST [https://api.anthropic.com/v1/agents]([https://api.anthropic.com/v1/agents)]([https://api.anthropic.com/v1/agents))]([https://api.anthropic.com/v1/agents)))]([https://api.anthropic.com/v1/agents))))]([https://api.anthropic.com/v1/agents)))))]([https://api.anthropic.com/v1/agents))))))]([https://api.anthropic.com/v1/agents)))))))](https://api.anthropic.com/v1/agents)))))))) \
+curl -X POST [https://api.anthropic.com/v1/agents](https://a)pi.anthropic.com/v1/agents)]([https://api.anthropic.com/v1/agents))](https://a)pi.anthropic.com/v1/agents)))]([https://api.anthropic.com/v1/agents))))](https://a)pi.anthropic.com/v1/agents)))))]([https://api.anthropic.com/v1/agents))))))](https://a)pi.anthropic.com/v1/agents)))))))](https://api.anthropic.com/v1/agents) \
   "${HEADERS[@]}" \
   -d '{
     "name": "Restricted Agent",

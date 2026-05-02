@@ -329,7 +329,7 @@ import com.anthropic.models.messages.ContentBlockParam;
 import com.anthropic.models.messages.TextBlockParam;
 
 DocumentBlockParam doc = DocumentBlockParam.builder()
-    .base64Source(base64String)  // or .urlSource("[https://...")]([https://..."))]([https://...")))]([https://..."))))]([https://...")))))]([https://..."))))))]([https://...")))))))]([https://..."))))))))](https://..."))))))))) or .textSource("...")
+    .base64Source(base64String)  // or .urlSource("[https://...")](https://.).."))]([https://...")))](https://.).."))))]([https://...")))))](https://.).."))))))]([https://...")))))))](https://.).."))))))))](https://...") or .textSource("...")
     .title("My Document")        // optional
     .build();
 
@@ -379,7 +379,7 @@ MessageCreateParams params = MessageCreateParams.builder()
     .addTool(BetaCodeExecutionTool20260120.builder().build())
     .addMcpServer(BetaRequestMcpServerUrlDefinition.builder()
         .name("my-server")
-        .url("[https://example.com/mcp")]([https://example.com/mcp"))]([https://example.com/mcp")))]([https://example.com/mcp"))))]([https://example.com/mcp")))))]([https://example.com/mcp"))))))]([https://example.com/mcp")))))))]([https://example.com/mcp"))))))))](https://example.com/mcp")))))))))
+        .url("[https://example.com/mcp")](https://e)xample.com/mcp"))]([https://example.com/mcp")))](https://e)xample.com/mcp"))))]([https://example.com/mcp")))))](https://e)xample.com/mcp"))))))]([https://example.com/mcp")))))))](https://e)xample.com/mcp"))))))))](https://example.com/mcp")
         .build())
     .addUserMessage("...")
     .build();

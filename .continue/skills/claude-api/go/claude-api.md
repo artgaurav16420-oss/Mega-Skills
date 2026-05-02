@@ -260,7 +260,7 @@ func main() {
 #### Key API surface
 
 | Symbol | Purpose |
-|:::::::::::::---|:::::::::::::---|
+|:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::---|:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::---|
 | `resp.ToParam()` | Convert `Message` response → `MessageParam` for history |
 | `block.AsAny().(type)` | Type-switch on `ContentBlockUnion` variants |
 | `variant.JSON.Input.Raw()` | Raw JSON string of tool input (for `json.Unmarshal`) |
@@ -417,4 +417,4 @@ for _, block := range resp.Content {
 }
 ```
 
-Other edit types: `BetaClearToolUses20250919EditParam`, `BetaClearThinking20251015EditParam`.
+Other edit types: `BetaClearToolUs

@@ -601,7 +601,7 @@ import { z } from "zod";
 import axios, { AxiosError } from "axios";
 
 // Constants
-const API_BASE_URL = "[https://api.example.com/v1";]([https://api.example.com/v1";)]([https://api.example.com/v1";))]([https://api.example.com/v1";)))]([https://api.example.com/v1";))))]([https://api.example.com/v1";)))))]([https://api.example.com/v1";))))))]([https://api.example.com/v1";)))))))](https://api.example.com/v1";))))))))
+const API_BASE_URL = "[https://api.example.com/v1";](https://a)pi.example.com/v1";)]([https://api.example.com/v1";))](https://a)pi.example.com/v1";)))]([https://api.example.com/v1";))))](https://a)pi.example.com/v1";)))))]([https://api.example.com/v1";))))))](https://a)pi.example.com/v1";)))))))](https://api.example.com/v1";)
 const CHARACTER_LIMIT = 25000;
 
 // Enums

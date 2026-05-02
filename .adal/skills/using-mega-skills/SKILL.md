@@ -84,7 +84,7 @@ digraph skill_flow {
 These thoughts mean STOP—you're rationalizing:
 
 |Thought|Reality|
-|::::::::::::::::::::::::::::::::---|::::::::::::::::::::::::::::::::---|
+|::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::---|::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::---|
 |"This is just a simple question"|Questions are tasks. Check for skills.|
 |"I need more context first"|Skill check comes BEFORE clarifying questions.|
 |"Let me explore the codebase first"|Skills tell you HOW to explore. Check first.|
@@ -117,6 +117,4 @@ When multiple skills could apply, use this order:
 
 The skill itself tells you which.
 
-## User Instructions
-
-Instructions say WHAT, not HOW. "Add X" or "Fix Y" doesn't mean skip workflows.
+## User Inst

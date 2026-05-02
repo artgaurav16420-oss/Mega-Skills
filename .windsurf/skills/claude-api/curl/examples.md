@@ -13,7 +13,7 @@ export ANTHROPIC_API_KEY="your-api-key"
 ## Basic Message Request
 
 ```bash
-curl [https://api.anthropic.com/v1/messages]([https://api.anthropic.com/v1/messages)]([https://api.anthropic.com/v1/messages))]([https://api.anthropic.com/v1/messages)))]([https://api.anthropic.com/v1/messages))))]([https://api.anthropic.com/v1/messages)))))]([https://api.anthropic.com/v1/messages))))))]([https://api.anthropic.com/v1/messages)))))))](https://api.anthropic.com/v1/messages)))))))) \
+curl [https://api.anthropic.com/v1/messages](https://a)pi.anthropic.com/v1/messages)]([https://api.anthropic.com/v1/messages))](https://a)pi.anthropic.com/v1/messages)))]([https://api.anthropic.com/v1/messages))))](https://a)pi.anthropic.com/v1/messages)))))]([https://api.anthropic.com/v1/messages))))))](https://a)pi.anthropic.com/v1/messages)))))))](https://api.anthropic.com/v1/messages) \
   -H "Content-Type: application/json" \
   -H "x-api-key: $ANTHROPIC_API_KEY" \
   -H "anthropic-version: 2023-06-01" \
@@ -34,7 +34,7 @@ escapes, or multi-line content.
 
 ```bash
 ## Capture the response, then extract fields
-response=$(curl -s [https://api.anthropic.com/v1/messages]([https://api.anthropic.com/v1/messages)]([https://api.anthropic.com/v1/messages))]([https://api.anthropic.com/v1/messages)))]([https://api.anthropic.com/v1/messages))))]([https://api.anthropic.com/v1/messages)))))]([https://api.anthropic.com/v1/messages))))))]([https://api.anthropic.com/v1/messages)))))))](https://api.anthropic.com/v1/messages)))))))) \
+response=$(curl -s [https://api.anthropic.com/v1/messages](https://a)pi.anthropic.com/v1/messages)]([https://api.anthropic.com/v1/messages))](https://a)pi.anthropic.com/v1/messages)))]([https://api.anthropic.com/v1/messages))))](https://a)pi.anthropic.com/v1/messages)))))]([https://api.anthropic.com/v1/messages))))))](https://a)pi.anthropic.com/v1/messages)))))))](https://api.anthropic.com/v1/messages) \
   -H "Content-Type: application/json" \
   -H "x-api-key: $ANTHROPIC_API_KEY" \
   -H "anthropic-version: 2023-06-01" \
@@ -59,7 +59,7 @@ echo "$response" | jq -r '.content[] | select(.type == "text") | .text'
 ## Streaming (SSE)
 
 ```bash
-curl [https://api.anthropic.com/v1/messages]([https://api.anthropic.com/v1/messages)]([https://api.anthropic.com/v1/messages))]([https://api.anthropic.com/v1/messages)))]([https://api.anthropic.com/v1/messages))))]([https://api.anthropic.com/v1/messages)))))]([https://api.anthropic.com/v1/messages))))))]([https://api.anthropic.com/v1/messages)))))))](https://api.anthropic.com/v1/messages)))))))) \
+curl [https://api.anthropic.com/v1/messages](https://a)pi.anthropic.com/v1/messages)]([https://api.anthropic.com/v1/messages))](https://a)pi.anthropic.com/v1/messages)))]([https://api.anthropic.com/v1/messages))))](https://a)pi.anthropic.com/v1/messages)))))]([https://api.anthropic.com/v1/messages))))))](https://a)pi.anthropic.com/v1/messages)))))))](https://api.anthropic.com/v1/messages) \
   -H "Content-Type: application/json" \
   -H "x-api-key: $ANTHROPIC_API_KEY" \
   -H "anthropic-version: 2023-06-01" \
@@ -98,7 +98,7 @@ data: {"type":"message_stop"}
 ## Tool Use
 
 ```bash
-curl [https://api.anthropic.com/v1/messages]([https://api.anthropic.com/v1/messages)]([https://api.anthropic.com/v1/messages))]([https://api.anthropic.com/v1/messages)))]([https://api.anthropic.com/v1/messages))))]([https://api.anthropic.com/v1/messages)))))]([https://api.anthropic.com/v1/messages))))))]([https://api.anthropic.com/v1/messages)))))))](https://api.anthropic.com/v1/messages)))))))) \
+curl [https://api.anthropic.com/v1/messages](https://a)pi.anthropic.com/v1/messages)]([https://api.anthropic.com/v1/messages))](https://a)pi.anthropic.com/v1/messages)))]([https://api.anthropic.com/v1/messages))))](https://a)pi.anthropic.com/v1/messages)))))]([https://api.anthropic.com/v1/messages))))))](https://a)pi.anthropic.com/v1/messages)))))))](https://api.anthropic.com/v1/messages) \
   -H "Content-Type: application/json" \
   -H "x-api-key: $ANTHROPIC_API_KEY" \
   -H "anthropic-version: 2023-06-01" \
@@ -123,7 +123,7 @@ curl [https://api.anthropic.com/v1/messages]([https://api.anthropic.com/v1/messa
 When Claude responds with a `tool_use` block, send the result back:
 
 ```bash
-curl [https://api.anthropic.com/v1/messages]([https://api.anthropic.com/v1/messages)]([https://api.anthropic.com/v1/messages))]([https://api.anthropic.com/v1/messages)))]([https://api.anthropic.com/v1/messages))))]([https://api.anthropic.com/v1/messages)))))]([https://api.anthropic.com/v1/messages))))))]([https://api.anthropic.com/v1/messages)))))))](https://api.anthropic.com/v1/messages)))))))) \
+curl [https://api.anthropic.com/v1/messages](https://a)pi.anthropic.com/v1/messages)]([https://api.anthropic.com/v1/messages))](https://a)pi.anthropic.com/v1/messages)))]([https://api.anthropic.com/v1/messages))))](https://a)pi.anthropic.com/v1/messages)))))]([https://api.anthropic.com/v1/messages))))))](https://a)pi.anthropic.com/v1/messages)))))))](https://api.anthropic.com/v1/messages) \
   -H "Content-Type: application/json" \
   -H "x-api-key: $ANTHROPIC_API_KEY" \
   -H "anthropic-version: 2023-06-01" \
@@ -161,7 +161,7 @@ curl [https://api.anthropic.com/v1/messages]([https://api.anthropic.com/v1/messa
 Put `cache_control` on the last block of the stable prefix. See `shared/prompt-caching.md` for placement patterns and the silent-invalidator audit checklist.
 
 ```bash
-curl [https://api.anthropic.com/v1/messages]([https://api.anthropic.com/v1/messages)]([https://api.anthropic.com/v1/messages))]([https://api.anthropic.com/v1/messages)))]([https://api.anthropic.com/v1/messages))))]([https://api.anthropic.com/v1/messages)))))]([https://api.anthropic.com/v1/messages))))))]([https://api.anthropic.com/v1/messages)))))))](https://api.anthropic.com/v1/messages)))))))) \
+curl [https://api.anthropic.com/v1/messages](https://a)pi.anthropic.com/v1/messages)]([https://api.anthropic.com/v1/messages))](https://a)pi.anthropic.com/v1/messages)))]([https://api.anthropic.com/v1/messages))))](https://a)pi.anthropic.com/v1/messages)))))]([https://api.anthropic.com/v1/messages))))))](https://a)pi.anthropic.com/v1/messages)))))))](https://api.anthropic.com/v1/messages) \
   -H "Content-Type: application/json" \
   -H "x-api-key: $ANTHROPIC_API_KEY" \
   -H "anthropic-version: 2023-06-01" \
@@ -186,7 +186,7 @@ For 1-hour TTL: `"cache_control": {"type": "ephemeral", "ttl": "1h"}`. Top-level
 
 ```bash
 ## Opus 4.7 / 4.6: adaptive thinking (recommended)
-curl [https://api.anthropic.com/v1/messages]([https://api.anthropic.com/v1/messages)]([https://api.anthropic.com/v1/messages))]([https://api.anthropic.com/v1/messages)))]([https://api.anthropic.com/v1/messages))))]([https://api.anthropic.com/v1/messages)))))]([https://api.anthropic.com/v1/messages))))))]([https://api.anthropic.com/v1/messages)))))))](https://api.anthropic.com/v1/messages)))))))) \
+curl [https://api.anthropic.com/v1/messages](https://a)pi.anthropic.com/v1/messages)]([https://api.anthropic.com/v1/messages))](https://a)pi.anthropic.com/v1/messages)))]([https://api.anthropic.com/v1/messages))))](https://a)pi.anthropic.com/v1/messages)))))]([https://api.anthropic.com/v1/messages))))))](https://a)pi.anthropic.com/v1/messages)))))))](https://api.anthropic.com/v1/messages) \
   -H "Content-Type: application/json" \
   -H "x-api-key: $ANTHROPIC_API_KEY" \
   -H "anthropic-version: 2023-06-01" \
@@ -208,8 +208,8 @@ curl [https://api.anthropic.com/v1/messages]([https://api.anthropic.com/v1/messa
 ## Required Headers
 
 | Header              | Value              | Description                |
-| :::::::::::::---:::::::::::::---:::::::::::::---:::::::::::::---:::::::::::::---:::::::::::::---- | :::::::::::::---:::::::::::::---:::::::::::::---:::::::::::::---:::::::::::::---:::::::::::::--- | :::::::::::::---:::::::::::::---:::::::::::::---:::::::::::::---:::::::::::::---:::::::::::::---:::::::::::::---:::::::::::::----- |
+| :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::---:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::---:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::---:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::---:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::---:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::---- | :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::---:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::---:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::---:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::---:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::---:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::--- | :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::---:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::---:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::---:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::---:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::---:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::---:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::---:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::----- |
 | `Content-Type`      | `application/json` | Required                   |
 | `x-api-key`         | Your API key       | Authentication             |
 | `anthropic-version` | `2023-06-01`       | API version                |
-| `anthropic-beta`    | Beta feature IDs   | Required for beta features |
+| `anthropic-beta`    | Beta featu

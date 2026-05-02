@@ -18,7 +18,7 @@ Both follow the iterative loop pattern used by implementation reviews.
 ### What it checks for
 
 | Category | What to Look For |
-|:::::::::::::---:::::::::::::---:::::::::::::----|:::::::::::::---:::::::::::::---:::::::::::::---:::::::::::::---:::::::::::::---:::::::::::::---|
+|:::::::::::::::::---:::::::::::::::::---:::::::::::::::::----|:::::::::::::::::---:::::::::::::::::---:::::::::::::::::---:::::::::::::::::---:::::::::::::::::---:::::::::::::::::---|
 | Completeness | TODOs, placeholders, "TBD", incomplete sections |
 | Coverage | Missing error handling, edge cases, integration points |
 | Consistency | Internal contradictions, conflicting requirements |
@@ -52,7 +52,7 @@ Both follow the iterative loop pattern used by implementation reviews.
 ### What it checks for (2)
 
 | Category | What to Look For |
-|:::::::::::::---:::::::::::::---:::::::::::::----|:::::::::::::---:::::::::::::---:::::::::::::---:::::::::::::---:::::::::::::---:::::::::::::---|
+|:::::::::::::::::---:::::::::::::::::---:::::::::::::::::----|:::::::::::::::::---:::::::::::::::::---:::::::::::::::::---:::::::::::::::::---:::::::::::::::::---:::::::::::::::::---|
 | Completeness | TODOs, placeholders, incomplete tasks |
 | Spec Alignment | Plan covers spec requirements, no scope creep |
 | Task Decomposition | Tasks atomic, clear boundaries |

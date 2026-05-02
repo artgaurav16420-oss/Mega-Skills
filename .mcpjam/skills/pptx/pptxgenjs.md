@@ -121,7 +121,7 @@ slide.addShape(pres.shapes.RECTANGLE, {
 Shadow options:
 
 | Property | Type | Range | Notes |
-|:::::::::::::---:::::::::::::---:::::::::::::----|:::::::::::::---:::::::::::::---|:::::::::::::---:::::::::::::----|:::::::::::::---:::::::::::::----|
+|:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::---:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::---:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::----|:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::---:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::---|:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::---:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::----|:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::---:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::----|
 | `type` | string | `"outer"`, `"inner"` | |
 | `color` | string | 6-char hex (e.g. `"000000"`) | No `#` prefix, no 8-char hex — see Common Pitfalls |
 | `blur` | number | 0-100 pt | |
@@ -144,7 +144,7 @@ To cast a shadow upward (e.g. on a footer bar), use `angle: 270` with a positive
 slide.addImage({ path: "images/chart.png", x: 1, y: 1, w: 5, h: 3 });
 
 // From URL
-slide.addImage({ path: "[https://example.com/image.jpg",]([https://example.com/image.jpg",)]([https://example.com/image.jpg",))]([https://example.com/image.jpg",)))]([https://example.com/image.jpg",))))]([https://example.com/image.jpg",)))))]([https://example.com/image.jpg",))))))]([https://example.com/image.jpg",)))))))](https://example.com/image.jpg",)))))))) x: 1, y: 1, w: 5, h: 3 });
+slide.addImage({ path: "[https://example.com/image.jpg",](https://e)xample.com/image.jpg",)]([https://example.com/image.jpg",))](https://e)xample.com/image.jpg",)))]([https://example.com/image.jpg",))))](https://e)xample.com/image.jpg",)))))]([https://example.com/image.jpg",))))))](https://e)xample.com/image.jpg",)))))))](https://example.com/image.jpg",) x: 1, y: 1, w: 5, h: 3 });
 
 // From base64 (faster, no file I/O)
 slide.addImage({ data: "image/png;base64,iVBORw0KGgo...", x: 1, y: 1, w: 5, h: 3 });
@@ -162,7 +162,7 @@ slide.addImage({
   flipH: true,             // Horizontal flip
   flipV: false,            // Vertical flip
   altText: "Description",  // Accessibility
-  hyperlink: { url: "[https://example.com"]([https://example.com")]([https://example.com"))]([https://example.com")))]([https://example.com"))))]([https://example.com")))))]([https://example.com"))))))]([https://example.com")))))))](https://example.com")))))))) }
+  hyperlink: { url: "[https://example.com"](https://e)xample.com")]([https://example.com"))](https://e)xample.com")))]([https://example.com"))))](https://e)xample.com")))))]([https://example.com"))))))](https://e)xample.com")))))))](https://example.com") }
 });
 ```
 
@@ -257,7 +257,7 @@ slide.background = { color: "F1F1F1" };
 slide.background = { color: "FF3399", transparency: 50 };
 
 // Image from URL
-slide.background = { path: "[https://example.com/bg.jpg"]([https://example.com/bg.jpg")]([https://example.com/bg.jpg"))]([https://example.com/bg.jpg")))]([https://example.com/bg.jpg"))))]([https://example.com/bg.jpg")))))]([https://example.com/bg.jpg"))))))]([https://example.com/bg.jpg")))))))](https://example.com/bg.jpg")))))))) };
+slide.background = { path: "[https://example.com/bg.jpg"](https://e)xample.com/bg.jpg")]([https://example.com/bg.jpg"))](https://e)xample.com/bg.jpg")))]([https://example.com/bg.jpg"))))](https://e)xample.com/bg.jpg")))))]([https://example.com/bg.jpg"))))))](https://e)xample.com/bg.jpg")))))))](https://example.com/bg.jpg") };
 
 // Image from base64
 slide.background = { data: "image/png;base64,iVBORw0KGgo..." };
@@ -422,6 +422,4 @@ titleSlide.addText("My Title", { placeholder: "title" });
 
 1. **Shapes**: RECTANGLE, OVAL, LINE, ROUNDED_RECTANGLE
 1. **Charts**: BAR, LINE, PIE, DOUGHNUT, SCATTER, BUBBLE, RADAR
-1. **Layouts**: LAYOUT_16x9 (10"×5.625"), LAYOUT_16x10, LAYOUT_4x3, LAYOUT_WIDE
-1. **Alignment**: "left", "center", "right"
-1. **Chart data labels**: "outEnd", "inEnd", "center"
+1. **Layouts**: LAYOUT_16x

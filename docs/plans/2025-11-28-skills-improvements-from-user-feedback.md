@@ -222,7 +222,7 @@ Operation succeeds because *some* valid config exists, but it's not the config y
 ### Examples
 
 | Change | Insufficient | Required |
-|:::::::::::::---:::::::::::::-----|:::::::::::::---:::::::::::::---:::::::::::::---:::::::::::::----|:::::::::::::---:::::::::::::---:::::::::::::----|
+|:::::::::::::::::---:::::::::::::::::-----|:::::::::::::::::---:::::::::::::::::---:::::::::::::::::---:::::::::::::::::----|:::::::::::::::::---:::::::::::::::::---:::::::::::::::::----|
 | Switch LLM provider | Status 200 | Response contains expected model name |
 | Enable feature flag | No errors | Feature behavior actually active |
 | Change environment | Deploy succeeds | Logs/vars reference new environment |

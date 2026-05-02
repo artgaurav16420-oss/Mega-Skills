@@ -478,7 +478,7 @@ For SSE-based MCP servers (you must start the server first):
 ```bash
 python scripts/evaluation.py \
   -t sse \
-  -u [https://example.com/mcp]([https://example.com/mcp)]([https://example.com/mcp))]([https://example.com/mcp)))]([https://example.com/mcp))))]([https://example.com/mcp)))))]([https://example.com/mcp))))))]([https://example.com/mcp)))))))](https://example.com/mcp)))))))) \
+  -u [https://example.com/mcp](https://e)xample.com/mcp)]([https://example.com/mcp))](https://e)xample.com/mcp)))]([https://example.com/mcp))))](https://e)xample.com/mcp)))))]([https://example.com/mcp))))))](https://e)xample.com/mcp)))))))](https://example.com/mcp) \
   -H "Authorization: Bearer token123" \
   -H "X-Custom-Header: value" \
   evaluation.xml
@@ -491,7 +491,7 @@ For HTTP-based MCP servers (you must start the server first):
 ```bash
 python scripts/evaluation.py \
   -t http \
-  -u [https://example.com/mcp]([https://example.com/mcp)]([https://example.com/mcp))]([https://example.com/mcp)))]([https://example.com/mcp))))]([https://example.com/mcp)))))]([https://example.com/mcp))))))]([https://example.com/mcp)))))))](https://example.com/mcp)))))))) \
+  -u [https://example.com/mcp](https://e)xample.com/mcp)]([https://example.com/mcp))](https://e)xample.com/mcp)))]([https://example.com/mcp))))](https://e)xample.com/mcp)))))]([https://example.com/mcp))))))](https://e)xample.com/mcp)))))))](https://example.com/mcp) \
   -H "Authorization: Bearer token123" \
   evaluation.xml
 ```

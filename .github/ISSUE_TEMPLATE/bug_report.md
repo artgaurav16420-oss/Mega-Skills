@@ -17,7 +17,7 @@ add a comment or reaction to the existing one instead.
 ## Environment
 
 | Field | Value |
-|:::::::::::::---:::::::::::::----|:::::::::::::---:::::::::::::----|
+|:::::::::::::::::---:::::::::::::::::----|:::::::::::::::::---:::::::::::::::::----|
 | Mega-Skills version | |
 | Harness (Claude Code, Cursor, etc.) | |
 | Harness version | |

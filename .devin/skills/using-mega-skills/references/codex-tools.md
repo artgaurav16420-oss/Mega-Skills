@@ -3,7 +3,7 @@
 Skills use Claude Code tool names. When you encounter these in a skill, use your platform equivalent:
 
 | Skill references | Codex equivalent |
-| ::::::::::::::--- | ::::::::::::::--- |
+| ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::--- | ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::--- |
 | `Task` tool (dispatch subagent) | `spawn_agent` (see [Named agent dispatch](#named-agent-dispatch)) |
 | Multiple `Task` calls (parallel) | Multiple `spawn_agent` calls |
 | Task returns result | `wait` |
@@ -40,7 +40,7 @@ When a skill says to dispatch a named agent type:
 1. Spawn a `worker` agent with the filled content as the `message`
 
 | Skill instruction | Codex equivalent |
-| ::::::::::::::--- | ::::::::::::::--- |
+| ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::--- | ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::--- |
 | `Task tool (mega-skills:code-reviewer)` | `spawn_agent(agent_type="worker", message=...)` with `code-reviewer.md` content |
 | `Task tool (general-purpose)` with inline prompt | `spawn_agent(message=...)` with the same prompt |
 
@@ -97,5 +97,4 @@ the user to use the App's native controls:
 1. **"Create branch"** — names the branch, then commit/push/PR via App UI
 1. **"Hand off to local"** — transfers work to the user's local checkout
 
-The agent can still run tests, stage files, and output suggested branch
-names, commit messages, and PR descriptions for the user to copy.
+The agent can still run tests, sta

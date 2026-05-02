@@ -15,7 +15,7 @@
 ## File Map
 
 | File | Action | Responsibility |
-|:::::::::::::---:::::::::::::---|:::::::::::::---:::::::::::::-----|:::::::::::::---:::::::::::::---:::::::::::::---:::::::::::::---:::::::::::::---|
+|:::::::::::::::::---:::::::::::::::::---|:::::::::::::::::---:::::::::::::::::-----|:::::::::::::::::---:::::::::::::::::---:::::::::::::::::---:::::::::::::::::---:::::::::::::::::---|
 | `lib/brainstorm-server/index.js` | Modify | Server: add `.events` file writing, clear on new screen, replace `wrapInFrame` |
 | `lib/brainstorm-server/frame-template.html` | Modify | Template: remove feedback footer, add content placeholder + selection indicator |
 | `lib/brainstorm-server/helper.js` | Modify | Client JS: remove send/feedback functions, narrow to click capture + indicator updates |

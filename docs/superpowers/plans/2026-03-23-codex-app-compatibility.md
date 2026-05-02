@@ -15,7 +15,7 @@
 ## File Structure
 
 | File | Responsibility | Action |
-|:::::::::::::---|:::::::::::::---|:::::::::::::---|
+|:::::::::::::::::---|:::::::::::::::::---|:::::::::::::::::---|
 | `skills/using-git-worktrees/SKILL.md` | Worktree creation + isolation | Add Step 0 detection + sandbox fallback |
 | `skills/finishing-a-development-branch/SKILL.md` | Branch finishing workflow | Add Step 1.5 detection + cleanup guard |
 | `skills/subagent-driven-development/SKILL.md` | Plan execution with subagents | Update Integration description |

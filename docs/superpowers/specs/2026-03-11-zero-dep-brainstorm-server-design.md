@@ -92,7 +92,7 @@ Debounce per-filename with ~100ms timeout to prevent duplicate events (common on
 ## What Changes
 
 | Before | After |
-|:::::::::::::---|:::::::::::::---|
+|:::::::::::::::::---|:::::::::::::::::---|
 | `index.js` + `package.json` + `package-lock.json` + 714 `node_modules` files | `server.js` (single file) |
 | express, ws, chokidar dependencies | none |
 | No static file serving | `/files/*` serves from screen directory |

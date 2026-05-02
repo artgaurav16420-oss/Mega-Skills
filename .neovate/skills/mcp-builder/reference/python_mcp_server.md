@@ -386,7 +386,7 @@ from mcp.server.fastmcp import FastMCP
 mcp = FastMCP("example_mcp")
 
 ## Constants
-API_BASE_URL = "[https://api.example.com/v1"]([https://api.example.com/v1")]([https://api.example.com/v1"))]([https://api.example.com/v1")))]([https://api.example.com/v1"))))]([https://api.example.com/v1")))))]([https://api.example.com/v1"))))))]([https://api.example.com/v1")))))))](https://api.example.com/v1"))))))))
+API_BASE_URL = "[https://api.example.com/v1"](https://a)pi.example.com/v1")]([https://api.example.com/v1"))](https://a)pi.example.com/v1")))]([https://api.example.com/v1"))))](https://a)pi.example.com/v1")))))]([https://api.example.com/v1"))))))](https://a)pi.example.com/v1")))))))](https://api.example.com/v1")
 CHARACTER_LIMIT = 25000  # Maximum response size in characters
 
 ## Enums
