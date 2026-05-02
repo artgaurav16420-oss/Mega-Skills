@@ -78,7 +78,8 @@ copilot plugin install mega-superpowers@https://github.com/artgaurav16420-oss/Me
 
 The full library contains 59 composable skills, ordered by utility:
 
-### 🛠️ Core Methodology (The Superpowers)
+#### 🛠️ Core Methodology (The Superpowers)
+
 - **test-driven-development** - RED-GREEN-REFACTOR cycle: write tests first
 - **writing-plans** - Detailed implementation planning and task breakdown
 - **brainstorming** - Socratic design and spec refinement
@@ -90,6 +91,7 @@ The full library contains 59 composable skills, ordered by utility:
 - **receiving-code-review** & **requesting-code-review** - PR workflow
 
 ### 🏗️ Advanced Developer Tools
+
 - **mcp-builder** - Model Context Protocol server creation assistant
 - **claude-api** - Anthropic SDK and prompt optimization
 - **webapp-testing** - Playwright-based frontend testing
@@ -99,11 +101,13 @@ The full library contains 59 composable skills, ordered by utility:
 - **skill-creator** & **writing-skills** - Authoring new agent capabilities
 
 ### 📄 Document & Data Processing
+
 - **pdf**, **docx**, **pptx**, **xlsx** - Professional document manipulation
 - **invoice-organizer** - Automated receipt and invoice management
 - **file-organizer** - Intelligent asset and folder management
 
 ### 🔌 Integrations & Research
+
 - **connect** & **connect-apps** - Integration with 1000+ external services
 - **lead-research-assistant** - Sales and lead generation automation
 - **content-research-writer** - Research-backed content creation
@@ -112,6 +116,7 @@ The full library contains 59 composable skills, ordered by utility:
 - **domain-name-brainstormer** - Creative naming and availability
 
 ### 🎨 Creative & Content Tools
+
 - **frontend-design** - Production-grade web interfaces
 - **canvas-design** - Visual design and poster creation
 - **slack-gif-creator** - Custom animations for Slack
@@ -122,6 +127,7 @@ The full library contains 59 composable skills, ordered by utility:
 - **theme-factory** - Universal styling for artifacts
 
 ### ⚙️ Utilities
+
 - **cavecrew** - Subagent delegation and context compression
 - **caveman** suite - Ultra-compressed agent communication modes
 - **changelog-generator** - Automated release notes from git
