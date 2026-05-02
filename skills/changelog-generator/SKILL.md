@@ -63,6 +63,7 @@ guidelines from CHANGELOG_STYLE.md
 
 **Output**:
 ```markdown
+
 # Updates - Week of March 10, 2024
 
 ## ✨ New Features
@@ -83,6 +84,7 @@ guidelines from CHANGELOG_STYLE.md
 - Fixed issue where large images wouldn't upload
 - Resolved timezone confusion in scheduled posts
 - Corrected notification badge count
+
 ```
 
 **Inspired by:** Manik Aggarwal's use case from Lenny's Newsletter
@@ -101,4 +103,5 @@ guidelines from CHANGELOG_STYLE.md
 - Writing app store update descriptions
 - Generating email updates for users
 - Creating social media announcement posts
+
 

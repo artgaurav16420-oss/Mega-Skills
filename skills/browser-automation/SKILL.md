@@ -48,3 +48,5 @@ If an interaction fails:
 - The end-to-end user flow is verified.
 - Visual bugs are caught and documented.
 - Complex data is extracted accurately from the UI.
+
+

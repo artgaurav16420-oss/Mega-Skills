@@ -15,16 +15,19 @@ First, undertake this task:
 ## DESIGN PHILOSOPHY CREATION
 
 To begin, create a VISUAL PHILOSOPHY (not layouts or templates) that will be interpreted through:
+
 - Form, space, color, composition
 - Images, graphics, shapes, patterns
 - Minimal text as visual accent
 
 ### THE CRITICAL UNDERSTANDING
+
 - What is received: Some subtle input or instructions by the user that should be taken into account, but used as a foundation; it should not constrain creative freedom.
 - What is created: A design philosophy/aesthetic movement.
 - What happens next: Then, the same version receives the philosophy and EXPRESSES IT VISUALLY - creating artifacts that are 90% visual design, 10% essential text.
 
 Consider this approach:
+
 - Write a manifesto for an art movement
 - The next phase involves making the artwork
 
@@ -37,6 +40,7 @@ The philosophy must emphasize: Visual expression. Spatial communication. Artisti
 **Articulate the philosophy** (4-6 paragraphs - concise but complete):
 
 To capture the VISUAL essence, express how the philosophy manifests through:
+
 - Space and form
 - Color and material
 - Scale and rhythm
@@ -75,6 +79,7 @@ Visual expression: Grid-based precision, bold photography or stark graphics, dra
 *These are condensed examples. The actual design philosophy should be 4-6 substantial paragraphs.*
 
 ### ESSENTIAL PRINCIPLES
+
 - **VISUAL PHILOSOPHY**: Create an aesthetic worldview to be expressed through design
 - **MINIMAL TEXT**: Always emphasize that text is sparse, essential-only, integrated as visual element - never lengthy
 - **SPATIAL EXPRESSION**: Ideas communicate through space, form, color, composition - not paragraphs
@@ -128,3 +133,5 @@ Take a second pass. Go back to the code and refine/polish further to make this a
 ## MULTI-PAGE OPTION
 
 To create additional pages when requested, create more creative pages along the same lines as the design philosophy but distinctly different as well. Bundle those pages in the same .pdf or many .pngs. Treat the first page as just a single page in a whole coffee table book waiting to be filled. Make the next pages unique twists and memories of the original. Have them almost tell a story in a very tasteful way. Exercise full creative freedom.
+
+

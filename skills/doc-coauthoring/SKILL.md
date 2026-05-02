@@ -54,6 +54,7 @@ Inform them they can answer in shorthand or dump information however works best 
 ### Info Dumping
 
 Once initial questions are answered, encourage the user to dump all the context they have. Request information such as:
+
 - Background on the project/problem
 - Related team discussions or shared documents
 - Why alternative solutions aren't being used
@@ -63,6 +64,7 @@ Once initial questions are answered, encourage the user to dump all the context 
 - Stakeholder concerns
 
 Advise them not to worry about organizing it - just get it all out. Offer multiple ways to provide context:
+
 - Info dump stream-of-consciousness
 - Point to team channels or threads to read
 - Link to shared documents
@@ -162,6 +164,7 @@ Inform them they can answer in shorthand or just indicate what's important to co
 ### Step 2: Brainstorming
 
 For the [SECTION NAME] section, brainstorm [5-20] things that might be included, depending on the section's complexity. Look for:
+
 - Context shared that might have been forgotten
 - Angles or considerations not yet mentioned
 
@@ -172,6 +175,7 @@ Generate 5-20 numbered options based on section complexity. At the end, offer to
 Ask which points should be kept, removed, or combined. Request brief justifications to help learn priorities for the next sections.
 
 Provide examples:
+
 - "Keep 1,4,7,9"
 - "Remove 3 (duplicates 1)"
 - "Remove 6 (audience already knows this)"
@@ -205,6 +209,7 @@ Provide a note: Instead of editing the doc directly, ask them to indicate what t
 ### Step 6: Iterative Refinement
 
 As user provides feedback:
+
 - Use `str_replace` to make edits (never reprint the whole doc)
 - **If using artifacts:** Provide link to artifact after each edit
 - **If using files:** Just confirm edits are complete
@@ -223,6 +228,7 @@ When section is done, confirm [SECTION NAME] is complete. Ask if ready to move t
 ### Near Completion
 
 As approaching completion (80%+ of sections done), announce intention to re-read the entire document and check for:
+
 - Flow and consistency across sections
 - Redundancy or contradictions
 - Anything that feels like "slop" or generic filler
@@ -305,6 +311,7 @@ Provide testing instructions:
 3. Ask Reader Claude the generated questions
 
 For each question, instruct Reader Claude to provide:
+
 - The answer
 - Whether anything was ambiguous or unclear
 - What knowledge/context the doc assumes is already known
@@ -314,6 +321,7 @@ Check if Reader Claude gives correct answers or misinterprets anything.
 ### Step 3: Additional Checks
 
 Also ask Reader Claude:
+
 - "What in this doc might be ambiguous or unclear to readers?"
 - "What knowledge or context does this doc assume readers already have?"
 - "Are there any internal contradictions or inconsistencies?"
@@ -343,6 +351,7 @@ Ask if they want one more review, or if the work is done.
 
 **If user wants final review, provide it. Otherwise:**
 Announce document completion. Provide a few final tips:
+
 - Consider linking this conversation in an appendix so readers can see how the doc was developed
 - Use appendices to provide depth without bloating the main doc
 - Update the doc as feedback is received from real readers
@@ -373,3 +382,5 @@ Announce document completion. Provide a few final tips:
 - Don't rush through stages
 - Each iteration should make meaningful improvements
 - The goal is a document that actually works for readers
+
+

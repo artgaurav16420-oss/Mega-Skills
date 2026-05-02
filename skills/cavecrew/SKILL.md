@@ -38,7 +38,9 @@ What main thread can rely on per agent:
 **`cavecrew-investigator`**
 ```
 <Header>:
+
 - path:line — `symbol` — short note
+
 totals: <counts>.
 ```
 Or `No match.` Always file-path-first, line-number-attached, backticked symbols. Safe to grep with `path:\d+`.
@@ -80,3 +82,5 @@ Skip investigator. Hand exact path:line to `cavecrew-builder` directly.
 ## Auto-clarity (inherited)
 
 Subagents drop caveman → normal English for security warnings, irreversible-action confirmations, and any output where fragment ambiguity could be misread. Resume caveman after.
+
+

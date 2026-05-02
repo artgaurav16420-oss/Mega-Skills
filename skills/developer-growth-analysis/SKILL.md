@@ -10,6 +10,7 @@ This skill provides personalized feedback on your recent coding work by analyzin
 ## When to Use This Skill
 
 Use this skill when you want to:
+
 - Understand your development patterns and habits from recent work
 - Identify specific technical gaps or recurring challenges
 - Discover which topics would benefit from deeper study
@@ -50,6 +51,7 @@ Analyze my work from today and suggest areas for improvement
 ```
 
 The skill will generate a formatted report with:
+
 - Overview of your recent work
 - Key improvement areas identified
 - Specific recommendations for each area
@@ -214,6 +216,7 @@ Analyze my developer growth from my recent chats
 ### Output
 
 ```markdown
+
 # Your Developer Growth Report
 
 **Report Period**: November 9-10, 2024
@@ -314,9 +317,12 @@ Priority order:
 ## How Accuracy and Quality Are Maintained
 
 This skill:
+
 - Analyzes your actual work patterns from timestamped chat history
 - Generates evidence-based recommendations grounded in real projects
 - Curates learning resources that directly address your identified gaps
 - Focuses on actionable improvements, not vague feedback
 - Provides specific time estimates based on complexity
 - Prioritizes areas that will have the most impact on your development velocity
+
+

@@ -285,9 +285,11 @@ When a user requests file organization help:
 
 **Output**:
 ```markdown
+
 # Found 23 Sets of Duplicates (156 MB total)
 
 ## Duplicate Set 1: "proposal.pdf"
+
 - `/Documents/proposal.pdf` (2.3 MB, modified: 2024-03-15)
 - `/Documents/old/proposal.pdf` (2.3 MB, modified: 2024-03-15)
 - `/Desktop/proposal.pdf` (2.3 MB, modified: 2024-03-10)
@@ -304,9 +306,11 @@ Delete the other 2 copies?
 
 **Output**:
 ```markdown
+
 # Analysis of ~/Projects
 
 ## Current Structure Issues
+
 - Mix of active and archived projects (3+ years old)
 - No consistent naming convention
 - Some projects at root, others in random subfolders
@@ -328,6 +332,7 @@ Projects/
 ```
 
 ## Specific Changes
+
 1. Move 12 projects not touched since 2022 → Archive/
 2. Consolidate 4 duplicate project folders
 3. Rename projects to consistent format: "client-name-project-name"
@@ -358,6 +363,7 @@ Then moves photos based on EXIF data or file modification dates.
 ## Common Organization Tasks
 
 ### Downloads Cleanup
+
 ```
 Organize my Downloads folder - move documents to Documents, 
 images to Pictures, keep installers separate, and archive files 
@@ -365,30 +371,35 @@ older than 3 months.
 ```
 
 ### Project Organization
+
 ```
 Review my Projects folder structure and help me separate active 
 projects from old ones I should archive.
 ```
 
 ### Duplicate Removal
+
 ```
 Find all duplicate files in my Documents folder and help me 
 decide which ones to keep.
 ```
 
 ### Desktop Cleanup
+
 ```
 My Desktop is covered in files. Help me organize everything into 
 my Documents folder properly.
 ```
 
 ### Photo Organization
+
 ```
 Organize all photos in this folder by date (year/month) based 
 on when they were taken.
 ```
 
 ### Work/Personal Separation
+
 ```
 Help me separate my work files from personal files across my 
 Documents folder.
@@ -406,18 +417,21 @@ Documents folder.
 ## Best Practices
 
 ### Folder Naming
+
 - Use clear, descriptive names
 - Avoid spaces (use hyphens or underscores)
 - Be specific: "client-proposals" not "docs"
 - Use prefixes for ordering: "01-current", "02-archive"
 
 ### File Naming
+
 - Include dates: "2024-10-17-meeting-notes.md"
 - Be descriptive: "q3-financial-report.xlsx"
 - Avoid version numbers in names (use version control instead)
 - Remove download artifacts: "document-final-v2 (1).pdf" → "document.pdf"
 
 ### When to Archive
+
 - Projects not touched in 6+ months
 - Completed work that might be referenced later
 - Old versions after migration to new systems
@@ -430,4 +444,5 @@ Documents folder.
 - Cleaning up before storage cleanup
 - Organizing shared team folders
 - Structuring new project directories
+
 

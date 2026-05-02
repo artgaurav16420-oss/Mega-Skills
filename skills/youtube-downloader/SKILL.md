@@ -84,6 +84,7 @@ python scripts/download_video.py "https://www.youtube.com/watch?v=dQw4w9WgXcQ" -
 ## How It Works
 
 The skill uses `yt-dlp`, a robust YouTube downloader that:
+
 - Automatically installs itself if not present
 - Fetches video information before downloading
 - Selects the best available streams matching your criteria
@@ -97,3 +98,5 @@ The skill uses `yt-dlp`, a robust YouTube downloader that:
 - The script handles installation of yt-dlp automatically
 - Only single videos are downloaded (playlists are skipped by default)
 - Higher quality videos may take longer to download and use more disk space
+
+

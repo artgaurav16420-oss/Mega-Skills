@@ -55,6 +55,7 @@ For more targeted research:
 ```
 My product: [description]
 Ideal customer profile:
+
 - Industry: [industry]
 - Company size: [size range]
 - Location: [location]
@@ -197,3 +198,5 @@ When a user requests lead research:
 - Researching specific companies in detail
 - Analyzing competitor customer bases
 - Identifying partnership opportunities
+
+

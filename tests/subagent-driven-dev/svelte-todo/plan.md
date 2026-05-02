@@ -1,6 +1,6 @@
 # Svelte Todo List - Implementation Plan
 
-Execute this plan using the `superpowers:subagent-driven-development` skill.
+Execute this plan using the `mega-skills:subagent-driven-development` skill.
 
 ## Context
 
@@ -220,3 +220,4 @@ Document the project.
 **Verify:**
 - README accurately describes the project
 - Instructions work
+

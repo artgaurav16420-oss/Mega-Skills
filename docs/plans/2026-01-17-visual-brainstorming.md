@@ -1,6 +1,6 @@
 # Visual Brainstorming Companion Implementation Plan
 
-> **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:executing-plans to implement this plan task-by-task.
+> **For agentic workers:** REQUIRED SUB-SKILL: Use mega-skills:executing-plans to implement this plan task-by-task.
 
 **Goal:** Give Claude a browser-based visual companion for brainstorming sessions - show mockups, prototypes, and interactive choices alongside terminal conversation.
 
@@ -569,3 +569,4 @@ After completing all tasks:
 2. Tell user to open `http://localhost:3333`
 3. Write HTML to `/tmp/brainstorm/screen.html`
 4. Check task output for user events
+

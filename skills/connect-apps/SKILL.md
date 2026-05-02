@@ -22,6 +22,7 @@ Connect Claude to 1000+ apps. Actually send emails, create issues, post messages
 ```
 
 This will:
+
 - Ask for your free API key (get one at [platform.composio.dev](https://platform.composio.dev/?utm_source=Github&utm_content=AwesomeSkills))
 - Configure Claude's connection to 1000+ apps
 - Take about 60 seconds
@@ -78,3 +79,5 @@ If it works, you're connected!
     <img src="https://img.shields.io/badge/Get_Started_Free-4F46E5?style=for-the-badge" alt="Get Started"/>
   </a>
 </p>
+
+

@@ -20,7 +20,9 @@ Guide completion of development work by presenting clear options and handling ch
 **Before presenting options, verify tests pass:**
 
 ```bash
+
 # Run project's test suite
+
 npm test / cargo test / pytest / go test ./...
 ```
 
@@ -40,7 +42,9 @@ Stop. Don't proceed to Step 2.
 ### Step 2: Determine Base Branch
 
 ```bash
+
 # Try common base branches
+
 git merge-base HEAD main 2>/dev/null || git merge-base HEAD master 2>/dev/null
 ```
 
@@ -68,19 +72,25 @@ Which option?
 #### Option 1: Merge Locally
 
 ```bash
+
 # Switch to base branch
+
 git checkout <base-branch>
 
 # Pull latest
+
 git pull
 
 # Merge feature branch
+
 git merge <feature-branch>
 
 # Verify tests on merged result
+
 <test command>
 
 # If tests pass
+
 git branch -d <feature-branch>
 ```
 
@@ -89,16 +99,23 @@ Then: Cleanup worktree (Step 5)
 #### Option 2: Push and Create PR
 
 ```bash
+
 # Push branch
+
 git push -u origin <feature-branch>
 
 # Create PR
+
 gh pr create --title "<title>" --body "$(cat <<'EOF'
+
 ## Summary
+
 <2-3 bullets of what changed>
 
 ## Test Plan
+
 - [ ] <verification steps>
+
 EOF
 )"
 ```
@@ -116,6 +133,7 @@ Report: "Keeping branch <name>. Worktree preserved at <path>."
 **Confirm first:**
 ```
 This will permanently delete:
+
 - Branch <name>
 - All commits: <commit-list>
 - Worktree at <path>
@@ -198,3 +216,5 @@ git worktree remove <worktree-path>
 
 **Pairs with:**
 - **using-git-worktrees** - Cleans up worktree created by that skill
+
+

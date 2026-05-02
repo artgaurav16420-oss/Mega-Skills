@@ -507,7 +507,7 @@ Directly addresses the failure pattern from feedback.
 BEFORE writing any tests:
 
 1. Read testing-anti-patterns skill:
-   Use Skill tool: superpowers:testing-anti-patterns
+   Use Skill tool: mega-skills:testing-anti-patterns
 
 2. Apply gate functions from that skill when:
    - Writing mocks
@@ -709,3 +709,4 @@ How do we know these improvements work?
 - Implementer-fix workflow change needs careful evaluation
 
 These changes address real problems documented by users while minimizing risk of making skills worse.
+

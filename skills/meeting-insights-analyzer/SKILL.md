@@ -213,6 +213,7 @@ When a user requests meeting analysis:
 
 **Output**: 
 ```markdown
+
 # Conflict Avoidance Patterns
 
 Found 23 instances across 15 meetings where you used indirect 
@@ -324,4 +325,5 @@ today."
 - Coaching direct reports on their communication
 - Analyzing customer calls for sales or support patterns
 - Studying negotiation tactics and outcomes
+
 

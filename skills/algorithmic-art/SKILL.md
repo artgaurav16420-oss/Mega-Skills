@@ -15,17 +15,20 @@ First, undertake this task:
 ## ALGORITHMIC PHILOSOPHY CREATION
 
 To begin, create an ALGORITHMIC PHILOSOPHY (not static images or templates) that will be interpreted through:
+
 - Computational processes, emergent behavior, mathematical beauty
 - Seeded randomness, noise fields, organic systems
 - Particles, flows, fields, forces
 - Parametric variation and controlled chaos
 
 ### THE CRITICAL UNDERSTANDING
+
 - What is received: Some subtle input or instructions by the user to take into account, but use as a foundation; it should not constrain creative freedom.
 - What is created: An algorithmic philosophy/generative aesthetic movement.
 - What happens next: The same version receives the philosophy and EXPRESSES IT IN CODE - creating p5.js sketches that are 90% algorithmic generation, 10% essential parameters.
 
 Consider this approach:
+
 - Write a manifesto for a generative art movement
 - The next phase involves writing the algorithm that brings it to life
 
@@ -38,6 +41,7 @@ The philosophy must emphasize: Algorithmic expression. Emergent behavior. Comput
 **Articulate the philosophy** (4-6 paragraphs - concise but complete):
 
 To capture the ALGORITHMIC essence, express how this philosophy manifests through:
+
 - Computational processes and mathematical relationships?
 - Noise functions and randomness patterns?
 - Particle behaviors and field dynamics?
@@ -76,6 +80,7 @@ Algorithmic expression: Randomized circle packing or Voronoi tessellation. Start
 *These are condensed examples. The actual algorithmic philosophy should be 4-6 substantial paragraphs.*
 
 ### ESSENTIAL PRINCIPLES
+
 - **ALGORITHMIC PHILOSOPHY**: Creating a computational worldview to be expressed through code
 - **PROCESS OVER PRODUCT**: Always emphasize that beauty emerges from the algorithm's execution - each run is unique
 - **PARAMETRIC EXPRESSION**: Ideas communicate through mathematical relationships, forces, behaviors - not static composition
@@ -167,16 +172,19 @@ let params = {
 To express the philosophy through code, avoid thinking "which pattern should I use?" and instead think "how to express this philosophy through code?"
 
 If the philosophy is about **organic emergence**, consider using:
+
 - Elements that accumulate or grow over time
 - Random processes constrained by natural rules
 - Feedback loops and interactions
 
 If the philosophy is about **mathematical beauty**, consider using:
+
 - Geometric relationships and ratios
 - Trigonometric functions and harmonics
 - Precise calculations creating unexpected patterns
 
 If the philosophy is about **controlled chaos**, consider using:
+
 - Random variation within strict boundaries
 - Bifurcation and phase transitions
 - Order emerging from disorder
@@ -403,3 +411,5 @@ This skill includes helpful templates and documentation:
 - The **algorithm is where to create** something unique
 - Don't copy the flow field example - build what the philosophy demands
 - But DO keep the exact UI structure and Anthropic branding from the template
+
+

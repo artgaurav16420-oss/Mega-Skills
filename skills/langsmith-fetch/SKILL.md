@@ -10,6 +10,7 @@ Debug LangChain and LangGraph agents by fetching execution traces directly from 
 ## When to Use This Skill
 
 Automatically activate when user mentions:
+
 - 🐛 "Debug my agent" or "What went wrong?"
 - 🔍 "Show me recent traces" or "What happened?"
 - ❌ "Check for errors" or "Why did it fail?"
@@ -20,11 +21,13 @@ Automatically activate when user mentions:
 ## Prerequisites
 
 ### 1. Install langsmith-fetch
+
 ```bash
 pip install langsmith-fetch
 ```
 
 ### 2. Set Environment Variables
+
 ```bash
 export LANGSMITH_API_KEY="your_langsmith_api_key"
 export LANGSMITH_PROJECT="your_project_name"
@@ -59,18 +62,21 @@ langsmith-fetch traces --last-n-minutes 5 --limit 5 --format pretty
 Found 3 traces in the last 5 minutes:
 
 Trace 1: ✅ Success
+
 - Agent: memento
 - Tools: recall_memories, create_entities
 - Duration: 2.3s
 - Tokens: 1,245
 
 Trace 2: ❌ Error
+
 - Agent: cypher
 - Error: "Neo4j connection timeout"
 - Duration: 15.1s
 - Failed at: search_nodes tool
 
 Trace 3: ✅ Success
+
 - Agent: memento
 - Tools: store_memory
 - Duration: 1.8s
@@ -135,14 +141,18 @@ Execution Time: 8.7 seconds
 
 **Execute:**
 ```bash
+
 # Create session folder with timestamp
+
 SESSION_DIR="langsmith-debug/session-$(date +%Y%m%d-%H%M%S)"
 mkdir -p "$SESSION_DIR"
 
 # Export traces
+
 langsmith-fetch traces "$SESSION_DIR/traces" --last-n-minutes 30 --limit 50 --include-metadata
 
 # Export threads (conversations)
+
 langsmith-fetch threads "$SESSION_DIR/threads" --limit 20
 ```
 
@@ -151,6 +161,7 @@ langsmith-fetch threads "$SESSION_DIR/threads" --limit 20
 ✅ Session exported successfully!
 
 Location: langsmith-debug/session-20251224-143022/
+
 - Traces: 42 files
 - Threads: 8 files
 
@@ -171,10 +182,13 @@ Session size: 2.3 MB
 
 **Execute:**
 ```bash
+
 # Fetch recent traces
+
 langsmith-fetch traces --last-n-minutes 30 --limit 50 --format json > recent-traces.json
 
 # Search for errors
+
 grep -i "error\|failed\|exception" recent-traces.json
 ```
 
@@ -299,18 +313,21 @@ Error Breakdown:
 ## Output Format Guide
 
 ### Pretty Format (Default)
+
 ```bash
 langsmith-fetch traces --limit 5 --format pretty
 ```
 **Use for:** Quick visual inspection, showing to users
 
 ### JSON Format
+
 ```bash
 langsmith-fetch traces --limit 5 --format json
 ```
 **Use for:** Detailed analysis, syntax-highlighted review
 
 ### Raw Format
+
 ```bash
 langsmith-fetch traces --limit 5 --format raw
 ```
@@ -321,25 +338,36 @@ langsmith-fetch traces --limit 5 --format raw
 ## Advanced Features
 
 ### Time-Based Filtering
+
 ```bash
+
 # After specific timestamp
+
 langsmith-fetch traces --after "2025-12-24T13:00:00Z" --limit 20
 
 # Last N minutes (most common)
+
 langsmith-fetch traces --last-n-minutes 60 --limit 100
 ```
 
 ### Include Metadata
+
 ```bash
+
 # Get extra context
+
 langsmith-fetch traces --limit 10 --include-metadata
 
 # Metadata includes: agent type, model, tags, environment
+
 ```
 
 ### Concurrent Fetching (Faster)
+
 ```bash
+
 # Speed up large exports
+
 langsmith-fetch traces ./output --limit 100 --concurrent 10
 ```
 
@@ -357,31 +385,41 @@ langsmith-fetch traces ./output --limit 100 --concurrent 10
 
 **Solutions:**
 ```bash
+
 # 1. Try longer timeframe
+
 langsmith-fetch traces --last-n-minutes 1440 --limit 50
 
 # 2. Check environment
+
 echo $LANGSMITH_API_KEY
 echo $LANGSMITH_PROJECT
 
 # 3. Try fetching threads instead
+
 langsmith-fetch threads --limit 10
 
 # 4. Verify tracing is enabled in your code
+
 # Check for: LANGCHAIN_TRACING_V2=true
+
 ```
 
 ### "Project not found"
 
 **Solution:**
 ```bash
+
 # View current config
+
 langsmith-fetch config show
 
 # Set correct project
+
 export LANGSMITH_PROJECT="correct-project-name"
 
 # Or configure permanently
+
 langsmith-fetch config set project "your-project-name"
 ```
 
@@ -389,11 +427,14 @@ langsmith-fetch config set project "your-project-name"
 
 **Solution:**
 ```bash
+
 # Add to shell config file (~/.bashrc or ~/.zshrc)
+
 echo 'export LANGSMITH_API_KEY="your_key"' >> ~/.bashrc
 echo 'export LANGSMITH_PROJECT="your_project"' >> ~/.bashrc
 
 # Reload shell config
+
 source ~/.bashrc
 ```
 
@@ -402,12 +443,16 @@ source ~/.bashrc
 ## Best Practices
 
 ### 1. Regular Health Checks
+
 ```bash
+
 # Quick check after making changes
+
 langsmith-fetch traces --last-n-minutes 5 --limit 5
 ```
 
 ### 2. Organized Storage
+
 ```
 langsmith-debug/
 ├── sessions/
@@ -418,6 +463,7 @@ langsmith-debug/
 ```
 
 ### 3. Document Findings
+
 When you find bugs:
 1. Export the problematic trace
 2. Save to `error-cases/` folder
@@ -425,11 +471,15 @@ When you find bugs:
 4. Share trace ID with team
 
 ### 4. Integration with Development
+
 ```bash
+
 # Before committing code
+
 langsmith-fetch traces --last-n-minutes 10 --limit 5
 
 # If errors found
+
 langsmith-fetch trace <error-id> --format json > pre-commit-error.json
 ```
 
@@ -438,21 +488,27 @@ langsmith-fetch trace <error-id> --format json > pre-commit-error.json
 ## Quick Reference
 
 ```bash
+
 # Most common commands
 
 # Quick debug
+
 langsmith-fetch traces --last-n-minutes 5 --limit 5 --format pretty
 
 # Specific trace
+
 langsmith-fetch trace <trace-id> --format pretty
 
 # Export session
+
 langsmith-fetch traces ./debug-session --last-n-minutes 30 --limit 50
 
 # Find errors
+
 langsmith-fetch traces --last-n-minutes 30 --limit 50 --format raw | grep -i error
 
 # With metadata
+
 langsmith-fetch traces --limit 10 --include-metadata
 ```
 
@@ -483,3 +539,5 @@ langsmith-fetch traces --limit 10 --include-metadata
 **Author:** Ahmad Othman Ammar Adi
 **License:** MIT
 **Repository:** https://github.com/OthmanAdi/langsmith-fetch-skill
+
+

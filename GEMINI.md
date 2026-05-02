@@ -1,3 +1,4 @@
-@./skills/using-superpowers/SKILL.md
-@./skills/using-superpowers/references/gemini-tools.md
-@./skills/using-superpowers/references/antigravity-tools.md
+@./skills/using-mega-skills/SKILL.md
+@./skills/using-mega-skills/references/gemini-tools.md
+@./skills/using-mega-skills/references/antigravity-tools.md
+

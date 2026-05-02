@@ -9,6 +9,7 @@ license: AGPL-3.0 (referencing Twitter's algorithm source)
 ## When to Use This Skill
 
 Use this skill when you need to:
+
 - **Optimize tweet drafts** for maximum reach and engagement
 - **Understand why** a tweet might not perform well algorithmically
 - **Rewrite tweets** to align with Twitter's ranking mechanisms
@@ -192,23 +193,27 @@ Your tweet reaches users through this pipeline:
 ## How to Optimize Your Tweets
 
 ### Step 1: Identify the Core Message
+
 - What's the single most important thing this tweet communicates?
 - Who should care about this?
 - What action/engagement do you want?
 
 ### Step 2: Map to Algorithm Strategy
+
 - Which Real-graph follower segment will engage? (Followers who care about X)
 - Which SimCluster community? (Niche interested in Y)
 - How does this fit your TwHIN identity? (Your established expertise)
 - Does this boost or hurt Tweepcred?
 
 ### Step 3: Optimize for Signals
+
 - Does it trigger replies? (Ask a question, create debate)
 - Is it retweet-worthy? (Usefulness, entertainment, representational value)
 - Will followers like it? (Novel, validating, actionable)
 - Could it go viral? (Community resonance + network effects)
 
 ### Step 4: Check Against Negatives
+
 - Any blocks/reports risk?
 - Any confusion about your identity?
 - Any engagement bait that damages credibility?
@@ -313,6 +318,7 @@ Your tweet reaches users through this pipeline:
 ## When to Ask for Algorithm Optimization
 
 Use this skill when:
+
 - You've drafted a tweet and want to maximize reach
 - A tweet underperformed and you want to understand why
 - You're launching important content and want algorithm advantage
@@ -321,7 +327,10 @@ Use this skill when:
 - You're debugging inconsistent engagement rates
 
 Use Claude without this skill for:
+
 - General writing and grammar fixes
 - Tone adjustments not related to algorithm
 - Off-Twitter content (LinkedIn, Medium, blogs, etc.)
 - Personal conversations and casual tweets
+
+

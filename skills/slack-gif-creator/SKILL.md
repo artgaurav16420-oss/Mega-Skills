@@ -51,14 +51,19 @@ To ensure a GIF meets Slack's constraints, use these validators:
 from core.gif_builder import GIFBuilder
 
 # After creating your GIF, check if it meets requirements
+
 builder = GIFBuilder(width=128, height=128, fps=10)
+
 # ... add your frames however you want ...
 
 # Save and check size
+
 info = builder.save('emoji.gif', num_colors=48, optimize_for_emoji=True)
 
 # The save method automatically warns if file exceeds limits
+
 # info dict contains: size_kb, size_mb, frame_count, duration_seconds
+
 ```
 
 **File size validator**:
@@ -66,8 +71,11 @@ info = builder.save('emoji.gif', num_colors=48, optimize_for_emoji=True)
 from core.validators import check_slack_size
 
 # Check if GIF meets size limits
+
 passes, info = check_slack_size('emoji.gif', is_emoji=True)
+
 # Returns: (True/False, dict with size details)
+
 ```
 
 **Dimension validator**:
@@ -75,8 +83,11 @@ passes, info = check_slack_size('emoji.gif', is_emoji=True)
 from core.validators import validate_dimensions
 
 # Check dimensions
+
 passes, info = validate_dimensions(128, 128, is_emoji=True)
+
 # Returns: (True/False, dict with dimension details)
+
 ```
 
 **Complete validation**:
@@ -84,9 +95,11 @@ passes, info = validate_dimensions(128, 128, is_emoji=True)
 from core.validators import validate_gif, is_slack_ready
 
 # Run all validations
+
 all_pass, results = validate_gif('emoji.gif', is_emoji=True)
 
 # Or quick check
+
 if is_slack_ready('emoji.gif', is_emoji=True):
     print("Ready to upload!")
 ```
@@ -96,10 +109,12 @@ if is_slack_ready('emoji.gif', is_emoji=True):
 These are composable building blocks for motion. Apply these to any object in any combination:
 
 ### Shake
+
 ```python
 from templates.shake import create_shake_animation
 
 # Shake an emoji
+
 frames = create_shake_animation(
     object_type='emoji',
     object_data={'emoji': '😱', 'size': 80},
@@ -110,10 +125,12 @@ frames = create_shake_animation(
 ```
 
 ### Bounce
+
 ```python
 from templates.bounce import create_bounce_animation
 
 # Bounce a circle
+
 frames = create_bounce_animation(
     object_type='circle',
     object_data={'radius': 40, 'color': (255, 100, 100)},
@@ -123,10 +140,12 @@ frames = create_bounce_animation(
 ```
 
 ### Spin / Rotate
+
 ```python
 from templates.spin import create_spin_animation, create_loading_spinner
 
 # Clockwise spin
+
 frames = create_spin_animation(
     object_type='emoji',
     object_data={'emoji': '🔄', 'size': 100},
@@ -135,17 +154,21 @@ frames = create_spin_animation(
 )
 
 # Wobble rotation
+
 frames = create_spin_animation(rotation_type='wobble', full_rotations=3)
 
 # Loading spinner
+
 frames = create_loading_spinner(spinner_type='dots')
 ```
 
 ### Pulse / Heartbeat
+
 ```python
 from templates.pulse import create_pulse_animation, create_attention_pulse
 
 # Smooth pulse
+
 frames = create_pulse_animation(
     object_data={'emoji': '❤️', 'size': 100},
     pulse_type='smooth',
@@ -153,23 +176,29 @@ frames = create_pulse_animation(
 )
 
 # Heartbeat (double-pump)
+
 frames = create_pulse_animation(pulse_type='heartbeat')
 
 # Attention pulse for emoji GIFs
+
 frames = create_attention_pulse(emoji='⚠️', num_frames=20)
 ```
 
 ### Fade
+
 ```python
 from templates.fade import create_fade_animation, create_crossfade
 
 # Fade in
+
 frames = create_fade_animation(fade_type='in')
 
 # Fade out
+
 frames = create_fade_animation(fade_type='out')
 
 # Crossfade between two emojis
+
 frames = create_crossfade(
     object1_data={'emoji': '😊', 'size': 100},
     object2_data={'emoji': '😂', 'size': 100}
@@ -177,10 +206,12 @@ frames = create_crossfade(
 ```
 
 ### Zoom
+
 ```python
 from templates.zoom import create_zoom_animation, create_explosion_zoom
 
 # Zoom in dramatically
+
 frames = create_zoom_animation(
     zoom_type='in',
     scale_range=(0.1, 2.0),
@@ -188,37 +219,46 @@ frames = create_zoom_animation(
 )
 
 # Zoom out
+
 frames = create_zoom_animation(zoom_type='out')
 
 # Explosion zoom
+
 frames = create_explosion_zoom(emoji='💥')
 ```
 
 ### Explode / Shatter
+
 ```python
 from templates.explode import create_explode_animation, create_particle_burst
 
 # Burst explosion
+
 frames = create_explode_animation(
     explode_type='burst',
     num_pieces=25
 )
 
 # Shatter effect
+
 frames = create_explode_animation(explode_type='shatter')
 
 # Dissolve into particles
+
 frames = create_explode_animation(explode_type='dissolve')
 
 # Particle burst
+
 frames = create_particle_burst(particle_count=30)
 ```
 
 ### Wiggle / Jiggle
+
 ```python
 from templates.wiggle import create_wiggle_animation, create_excited_wiggle
 
 # Jello wobble
+
 frames = create_wiggle_animation(
     wiggle_type='jello',
     intensity=1.0,
@@ -226,17 +266,21 @@ frames = create_wiggle_animation(
 )
 
 # Wave motion
+
 frames = create_wiggle_animation(wiggle_type='wave')
 
 # Excited wiggle for emoji GIFs
+
 frames = create_excited_wiggle(emoji='🎉')
 ```
 
 ### Slide
+
 ```python
 from templates.slide import create_slide_animation, create_multi_slide
 
 # Slide in from left with overshoot
+
 frames = create_slide_animation(
     direction='left',
     slide_type='in',
@@ -244,9 +288,11 @@ frames = create_slide_animation(
 )
 
 # Slide across
+
 frames = create_slide_animation(direction='left', slide_type='across')
 
 # Multiple objects sliding in sequence
+
 objects = [
     {'data': {'emoji': '🎯', 'size': 60}, 'direction': 'left', 'final_pos': (120, 240)},
     {'data': {'emoji': '🎪', 'size': 60}, 'direction': 'right', 'final_pos': (240, 240)}
@@ -255,10 +301,12 @@ frames = create_multi_slide(objects, stagger_delay=5)
 ```
 
 ### Flip
+
 ```python
 from templates.flip import create_flip_animation, create_quick_flip
 
 # Horizontal flip between two emojis
+
 frames = create_flip_animation(
     object1_data={'emoji': '😊', 'size': 120},
     object2_data={'emoji': '😂', 'size': 120},
@@ -266,17 +314,21 @@ frames = create_flip_animation(
 )
 
 # Vertical flip
+
 frames = create_flip_animation(flip_axis='vertical')
 
 # Quick flip for emoji GIFs
+
 frames = create_quick_flip('👍', '👎')
 ```
 
 ### Morph / Transform
+
 ```python
 from templates.morph import create_morph_animation, create_reaction_morph
 
 # Crossfade morph
+
 frames = create_morph_animation(
     object1_data={'emoji': '😊', 'size': 100},
     object2_data={'emoji': '😂', 'size': 100},
@@ -284,17 +336,21 @@ frames = create_morph_animation(
 )
 
 # Scale morph (shrink while other grows)
+
 frames = create_morph_animation(morph_type='scale')
 
 # Spin morph (3D flip-like)
+
 frames = create_morph_animation(morph_type='spin_morph')
 ```
 
 ### Move Effect
+
 ```python
 from templates.move import create_move_animation
 
 # Linear movement
+
 frames = create_move_animation(
     object_type='emoji',
     object_data={'emoji': '🚀', 'size': 60},
@@ -305,6 +361,7 @@ frames = create_move_animation(
 )
 
 # Arc movement (parabolic trajectory)
+
 frames = create_move_animation(
     object_type='emoji',
     object_data={'emoji': '⚽', 'size': 60},
@@ -315,6 +372,7 @@ frames = create_move_animation(
 )
 
 # Circular movement
+
 frames = create_move_animation(
     object_type='emoji',
     object_data={'emoji': '🌍', 'size': 50},
@@ -327,6 +385,7 @@ frames = create_move_animation(
 )
 
 # Wave movement
+
 frames = create_move_animation(
     motion_type='wave',
     motion_params={
@@ -336,6 +395,7 @@ frames = create_move_animation(
 )
 
 # Or use low-level easing functions
+
 from core.easing import interpolate, calculate_arc_motion
 
 for i in range(num_frames):
@@ -345,13 +405,16 @@ for i in range(num_frames):
 ```
 
 ### Kaleidoscope Effect
+
 ```python
 from templates.kaleidoscope import apply_kaleidoscope, create_kaleidoscope_animation
 
 # Apply to a single frame
+
 kaleido_frame = apply_kaleidoscope(frame, segments=8)
 
 # Or create animated kaleidoscope
+
 frames = create_kaleidoscope_animation(
     base_frame=my_frame,  # or None for demo pattern
     num_frames=30,
@@ -360,15 +423,20 @@ frames = create_kaleidoscope_animation(
 )
 
 # Simple mirror effects (faster)
+
 from templates.kaleidoscope import apply_simple_mirror
 
 mirrored = apply_simple_mirror(frame, mode='quad')  # 4-way mirror
+
 # modes: 'horizontal', 'vertical', 'quad', 'radial'
+
 ```
 
 **To compose primitives freely, follow these patterns:**
 ```python
+
 # Example: Bounce + shake for impact
+
 for i in range(num_frames):
     frame = create_blank_frame(480, 480, bg_color)
 
@@ -397,19 +465,23 @@ These are optional helpers for common needs. **Use, modify, or replace these wit
 from core.gif_builder import GIFBuilder
 
 # Create builder with your chosen settings
+
 builder = GIFBuilder(width=480, height=480, fps=20)
 
 # Add frames (however you created them)
+
 for frame in my_frames:
     builder.add_frame(frame)
 
 # Save with optimization
+
 builder.save('output.gif',
              num_colors=128,
              optimize_for_emoji=False)
 ```
 
 Key features:
+
 - Automatic color quantization
 - Duplicate frame removal
 - Size warnings for Slack limits
@@ -423,6 +495,7 @@ For small GIFs like emojis, text readability is challenging. A common solution i
 from core.typography import draw_text_with_outline, TYPOGRAPHY_SCALE
 
 # Text with outline (helps readability)
+
 draw_text_with_outline(
     frame, "BONK!",
     position=(240, 100),
@@ -444,6 +517,7 @@ Professional-looking GIFs often use cohesive color palettes:
 from core.color_palettes import get_palette
 
 # Get a pre-made palette
+
 palette = get_palette('vibrant')  # or 'pastel', 'dark', 'neon', 'professional'
 
 bg_color = palette['background']
@@ -461,18 +535,22 @@ Optional effects for impact moments:
 from core.visual_effects import ParticleSystem, create_impact_flash, create_shockwave_rings
 
 # Particle system
+
 particles = ParticleSystem()
 particles.emit_sparkles(x=240, y=200, count=15)
 particles.emit_confetti(x=240, y=200, count=20)
 
 # Update and render each frame
+
 particles.update()
 particles.render(frame)
 
 # Flash effect
+
 frame = create_impact_flash(frame, position=(240, 200), radius=100)
 
 # Shockwave rings
+
 frame = create_shockwave_rings(frame, position=(240, 200), radii=[30, 60, 90])
 ```
 
@@ -484,15 +562,19 @@ Smooth motion uses easing instead of linear interpolation:
 from core.easing import interpolate
 
 # Object falling (accelerates)
+
 y = interpolate(start=0, end=400, t=progress, easing='ease_in')
 
 # Object landing (decelerates)
+
 y = interpolate(start=0, end=400, t=progress, easing='ease_out')
 
 # Bouncing
+
 y = interpolate(start=0, end=400, t=progress, easing='bounce_out')
 
 # Overshoot (elastic)
+
 scale = interpolate(start=0.5, end=1.0, t=progress, easing='elastic_out')
 ```
 
@@ -511,9 +593,11 @@ from core.frame_composer import (
 )
 
 # Gradient background
+
 frame = create_gradient_background(480, 480, top_color, bottom_color)
 
 # Emoji with shadow
+
 draw_emoji_enhanced(frame, '🎉', position=(200, 200), size=80, shadow=True)
 ```
 
@@ -537,6 +621,7 @@ When your GIF is too large:
 ## Example Composition Patterns
 
 ### Simple Reaction (Pulsing)
+
 ```python
 builder = GIFBuilder(128, 128, 10)
 
@@ -554,15 +639,18 @@ for i in range(12):
 builder.save('reaction.gif', num_colors=40, optimize_for_emoji=True)
 
 # Validate
+
 from core.validators import check_slack_size
 check_slack_size('reaction.gif', is_emoji=True)
 ```
 
 ### Action with Impact (Bounce + Flash)
+
 ```python
 builder = GIFBuilder(480, 480, 20)
 
 # Phase 1: Object falls
+
 for i in range(15):
     frame = create_gradient_background(480, 480, (240, 248, 255), (200, 230, 255))
     t = i / 14
@@ -571,6 +659,7 @@ for i in range(15):
     builder.add_frame(frame)
 
 # Phase 2: Impact + flash
+
 for i in range(8):
     frame = create_gradient_background(480, 480, (240, 248, 255), (200, 230, 255))
 
@@ -592,10 +681,12 @@ builder.save('goal.gif', num_colors=128)
 ```
 
 ### Combining Primitives (Move + Shake)
+
 ```python
 from templates.shake import create_shake_animation
 
 # Create shake animation
+
 shake_frames = create_shake_animation(
     object_type='emoji',
     object_data={'emoji': '😰', 'size': 70},
@@ -604,6 +695,7 @@ shake_frames = create_shake_animation(
 )
 
 # Create moving element that triggers the shake
+
 builder = GIFBuilder(480, 480, 20)
 for i in range(40):
     t = i / 39
@@ -644,3 +736,5 @@ To use this toolkit, install these dependencies only if they aren't already pres
 ```bash
 pip install pillow imageio numpy
 ```
+
+

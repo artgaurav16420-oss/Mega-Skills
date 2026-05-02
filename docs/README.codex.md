@@ -55,14 +55,14 @@ Codex has native skill discovery — it scans `~/.agents/skills/` at startup, pa
 ~/.agents/skills/superpowers/ → ~/.codex/superpowers/skills/
 ```
 
-The `using-superpowers` skill is discovered automatically and enforces skill usage discipline — no additional configuration needed.
+The `using-mega-skills` skill is discovered automatically and enforces skill usage discipline — no additional configuration needed.
 
 ## Usage
 
 Skills are discovered automatically. Codex activates them when:
 - You mention a skill by name (e.g., "use brainstorming")
 - The task matches a skill's description
-- The `using-superpowers` skill directs Codex to use one
+- The `using-mega-skills` skill directs Codex to use one
 
 ### Personal Skills
 
@@ -124,5 +124,6 @@ Junctions normally work without special permissions. If creation fails, try runn
 
 - Report issues: https://github.com/artgaurav16420-oss/Mega-Skills/issues
 - Main documentation: https://github.com/artgaurav16420-oss/Mega-Skills
+
 
 

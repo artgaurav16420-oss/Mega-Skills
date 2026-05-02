@@ -44,9 +44,11 @@ Pick 3 random winners from entries.csv
 
 ```
 Pick a random winner from this list:
+
 - Alice (alice@email.com)
 - Bob (bob@email.com)
 - Carol (carol@email.com)
+
 ...
 ```
 
@@ -80,9 +82,11 @@ Selection method: Cryptographically random
 Timestamp: 2024-03-15 14:32:18 UTC
 
 Would you like to:
+
 - Pick another winner (excluding Sarah)?
 - Export winner details?
 - Pick runner-ups?
+
 ```
 
 **Inspired by:** Lenny's use case - picking a Sora 2 giveaway winner from his subscriber Slack community
@@ -90,24 +94,28 @@ Would you like to:
 ## Features
 
 ### Fair Selection
+
 - Uses secure random number generation
 - No bias or patterns
 - Transparent process
 - Repeatable with seed (for verification)
 
 ### Exclusions
+
 ```
 Pick a random winner excluding previous winners: 
 Alice, Bob, Carol
 ```
 
 ### Weighted Selection
+
 ```
 Pick a winner with weighted probability based on 
 the "entries" column (1 entry = 1 ticket)
 ```
 
 ### Runner-ups
+
 ```
 Pick 1 winner and 3 runner-ups from the list
 ```
@@ -115,18 +123,21 @@ Pick 1 winner and 3 runner-ups from the list
 ## Example Workflows
 
 ### Social Media Giveaway
+
 1. Export entries from Google Form to Sheets
 2. "Pick a random winner from [Sheet URL]"
 3. Verify winner details
 4. Announce publicly with timestamp
 
 ### Event Raffle
+
 1. Create CSV of attendee names and emails
 2. "Pick 10 random winners from attendees.csv"
 3. Export winner list
 4. Email winners directly
 
 ### Team Assignment
+
 1. Have list of participants
 2. "Randomly split this list into 4 equal teams"
 3. Review assignments
@@ -156,4 +167,5 @@ Pick 1 winner and 3 runner-ups from the list
 - Beta tester selection
 - Focus group participant selection
 - Random prize distribution at events
+
 

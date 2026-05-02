@@ -42,12 +42,12 @@ else
     exit 1
 fi
 
-# Test 3: Check using-superpowers skill exists (critical for bootstrap)
-echo "Test 3: Checking using-superpowers skill (required for bootstrap)..."
-if [ -f "$SUPERPOWERS_SKILLS_DIR/using-superpowers/SKILL.md" ]; then
-    echo "  [PASS] using-superpowers skill exists"
+# Test 3: Check using-mega-skills skill exists (critical for bootstrap)
+echo "Test 3: Checking using-mega-skills skill (required for bootstrap)..."
+if [ -f "$SUPERPOWERS_SKILLS_DIR/using-mega-skills/SKILL.md" ]; then
+    echo "  [PASS] using-mega-skills skill exists"
 else
-    echo "  [FAIL] using-superpowers skill not found (required for bootstrap)"
+    echo "  [FAIL] using-mega-skills skill not found (required for bootstrap)"
     exit 1
 fi
 
@@ -80,3 +80,4 @@ fi
 
 echo ""
 echo "=== All plugin loading tests passed ==="
+

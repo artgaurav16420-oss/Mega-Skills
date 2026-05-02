@@ -20,7 +20,9 @@ Follow this priority order:
 ### 1. Check Existing Directories
 
 ```bash
+
 # Check in priority order
+
 ls -d .worktrees 2>/dev/null     # Preferred (hidden)
 ls -d worktrees 2>/dev/null      # Alternative
 ```
@@ -43,7 +45,7 @@ If no directory exists and no CLAUDE.md preference:
 No worktree directory found. Where should I create worktrees?
 
 1. .worktrees/ (project-local, hidden)
-2. ~/.config/superpowers/worktrees/<project-name>/ (global location)
+2. ~/.config/mega-skills/worktrees/<project-name>/ (global location)
 
 Which would you prefer?
 ```
@@ -55,7 +57,9 @@ Which would you prefer?
 **MUST verify directory is ignored before creating worktree:**
 
 ```bash
+
 # Check if directory is ignored (respects local, global, and system gitignore)
+
 git check-ignore -q .worktrees 2>/dev/null || git check-ignore -q worktrees 2>/dev/null
 ```
 
@@ -68,7 +72,7 @@ Per Jesse's rule "Fix broken things immediately":
 
 **Why critical:** Prevents accidentally committing worktree contents to repository.
 
-### For Global Directory (~/.config/superpowers/worktrees)
+### For Global Directory (~/.config/mega-skills/worktrees)
 
 No .gitignore verification needed - outside project entirely.
 
@@ -83,17 +87,20 @@ project=$(basename "$(git rev-parse --show-toplevel)")
 ### 2. Create Worktree
 
 ```bash
+
 # Determine full path
+
 case $LOCATION in
   .worktrees|worktrees)
     path="$LOCATION/$BRANCH_NAME"
     ;;
-  ~/.config/superpowers/worktrees/*)
-    path="~/.config/superpowers/worktrees/$project/$BRANCH_NAME"
+  ~/.config/mega-skills/worktrees/*)
+    path="~/.config/mega-skills/worktrees/$project/$BRANCH_NAME"
     ;;
 esac
 
 # Create worktree with new branch
+
 git worktree add "$path" -b "$BRANCH_NAME"
 cd "$path"
 ```
@@ -103,17 +110,22 @@ cd "$path"
 Auto-detect and run appropriate setup:
 
 ```bash
+
 # Node.js
+
 if [ -f package.json ]; then npm install; fi
 
 # Rust
+
 if [ -f Cargo.toml ]; then cargo build; fi
 
 # Python
+
 if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 if [ -f pyproject.toml ]; then poetry install; fi
 
 # Go
+
 if [ -f go.mod ]; then go mod download; fi
 ```
 
@@ -122,7 +134,9 @@ if [ -f go.mod ]; then go mod download; fi
 Run tests to ensure worktree starts clean:
 
 ```bash
+
 # Examples - use project-appropriate command
+
 npm test
 cargo test
 pytest
@@ -216,3 +230,5 @@ Ready to implement auth feature
 
 **Pairs with:**
 - **finishing-a-development-branch** - REQUIRED for cleanup after work complete
+
+

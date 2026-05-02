@@ -62,21 +62,25 @@ Done. Claude can now connect to any app.
 ## Examples
 
 ### Send Email
+
 ```
 Email sarah@acme.com - Subject: "Shipped!" Body: "v2.0 is live, let me know if issues"
 ```
 
 ### Create GitHub Issue
+
 ```
 Create issue in my-org/repo: "Mobile timeout bug" with label:bug
 ```
 
 ### Post to Slack
+
 ```
 Post to #engineering: "Deploy complete - v2.4.0 live"
 ```
 
 ### Chain Actions
+
 ```
 Find GitHub issues labeled "bug" from this week, summarize, post to #bugs on Slack
 ```
@@ -154,3 +158,5 @@ Connection persists after that.
     <img src="https://img.shields.io/badge/Get_Started_Free-4F46E5?style=for-the-badge" alt="Get Started"/>
   </a>
 </p>
+
+

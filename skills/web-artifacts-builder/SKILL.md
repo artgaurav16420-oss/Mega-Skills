@@ -30,6 +30,7 @@ cd <project-name>
 ```
 
 This creates a fully configured project with:
+
 - ✅ React + TypeScript (via Vite)
 - ✅ Tailwind CSS 3.4.1 with shadcn/ui theming system
 - ✅ Path aliases (`@/`) configured
@@ -72,3 +73,5 @@ To test/visualize the artifact, use available tools (including other Skills or b
 ## Reference
 
 - **shadcn/ui components**: https://ui.shadcn.com/docs/components
+
+

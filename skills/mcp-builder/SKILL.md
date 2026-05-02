@@ -78,6 +78,7 @@ This comprehensive document contains the complete MCP specification and guidelin
 #### 1.5 Exhaustively Study API Documentation
 
 To integrate a service, read through **ALL** available API documentation:
+
 - Official API reference documentation
 - Authentication and authorization requirements
 - Rate limiting and pagination patterns
@@ -203,6 +204,7 @@ After initial implementation:
 #### 3.1 Code Quality Review
 
 To ensure quality, review the code for:
+
 - **DRY Principle**: No duplicated code between tools
 - **Composability**: Shared logic extracted into functions
 - **Consistency**: Similar operations return similar formats
@@ -234,6 +236,7 @@ To ensure quality, review the code for:
 #### 3.3 Use Quality Checklist
 
 To verify implementation quality, load the appropriate checklist from the language-specific guide:
+
 - Python: see "Quality Checklist" in [🐍 Python Guide](./reference/python_mcp_server.md)
 - Node/TypeScript: see "Quality Checklist" in [⚡ TypeScript Guide](./reference/node_mcp_server.md)
 
@@ -261,6 +264,7 @@ To create effective evaluations, follow the process outlined in the evaluation g
 #### 4.3 Evaluation Requirements
 
 Each question must be:
+
 - **Independent**: Not dependent on other questions
 - **Read-only**: Only non-destructive operations required
 - **Complex**: Requiring multiple tool calls and deep exploration
@@ -291,6 +295,7 @@ Create an XML file with this structure:
 Load these resources as needed during development:
 
 ### Core MCP Documentation (Load First)
+
 - **MCP Protocol**: Fetch from `https://modelcontextprotocol.io/llms-full.txt` - Complete MCP specification
 - [📋 MCP Best Practices](./reference/mcp_best_practices.md) - Universal MCP guidelines including:
   - Server and tool naming conventions
@@ -301,10 +306,12 @@ Load these resources as needed during development:
   - Security and error handling standards
 
 ### SDK Documentation (Load During Phase 1/2)
+
 - **Python SDK**: Fetch from `https://raw.githubusercontent.com/modelcontextprotocol/python-sdk/main/README.md`
 - **TypeScript SDK**: Fetch from `https://raw.githubusercontent.com/modelcontextprotocol/typescript-sdk/main/README.md`
 
 ### Language-Specific Implementation Guides (Load During Phase 2)
+
 - [🐍 Python Implementation Guide](./reference/python_mcp_server.md) - Complete Python/FastMCP guide with:
   - Server initialization patterns
   - Pydantic model examples
@@ -320,9 +327,12 @@ Load these resources as needed during development:
   - Quality checklist
 
 ### Evaluation Guide (Load During Phase 4)
+
 - [✅ Evaluation Guide](./reference/evaluation.md) - Complete evaluation creation guide with:
   - Question creation guidelines
   - Answer verification strategies
   - XML format specifications
   - Example questions and answers
   - Running an evaluation with the provided scripts
+
+

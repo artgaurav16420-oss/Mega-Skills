@@ -283,9 +283,11 @@ When a user requests invoice organization:
 
 **Output**:
 ```markdown
+
 # March 2024 Receipts Organized
 
 ## By Category
+
 - Software & Tools: $847.32 (12 invoices)
 - Office Supplies: $234.18 (8 receipts)
 - Travel & Meals: $1,456.90 (15 receipts)
@@ -333,6 +335,7 @@ Found 89 files all named "invoice*.pdf"
 Reading each file to extract real information...
 
 Renamed examples:
+
 - invoice.pdf → 2024-03-15 Shopify - Invoice - Monthly Subscription.pdf
 - invoice(1).pdf → 2024-03-14 Google - Invoice - Workspace.pdf
 - invoice(2).pdf → 2024-03-10 Netlify - Invoice - Pro Plan.pdf
@@ -343,6 +346,7 @@ All files renamed and organized by vendor.
 ## Common Organization Patterns
 
 ### By Vendor (Simple)
+
 ```
 Invoices/
 ├── Adobe/
@@ -352,6 +356,7 @@ Invoices/
 ```
 
 ### By Year and Category (Tax-Friendly)
+
 ```
 Invoices/
 ├── 2023/
@@ -364,6 +369,7 @@ Invoices/
 ```
 
 ### By Quarter (Detailed Tracking)
+
 ```
 Invoices/
 ├── 2024/
@@ -376,6 +382,7 @@ Invoices/
 ```
 
 ### By Tax Category (Accountant-Ready)
+
 ```
 Invoices/
 ├── Deductible/
@@ -412,25 +419,33 @@ This creates a persistent solution that organizes invoices as they arrive.
 ## Handling Special Cases
 
 ### Missing Information
+
 If date/vendor can't be extracted:
+
 - Flag file for manual review
 - Use file modification date as fallback
 - Create "Needs-Review/" folder
 
 ### Duplicate Invoices
+
 If same invoice appears multiple times:
+
 - Compare file hashes
 - Keep highest quality version
 - Note duplicates in summary
 
 ### Multi-Page Invoices
+
 For invoices split across files:
+
 - Merge PDFs if needed
 - Use consistent naming for parts
 - Note in CSV if invoice is split
 
 ### Non-Standard Formats
+
 For unusual receipt formats:
+
 - Extract what's possible
 - Standardize what you can
 - Flag for review if critical info missing
@@ -443,4 +458,5 @@ For unusual receipt formats:
 - Archiving old financial records
 - Preparing for audits
 - Tracking subscription costs over time
+
 

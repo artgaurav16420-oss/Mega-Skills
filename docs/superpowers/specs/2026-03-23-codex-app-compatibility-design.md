@@ -143,11 +143,11 @@ Otherwise, check and remove as today. Note: the existing Step 5 text says "For O
 
 Both skills have an identical Integration section line. Change from:
 ```
-- superpowers:using-git-worktrees - REQUIRED: Set up isolated workspace before starting
+- mega-skills:using-git-worktrees - REQUIRED: Set up isolated workspace before starting
 ```
 To:
 ```
-- superpowers:using-git-worktrees - REQUIRED: Ensures isolated workspace (creates one or verifies existing)
+- mega-skills:using-git-worktrees - REQUIRED: Ensures isolated workspace (creates one or verifies existing)
 ```
 
 **Everything else unchanged:** Dispatch/review loop, prompt templates, model selection, status handling, red flags.
@@ -211,7 +211,7 @@ names, commit messages, and PR descriptions for the user to copy.
 | `skills/finishing-a-development-branch/SKILL.md` | +20 lines (Step 1.5 + cleanup guard) |
 | `skills/subagent-driven-development/SKILL.md` | 1 line edit |
 | `skills/executing-plans/SKILL.md` | 1 line edit |
-| `skills/using-superpowers/references/codex-tools.md` | +15 lines |
+| `skills/using-mega-skills/references/codex-tools.md` | +15 lines |
 
 ~50 lines added/changed across 5 files. Zero new files. Zero breaking changes.
 
@@ -242,3 +242,5 @@ If a third skill needs the same detection pattern, extract it into a shared `ref
 - Existing Claude Code skill-triggering tests still pass
 - Existing subagent-driven-development integration tests still pass
 - Normal Claude Code session: full worktree creation + 4-option finishing still works
+
+

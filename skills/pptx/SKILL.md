@@ -19,13 +19,17 @@ license: Proprietary. LICENSE.txt has complete terms
 ## Reading Content
 
 ```bash
+
 # Text extraction
+
 python -m markitdown presentation.pptx
 
 # Visual overview
+
 python scripts/thumbnail.py presentation.pptx
 
 # Raw XML
+
 python scripts/office/unpack.py presentation.pptx unpacked/
 ```
 
@@ -170,6 +174,7 @@ Convert slides to images (see [Converting to Images](#converting-to-images)), th
 Visually inspect these slides. Assume there are issues — find them.
 
 Look for:
+
 - Overlapping elements (text through shapes, lines through words, stacked elements)
 - Text overflow or cut off at edges/box boundaries
 - Decorative lines positioned for single-line text but title wrapped to two lines
@@ -230,3 +235,5 @@ pdftoppm -jpeg -r 150 -f N -l N output.pdf slide-fixed
 - `npm install -g pptxgenjs` - creating from scratch
 - LibreOffice (`soffice`) - PDF conversion (auto-configured for sandboxed environments via `scripts/office/soffice.py`)
 - Poppler (`pdftoppm`) - PDF to images
+
+

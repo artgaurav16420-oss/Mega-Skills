@@ -73,9 +73,11 @@ Extracting screenshots...
 [████████████████████] 100%
 
 Saved to: competitor-ads/notion/
+
 - ad-001-collaboration.png
 - ad-002-productivity.png
 - ad-003-templates.png
+
 ...
 
 Analyzing messaging...
@@ -83,9 +85,11 @@ Analyzing messaging...
 
 **Output**:
 ```
+
 # Notion Ad Analysis
 
 ## Overview
+
 - Total Ads: 23 active
 - Primary Themes: Productivity (35%), Collaboration (30%), 
   Templates (20%), AI Features (15%)
@@ -109,16 +113,19 @@ Analyzing messaging...
 ## Successful Creative Patterns
 
 ### Pattern 1: Before/After Split
+
 - Shows chaotic tool landscape → Clean Notion workspace
 - Used in 6 high-performing ads
 - Visual metaphor is immediately clear
 
 ### Pattern 2: Feature Showcase
+
 - GIF of actual product usage
 - Shows specific feature in 5 seconds
 - Used for new features (AI, templates)
 
 ### Pattern 3: Social Proof
+
 - "Join 20M users" messaging
 - Customer logos
 - Used in 4 ads targeting enterprise
@@ -136,6 +143,7 @@ Best Headlines:
    → Addresses AI skepticism, practical angle
 
 Best Body Copy Patterns:
+
 - Short sentences (under 10 words)
 - Focus on outcomes not features
 - Include specific numbers ("Cut meetings by 50%")
@@ -143,6 +151,7 @@ Best Body Copy Patterns:
 ## Audience Targeting Insights
 
 Based on ad variations:
+
 - Startup founders: Solo productivity angle
 - Team leads: Collaboration and alignment
 - Enterprise: Security and compliance mentions
@@ -166,9 +175,11 @@ Based on ad variations:
    → Proven pattern in their creative
 
 ## Files Saved
+
 - All ads: ~/competitor-ads/notion/
 - Analysis: ~/competitor-ads/notion/analysis.md
 - Best performers: ~/competitor-ads/notion/top-10/
+
 ```
 
 **Inspired by:** Sumant Subrahmanya's use case from Lenny's Newsletter
@@ -176,24 +187,28 @@ Based on ad variations:
 ## What You Can Learn
 
 ### Messaging Analysis
+
 - What problems they emphasize
 - How they position against competition
 - Value propositions that resonate
 - Target audience segments
 
 ### Creative Patterns
+
 - Visual styles that work
 - Video vs. static image performance
 - Color schemes and branding
 - Layout patterns
 
 ### Copy Formulas
+
 - Headline structures
 - Call-to-action patterns
 - Length and tone
 - Emotional triggers
 
 ### Campaign Strategy
+
 - Seasonal campaigns
 - Product launch approaches
 - Feature announcement tactics
@@ -202,6 +217,7 @@ Based on ad variations:
 ## Best Practices
 
 ### Legal & Ethical
+
 ✓ Only use for research and inspiration
 ✓ Don't copy ads directly
 ✓ Respect intellectual property
@@ -209,6 +225,7 @@ Based on ad variations:
 ✗ Don't plagiarize copy or steal designs
 
 ### Analysis Tips
+
 1. **Look for patterns**: What themes repeat?
 2. **Track over time**: Save ads monthly to see evolution
 3. **Test hypotheses**: Adapt successful patterns for your brand
@@ -218,24 +235,28 @@ Based on ad variations:
 ## Advanced Features
 
 ### Trend Tracking
+
 ```
 Compare [Competitor]'s ads from Q1 vs Q2. 
 What messaging has changed?
 ```
 
 ### Multi-Competitor Analysis
+
 ```
 Extract ads from [Company A], [Company B], [Company C]. 
 What are the common patterns? Where do they differ?
 ```
 
 ### Industry Benchmarks
+
 ```
 Show me ad patterns across the top 10 project management 
 tools. What problems do they all focus on?
 ```
 
 ### Format Analysis
+
 ```
 Analyze video ads vs static image ads from [Competitor]. 
 Which gets more engagement? (if data available)
@@ -244,6 +265,7 @@ Which gets more engagement? (if data available)
 ## Common Workflows
 
 ### Ad Campaign Planning
+
 1. Extract competitor ads
 2. Identify successful patterns
 3. Note gaps in their messaging
@@ -251,6 +273,7 @@ Which gets more engagement? (if data available)
 5. Draft test ad variations
 
 ### Positioning Research
+
 1. Get ads from 5 competitors
 2. Map their positioning
 3. Find underserved angles
@@ -258,6 +281,7 @@ Which gets more engagement? (if data available)
 5. Test against their approaches
 
 ### Creative Inspiration
+
 1. Extract ads by theme
 2. Analyze visual patterns
 3. Note color and layout trends
@@ -290,4 +314,5 @@ Which gets more engagement? (if data available)
 - Discovering new use cases for your product
 - Planning product marketing strategy
 - Inspiring social media content
+
 

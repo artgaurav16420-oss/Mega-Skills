@@ -1,6 +1,6 @@
 # Visual Brainstorming Refactor Implementation Plan
 
-> **For agentic workers:** REQUIRED: Use superpowers:subagent-driven-development (if subagents available) or superpowers:executing-plans to implement this plan. Steps use checkbox (`- [ ]`) syntax for tracking.
+> **For agentic workers:** REQUIRED: Use mega-skills:subagent-driven-development (if subagents available) or mega-skills:executing-plans to implement this plan. Steps use checkbox (`- [ ]`) syntax for tracking.
 
 **Goal:** Refactor visual brainstorming from blocking TUI feedback model to non-blocking "Browser Displays, Terminal Commands" architecture.
 
@@ -521,3 +521,4 @@ Expected: No hits outside of release notes and the spec/plan docs (which are his
 git status
 # Review untracked/modified files, stage specific files as needed, commit if clean
 ```
+

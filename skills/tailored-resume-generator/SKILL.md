@@ -26,6 +26,7 @@ description: Analyzes job descriptions and generates tailored resumes that highl
 ## How to Use
 
 ### Basic Usage
+
 Provide a job description and your background information:
 
 ```
@@ -34,13 +35,16 @@ I'm applying for this job:
 [paste job description]
 
 Here's my background:
+
 - 5 years as software engineer at TechCorp
 - Led team of 3 developers on mobile app project
 - Expert in Python, JavaScript, React
 - Computer Science degree from State University
+
 ```
 
 ### With Existing Resume
+
 Upload or paste your current resume along with the job description:
 
 ```
@@ -54,6 +58,7 @@ My Current Resume:
 ```
 
 ### Career Transition
+
 When changing industries or roles:
 
 ```
@@ -63,10 +68,12 @@ Here's the job I'm applying for:
 [paste job description]
 
 My transferable experience:
+
 - 7 years in digital marketing
 - Led cross-functional teams
 - Managed product launches
 - Data analysis and A/B testing
+
 ```
 
 ## Example
@@ -78,6 +85,7 @@ I need a tailored resume for this job:
 Senior Data Analyst Position
 
 Requirements:
+
 - 5+ years experience in data analysis
 - Expert in SQL, Python, and data visualization tools
 - Experience with A/B testing and statistical analysis
@@ -85,27 +93,33 @@ Requirements:
 - Healthcare industry experience preferred
 
 My background:
+
 - Data Analyst at RetailCo (2019-2024)
 - Created dashboards using Tableau and Power BI
 - Built Python scripts for data automation
 - Worked with marketing team on campaign analysis
 - Business Analytics degree
 - Also did 1 year internship at HealthPlus clinic
+
 ```
 
 **Generated Output:**
 
 ```markdown
+
 # JOHN DOE
+
 Email: john.doe@email.com | Phone: (555) 123-4567 | LinkedIn: linkedin.com/in/johndoe
 
 ## PROFESSIONAL SUMMARY
+
 Results-driven Data Analyst with 5+ years of experience leveraging SQL, Python, and advanced
 visualization tools to deliver actionable insights. Proven track record in statistical analysis,
 A/B testing, and cross-functional collaboration. Healthcare industry experience with strong
 ability to communicate complex data findings to stakeholders.
 
 ## TECHNICAL SKILLS
+
 - **Data Analysis & Programming**: SQL, Python, Statistical Analysis, A/B Testing
 - **Visualization Tools**: Tableau, Power BI, Advanced Dashboard Development
 - **Data Management**: Data Automation, ETL Processes, Database Optimization
@@ -136,9 +150,11 @@ ability to communicate complex data findings to stakeholders.
 State University | Graduated 2018
 
 ## KEY ACHIEVEMENTS
+
 - Reduced data processing time by 60% through Python automation
 - Improved marketing campaign ROI by 35% through A/B testing and optimization
 - Created data visualization system now used across entire organization
+
 ```
 
 **Additional Recommendations:**
@@ -172,6 +188,7 @@ When a user requests resume tailoring:
 ### 2. Analyze Job Requirements
 
 Extract and prioritize:
+
 - **Must-have qualifications**: Years of experience, required skills, education
 - **Key skills**: Technical tools, methodologies, competencies
 - **Soft skills**: Communication, leadership, teamwork
@@ -180,6 +197,7 @@ Extract and prioritize:
 - **Company values**: Cultural fit indicators from job description
 
 Create a mental map of:
+
 - Priority 1: Critical requirements (deal-breakers)
 - Priority 2: Important qualifications (strongly desired)
 - Priority 3: Nice-to-have skills (bonus points)
@@ -187,6 +205,7 @@ Create a mental map of:
 ### 3. Map Candidate Experience to Requirements
 
 For each job requirement:
+
 - Identify matching experience from candidate's background
 - Find transferable skills if no direct match
 - Note gaps that need to be addressed or de-emphasized
@@ -273,6 +292,7 @@ After presenting the tailored resume, offer:
 ### 8. Iterate and Refine
 
 Ask if user wants to:
+
 - Adjust emphasis or tone
 - Add or remove sections
 - Generate alternative versions for different roles
@@ -343,3 +363,5 @@ Ask if user wants to:
 ## Privacy Note
 
 This skill processes your personal and professional information to generate tailored resumes. Always review the output before submitting to ensure accuracy and appropriateness. Remove or modify any information you prefer not to share with potential employers.
+
+

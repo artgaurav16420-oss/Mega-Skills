@@ -372,18 +372,22 @@ When a user requests writing assistance:
 
 **Output**:
 ```markdown
+
 ## Research Compiled
 
 ### Recent Data
+
 - Gartner: 80% of PMs will use AI tools by 2025 [1]
 - Survey: 45% report faster feature shipping [2]
 - Case study: Airbnb's AI-assisted prioritization [3]
 
 ### Expert Quotes
+
 - "AI amplifies PM judgment, not replaces it" - Marty Cagan
 - [Additional quotes with citations]
 
 ### Real Examples
+
 1. **Company A**: Used AI for user research synthesis
    - Result: 60% time savings
    - Source: [citation]
@@ -417,9 +421,11 @@ All added to your outline with proper citations.
 
 **Response**:
 ```markdown
+
 # Feedback: Common Mistakes Section
 
 ## What Works Well ✓
+
 - Strong examples (the Slack notification story)
 - Clear structure (3 mistakes, clean layout)
 - Practical advice for each mistake
@@ -427,6 +433,7 @@ All added to your outline with proper citations.
 ## Suggestions
 
 ### Make It More Specific
+
 Your second point says "Bad prioritization" but could be stronger:
 
 Current:
@@ -436,10 +443,12 @@ Suggested:
 > "I've watched teams ship 14 features in a quarter yet move none of their key metrics. They prioritized activity over progress."
 
 ### Add Data
+
 The third mistake would benefit from evidence:
 > "[Add citation]: Studies show teams without regular user contact are 3x more likely to build unused features [needs source]"
 
 ### Flow Improvement
+
 Consider reordering: Mistake 3 → Mistake 2 → Mistake 1
 This builds from small to big impact.
 
@@ -449,6 +458,7 @@ Ready for the next section!
 ## Writing Workflows
 
 ### Blog Post Workflow
+
 1. Outline together
 2. Research key points
 3. Write introduction → get feedback
@@ -457,6 +467,7 @@ Ready for the next section!
 6. Polish and edit
 
 ### Newsletter Workflow
+
 1. Discuss hook ideas
 2. Quick outline (shorter format)
 3. Draft in one session
@@ -464,6 +475,7 @@ Ready for the next section!
 5. Quick polish
 
 ### Technical Tutorial Workflow
+
 1. Outline steps
 2. Write code examples
 3. Add explanations
@@ -472,6 +484,7 @@ Ready for the next section!
 6. Final review for accuracy
 
 ### Thought Leadership Workflow
+
 1. Brainstorm unique angle
 2. Research existing perspectives
 3. Develop your thesis
@@ -509,18 +522,21 @@ Recommended structure for writing projects:
 ## Best Practices
 
 ### For Research
+
 - Verify sources before citing
 - Use recent data when possible
 - Balance different perspectives
 - Link to original sources
 
 ### For Feedback
+
 - Be specific about what you want: "Is this too technical?"
 - Share your concerns: "I'm worried this section drags"
 - Ask questions: "Does this flow logically?"
 - Request alternatives: "What's another way to explain this?"
 
 ### For Voice
+
 - Share examples of your writing
 - Specify tone preferences
 - Point out good matches: "That sounds like me!"
@@ -535,4 +551,5 @@ Recommended structure for writing projects:
 - Creating presentation content
 - Writing case studies
 - Developing course outlines
+
 

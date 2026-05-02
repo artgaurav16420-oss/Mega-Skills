@@ -80,7 +80,7 @@ Loads a specific skill's content into the conversation (equivalent to Claude's S
   name: 'use_skill',
   description: 'Load and read a specific skill to guide your work',
   schema: z.object({
-    skill_name: z.string().describe('Name of skill (e.g., "superpowers:brainstorming")')
+    skill_name: z.string().describe('Name of skill (e.g., "mega-skills:brainstorming")')
   }),
   execute: async ({ skill_name }) => {
     const { skillPath, content, frontmatter } = resolveAndReadSkill(skill_name);
@@ -120,8 +120,8 @@ Lists all available skills with metadata.
 
 When a new session starts (`session.started` event):
 
-1. **Inject using-superpowers content**
-   - Full content of the using-superpowers skill
+1. **Inject using-mega-skills content**
+   - Full content of the using-mega-skills skill
    - Establishes mandatory workflows
 
 2. **Run find_skills automatically**
@@ -162,7 +162,7 @@ export const Mega-SkillsPlugin = async ({ client, directory, $ }) => {
 
   return {
     'session.started': async () => {
-      const usingMega-Skills = await readSkill('using-superpowers');
+      const usingMega-Skills = await readSkill('using-mega-skills');
       const skillsList = await findAllSkills();
       const toolMapping = getToolMappingInstructions();
 
@@ -292,4 +292,6 @@ superpowers/
 - **Extensibility**: Easy to add future platforms (Cursor, Windsurf, etc.)
 - **Native integration**: Uses OpenCode's plugin system properly
 - **Consistency**: Same skill experience across all platforms
+
+
 
