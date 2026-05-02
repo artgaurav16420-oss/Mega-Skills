@@ -38,7 +38,7 @@ Skip any step = lying, not verifying
 ## Common Failures
 
 | Claim | Requires | Not Sufficient |
-|:::::::::::::::::---:::::::::::::::::----|:::::::::::::::::---:::::::::::::::::---:::::::::::::::::----|:::::::::::::::::---:::::::::::::::::---:::::::::::::::::---:::::::::::::::::---:::::::::::::::::----|
+|::::::::::::::::::---::::::::::::::::::----|::::::::::::::::::---::::::::::::::::::---::::::::::::::::::----|::::::::::::::::::---::::::::::::::::::---::::::::::::::::::---::::::::::::::::::---::::::::::::::::::----|
 | Tests pass | Test command output: 0 failures | Previous run, "should pass" |
 | Linter clean | Linter output: 0 errors | Partial check, extrapolation |
 | Build succeeds | Build command: exit 0 | Linter passing, logs look good |
@@ -68,7 +68,7 @@ Skip any step = lying, not verifying
 ## Rationalization Prevention
 
 | Excuse | Reality |
-|:::::::::::::::::---:::::::::::::::::-----|:::::::::::::::::---:::::::::::::::::---:::::::::::::::::---|
+|::::::::::::::::::---::::::::::::::::::-----|::::::::::::::::::---::::::::::::::::::---::::::::::::::::::---|
 | "Should work now" | RUN the verification |
 | "I'm confident" | Confidence ≠ evidence |
 | "Just this once" | No exceptions |

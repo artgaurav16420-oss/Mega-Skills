@@ -27,6 +27,7 @@ function fixMarkdown(filePath) {
     let lines = content.split('\n');
     let newLines = [];
     let inFence = false;
+    let fencePrefix = '';
     let inBlockquote = false;
     let frontmatterEnd = -1;
     let skillName = '';
@@ -65,23 +66,29 @@ function fixMarkdown(filePath) {
             const prefix = fenceMatch[1];
             const tag = fenceMatch[2].trim();
             if (!inFence) {
+                fencePrefix = prefix.includes('>') ? '>' : '';
                 if (newLines.length > 0 && newLines[newLines.length - 1].trim() !== '') {
-                    newLines.push(isBlockquoteLine ? '>' : '');
+                    newLines.push(fencePrefix);
                 }
                 newLines.push(`${prefix}\`\`\`${tag || 'text'}`);
                 inFence = true;
             } else {
                 newLines.push(`${prefix}\`\`\``);
                 if (i + 1 < lines.length && lines[i + 1].trim() !== '') {
-                    newLines.push(isBlockquoteLine ? '>' : '');
+                    newLines.push(fencePrefix);
                 }
                 inFence = false;
+                fencePrefix = '';
             }
             continue;
         }
 
         if (inFence) {
-            newLines.push(line);
+            if (fencePrefix && !line.startsWith(fencePrefix)) {
+                newLines.push(`${fencePrefix} ${line}`);
+            } else {
+                newLines.push(line);
+            }
             continue;
         }
 

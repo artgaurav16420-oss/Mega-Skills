@@ -86,7 +86,7 @@ Before reading code examples, determine which language the user is working in:
 ### Language-Specific Feature Support
 
 | Language   | Tool Runner | Managed Agents | Notes                                 |
-| :::::::::::::::::---:::::::::::::::::---:::::::::::::::::---- | :::::::::::::::::---:::::::::::::::::---:::::::::::::::::----- | :::::::::::::::::---:::::::::::::::::---:::::::::::::::::---:::::::::::::::::----- | :::::::::::::::::---:::::::::::::::::---:::::::::::::::::---:::::::::::::::::---:::::::::::::::::---:::::::::::::::::---:::::::::::::::::---:::::::::::::::::---:::::::::::::::::---:::::::::::::::::---:::::::::::::::::---:::::::::::::::::---- |
+| ::::::::::::::::::---::::::::::::::::::---::::::::::::::::::---- | ::::::::::::::::::---::::::::::::::::::---::::::::::::::::::----- | ::::::::::::::::::---::::::::::::::::::---::::::::::::::::::---::::::::::::::::::----- | ::::::::::::::::::---::::::::::::::::::---::::::::::::::::::---::::::::::::::::::---::::::::::::::::::---::::::::::::::::::---::::::::::::::::::---::::::::::::::::::---::::::::::::::::::---::::::::::::::::::---::::::::::::::::::---::::::::::::::::::---- |
 | Python     | Yes (beta)  | Yes (beta)     | Full support — `@beta_tool` decorator |
 
 | TypeScript | Yes (beta)  | Yes (beta)     | Full support — `betaZodTool` + Zod    |
@@ -111,7 +111,7 @@ Before reading code examples, determine which language the user is working in:
 > **Start simple.** Default to the simplest tier that meets your needs. Single API calls and workflows handle most use cases — only reach for agents when the task genuinely requires open-ended, model-driven exploration.
 
 | Use Case                                        | Tier            | Recommended Surface       | Why                                                          |
-| :::::::::::::::::---:::::::::::::::::---:::::::::::::::::---:::::::::::::::::---:::::::::::::::::---:::::::::::::::::---:::::::::::::::::---:::::::::::::::::---:::::::::::::::::---:::::::::::::::::---:::::::::::::::::---:::::::::::::::::---:::::::::::::::::---:::::::::::::::::---:::::::::::::::::----- | :::::::::::::::::---:::::::::::::::::---:::::::::::::::::---:::::::::::::::::---:::::::::::::::::--- | :::::::::::::::::---:::::::::::::::::---:::::::::::::::::---:::::::::::::::::---:::::::::::::::::---:::::::::::::::::---:::::::::::::::::---:::::::::::::::::---- | :::::::::::::::::---:::::::::::::::::---:::::::::::::::::---:::::::::::::::::---:::::::::::::::::---:::::::::::::::::---:::::::::::::::::---:::::::::::::::::---:::::::::::::::::---:::::::::::::::::---:::::::::::::::::---:::::::::::::::::---:::::::::::::::::---:::::::::::::::::---:::::::::::::::::---:::::::::::::::::---:::::::::::::::::---:::::::::::::::::---:::::::::::::::::---:::::::::::::::::--- |
+| ::::::::::::::::::---::::::::::::::::::---::::::::::::::::::---::::::::::::::::::---::::::::::::::::::---::::::::::::::::::---::::::::::::::::::---::::::::::::::::::---::::::::::::::::::---::::::::::::::::::---::::::::::::::::::---::::::::::::::::::---::::::::::::::::::---::::::::::::::::::---::::::::::::::::::----- | ::::::::::::::::::---::::::::::::::::::---::::::::::::::::::---::::::::::::::::::---::::::::::::::::::--- | ::::::::::::::::::---::::::::::::::::::---::::::::::::::::::---::::::::::::::::::---::::::::::::::::::---::::::::::::::::::---::::::::::::::::::---::::::::::::::::::---- | ::::::::::::::::::---::::::::::::::::::---::::::::::::::::::---::::::::::::::::::---::::::::::::::::::---::::::::::::::::::---::::::::::::::::::---::::::::::::::::::---::::::::::::::::::---::::::::::::::::::---::::::::::::::::::---::::::::::::::::::---::::::::::::::::::---::::::::::::::::::---::::::::::::::::::---::::::::::::::::::---::::::::::::::::::---::::::::::::::::::---::::::::::::::::::---::::::::::::::::::--- |
 | Classification, summarization, extraction, Q&A  | Single LLM call | **Claude API**            | One request, one response                                    |
 | Batch processing or embeddings                  | Single LLM call | **Claude API**            | Specialized endpoints                                        |
 | Multi-step pipelines with code-controlled logic | Workflow        | **Claude API + tool use** | You orchestrate the loop                                     |
@@ -179,7 +179,7 @@ Everything goes through `POST /v1/messages`. Tools and output constraints are fe
 ## Current Models (cached: 2026-04-15)
 
 | Model             | Model ID            | Context        | Input $/1M | Output $/1M |
-| :::::::::::::::::---:::::::::::::::::---:::::::::::::::::---:::::::::::::::::---:::::::::::::::::----- | :::::::::::::::::---:::::::::::::::::---:::::::::::::::::---:::::::::::::::::---:::::::::::::::::---:::::::::::::::::---- | :::::::::::::::::---:::::::::::::::::---:::::::::::::::::---:::::::::::::::::----- | :::::::::::::::::---:::::::::::::::::---:::::::::::::::::---- | :::::::::::::::::---:::::::::::::::::---:::::::::::::::::----- |
+| ::::::::::::::::::---::::::::::::::::::---::::::::::::::::::---::::::::::::::::::---::::::::::::::::::----- | ::::::::::::::::::---::::::::::::::::::---::::::::::::::::::---::::::::::::::::::---::::::::::::::::::---::::::::::::::::::---- | ::::::::::::::::::---::::::::::::::::::---::::::::::::::::::---::::::::::::::::::----- | ::::::::::::::::::---::::::::::::::::::---::::::::::::::::::---- | ::::::::::::::::::---::::::::::::::::::---::::::::::::::::::----- |
 | Claude Opus 4.7   | `claude-opus-4-7`   | 1M             | $5.00      | $25.00      |
 
 | Claude Opus 4.6   | `claude-opus-4-6`   | 1M             | $5.00      | $25.00      |
@@ -251,7 +251,7 @@ For placement patterns, architectural guidance, and the silent-invalidator audit
 **Subcommands** — invoke directly with `/claude-api <subcommand>`:
 
 | Subcommand | Action |
-|:::::::::::::::::---|:::::::::::::::::---|
+|::::::::::::::::::---|::::::::::::::::::---|
 | `managed-agents-onboard` | Walk the user through setting up a Managed Agent from scratch. **Read `shared/managed-agents-onboarding.md` immediately** and follow its interview script: mental model → know-or-explore branch → template config → session setup → emit code. Do not summarize — run the interview. |
 
 **Reading guide:** Start with `shared/managed-agents-overview.md`, then the topical `shared/managed-agents-*.md` files (core, environments, tools, events, memory, client-patterns, onboarding, api-reference). For Python, TypeScript, Go, Ruby, PHP, and Java, read `{lang}/managed-agents/README.md` for code examples. For cURL, read `curl/managed-agents.md`. **Agents are persistent — create once, reference by ID.** Store the agent ID returned by `agents.create` and pass it to every subsequent `sessions.create`; do not call `agents.create` in the request path. The Anthropic CLI is one convenient way to create agents and environments from version-controlled YAML (URL in `shared/live-sources.md`). If a binding you need isn't shown in the language README, WebFetch the relevant entry from `shared/live-sources.md` rather than guess. C# does not currently have Managed Agents support; use raw HTTP from `curl/managed-agents.md` as a reference.

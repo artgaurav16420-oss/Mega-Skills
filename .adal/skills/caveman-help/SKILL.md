@@ -13,7 +13,7 @@ Display this reference card when invoked. One-shot — do NOT change mode, write
 ## Modes
 
 | Mode | Trigger | What change |
-|:::::::::::::::::---:::::::::::::::::---|:::::::::::::::::---:::::::::::::::::---:::::::::::::::::---|:::::::::::::::::---:::::::::::::::::---:::::::::::::::::---:::::::::::::::::----|
+|::::::::::::::::::---::::::::::::::::::---|::::::::::::::::::---::::::::::::::::::---::::::::::::::::::---|::::::::::::::::::---::::::::::::::::::---::::::::::::::::::---::::::::::::::::::----|
 | **Lite** | `/caveman lite` | Drop filler. Keep sentence structure. |
 
 | **Full** | `/caveman` | Drop articles, filler, pleasantries, hedging. Fragments OK. Default. |
@@ -31,7 +31,7 @@ Mode stick until changed or session end.
 ## Skills
 
 | Skill | Trigger | What it do |
-|:::::::::::::::::---:::::::::::::::::----|:::::::::::::::::---:::::::::::::::::---:::::::::::::::::---|:::::::::::::::::---:::::::::::::::::---:::::::::::::::::-----|
+|::::::::::::::::::---::::::::::::::::::----|::::::::::::::::::---::::::::::::::::::---::::::::::::::::::---|::::::::::::::::::---::::::::::::::::::---::::::::::::::::::-----|
 | **caveman-commit** | `/caveman-commit` | Terse commit messages. Conventional Commits. ≤50 char subject. |
 
 | **caveman-review** | `/caveman-review` | One-line PR comments: `L42: bug: user null. Add guard.` |
