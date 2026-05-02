@@ -30,9 +30,9 @@ Ask the user:
 Four shapes, same runtime code path (`sessions.create()` → `sessions.events.send()` → stream). Only the trigger and sink differ.
 
 | Pattern | Trigger | Example |
-|:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::---|:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::---|:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::---|
-| Event-triggered | Webhook | GitHub PR push → CMA (GitHub tool) → Slack | # <:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::---:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::--- MC maybe delete?
-| Scheduled | Cron | Daily brief: browser + GitHub + Jira → CMA → Slack | # <:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::---:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::--- MC maybe delete?
+|:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::---|:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::---|:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::---|
+| Event-triggered | Webhook | GitHub PR push → CMA (GitHub tool) → Slack | # <:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::---:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::--- MC maybe delete?
+| Scheduled | Cron | Daily brief: browser + GitHub + Jira → CMA → Slack | # <:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::---:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::--- MC maybe delete?
 | Fire-and-forget PR | Human | Slack slash-command → CMA (GitHub tool) → PR passing CI |
 | Research + dashboard | Human | Topic → CMA (web search + `frontend-design` skill) → HTML dashboard |
 
@@ -45,7 +45,7 @@ Three rounds. Batch the questions in each round; don't ask them one at a time.
 **Round A — Tools.** Start here; it's the most concrete part. Three types; ask which the user wants (any combination):
 
 | Type | What it is | How to guide |
-|:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::---|:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::---|:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::---|
+|:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::---|:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::---|:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::---|
 | **Prebuilt Claude Agent tools** (`agent_toolset_20260401`) | Ready-to-use: `bash`, `read`, `write`, `edit`, `glob`, `grep`, `web_fetch`, `web_search`. Enable all at once, or individually via `enabled: true/false`. | Recommend enabling the full toolset. List the 8 tools so the user knows what they're getting. Full detail: `shared/managed-agents-tools.md` → Agent Toolset. |
 | **MCP tools** | Third-party integrations (GitHub, Linear, Asana, etc.) via `mcp_toolset`. Credentials live in a vault, not inline. | Ask which services. For each, walk through MCP server URL + vault credentials. Full detail: `shared/managed-agents-tools.md` → MCP Servers + Vaults. |
 | **Custom tools** | The user's own app handles these tool calls — agent fires `agent.custom_tool_use`, the app sends a result message back. | Ask for each tool: name, description, input schema. The app code that handles the event is *their* code — don't generate it. Full detail: `shared/managed-agents-tools.md` → Custom Tools. |

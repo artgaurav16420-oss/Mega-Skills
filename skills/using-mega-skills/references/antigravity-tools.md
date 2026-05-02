@@ -3,7 +3,7 @@
 Skills use Claude Code tool names. When you encounter these in a skill, use your platform equivalent:
 
 | Skill references | Antigravity equivalent |
-| ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::--- | ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::--- |
+| ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::--- | ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::--- |
 | `Read` (file reading) | `view_file` |
 | `Write` (file creation) | `write_to_file` |
 | `Edit` (file editing) | `replace_file_content` / `multi_replace_file_content` |

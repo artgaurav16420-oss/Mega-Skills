@@ -265,7 +265,7 @@ agent = client.beta.agents.create(
     {
       type: "url",
       name: "github",
-      url: "[https://api.githubcopilot.com/mcp/"]([https://api.githubcopilot.com/mcp/")]([https://api.githubcopilot.com/mcp/"))]([https://api.githubcopilot.com/mcp/")))]([https://api.githubcopilot.com/mcp/"))))]([https://api.githubcopilot.com/mcp/")))))]([https://api.githubcopilot.com/mcp/"))))))]([https://api.githubcopilot.com/mcp/")))))))](https://api.githubcopilot.com/mcp/"))))))))
+      url: "[https://api.githubcopilot.com/mcp/"](https://a)pi.githubcopilot.com/mcp/")]([https://api.githubcopilot.com/mcp/"))](https://a)pi.githubcopilot.com/mcp/")))]([https://api.githubcopilot.com/mcp/"))))](https://a)pi.githubcopilot.com/mcp/")))))]([https://api.githubcopilot.com/mcp/"))))))](https://a)pi.githubcopilot.com/mcp/")))))))](https://api.githubcopilot.com/mcp/")
     }
   ],
   tools: [
@@ -302,11 +302,11 @@ credential = client.beta.vaults.credentials.create(
   display_name: "Alice's Slack",
   auth: {
     type: "mcp_oauth",
-    mcp_server_url: "[https://mcp.slack.com/mcp",]([https://mcp.slack.com/mcp",)]([https://mcp.slack.com/mcp",))]([https://mcp.slack.com/mcp",)))]([https://mcp.slack.com/mcp",))))]([https://mcp.slack.com/mcp",)))))]([https://mcp.slack.com/mcp",))))))]([https://mcp.slack.com/mcp",)))))))](https://mcp.slack.com/mcp",))))))))
+    mcp_server_url: "[https://mcp.slack.com/mcp",](https://m)cp.slack.com/mcp",)]([https://mcp.slack.com/mcp",))](https://m)cp.slack.com/mcp",)))]([https://mcp.slack.com/mcp",))))](https://m)cp.slack.com/mcp",)))))]([https://mcp.slack.com/mcp",))))))](https://m)cp.slack.com/mcp",)))))))](https://mcp.slack.com/mcp",)
     access_token: "xoxp-...",
     expires_at: "2026-04-15T00:00:00Z",
     refresh: {
-      token_endpoint: "[https://slack.com/api/oauth.v2.access",]([https://slack.com/api/oauth.v2.access",)]([https://slack.com/api/oauth.v2.access",))]([https://slack.com/api/oauth.v2.access",)))]([https://slack.com/api/oauth.v2.access",))))]([https://slack.com/api/oauth.v2.access",)))))]([https://slack.com/api/oauth.v2.access",))))))]([https://slack.com/api/oauth.v2.access",)))))))](https://slack.com/api/oauth.v2.access",))))))))
+      token_endpoint: "[https://slack.com/api/oauth.v2.access",](https://s)lack.com/api/oauth.v2.access",)]([https://slack.com/api/oauth.v2.access",))](https://s)lack.com/api/oauth.v2.access",)))]([https://slack.com/api/oauth.v2.access",))))](https://s)lack.com/api/oauth.v2.access",)))))]([https://slack.com/api/oauth.v2.access",))))))](https://s)lack.com/api/oauth.v2.access",)))))))](https://slack.com/api/oauth.v2.access",)
       client_id: "1234567890.0987654321",
       scope: "channels:read chat:write",
       refresh_token: "xoxe-1-...",
@@ -348,7 +348,7 @@ session = client.beta.sessions.create(
   resources: [
     {
       type: "github_repository",
-      url: "[https://github.com/org/repo",]([https://github.com/org/repo",)]([https://github.com/org/repo",))]([https://github.com/org/repo",)))]([https://github.com/org/repo",))))]([https://github.com/org/repo",)))))]([https://github.com/org/repo",))))))]([https://github.com/org/repo",)))))))](https://github.com/org/repo",))))))))
+      url: "[https://github.com/org/repo",](https://g)ithub.com/org/repo",)]([https://github.com/org/repo",))](https://g)ithub.com/org/repo",)))]([https://github.com/org/repo",))))](https://g)ithub.com/org/repo",)))))]([https://github.com/org/repo",))))))](https://g)ithub.com/org/repo",)))))))](https://github.com/org/repo",)
       mount_path: "/workspace/repo",
       authorization_token: "ghp_your_github_token"
     }
@@ -362,13 +362,13 @@ Multiple repositories on the same session:
 resources = [
   {
     type: "github_repository",
-    url: "[https://github.com/org/frontend",]([https://github.com/org/frontend",)]([https://github.com/org/frontend",))]([https://github.com/org/frontend",)))]([https://github.com/org/frontend",))))]([https://github.com/org/frontend",)))))]([https://github.com/org/frontend",))))))]([https://github.com/org/frontend",)))))))](https://github.com/org/frontend",))))))))
+    url: "[https://github.com/org/frontend",](https://g)ithub.com/org/frontend",)]([https://github.com/org/frontend",))](https://g)ithub.com/org/frontend",)))]([https://github.com/org/frontend",))))](https://g)ithub.com/org/frontend",)))))]([https://github.com/org/frontend",))))))](https://g)ithub.com/org/frontend",)))))))](https://github.com/org/frontend",)
     mount_path: "/workspace/frontend",
     authorization_token: "ghp_your_github_token"
   },
   {
     type: "github_repository",
-    url: "[https://github.com/org/backend",]([https://github.com/org/backend",)]([https://github.com/org/backend",))]([https://github.com/org/backend",)))]([https://github.com/org/backend",))))]([https://github.com/org/backend",)))))]([https://github.com/org/backend",))))))]([https://github.com/org/backend",)))))))](https://github.com/org/backend",))))))))
+    url: "[https://github.com/org/backend",](https://g)ithub.com/org/backend",)]([https://github.com/org/backend",))](https://g)ithub.com/org/backend",)))]([https://github.com/org/backend",))))](https://g)ithub.com/org/backend",)))))]([https://github.com/org/backend",))))))](https://g)ithub.com/org/backend",)))))))](https://github.com/org/backend",)
     mount_path: "/workspace/backend",
     authorization_token: "ghp_your_github_token"
   }
