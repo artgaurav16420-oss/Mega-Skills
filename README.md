@@ -74,87 +74,61 @@ copilot plugin install mega-superpowers@https://github.com/artgaurav16420-oss/Me
 
 **The agent checks for relevant skills before any task.** Mandatory workflows, not suggestions.
 
-## What's Inside
+## Complete Skills Index
 
-Mega Superpowers includes three major skill libraries:
+The full library contains 59 composable skills, ordered by utility:
 
-### 1. Superpowers Methodology (Core)
-
-The original software development lifecycle skills:
-
-- **test-driven-development**
-- **systematic-debugging**
-- **brainstorming**
-- **writing-plans**
-- **subagent-driven-development**
-- ... and more.
-
-### 2. Anthropic Skills Library
-
-Essential tools for file manipulation and analysis:
-
-- **pdf**, **docx**, **xlsx**, **pptx** - Professional document handling
-- **frontend-design**, **canvas-design** - UI/UX and visual design
-- **claude-api** - Anthropic SDK optimization
-- **mcp-builder** - Tool creation assistant
-
-### 3. Composio "Awesome Claude" Skills
-
-Advanced automation and integration skills:
-
-- **connect** & **connect-apps** - Connect to 1000+ external services
-- **lead-research-assistant**, **content-research-writer** - Research automation
-- **youtube-downloader**, **twitter-algorithm-optimizer** - Social media tools
-- **file-organizer**, **invoice-organizer** - Productivity enhancements
-
-### Complete Skills Index
-
-The full library contains 59 composable skills:
-
-- **algorithmic-art** - Create generative art with code
-- **artifacts-builder** - Build complex React/Tailwind artifacts
+### 🛠️ Core Methodology (The Superpowers)
+- **test-driven-development** - RED-GREEN-REFACTOR cycle: write tests first
+- **writing-plans** - Detailed implementation planning and task breakdown
 - **brainstorming** - Socratic design and spec refinement
-- **brand-guidelines** - Apply professional brand styling
-- **canvas-design** - Visual design and poster creation
-- **cavecrew** - Subagent delegation and compression
-- **caveman** suite - Ultra-compressed agent communication
-- **changelog-generator** - Automated release notes from git
-- **claude-api** - Anthropic SDK and prompt optimization
-- **competitive-ads-extractor** - Competitor ad analysis
-- **connect** & **connect-apps** - Integration with 1000+ services
-- **content-research-writer** - Research-backed content creation
-- **developer-growth-analysis** - Personal coding growth reports
-- **dispatching-parallel-agents** - Multi-agent orchestration
-- **doc-coauthoring** - Structured documentation workflow
-- **docx**, **pdf**, **pptx**, **xlsx** - Professional document handling
-- **domain-name-brainstormer** - Creative naming and availability
-- **executing-plans** - Batch task execution
-- **file-organizer** & **invoice-organizer** - Asset management
-- **finishing-a-development-branch** - Merge and cleanup workflow
-- **frontend-design** - Production-grade web interfaces
-- **image-enhancer** - Resolution and clarity improvement
-- **internal-comms** - Professional company updates
-- **langsmith-fetch** - Debugging agent traces
-- **lead-research-assistant** - Sales and lead generation
-- **mcp-builder** - Model Context Protocol server creation
-- **meeting-insights-analyzer** - Communication pattern analysis
-- **raffle-winner-picker** - Fair random selection
-- **receiving-code-review** & **requesting-code-review** - PR workflow
-- **skill-creator** & **writing-skills** - Authoring new agent capabilities
-- **skill-share** - Team skill discovery
-- **slack-gif-creator** - Custom animations for Slack
-- **subagent-driven-development** - Autonomous task completion
-- **systematic-debugging** - 4-phase root cause analysis
-- **tailored-resume-generator** - Job-specific resume optimization
-- **test-driven-development** - RED-GREEN-REFACTOR cycle
-- **theme-factory** - Universal styling for artifacts
-- **twitter-algorithm-optimizer** - Reach and engagement optimization
+- **subagent-driven-development** - Autonomous task completion via subagents
+- **systematic-debugging** - 4-phase root cause analysis and fixing
 - **using-git-worktrees** - Isolated development environments
 - **verification-before-completion** - Final fix validation
-- **web-artifacts-builder** - Advanced shadcn/ui artifacts
+- **finishing-a-development-branch** - Merge and cleanup workflow
+- **receiving-code-review** & **requesting-code-review** - PR workflow
+
+### 🏗️ Advanced Developer Tools
+- **mcp-builder** - Model Context Protocol server creation assistant
+- **claude-api** - Anthropic SDK and prompt optimization
 - **webapp-testing** - Playwright-based frontend testing
-- **writing-plans** - Detailed implementation planning
+- **web-artifacts-builder** - Advanced shadcn/ui and React artifacts
+- **artifacts-builder** - Build complex React/Tailwind artifacts
+- **langsmith-fetch** - Debugging agent traces and performance
+- **skill-creator** & **writing-skills** - Authoring new agent capabilities
+
+### 📄 Document & Data Processing
+- **pdf**, **docx**, **pptx**, **xlsx** - Professional document manipulation
+- **invoice-organizer** - Automated receipt and invoice management
+- **file-organizer** - Intelligent asset and folder management
+
+### 🔌 Integrations & Research
+- **connect** & **connect-apps** - Integration with 1000+ external services
+- **lead-research-assistant** - Sales and lead generation automation
+- **content-research-writer** - Research-backed content creation
+- **developer-growth-analysis** - Personal coding growth reports
+- **meeting-insights-analyzer** - Communication pattern analysis
+- **domain-name-brainstormer** - Creative naming and availability
+
+### 🎨 Creative & Content Tools
+- **frontend-design** - Production-grade web interfaces
+- **canvas-design** - Visual design and poster creation
+- **slack-gif-creator** - Custom animations for Slack
+- **twitter-algorithm-optimizer** - Reach and engagement optimization
 - **youtube-downloader** - Video and audio acquisition
+- **algorithmic-art** - Create generative art with code
+- **brand-guidelines** - Apply professional brand styling
+- **theme-factory** - Universal styling for artifacts
+
+### ⚙️ Utilities
+- **cavecrew** - Subagent delegation and context compression
+- **caveman** suite - Ultra-compressed agent communication modes
+- **changelog-generator** - Automated release notes from git
+- **image-enhancer** - Resolution and clarity improvement
+- **raffle-winner-picker** - Fair random selection
+- **skill-share** - Team skill discovery via Slack
+- **doc-coauthoring** - Structured documentation workflow
 
 ## Philosophy
 
