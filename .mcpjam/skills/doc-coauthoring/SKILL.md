@@ -297,7 +297,7 @@ Ask if ready to move to Reader Testing, or if they want to refine anything else.
 
 **Goal:** Test the document with a fresh Claude (no context bleed) to verify it works for readers.
 
-### Instructions to user
+### Instructions to user (2)
 
 Explain that testing will now occur to see if the document actually works for readers. This catches blind spots - things that make sense to the authors but might confuse others.
 
@@ -346,7 +346,7 @@ Loop back to refinement for problematic sections.
 
 The user will need to do the testing manually.
 
-### Step 1: Predict Reader Questions
+### Step 1: Predict Reader Questions (2)
 
 Ask what questions people might ask when trying to discover this document. What would they type into Claude.ai?
 

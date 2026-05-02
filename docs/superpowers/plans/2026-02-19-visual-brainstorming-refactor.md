@@ -15,7 +15,7 @@
 ## File Map
 
 | File | Action | Responsibility |
-|:::::::---:::::::---|:::::::---:::::::-----|:::::::---:::::::---:::::::---:::::::---:::::::---|
+|::::::::---::::::::---|::::::::---::::::::-----|::::::::---::::::::---::::::::---::::::::---::::::::---|
 | `lib/brainstorm-server/index.js` | Modify | Server: add `.events` file writing, clear on new screen, replace `wrapInFrame` |
 | `lib/brainstorm-server/frame-template.html` | Modify | Template: remove feedback footer, add content placeholder + selection indicator |
 | `lib/brainstorm-server/helper.js` | Modify | Client JS: remove send/feedback functions, narrow to click capture + indicator updates |
@@ -96,7 +96,7 @@ git commit -m "Replace feedback footer with selection indicator bar in brainstor
 
 ### Task 2: Update `index.js` — content injection and `.events` file
 
-#### Files
+#### Files (2)
 
 - Modify: `lib/brainstorm-server/index.js`
 
@@ -208,7 +208,7 @@ git commit -m "Add .events file writing and comment-based content injection to b
 
 ### Task 3: Simplify `helper.js`
 
-#### Files
+#### Files (3)
 
 - Modify: `lib/brainstorm-server/helper.js`
 
@@ -288,7 +288,7 @@ git commit -m "Simplify helper.js: remove feedback functions, narrow to choice c
 
 ### Task 4: Update tests for new structure
 
-#### Files
+#### Files (4)
 
 - Modify: `tests/brainstorm-server/server.test.js`
 
@@ -363,7 +363,7 @@ git commit -m "Update brainstorm server tests for new template structure and hel
 
 ### Task 5: Delete `wait-for-feedback.sh`
 
-#### Files
+#### Files (5)
 
 - Delete: `lib/brainstorm-server/wait-for-feedback.sh`
 
@@ -402,7 +402,7 @@ git commit -m "Delete wait-for-feedback.sh: replaced by .events file"
 
 ### Task 6: Rewrite `visual-companion.md`
 
-#### Files
+#### Files (6)
 
 - Modify: `skills/brainstorming/visual-companion.md`
 

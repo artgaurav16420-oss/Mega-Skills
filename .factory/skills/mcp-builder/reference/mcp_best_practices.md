@@ -230,7 +230,7 @@ MCP servers support multiple transport mechanisms for different deployment scena
 ### Transport Selection Criteria
 
 | Criterion | Stdio | HTTP | SSE |
-|:::::::---:::::::---:::::::-----|:::::::---:::::::----|:::::::---:::::::---|:::::::-----|
+|::::::::---::::::::---::::::::-----|::::::::---::::::::----|::::::::---::::::::---|::::::::-----|
 | **Deployment** | Local | Remote | Remote |
 | **Clients** | Single | Multiple | Multiple |
 | **Communication** | Bidirectional | Request-Response | Server-Push |
@@ -333,7 +333,7 @@ A comprehensive testing strategy should cover:
 
 - Check behavior under load, timeouts
 
-### Error Handling
+### Error Handling (2)
 
 - Ensure proper error reporting and cleanup
 
@@ -460,7 +460,7 @@ Tools are a powerful primitive in the Model Context Protocol (MCP) that enable s
   Tools are designed to be **model-controlled**, meaning that tools are exposed from servers to clients with the intention of the AI model being able to automatically invoke them (with a human in the loop to grant approval).
 </Note>
 
-## Overview
+## Overview (2)
 
 Tools in MCP allow servers to expose executable functions that can be invoked by clients and used by LLMs to perform actions. Key aspects of tools include:
 
@@ -712,7 +712,7 @@ MCP supports dynamic tool discovery:
 1. Tools can be added or removed during runtime
 1. Tool definitions can be updated (though this should be done carefully)
 
-## Error handling
+## Error handling (2)
 
 Tool errors should be reported within the result object, not as MCP protocol-level errors. This allows the LLM to see and potentially handle the error. When a tool encounters an error:
 
@@ -800,7 +800,7 @@ Tool annotations serve several key purposes:
 The MCP specification defines the following annotations for tools:
 
 | Annotation        | Type    | Default | Description                                                                                                                          |
-| :::::::---:::::::---:::::::---:::::::---:::::::----- | :::::::---:::::::---- | :::::::---:::::::---- | :::::::---:::::::---:::::::---:::::::---:::::::---:::::::---:::::::---:::::::---:::::::---:::::::---:::::::---:::::::---:::::::---:::::::---:::::::---:::::::---:::::::---:::::::---:::::::---:::::::---:::::::---:::::::---:::::::---:::::::---:::::::---:::::::---:::::::---:::::::---:::::::---:::::::---:::::::---:::::::---:::::::---:::::::---:::::::---:::::::---:::::::---:::::::---:::::::---:::::::---:::::::---:::::::---:::::::---:::::::--- |
+| ::::::::---::::::::---::::::::---::::::::---::::::::----- | ::::::::---::::::::---- | ::::::::---::::::::---- | ::::::::---::::::::---::::::::---::::::::---::::::::---::::::::---::::::::---::::::::---::::::::---::::::::---::::::::---::::::::---::::::::---::::::::---::::::::---::::::::---::::::::---::::::::---::::::::---::::::::---::::::::---::::::::---::::::::---::::::::---::::::::---::::::::---::::::::---::::::::---::::::::---::::::::---::::::::---::::::::---::::::::---::::::::---::::::::---::::::::---::::::::---::::::::---::::::::---::::::::---::::::::---::::::::---::::::::---::::::::--- |
 | `title`           | string  | -       | A human-readable title for the tool, useful for UI display                                                                           |
 | `readOnlyHint`    | boolean | false   | If true, indicates the tool does not modify its environment                                                                          |
 | `destructiveHint` | boolean | true    | If true, the tool may perform destructive updates (only meaningful when `readOnlyHint` is false)                                     |

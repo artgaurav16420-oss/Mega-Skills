@@ -83,7 +83,7 @@ checking for relevant skills before working on tasks.
 ### Variant B: Directive
 
 ```markdown
-## Skills Library
+## Skills Library (2)
 
 Before working on any task, check `~/.claude/skills/` for
 relevant skills. You should use skills when they exist.

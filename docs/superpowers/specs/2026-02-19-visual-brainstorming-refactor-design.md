@@ -91,7 +91,7 @@ The current regex anchors on `<div class="feedback-footer">`, which is being rem
 
 ### `helper.js` (client-side script)
 
-#### Remove
+#### Remove (2)
 
 - `sendToClaude()` function and the "Sent to Claude" page takeover
 - `window.send()` function (was tied to the removed Send button)
@@ -111,7 +111,7 @@ The current regex anchors on `<div class="feedback-footer">`, which is being rem
 
 - Click handler: capture only `[data-choice]` clicks, not all buttons/links. The broad capture was needed when the browser was a feedback channel; now it's just for selection tracking.
 
-#### Add
+#### Add (2)
 
 - On `data-choice` click, update the selection indicator bar text to show which option was selected.
 
@@ -133,7 +133,7 @@ The current regex anchors on `<div class="feedback-footer">`, which is being rem
 - `.events` file format documentation
 - Guidance that the terminal message is the primary feedback; `.events` provides the full browser interaction stream for additional context
 
-#### Keep
+#### Keep (2)
 
 - Server startup/shutdown instructions
 - Content fragment vs full document guidance

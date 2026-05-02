@@ -15,7 +15,7 @@
 ## File Structure
 
 | File | Responsibility | Action |
-|:::::::---|:::::::---|:::::::---|
+|::::::::---|::::::::---|::::::::---|
 | `skills/using-git-worktrees/SKILL.md` | Worktree creation + isolation | Add Step 0 detection + sandbox fallback |
 | `skills/finishing-a-development-branch/SKILL.md` | Branch finishing workflow | Add Step 1.5 detection + cleanup guard |
 | `skills/subagent-driven-development/SKILL.md` | Plan execution with subagents | Update Integration description |
@@ -87,7 +87,7 @@ sandbox fallback for permission errors on git worktree add."
 
 ### Task 2: Update `using-git-worktrees` Integration section
 
-#### Files
+#### Files (2)
 
 - Modify: `skills/using-git-worktrees/SKILL.md:211-215` (Integration > Called by)
 
@@ -126,7 +126,7 @@ Clarify that skill ensures a workspace exists, not that it always creates one."
 
 ### Task 3: Add Step 1.5 to `finishing-a-development-branch`
 
-#### Files
+#### Files (3)
 
 - Modify: `skills/finishing-a-development-branch/SKILL.md:38` (insert after Step 1, before Step 2)
 
@@ -210,7 +210,7 @@ payload instead of 4-option menu. Includes commit SHA and data loss warning."
 
 ### Task 4: Add Step 5 cleanup guard to `finishing-a-development-branch`
 
-#### Files
+#### Files (4)
 
 - Modify: `skills/finishing-a-development-branch/SKILL.md` (Step 5: Cleanup Worktree — find by section heading, line numbers will have shifted after Task 3)
 
@@ -245,7 +245,7 @@ git worktree remove <worktree-path>
 Replace the Step 5 section with:
 
 ```markdown
-### Step 5: Cleanup Worktree
+### Step 5: Cleanup Worktree (2)
 
 **First, check if worktree is externally managed:**
 
@@ -301,7 +301,7 @@ Options 1 and 4 only, matching Quick Reference and Common Mistakes."
 
 ### Task 5: Update Integration lines in `subagent-driven-development` and `executing-plans`
 
-#### Files
+#### Files (5)
 
 - Modify: `skills/subagent-driven-development/SKILL.md:268`
 - Modify: `skills/executing-plans/SKILL.md:68`
@@ -352,7 +352,7 @@ always creating one."
 
 ### Task 6: Add environment detection docs to `codex-tools.md`
 
-#### Files
+#### Files (6)
 
 - Modify: `skills/using-mega-skills/references/codex-tools.md:25` (append at end)
 
@@ -419,7 +419,7 @@ App's native finishing flow for skills that need to adapt."
 
 ### Task 7: Automated test — environment detection
 
-#### Files
+#### Files (7)
 
 - Create: `tests/codex-app-compat/test-environment-detection.sh`
 
@@ -553,7 +553,7 @@ worktree, detached HEAD, and cleanup guard scenarios."
 
 ### Task 8: Final verification
 
-#### Files
+#### Files (8)
 
 - Read: all 5 modified skill files
 

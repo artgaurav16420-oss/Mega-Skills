@@ -1,6 +1,6 @@
 # Mega-Skills for OpenCode
 
-Complete guide for using Mega-Skills with [OpenCode.ai]([https://opencode.ai).]([https://opencode.ai).)]([https://opencode.ai).))]([https://opencode.ai).)))]([https://opencode.ai).))))]([https://opencode.ai).)))))]([https://opencode.ai).))))))](https://opencode.ai).)))))))
+Complete guide for using Mega-Skills with [OpenCode.ai]([https://opencode.ai).]([https://opencode.ai).)]([https://opencode.ai).))]([https://opencode.ai).)))]([https://opencode.ai).))))]([https://opencode.ai).)))))]([https://opencode.ai).))))))]([https://opencode.ai).)))))))](https://opencode.ai).))))))))
 
 ## Installation
 
@@ -8,7 +8,7 @@ Add superpowers to the `plugin` array in your `opencode.json` (global or project
 
 ```json
 {
-  "plugin": ["superpowers@git+[https://github.com/artgaurav16420-oss/Mega-Skills.git]([https://github.com/artgaurav16420-oss/Mega-Skills.git)]([https://github.com/artgaurav16420-oss/Mega-Skills.git))]([https://github.com/artgaurav16420-oss/Mega-Skills.git)))]([https://github.com/artgaurav16420-oss/Mega-Skills.git))))]([https://github.com/artgaurav16420-oss/Mega-Skills.git)))))]([https://github.com/artgaurav16420-oss/Mega-Skills.git))))))](https://github.com/artgaurav16420-oss/Mega-Skills.git)))))))"]
+  "plugin": ["superpowers@git+[https://github.com/artgaurav16420-oss/Mega-Skills.git]([https://github.com/artgaurav16420-oss/Mega-Skills.git)]([https://github.com/artgaurav16420-oss/Mega-Skills.git))]([https://github.com/artgaurav16420-oss/Mega-Skills.git)))]([https://github.com/artgaurav16420-oss/Mega-Skills.git))))]([https://github.com/artgaurav16420-oss/Mega-Skills.git)))))]([https://github.com/artgaurav16420-oss/Mega-Skills.git))))))]([https://github.com/artgaurav16420-oss/Mega-Skills.git)))))))](https://github.com/artgaurav16420-oss/Mega-Skills.git))))))))"]
 }
 ```
 
@@ -84,7 +84,7 @@ To pin a specific version, use a branch or tag:
 
 ```json
 {
-  "plugin": ["superpowers@git+[https://github.com/artgaurav16420-oss/Mega-Skills.git#v5.0.3]([https://github.com/artgaurav16420-oss/Mega-Skills.git#v5.0.3)]([https://github.com/artgaurav16420-oss/Mega-Skills.git#v5.0.3))]([https://github.com/artgaurav16420-oss/Mega-Skills.git#v5.0.3)))]([https://github.com/artgaurav16420-oss/Mega-Skills.git#v5.0.3))))]([https://github.com/artgaurav16420-oss/Mega-Skills.git#v5.0.3)))))]([https://github.com/artgaurav16420-oss/Mega-Skills.git#v5.0.3))))))](https://github.com/artgaurav16420-oss/Mega-Skills.git#v5.0.3)))))))"]
+  "plugin": ["superpowers@git+[https://github.com/artgaurav16420-oss/Mega-Skills.git#v5.0.3]([https://github.com/artgaurav16420-oss/Mega-Skills.git#v5.0.3)]([https://github.com/artgaurav16420-oss/Mega-Skills.git#v5.0.3))]([https://github.com/artgaurav16420-oss/Mega-Skills.git#v5.0.3)))]([https://github.com/artgaurav16420-oss/Mega-Skills.git#v5.0.3))))]([https://github.com/artgaurav16420-oss/Mega-Skills.git#v5.0.3)))))]([https://github.com/artgaurav16420-oss/Mega-Skills.git#v5.0.3))))))]([https://github.com/artgaurav16420-oss/Mega-Skills.git#v5.0.3)))))))](https://github.com/artgaurav16420-oss/Mega-Skills.git#v5.0.3))))))))"]
 }
 ```
 
@@ -125,6 +125,6 @@ Skills written for Claude Code are automatically adapted for OpenCode:
 
 ## Getting Help
 
-- Report issues: [https://github.com/artgaurav16420-oss/Mega-Skills/issues]([https://github.com/artgaurav16420-oss/Mega-Skills/issues)]([https://github.com/artgaurav16420-oss/Mega-Skills/issues))]([https://github.com/artgaurav16420-oss/Mega-Skills/issues)))]([https://github.com/artgaurav16420-oss/Mega-Skills/issues))))]([https://github.com/artgaurav16420-oss/Mega-Skills/issues)))))]([https://github.com/artgaurav16420-oss/Mega-Skills/issues))))))](https://github.com/artgaurav16420-oss/Mega-Skills/issues)))))))
-- Main documentation: [https://github.com/artgaurav16420-oss/Mega-Skills]([https://github.com/artgaurav16420-oss/Mega-Skills)]([https://github.com/artgaurav16420-oss/Mega-Skills))]([https://github.com/artgaurav16420-oss/Mega-Skills)))]([https://github.com/artgaurav16420-oss/Mega-Skills))))]([https://github.com/artgaurav16420-oss/Mega-Skills)))))]([https://github.com/artgaurav16420-oss/Mega-Skills))))))](https://github.com/artgaurav16420-oss/Mega-Skills)))))))
-- OpenCode docs: [https://opencode.ai/docs/]([https://opencode.ai/docs/)]([https://opencode.ai/docs/))]([https://opencode.ai/docs/)))]([https://opencode.ai/docs/))))]([https://opencode.ai/docs/)))))]([https://opencode.ai/docs/))))))](https://opencode.ai/docs/)))))))
+- Report issues: [https://github.com/artgaurav16420-oss/Mega-Skills/issues]([https://github.com/artgaurav16420-oss/Mega-Skills/issues)]([https://github.com/artgaurav16420-oss/Mega-Skills/issues))]([https://github.com/artgaurav16420-oss/Mega-Skills/issues)))]([https://github.com/artgaurav16420-oss/Mega-Skills/issues))))]([https://github.com/artgaurav16420-oss/Mega-Skills/issues)))))]([https://github.com/artgaurav16420-oss/Mega-Skills/issues))))))]([https://github.com/artgaurav16420-oss/Mega-Skills/issues)))))))](https://github.com/artgaurav16420-oss/Mega-Skills/issues))))))))
+- Main documentation: [https://github.com/artgaurav16420-oss/Mega-Skills]([https://github.com/artgaurav16420-oss/Mega-Skills)]([https://github.com/artgaurav16420-oss/Mega-Skills))]([https://github.com/artgaurav16420-oss/Mega-Skills)))]([https://github.com/artgaurav16420-oss/Mega-Skills))))]([https://github.com/artgaurav16420-oss/Mega-Skills)))))]([https://github.com/artgaurav16420-oss/Mega-Skills))))))]([https://github.com/artgaurav16420-oss/Mega-Skills)))))))](https://github.com/artgaurav16420-oss/Mega-Skills))))))))
+- OpenCode docs: [https://opencode.ai/docs/]([https://opencode.ai/docs/)]([https://opencode.ai/docs/))]([https://opencode.ai/docs/)))]([https://opencode.ai/docs/))))]([https://opencode.ai/docs/)))))]([https://opencode.ai/docs/))))))]([https://opencode.ai/docs/)))))))](https://opencode.ai/docs/))))))))

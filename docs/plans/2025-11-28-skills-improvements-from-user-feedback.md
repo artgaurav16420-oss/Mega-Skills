@@ -51,7 +51,7 @@ Two Claude instances provided detailed feedback from actual development sessions
 
 ### Problem 2: Background Process Accumulation
 
-#### What happened
+#### What happened (2)
 
 - Multiple subagents dispatched during session
 - Each started background server processes
@@ -60,7 +60,7 @@ Two Claude instances provided detailed feedback from actual development sessions
 - Later E2E test hit stale server with wrong config
 - Confusing/incorrect test results
 
-#### Root cause
+#### Root cause (2)
 
 Subagents are stateless - don't know about previous subagents' processes. No cleanup protocol.
 
@@ -70,13 +70,13 @@ Subagents are stateless - don't know about previous subagents' processes. No cle
 
 ### Problem 3: Context Bloat in Subagent Prompts
 
-#### What happened
+#### What happened (3)
 
 - Standard approach: give subagent full plan file to read
 - Experiment: give only task + pattern + file + verify command
 - Result: Faster, more focused, single-attempt completion more common
 
-#### Root cause
+#### Root cause (3)
 
 Subagents waste tokens and attention on irrelevant plan sections.
 
@@ -101,14 +101,14 @@ in its metadata should result in the container running with `--privileged` flag.
 
 ### Problem 4: No Self-Reflection Before Handoff
 
-#### What happened
+#### What happened (4)
 
 - Added self-reflection prompt: "Look at your work with fresh eyes - what could be better?"
 - Implementer for Task 5 identified failing test was due to implementation bug, not test bug
 - Traced to line 99: `strings.Join(metadata.Entrypoint, " ")` creating invalid Docker syntax
 - Without self-reflection, would have just reported "test fails" without root cause
 
-#### Root cause
+#### Root cause (4)
 
 Implementers don't naturally step back and critique their own work before reporting completion.
 
@@ -118,7 +118,7 @@ Implementers don't naturally step back and critique their own work before report
 
 ### Problem 5: Mock-Interface Drift
 
-#### What happened
+#### What happened (5)
 
 ```typescript
 // Interface defines close()
@@ -140,7 +140,7 @@ vi.mock('web-adapter', () => ({
 - Tests passed
 - Runtime crashed: "adapter.cleanup is not a function"
 
-#### Root cause
+#### Root cause (5)
 
 Mock derived from what buggy code calls, not from interface definition. TypeScript can't catch inline mocks with wrong method names.
 
@@ -154,14 +154,14 @@ The skill covers testing mock behavior and mocking without understanding, but no
 
 ### Problem 6: Code Reviewer File Access
 
-#### What happened
+#### What happened (6)
 
 - Code reviewer subagent dispatched
 - Couldn't find test file: "The file doesn't appear to exist in the repository"
 - File actually exists
 - Reviewer didn't know to explicitly read it first
 
-#### Root cause
+#### Root cause (6)
 
 Reviewer prompts don't include explicit file reading instructions.
 
@@ -171,14 +171,14 @@ Reviewer prompts don't include explicit file reading instructions.
 
 ### Problem 7: Fix Workflow Latency
 
-#### What happened
+#### What happened (7)
 
 - Implementer identifies bug during self-reflection
 - Implementer knows the fix
 - Current workflow: report → I dispatch fixer → fixer fixes → I verify
 - Extra round-trip adds latency without adding value
 
-#### Root cause
+#### Root cause (7)
 
 Rigid separation between implementer and fixer roles when implementer has already diagnosed.
 
@@ -188,13 +188,13 @@ Rigid separation between implementer and fixer roles when implementer has alread
 
 ### Problem 8: Skills Not Being Read
 
-#### What happened
+#### What happened (8)
 
 - `testing-anti-patterns` skill exists
 - Neither human nor subagents read it before writing tests
 - Would have prevented some issues (though not all - see Problem 5)
 
-#### Root cause
+#### Root cause (8)
 
 No enforcement that subagents read relevant skills. No prompt includes skill reading.
 
@@ -222,7 +222,7 @@ Operation succeeds because *some* valid config exists, but it's not the config y
 ### Examples
 
 | Change | Insufficient | Required |
-|:::::::---:::::::-----|:::::::---:::::::---:::::::---:::::::----|:::::::---:::::::---:::::::----|
+|::::::::---::::::::-----|::::::::---::::::::---::::::::---::::::::----|::::::::---::::::::---::::::::----|
 | Switch LLM provider | Status 200 | Response contains expected model name |
 | Enable feature flag | No errors | Feature behavior actually active |
 | Change environment | Deploy succeeds | Logs/vars reference new environment |
@@ -507,7 +507,7 @@ const mock = {
 // That failure reveals the bug BEFORE runtime
 ```
 
-### Gate Function
+### Gate Function (2)
 
 ```text
 BEFORE writing any mock:

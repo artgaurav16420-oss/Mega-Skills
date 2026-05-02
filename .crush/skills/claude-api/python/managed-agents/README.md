@@ -94,7 +94,7 @@ session = client.beta.sessions.create(
     resources=[
         {
             "type": "github_repository",
-            "url": "[https://github.com/owner/repo",]([https://github.com/owner/repo",)]([https://github.com/owner/repo",))]([https://github.com/owner/repo",)))]([https://github.com/owner/repo",))))]([https://github.com/owner/repo",)))))]([https://github.com/owner/repo",))))))](https://github.com/owner/repo",)))))))
+            "url": "[https://github.com/owner/repo",]([https://github.com/owner/repo",)]([https://github.com/owner/repo",))]([https://github.com/owner/repo",)))]([https://github.com/owner/repo",))))]([https://github.com/owner/repo",)))))]([https://github.com/owner/repo",))))))]([https://github.com/owner/repo",)))))))](https://github.com/owner/repo",))))))))
             "mount_path": "/workspace/repo",
             "authorization_token": os.environ["GITHUB_TOKEN"],
             "branch": "main",
@@ -311,7 +311,7 @@ agent = client.beta.agents.create(
     name="MCP Agent",
     model="claude-opus-4-7",
     mcp_servers=[
-        {"type": "url", "name": "my-tools", "url": "[https://my-mcp-server.example.com/sse"},]([https://my-mcp-server.example.com/sse"},)]([https://my-mcp-server.example.com/sse"},))]([https://my-mcp-server.example.com/sse"},)))]([https://my-mcp-server.example.com/sse"},))))]([https://my-mcp-server.example.com/sse"},)))))]([https://my-mcp-server.example.com/sse"},))))))](https://my-mcp-server.example.com/sse"},)))))))
+        {"type": "url", "name": "my-tools", "url": "[https://my-mcp-server.example.com/sse"},]([https://my-mcp-server.example.com/sse"},)]([https://my-mcp-server.example.com/sse"},))]([https://my-mcp-server.example.com/sse"},)))]([https://my-mcp-server.example.com/sse"},))))]([https://my-mcp-server.example.com/sse"},)))))]([https://my-mcp-server.example.com/sse"},))))))]([https://my-mcp-server.example.com/sse"},)))))))](https://my-mcp-server.example.com/sse"},))))))))
     ],
     tools=[
         {"type": "agent_toolset_20260401", "default_config": {"enabled": True}},

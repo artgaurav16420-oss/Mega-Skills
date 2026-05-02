@@ -233,7 +233,7 @@ const response = await client.messages.create({
 ```
 
 | Interface | `name` | `type` |
-|:::::::---|:::::::---|:::::::---|
+|::::::::---|::::::::---|::::::::---|
 | `ToolTextEditor20250124` | `str_replace_editor` | `text_editor_20250124` |
 | `ToolTextEditor20250429` | `str_replace_based_edit_tool` | `text_editor_20250429` |
 | `ToolTextEditor20250728` | `str_replace_based_edit_tool` | `text_editor_20250728` |
@@ -397,7 +397,7 @@ const response2 = await client.messages.create({
 
 ## Memory Tool
 
-### Basic Usage
+### Basic Usage (2)
 
 ```typescript
 const response = await client.messages.create({

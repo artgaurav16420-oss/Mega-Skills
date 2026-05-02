@@ -376,11 +376,11 @@ import httpx
 from pydantic import BaseModel, Field, field_validator, ConfigDict
 from mcp.server.fastmcp import FastMCP
 
-## Initialize the MCP server
+## Initialize the MCP server (2)
 mcp = FastMCP("example_mcp")
 
 ## Constants
-API_BASE_URL = "[https://api.example.com/v1"]([https://api.example.com/v1")]([https://api.example.com/v1"))]([https://api.example.com/v1")))]([https://api.example.com/v1"))))]([https://api.example.com/v1")))))]([https://api.example.com/v1"))))))](https://api.example.com/v1")))))))
+API_BASE_URL = "[https://api.example.com/v1"]([https://api.example.com/v1")]([https://api.example.com/v1"))]([https://api.example.com/v1")))]([https://api.example.com/v1"))))]([https://api.example.com/v1")))))]([https://api.example.com/v1"))))))]([https://api.example.com/v1")))))))](https://api.example.com/v1"))))))))
 CHARACTER_LIMIT = 25000  # Maximum response size in characters
 
 ## Enums

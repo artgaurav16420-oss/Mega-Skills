@@ -30,7 +30,7 @@ A **skill** is a reference guide for proven techniques, patterns, or tools. Skil
 ## TDD Mapping for Skills
 
 | TDD Concept | Skill Creation |
-|:::::::::::::::::::::::::---:::::::::::::::::::::::::---:::::::::::::::::::::::::---:::::::::::::::::::::::::----|:::::::::::::::::::::::::---:::::::::::::::::::::::::---:::::::::::::::::::::::::---:::::::::::::::::::::::::---:::::::::::::::::::::::::----|
+|::::::::::::::::::::::::::---::::::::::::::::::::::::::---::::::::::::::::::::::::::---::::::::::::::::::::::::::----|::::::::::::::::::::::::::---::::::::::::::::::::::::::---::::::::::::::::::::::::::---::::::::::::::::::::::::::---::::::::::::::::::::::::::----|
 | **Test case** | Pressure scenario with subagent |
 | **Production code** | Skill document (SKILL.md) |
 | **Test fails (RED)** | Agent violates rule without skill (baseline) |
@@ -128,7 +128,7 @@ name: Skill-Name-With-Hyphens
 description: Use when [specific triggering conditions and symptoms]
 ---
 ## Skill Name
-## Overview
+## Overview (2)
 What is this? Core principle in 1-2 sentences.
 ## When to Use
 [Small inline flowchart IF decision non-obvious]
@@ -478,7 +478,7 @@ Different skill types need different test approaches:
 
 **Examples:** condition-based-waiting, root-cause-tracing, defensive-programming
 
-#### Test with
+#### Test with (2)
 
 - Application scenarios: Can they apply the technique correctly?
 
@@ -492,7 +492,7 @@ Different skill types need different test approaches:
 
 **Examples:** reducing-complexity, information-hiding concepts
 
-#### Test with
+#### Test with (3)
 
 - Recognition scenarios: Do they recognize when pattern applies?
 
@@ -506,7 +506,7 @@ Different skill types need different test approaches:
 
 **Examples:** API documentation, command references, library guides
 
-#### Test with
+#### Test with (4)
 
 - Retrieval scenarios: Can they find the right information?
 
@@ -519,7 +519,7 @@ Different skill types need different test approaches:
 ## Common Rationalizations for Skipping Testing
 
 | Excuse | Reality |
-|:::::::::::::::::::::::::---:::::::::::::::::::::::::-----|:::::::::::::::::::::::::---:::::::::::::::::::::::::---:::::::::::::::::::::::::---|
+|::::::::::::::::::::::::::---::::::::::::::::::::::::::-----|::::::::::::::::::::::::::---::::::::::::::::::::::::::---::::::::::::::::::::::::::---|
 | "Skill is obviously clear" | Clear to you ≠ clear to other agents. Test it. |
 | "It's just a reference" | References can have gaps, unclear sections. Test retrieval. |
 | "Testing is overkill" | Untested skills have issues. Always. 15 min testing saves hours. |
@@ -578,7 +578,7 @@ Capture rationalizations from baseline testing (see Testing section below). Ever
 
 ```markdown
 | Excuse | Reality |
-|:::::::::::::::::::::::::---:::::::::::::::::::::::::-----|:::::::::::::::::::::::::---:::::::::::::::::::::::::---:::::::::::::::::::::::::---|
+|::::::::::::::::::::::::::---::::::::::::::::::::::::::-----|::::::::::::::::::::::::::---::::::::::::::::::::::::::---::::::::::::::::::::::::::---|
 | "Too simple to test" | Simple code breaks. Test takes 30 seconds. |
 | "I'll test after" | Tests passing immediately prove nothing. |
 | "Tests after achieve same goals" | Tests-after = "what does this do?" Tests-first = "what should this do?" |

@@ -180,7 +180,7 @@ For canvas-drawn text (not Paragraph objects), manually adjust font the size and
 ### pdftotext (poppler-utils)
 
 ```bash
-## Extract text
+## Extract text (2)
 pdftotext input.pdf output.txt
 ## Extract text preserving layout
 pdftotext -layout input.pdf output.txt
@@ -191,7 +191,7 @@ pdftotext -f 1 -l 5 input.pdf output.txt  # Pages 1-5
 ### qpdf
 
 ```bash
-## Merge PDFs
+## Merge PDFs (2)
 qpdf --empty --pages file1.pdf file2.pdf -- merged.pdf
 ## Split pages
 qpdf input.pdf --pages . 1-5 -- pages1-5.pdf
@@ -273,7 +273,7 @@ with open("encrypted.pdf", "wb") as output:
 ## Quick Reference
 
 | Task | Best Tool | Command/Code |
-|:::::::::::::::::::::::::---:::::::::::::::::::::::::---|:::::::::::::::::::::::::---:::::::::::::::::::::::::---:::::::::::::::::::::::::-----|:::::::::::::::::::::::::---:::::::::::::::::::::::::---:::::::::::::::::::::::::---:::::::::::::::::::::::::-----|
+|::::::::::::::::::::::::::---::::::::::::::::::::::::::---|::::::::::::::::::::::::::---::::::::::::::::::::::::::---::::::::::::::::::::::::::-----|::::::::::::::::::::::::::---::::::::::::::::::::::::::---::::::::::::::::::::::::::---::::::::::::::::::::::::::-----|
 | Merge PDFs | pypdf | `writer.add_page(page)` |
 
 | Split PDFs | pypdf | One page per file |

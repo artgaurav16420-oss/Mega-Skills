@@ -65,7 +65,7 @@ BEFORE asserting on any mock element:
 
 ## Anti-Pattern 2: Test-Only Methods in Production
 
-### The violation
+### The violation (2)
 
 ```typescript
 // ❌ BAD: destroy() only used in tests
@@ -80,14 +80,14 @@ class Session {
 afterEach(() => session.destroy());
 ```
 
-#### Why this is wrong
+#### Why this is wrong (2)
 
 - Production class polluted with test-only code
 - Dangerous if accidentally called in production
 - Violates YAGNI and separation of concerns
 - Confuses object lifecycle with entity lifecycle
 
-#### The fix
+#### The fix (2)
 
 ```typescript
 // ✅ GOOD: Test utilities handle test cleanup
@@ -105,7 +105,7 @@ export async function cleanupSession(session: Session) {
 afterEach(() => cleanupSession(session));
 ```
 
-### Gate Function
+### Gate Function (2)
 
 ```text
 BEFORE adding any method to production class:
@@ -123,7 +123,7 @@ BEFORE adding any method to production class:
 
 ## Anti-Pattern 3: Mocking Without Understanding
 
-### The violation
+### The violation (3)
 
 ```typescript
 // ❌ BAD: Mock breaks test logic
@@ -138,13 +138,13 @@ test('detects duplicate server', () => {
 });
 ```
 
-#### Why this is wrong
+#### Why this is wrong (3)
 
 - Mocked method had side effect test depended on (writing config)
 - Over-mocking to "be safe" breaks actual behavior
 - Test passes for wrong reason or fails mysteriously
 
-#### The fix
+#### The fix (3)
 
 ```typescript
 // ✅ GOOD: Mock at correct level
@@ -157,7 +157,7 @@ test('detects duplicate server', () => {
 });
 ```
 
-### Gate Function
+### Gate Function (3)
 
 ```text
 BEFORE mocking any method:
@@ -185,7 +185,7 @@ BEFORE mocking any method:
 
 ## Anti-Pattern 4: Incomplete Mocks
 
-### The violation
+### The violation (4)
 
 ```typescript
 // ❌ BAD: Partial mock - only fields you think you need
@@ -198,7 +198,7 @@ const mockResponse = {
 // Later: breaks when code accesses response.metadata.requestId
 ```
 
-#### Why this is wrong
+#### Why this is wrong (4)
 
 - **Partial mocks hide structural assumptions** - You only mocked fields you know about
 - **Downstream code may depend on fields you didn't include** - Silent failures
@@ -207,7 +207,7 @@ const mockResponse = {
 
 **The Iron Rule:** Mock the COMPLETE data structure as it exists in reality, not just fields your immediate test uses.
 
-#### The fix
+#### The fix (4)
 
 ```typescript
 // ✅ GOOD: Mirror real API completeness
@@ -219,7 +219,7 @@ const mockResponse = {
 };
 ```
 
-### Gate Function
+### Gate Function (4)
 
 ```text
 BEFORE creating mock responses:
@@ -239,7 +239,7 @@ BEFORE creating mock responses:
 
 ## Anti-Pattern 5: Integration Tests as Afterthought
 
-### The violation
+### The violation (5)
 
 ```text
 ✅ Implementation complete
@@ -247,13 +247,13 @@ BEFORE creating mock responses:
 "Ready for testing"
 ```
 
-#### Why this is wrong
+#### Why this is wrong (5)
 
 - Testing is part of implementation, not optional follow-up
 - TDD would have caught this
 - Can't claim complete without tests
 
-#### The fix
+#### The fix (5)
 
 ```text
 TDD cycle:
@@ -290,7 +290,7 @@ TDD cycle:
 ## Quick Reference
 
 | Anti-Pattern | Fix |
-|:::::::---:::::::---:::::::---:::::::-----|:::::::-----|
+|::::::::---::::::::---::::::::---::::::::-----|::::::::-----|
 | Assert on mock elements | Test real component or unmock it |
 | Test-only methods in production | Move to test utilities |
 | Mock without understanding | Understand dependencies first, mock minimally |

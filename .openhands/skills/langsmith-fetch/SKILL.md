@@ -97,7 +97,7 @@ Trace 3: ✅ Success
 
 **When user provides:** Trace ID or says "investigate that error"
 
-#### Execute
+#### Execute (2)
 
 ```bash
 langsmith-fetch trace <trace-id> --format json
@@ -117,7 +117,7 @@ langsmith-fetch trace <trace-id> --format json
 
 1. 🔧 Suggested fix
 
-#### Example response format
+#### Example response format (2)
 
 ```text
 Deep Dive Analysis - Trace abc123
@@ -146,7 +146,7 @@ Execution Time: 8.7 seconds
 
 **When user says:** "Save this session" or "Export traces"
 
-#### Execute
+#### Execute (3)
 
 ```bash
 ## Create session folder with timestamp
@@ -179,7 +179,7 @@ Session size: 2.3 MB
 
 **When user asks:** "Show me errors" or "What's failing?"
 
-#### Execute
+#### Execute (4)
 
 ```bash
 ## Fetch recent traces
@@ -188,7 +188,7 @@ langsmith-fetch traces --last-n-minutes 30 --limit 50 --format json > recent-tra
 grep -i "error\|failed\|exception" recent-traces.json
 ```
 
-### Analyze and report
+### Analyze and report (2)
 
 1. 📊 Total errors found
 
@@ -200,7 +200,7 @@ grep -i "error\|failed\|exception" recent-traces.json
 
 1. 💡 Common patterns
 
-#### Example response format
+#### Example response format (3)
 
 ```text
 Error Analysis - Last 30 Minutes
@@ -263,7 +263,7 @@ Error Breakdown:
 
 **User says:** "Why did it use the wrong tool?"
 
-#### Steps
+#### Steps (2)
 
 1. Get the specific trace
 
@@ -281,7 +281,7 @@ Error Breakdown:
 
 **User says:** "Agent doesn't remember things"
 
-#### Steps
+#### Steps (3)
 
 1. Search for memory operations:
 
@@ -301,7 +301,7 @@ Error Breakdown:
 
 **User says:** "Agent is too slow"
 
-#### Steps
+#### Steps (4)
 
 1. Export with metadata:
 
@@ -419,7 +419,7 @@ langsmith-fetch config set project "your-project-name"
 
 ### Environment variables not persisting
 
-#### Solution
+#### Solution (2)
 
 ```bash
 ## Add to shell config file (~/.bashrc or ~/.zshrc)

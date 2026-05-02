@@ -316,7 +316,7 @@ To ensure quality, review the code for:
 
 - Use a timeout when testing: `timeout 5s python server.py`
 
-#### For Python
+#### For Python (2)
 
 - Verify Python syntax: `python -m py_compile your_server.py`
 
@@ -326,7 +326,7 @@ To ensure quality, review the code for:
 
 - Or use the evaluation harness directly (it manages the server for stdio transport)
 
-#### For Node/TypeScript
+#### For Node/TypeScript (2)
 
 - Run `npm run build` and ensure it completes without errors
 

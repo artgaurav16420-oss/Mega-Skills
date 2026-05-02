@@ -143,7 +143,7 @@ Create 10 human-readable questions requiring ONLY READ-ONLY, INDEPENDENT, NON-DE
    - Rather than opaque IDs (though IDs are acceptable)
    - The VAST MAJORITY of answers should be human-readable
 
-### Stability
+### Stability (2)
 
 1. **Answers must be STABLE/STATIONARY**
    - Look at old content (e.g., conversations that have ended, projects that have launched, questions answered)
@@ -219,7 +219,7 @@ After inspecting the content, create 10 human-readable questions:
 - An LLM should be able to answer these with the MCP server
 - Follow all question and answer guidelines above
 
-## Output Format
+## Output Format (2)
 
 Each QA pair consists of a question and an answer. The output should be an XML file with this structure:
 
@@ -425,7 +425,7 @@ Evaluation files use XML format with `<qa_pair>` elements:
 </evaluation>
 ```
 
-## Running Evaluations
+## Running Evaluations (2)
 
 The evaluation script (`scripts/evaluation.py`) supports three transport types:
 
@@ -465,7 +465,7 @@ For SSE-based MCP servers (you must start the server first):
 ```bash
 python scripts/evaluation.py \
   -t sse \
-  -u [https://example.com/mcp]([https://example.com/mcp)]([https://example.com/mcp))]([https://example.com/mcp)))]([https://example.com/mcp))))]([https://example.com/mcp)))))]([https://example.com/mcp))))))](https://example.com/mcp))))))) \
+  -u [https://example.com/mcp]([https://example.com/mcp)]([https://example.com/mcp))]([https://example.com/mcp)))]([https://example.com/mcp))))]([https://example.com/mcp)))))]([https://example.com/mcp))))))]([https://example.com/mcp)))))))](https://example.com/mcp)))))))) \
   -H "Authorization: Bearer token123" \
   -H "X-Custom-Header: value" \
   evaluation.xml
@@ -478,7 +478,7 @@ For HTTP-based MCP servers (you must start the server first):
 ```bash
 python scripts/evaluation.py \
   -t http \
-  -u [https://example.com/mcp]([https://example.com/mcp)]([https://example.com/mcp))]([https://example.com/mcp)))]([https://example.com/mcp))))]([https://example.com/mcp)))))]([https://example.com/mcp))))))](https://example.com/mcp))))))) \
+  -u [https://example.com/mcp]([https://example.com/mcp)]([https://example.com/mcp))]([https://example.com/mcp)))]([https://example.com/mcp))))]([https://example.com/mcp)))))]([https://example.com/mcp))))))]([https://example.com/mcp)))))))](https://example.com/mcp)))))))) \
   -H "Authorization: Bearer token123" \
   evaluation.xml
 ```

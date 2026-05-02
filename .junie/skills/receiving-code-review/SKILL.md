@@ -180,7 +180,7 @@ State the correction factually and move on.
 ## Common Mistakes
 
 | Mistake | Fix |
-|:::::::::::::::::::::::::---:::::::::::::::::::::::::---:::::::::::::::::::::::::---|:::::::::::::::::::::::::-----|
+|::::::::::::::::::::::::::---::::::::::::::::::::::::::---::::::::::::::::::::::::::---|::::::::::::::::::::::::::-----|
 | Performative agreement | State requirement or just act |
 | Blind implementation | Verify against codebase first |
 | Batch without testing | One at a time, test each |

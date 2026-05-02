@@ -9,7 +9,7 @@ Creating a session requires an `environment_id`. Environments are **reusable con
 ### Networking
 
 | Network Policy                  | Description                                                   |
-| :::::::---:::::::---:::::::---:::::::---:::::::---:::::::---:::::::---:::::::---:::::::---:::::::---- | :::::::---:::::::---:::::::---:::::::---:::::::---:::::::---:::::::---:::::::---:::::::---:::::::---:::::::---:::::::---:::::::---:::::::---:::::::---:::::::---:::::::---:::::::---:::::::---:::::::---- |
+| ::::::::---::::::::---::::::::---::::::::---::::::::---::::::::---::::::::---::::::::---::::::::---::::::::---- | ::::::::---::::::::---::::::::---::::::::---::::::::---::::::::---::::::::---::::::::---::::::::---::::::::---::::::::---::::::::---::::::::---::::::::---::::::::---::::::::---::::::::---::::::::---::::::::---::::::::---- |
 | `unrestricted`                  | Full egress (except legal blocklist)                          |
 | `package_managers_and_custom`   | Package managers + custom `allowed_hosts`                      |
 
@@ -41,7 +41,7 @@ const env = await client.beta.environments.create({
 ### Environment CRUD
 
 | Operation        | Method   | Path                                       | Notes |
-| :::::::---:::::::---:::::::---:::::::---:::::::---- | :::::::---:::::::----- | :::::::---:::::::---:::::::---:::::::---:::::::---:::::::---:::::::---:::::::---:::::::---:::::::---:::::::---:::::::---:::::::---:::::::--- | :::::::----- |
+| ::::::::---::::::::---::::::::---::::::::---::::::::---- | ::::::::---::::::::----- | ::::::::---::::::::---::::::::---::::::::---::::::::---::::::::---::::::::---::::::::---::::::::---::::::::---::::::::---::::::::---::::::::---::::::::--- | ::::::::----- |
 | Create           | `POST`   | `/v1/environments`                         | |
 | List             | `GET`    | `/v1/environments`                         | Paginated (`limit`, `after_id`, `before_id`) |
 | Get              | `GET`    | `/v1/environments/{id}`                    | |
@@ -115,7 +115,7 @@ Repositories are attached for the lifetime of the session — to change which re
 #### Fields
 
 | Field | Required | Notes |
-|:::::::---|:::::::---|:::::::---|
+|::::::::---|::::::::---|::::::::---|
 | `type` | ✅ | `"github_repository"` |
 | `url` | ✅ | The GitHub repository URL |
 | `authorization_token` | ✅ | GitHub Personal Access Token with repository access. **Never echoed in API responses.** |
@@ -139,7 +139,7 @@ const agent = await client.beta.agents.create(
     name: 'GitHub Agent',
     model: 'claude-opus-4-7',
     mcp_servers: [
-      { type: 'url', name: 'github', url: '[https://api.githubcopilot.com/mcp/']([https://api.githubcopilot.com/mcp/')]([https://api.githubcopilot.com/mcp/'))]([https://api.githubcopilot.com/mcp/')))]([https://api.githubcopilot.com/mcp/'))))]([https://api.githubcopilot.com/mcp/')))))]([https://api.githubcopilot.com/mcp/'))))))](https://api.githubcopilot.com/mcp/'))))))) },
+      { type: 'url', name: 'github', url: '[https://api.githubcopilot.com/mcp/']([https://api.githubcopilot.com/mcp/')]([https://api.githubcopilot.com/mcp/'))]([https://api.githubcopilot.com/mcp/')))]([https://api.githubcopilot.com/mcp/'))))]([https://api.githubcopilot.com/mcp/')))))]([https://api.githubcopilot.com/mcp/'))))))]([https://api.githubcopilot.com/mcp/')))))))](https://api.githubcopilot.com/mcp/')))))))) },
     ],
     tools: [
       { type: 'agent_toolset_20260401', default_config: { enabled: true } },
@@ -156,7 +156,7 @@ const session = await client.beta.sessions.create({
   resources: [
     {
       type: 'github_repository',
-      url: '[https://github.com/owner/repo',]([https://github.com/owner/repo',)]([https://github.com/owner/repo',))]([https://github.com/owner/repo',)))]([https://github.com/owner/repo',))))]([https://github.com/owner/repo',)))))]([https://github.com/owner/repo',))))))](https://github.com/owner/repo',)))))))
+      url: '[https://github.com/owner/repo',]([https://github.com/owner/repo',)]([https://github.com/owner/repo',))]([https://github.com/owner/repo',)))]([https://github.com/owner/repo',))))]([https://github.com/owner/repo',)))))]([https://github.com/owner/repo',))))))]([https://github.com/owner/repo',)))))))](https://github.com/owner/repo',))))))))
       authorization_token: process.env.GITHUB_TOKEN,  // repo clone token (≠ MCP auth)
       checkout: { type: 'branch', name: 'main' },
     },
@@ -175,7 +175,7 @@ agent = client.beta.agents.create(
     mcp_servers=[{
         "type": "url",
         "name": "github",
-        "url": "[https://api.githubcopilot.com/mcp/",]([https://api.githubcopilot.com/mcp/",)]([https://api.githubcopilot.com/mcp/",))]([https://api.githubcopilot.com/mcp/",)))]([https://api.githubcopilot.com/mcp/",))))]([https://api.githubcopilot.com/mcp/",)))))]([https://api.githubcopilot.com/mcp/",))))))](https://api.githubcopilot.com/mcp/",)))))))
+        "url": "[https://api.githubcopilot.com/mcp/",]([https://api.githubcopilot.com/mcp/",)]([https://api.githubcopilot.com/mcp/",))]([https://api.githubcopilot.com/mcp/",)))]([https://api.githubcopilot.com/mcp/",))))]([https://api.githubcopilot.com/mcp/",)))))]([https://api.githubcopilot.com/mcp/",))))))]([https://api.githubcopilot.com/mcp/",)))))))](https://api.githubcopilot.com/mcp/",))))))))
     }],
     tools=[
         {"type": "agent_toolset_20260401", "default_config": {"enabled": True}},
@@ -189,7 +189,7 @@ session = client.beta.sessions.create(
     vault_ids=[vault_id],  # vault contains the GitHub MCP OAuth credential
     resources=[{
         "type": "github_repository",
-        "url": "[https://github.com/owner/repo",]([https://github.com/owner/repo",)]([https://github.com/owner/repo",))]([https://github.com/owner/repo",)))]([https://github.com/owner/repo",))))]([https://github.com/owner/repo",)))))]([https://github.com/owner/repo",))))))](https://github.com/owner/repo",)))))))
+        "url": "[https://github.com/owner/repo",]([https://github.com/owner/repo",)]([https://github.com/owner/repo",))]([https://github.com/owner/repo",)))]([https://github.com/owner/repo",))))]([https://github.com/owner/repo",)))))]([https://github.com/owner/repo",))))))]([https://github.com/owner/repo",)))))))](https://github.com/owner/repo",))))))))
         "authorization_token": os.environ["GITHUB_TOKEN"],  # repo clone token (≠ MCP auth)
         "checkout": {"type": "branch", "name": "main"},
     }],
@@ -203,7 +203,7 @@ session = client.beta.sessions.create(
 Upload and manage files for use as session resources, and download files the agent wrote to `/mnt/session/outputs/`.
 
 | Operation        | Method   | Path                                  | SDK |
-| :::::::---:::::::---:::::::---:::::::---:::::::---- | :::::::---:::::::----- | :::::::---:::::::---:::::::---:::::::---:::::::---:::::::---:::::::---:::::::---:::::::---:::::::---:::::::---:::::::---- | :::::::--- |
+| ::::::::---::::::::---::::::::---::::::::---::::::::---- | ::::::::---::::::::----- | ::::::::---::::::::---::::::::---::::::::---::::::::---::::::::---::::::::---::::::::---::::::::---::::::::---::::::::---::::::::---- | ::::::::--- |
 | Upload           | `POST`   | `/v1/files`                           | `client.beta.files.upload({ file })` |
 | List             | `GET`    | `/v1/files?scope_id=...`              | `client.beta.files.list({ scope_id, betas: ["managed-agents-2026-04-01"] })` |
 | Get Metadata     | `GET`    | `/v1/files/{id}`                      | `client.beta.files.retrieveMetadata(id)` |

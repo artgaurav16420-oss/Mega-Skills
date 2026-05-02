@@ -408,7 +408,7 @@ for block in response.content:
 
 ## Memory Tool
 
-### Basic Usage
+### Basic Usage (2)
 
 ```python
 import anthropic

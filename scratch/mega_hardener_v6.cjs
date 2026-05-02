@@ -233,6 +233,23 @@ function fixMarkdown(filePath) {
     }).join('\n');
 
     result = result.replace(/\n{3,}/g, '\n\n').trimEnd() + '\n';
+    // MD024: Duplicate heading remediation
+    const headingCounts = new Map();
+    result = result.split('\n').map(line => {
+        const headingMatch = line.match(/^(#+)\s+(.*)/);
+        if (headingMatch) {
+            const level = headingMatch[1];
+            const content = headingMatch[2].trim();
+            const count = headingCounts.get(content) || 0;
+            if (count > 0) {
+                headingCounts.set(content, count + 1);
+                return `${level} ${content} (${count + 1})`;
+            }
+            headingCounts.set(content, 1);
+        }
+        return line;
+    }).join('\n');
+
     fs.writeFileSync(filePath, result);
 }
 

@@ -143,7 +143,7 @@ git commit -m "feat: add brainstorm server foundation"
 
 ## Task 2: Create the Helper Library
 
-### Files
+### Files (2)
 
 - Create: `lib/brainstorm-server/helper.js`
 
@@ -265,7 +265,7 @@ git commit -m "feat: add browser helper library for event capture"
 
 ## Task 3: Write Tests for the Server
 
-### Files
+### Files (3)
 
 - Create: `tests/brainstorm-server/server.test.js`
 - Create: `tests/brainstorm-server/package.json`
@@ -409,7 +409,7 @@ git commit -m "test: add brainstorm server integration tests"
 
 ## Task 4: Add Visual Companion to Brainstorming Skill
 
-### Files
+### Files (4)
 
 - Modify: `skills/brainstorming/SKILL.md`
 - Create: `skills/brainstorming/visual-companion.md` (supporting doc)
@@ -431,7 +431,7 @@ node ${PLUGIN_ROOT}/lib/brainstorm-server/index.js
 
 ```text
 
-Tell the user: "I've started a visual companion at [http://localhost:3333]([http://localhost:3333)]([http://localhost:3333))]([http://localhost:3333)))]([http://localhost:3333))))]([http://localhost:3333)))))]([http://localhost:3333))))))](http://localhost:3333))))))) - open it in a browser."
+Tell the user: "I've started a visual companion at [http://localhost:3333]([http://localhost:3333)]([http://localhost:3333))]([http://localhost:3333)))]([http://localhost:3333))))]([http://localhost:3333)))))]([http://localhost:3333))))))]([http://localhost:3333)))))))](http://localhost:3333)))))))) - open it in a browser."
 
 ## Pushing Screens
 
@@ -523,7 +523,7 @@ When brainstorming involves visual elements - UI mockups, wireframes, interactiv
 
 **How it works:**
 1. Start the server as a background job
-2. Tell user to open [http://localhost:3333]([http://localhost:3333)]([http://localhost:3333))]([http://localhost:3333)))]([http://localhost:3333))))]([http://localhost:3333)))))]([http://localhost:3333))))))](http://localhost:3333)))))))
+2. Tell user to open [http://localhost:3333]([http://localhost:3333)]([http://localhost:3333))]([http://localhost:3333)))]([http://localhost:3333))))]([http://localhost:3333)))))]([http://localhost:3333))))))]([http://localhost:3333)))))))](http://localhost:3333))))))))
 3. Write HTML to `/tmp/brainstorm/screen.html` (auto-refreshes)
 4. Check background task output for user interactions
 
@@ -537,7 +537,7 @@ The terminal remains the primary conversation interface. The browser is a visual
 Run: `grep -A5 "Visual Companion" skills/brainstorming/SKILL.md`
 Expected: Shows the new section
 
-#### Step 4: Commit
+#### Step 4: Commit (2)
 
 ```bash
 git add skills/brainstorming/
@@ -548,7 +548,7 @@ git commit -m "feat: add visual companion to brainstorming skill"
 
 ## Task 5: Add Server to Plugin Ignore (Optional Cleanup)
 
-### Files
+### Files (5)
 
 - Check if `.gitignore` needs node_modules exclusion for lib/brainstorm-server
 

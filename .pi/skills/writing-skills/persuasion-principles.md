@@ -35,19 +35,19 @@ LLMs respond to the same persuasion principles as humans. Understanding this psy
 
 **What it is:** Consistency with prior actions, statements, or public declarations.
 
-#### How it works in skills
+#### How it works in skills (2)
 
 - Require announcements: "Announce skill usage"
 - Force explicit choices: "Choose A, B, or C"
 - Use tracking: TodoWrite for checklists
 
-#### When to use
+#### When to use (2)
 
 - Ensuring skills are actually followed
 - Multi-step processes
 - Accountability mechanisms
 
-#### Example
+#### Example (2)
 
 ```markdown
 ✅ When you find a skill, you MUST announce: "I'm using [Skill Name]"
@@ -58,19 +58,19 @@ LLMs respond to the same persuasion principles as humans. Understanding this psy
 
 **What it is:** Urgency from time limits or limited availability.
 
-#### How it works in skills
+#### How it works in skills (3)
 
 - Time-bound requirements: "Before proceeding"
 - Sequential dependencies: "Immediately after X"
 - Prevents procrastination
 
-#### When to use
+#### When to use (3)
 
 - Immediate verification requirements
 - Time-sensitive workflows
 - Preventing "I'll do it later"
 
-#### Example
+#### Example (3)
 
 ```markdown
 ✅ After completing a task, IMMEDIATELY request code review before proceeding.
@@ -81,19 +81,19 @@ LLMs respond to the same persuasion principles as humans. Understanding this psy
 
 **What it is:** Conformity to what others do or what's considered normal.
 
-#### How it works in skills
+#### How it works in skills (4)
 
 - Universal patterns: "Every time", "Always"
 - Failure modes: "X without Y = failure"
 - Establishes norms
 
-#### When to use
+#### When to use (4)
 
 - Documenting universal practices
 - Warning about common failures
 - Reinforcing standards
 
-#### Example
+#### Example (4)
 
 ```markdown
 ✅ Checklists without TodoWrite tracking = steps get skipped. Every time.
@@ -104,18 +104,18 @@ LLMs respond to the same persuasion principles as humans. Understanding this psy
 
 **What it is:** Shared identity, "we-ness", in-group belonging.
 
-#### How it works in skills
+#### How it works in skills (5)
 
 - Collaborative language: "our codebase", "we're colleagues"
 - Shared goals: "we both want quality"
 
-#### When to use
+#### When to use (5)
 
 - Collaborative workflows
 - Establishing team culture
 - Non-hierarchical practices
 
-#### Example
+#### Example (5)
 
 ```markdown
 ✅ We're colleagues working together. I need your honest technical judgment.
@@ -139,20 +139,20 @@ LLMs respond to the same persuasion principles as humans. Understanding this psy
 
 **What it is:** Preference for cooperating with those we like.
 
-#### How it works
+#### How it works (2)
 
 - **DON'T USE for compliance**
 - Conflicts with honest feedback culture
 - Creates sycophancy
 
-#### When to avoid
+#### When to avoid (2)
 
 - Always for discipline enforcement
 
 ## Principle Combinations by Skill Type
 
 | Skill Type | Use | Avoid |
-|:::::::---:::::::---:::::::---:::::::---|:::::::-----|:::::::---:::::::----|
+|::::::::---::::::::---::::::::---::::::::---|::::::::-----|::::::::---::::::::----|
 | Discipline-enforcing | Authority + Commitment + Social Proof | Liking, Reciprocity |
 | Guidance/technique | Moderate Authority + Unity | Heavy authority |
 | Collaborative | Unity + Commitment | Authority, Liking |

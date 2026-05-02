@@ -5,7 +5,7 @@ This file documents HTTP error codes returned by the Claude API, their common ca
 ## Error Code Summary
 
 | Code | Error Type              | Retryable | Common Cause                         |
-| :::::::---- | :::::::---:::::::---:::::::---:::::::---:::::::---:::::::---:::::::----- | :::::::---:::::::---:::::::--- | :::::::---:::::::---:::::::---:::::::---:::::::---:::::::---:::::::---:::::::---:::::::---:::::::---:::::::---:::::::--- |
+| ::::::::---- | ::::::::---::::::::---::::::::---::::::::---::::::::---::::::::---::::::::----- | ::::::::---::::::::---::::::::--- | ::::::::---::::::::---::::::::---::::::::---::::::::---::::::::---::::::::---::::::::---::::::::---::::::::---::::::::---::::::::--- |
 | 400  | `invalid_request_error` | No        | Invalid request format or parameters |
 | 401  | `authentication_error`  | No        | Invalid or missing API key           |
 | 403  | `permission_error`      | No        | API key lacks permission             |
@@ -50,7 +50,7 @@ This file documents HTTP error codes returned by the Claude API, their common ca
 
 ### 401 Unauthorized
 
-#### Causes
+#### Causes (2)
 
 - Missing `x-api-key` header or `Authorization` header
 - Invalid API key format
@@ -62,7 +62,7 @@ This file documents HTTP error codes returned by the Claude API, their common ca
 
 ### 403 Forbidden
 
-#### Causes
+#### Causes (3)
 
 - API key doesn't have access to the requested model
 - Organization-level restrictions
@@ -74,7 +74,7 @@ This file documents HTTP error codes returned by the Claude API, their common ca
 
 ### 404 Not Found
 
-#### Causes
+#### Causes (4)
 
 - Typo in model ID (e.g., `claude-sonnet-4.6` instead of `claude-sonnet-4-6`)
 - Using deprecated model ID
@@ -86,7 +86,7 @@ This file documents HTTP error codes returned by the Claude API, their common ca
 
 ### 413 Request Too Large
 
-#### Causes
+#### Causes (5)
 
 - Request body exceeds maximum size
 - Too many tokens in input
@@ -124,7 +124,7 @@ thinking: budget_tokens=10000, max_tokens=16000
 
 ### 429 Rate Limited
 
-#### Causes
+#### Causes (6)
 
 - Exceeded requests per minute (RPM)
 - Exceeded tokens per minute (TPM)
@@ -142,18 +142,18 @@ thinking: budget_tokens=10000, max_tokens=16000
 
 ### 500 Internal Server Error
 
-#### Causes
+#### Causes (7)
 
 - Temporary Anthropic service issue
 - Bug in API processing
 
-**Fix:** Retry with exponential backoff. If persistent, check [status.anthropic.com]([https://status.anthropic.com).]([https://status.anthropic.com).)]([https://status.anthropic.com).))]([https://status.anthropic.com).)))]([https://status.anthropic.com).))))]([https://status.anthropic.com).)))))]([https://status.anthropic.com).))))))](https://status.anthropic.com).)))))))
+**Fix:** Retry with exponential backoff. If persistent, check [status.anthropic.com]([https://status.anthropic.com).]([https://status.anthropic.com).)]([https://status.anthropic.com).))]([https://status.anthropic.com).)))]([https://status.anthropic.com).))))]([https://status.anthropic.com).)))))]([https://status.anthropic.com).))))))]([https://status.anthropic.com).)))))))](https://status.anthropic.com).))))))))
 
 ---
 
 ### 529 Overloaded
 
-#### Causes
+#### Causes (8)
 
 - High API demand
 - Service capacity reached
@@ -165,7 +165,7 @@ thinking: budget_tokens=10000, max_tokens=16000
 ## Common Mistakes and Fixes
 
 | Mistake                         | Error            | Fix                                                     |
-| :::::::---:::::::---:::::::---:::::::---:::::::---:::::::---:::::::---:::::::---:::::::---:::::::---- | :::::::---:::::::---:::::::---:::::::---:::::::---- | :::::::---:::::::---:::::::---:::::::---:::::::---:::::::---:::::::---:::::::---:::::::---:::::::---:::::::---:::::::---:::::::---:::::::---:::::::---:::::::---:::::::---:::::::---- |
+| ::::::::---::::::::---::::::::---::::::::---::::::::---::::::::---::::::::---::::::::---::::::::---::::::::---- | ::::::::---::::::::---::::::::---::::::::---::::::::---- | ::::::::---::::::::---::::::::---::::::::---::::::::---::::::::---::::::::---::::::::---::::::::---::::::::---::::::::---::::::::---::::::::---::::::::---::::::::---::::::::---::::::::---::::::::---- |
 | `temperature`/`top_p`/`top_k` on Opus 4.7 | 400    | Remove the parameter (see `shared/model-migration.md`)  |
 | `budget_tokens` on Opus 4.7     | 400              | Use `thinking: {type: "adaptive"}`                      |
 | `budget_tokens` >= `max_tokens` (older models) | 400 | Ensure `budget_tokens` < `max_tokens`                  |
@@ -180,7 +180,7 @@ thinking: budget_tokens=10000, max_tokens=16000
 **Always use the SDK's typed exception classes** instead of checking error messages with string matching. Each HTTP error code maps to a specific exception class:
 
 | HTTP Code | TypeScript Class                  | Python Class                      |
-| :::::::---:::::::---:::::::--- | :::::::---:::::::---:::::::---:::::::---:::::::---:::::::---:::::::---:::::::---:::::::---:::::::---:::::::--- | :::::::---:::::::---:::::::---:::::::---:::::::---:::::::---:::::::---:::::::---:::::::---:::::::---:::::::--- |
+| ::::::::---::::::::---::::::::--- | ::::::::---::::::::---::::::::---::::::::---::::::::---::::::::---::::::::---::::::::---::::::::---::::::::---::::::::--- | ::::::::---::::::::---::::::::---::::::::---::::::::---::::::::---::::::::---::::::::---::::::::---::::::::---::::::::--- |
 | 400       | `Anthropic.BadRequestError`       | `anthropic.BadRequestError`       |
 | 401       | `Anthropic.AuthenticationError`   | `anthropic.AuthenticationError`   |
 | 403       | `Anthropic.PermissionDeniedError` | `anthropic.PermissionDeniedError` |

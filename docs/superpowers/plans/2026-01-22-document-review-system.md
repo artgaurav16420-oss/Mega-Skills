@@ -45,7 +45,7 @@ Task tool (general-purpose):
 ## What to Check
 
     | Category | What to Look For |
-    |:::::::---:::::::---:::::::----|:::::::---:::::::---:::::::---:::::::---:::::::---:::::::---|
+    |::::::::---::::::::---::::::::----|::::::::---::::::::---::::::::---::::::::---::::::::---::::::::---|
     | Completeness | TODOs, placeholders, "TBD", incomplete sections |
     | Coverage | Missing error handling, edge cases, integration points |
     | Consistency | Internal contradictions, conflicting requirements |
@@ -94,7 +94,7 @@ git commit -m "feat: add spec document reviewer prompt template"
 
 ### Task 2: Add Review Loop to Brainstorming Skill
 
-#### Files
+#### Files (2)
 
 - Modify: `skills/brainstorming/SKILL.md`
 
@@ -142,7 +142,7 @@ This chunk adds the plan document reviewer to the writing-plans skill.
 
 ### Task 3: Create Plan Document Reviewer Prompt Template
 
-#### Files
+#### Files (3)
 
 - Create: `skills/writing-plans/plan-document-reviewer-prompt.md`
 
@@ -167,17 +167,17 @@ Task tool (general-purpose):
     **Plan chunk to review:** [PLAN_FILE_PATH] - Chunk N only
     **Spec for reference:** [SPEC_FILE_PATH]
 
-## What to Check
+## What to Check (2)
 
     | Category | What to Look For |
-    |:::::::---:::::::---:::::::----|:::::::---:::::::---:::::::---:::::::---:::::::---:::::::---|
+    |::::::::---::::::::---::::::::----|::::::::---::::::::---::::::::---::::::::---::::::::---::::::::---|
     | Completeness | TODOs, placeholders, incomplete tasks, missing steps |
     | Spec Alignment | Chunk covers relevant spec requirements, no scope creep |
     | Task Decomposition | Tasks atomic, clear boundaries, steps actionable |
     | Task Syntax | Checkbox syntax (`- [ ]`) on tasks and steps |
     | Chunk Size | Each chunk under 1000 lines |
 
-## CRITICAL
+## CRITICAL (2)
 
     Look especially hard for:
     - Any TODO markers or placeholder text
@@ -185,17 +185,17 @@ Task tool (general-purpose):
     - Incomplete task definitions
     - Missing verification steps or expected outputs
 
-## Output Format
+## Output Format (2)
 
 ## Plan Review - Chunk N
 
     **Status:** ✅ Approved | ❌ Issues Found
 
-### Issues (if any)
+### Issues (if any) (2)
 
     - [Task X, Step Y]: [specific issue] - [why it matters]
 
-#### Recommendations (advisory)
+#### Recommendations (advisory) (2)
 
     - [suggestions that don't block approval]
 
@@ -220,7 +220,7 @@ git commit -m "feat: add plan document reviewer prompt template"
 
 ### Task 4: Add Review Loop to Writing-Plans Skill
 
-#### Files
+#### Files (4)
 
 - Modify: `skills/writing-plans/SKILL.md`
 
@@ -285,7 +285,7 @@ This chunk updates the plan document header template to reference the new checkb
 
 ### Task 5: Update Plan Header Template in Writing-Plans Skill
 
-#### Files
+#### Files (5)
 
 - Modify: `skills/writing-plans/SKILL.md`
 

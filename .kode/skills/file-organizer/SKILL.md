@@ -327,7 +327,7 @@ Delete the other 2 copies?
 - No consistent naming convention
 - Some projects at root, others in random subfolders
 - Duplicate folders (project-name, project-name-old, project-name-v2)
-## Proposed Structure
+## Proposed Structure (2)
 ```
 
 Projects/

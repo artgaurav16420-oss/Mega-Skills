@@ -124,12 +124,12 @@ git diff {BASE_SHA}..{HEAD_SHA}
 ## Example Output
 
 ```text
-### Strengths
+### Strengths (2)
 - Clean database schema with proper migrations (db.ts:15-42)
 - Comprehensive test coverage (18 tests, all edge cases)
 - Good error handling with fallbacks (summarizer.ts:85-92)
 
-### Issues
+### Issues (2)
 
 #### Important
 1. **Missing help text in CLI wrapper**
@@ -148,11 +148,11 @@ git diff {BASE_SHA}..{HEAD_SHA}
    - Issue: No "X of Y" counter for long operations
    - Impact: Users don't know how long to wait
 
-### Recommendations
+### Recommendations (2)
 - Add progress reporting for user experience
 - Consider config file for excluded projects (portability)
 
-### Assessment
+### Assessment (2)
 
 **Ready to merge: With fixes**
 

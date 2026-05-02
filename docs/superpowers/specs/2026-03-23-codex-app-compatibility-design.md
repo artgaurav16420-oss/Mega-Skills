@@ -15,7 +15,7 @@ The Codex CLI (open source terminal tool) does NOT have this conflict — it has
 Tested in the Codex App on 2026-03-23:
 
 | Operation | workspace-write sandbox | Full access sandbox |
-|:::::::---|:::::::---|:::::::---|
+|::::::::---|::::::::---|::::::::---|
 | `git add` | Works | Works |
 | `git commit` | Works | Works |
 | `git checkout -b` | **Blocked** (can't write `.git/refs/heads/`) | Works |
@@ -53,7 +53,7 @@ Why `git-dir != git-common-dir` instead of checking `show-toplevel`:
 ### Decision Matrix
 
 | Linked Worktree? | Detached HEAD? | Environment | Action |
-|:::::::---|:::::::---|:::::::---|:::::::---|
+|::::::::---|::::::::---|::::::::---|::::::::---|
 | No | No | Claude Code / Codex CLI / normal git | Full skill behavior (unchanged) |
 | Yes | Yes | Codex App worktree (workspace-write) | Skip worktree creation; handoff payload at finish |
 | Yes | No | Codex App (Full access) or manual worktree | Skip worktree creation; full finishing flow |
@@ -162,7 +162,7 @@ Two new sections at the end:
 #### Environment Detection
 
 ```markdown
-## Environment Detection
+## Environment Detection (2)
 
 Skills that create worktrees or finish branches should detect their
 environment with read-only git commands before proceeding:
@@ -183,7 +183,7 @@ Step 1.5 for how each skill uses these signals.
 ### Codex App Finishing
 
 ```markdown
-## Codex App Finishing
+## Codex App Finishing (2)
 
 When the sandbox blocks branch/push operations (detached HEAD in an
 externally managed worktree), the agent commits all work and informs
@@ -209,7 +209,7 @@ names, commit messages, and PR descriptions for the user to copy.
 ## Scope Summary
 
 | File | Change |
-|:::::::---|:::::::---|
+|::::::::---|::::::::---|
 | `skills/using-git-worktrees/SKILL.md` | +12 lines (Step 0) |
 | `skills/finishing-a-development-branch/SKILL.md` | +20 lines (Step 1.5 + cleanup guard) |
 | `skills/subagent-driven-development/SKILL.md` | 1 line edit |

@@ -36,7 +36,7 @@ The server watches a directory for HTML files and serves the newest one to the b
 ## Start server with persistence (mockups saved to project)
 scripts/start-server.sh --project-dir /path/to/project
 
-## Returns: {"type":"server-started","port":52341,"url":"[http://localhost:52341",]([http://localhost:52341",)]([http://localhost:52341",))]([http://localhost:52341",)))]([http://localhost:52341",))))]([http://localhost:52341",)))))]([http://localhost:52341",))))))](http://localhost:52341",)))))))
+## Returns: {"type":"server-started","port":52341,"url":"[http://localhost:52341",]([http://localhost:52341",)]([http://localhost:52341",))]([http://localhost:52341",)))]([http://localhost:52341",))))]([http://localhost:52341",)))))]([http://localhost:52341",))))))]([http://localhost:52341",)))))))](http://localhost:52341",))))))))
 ##           "screen_dir":"/path/to/project/.mega-skills/brainstorm/12345-1706000000/content",
 ##           "state_dir":"/path/to/project/.mega-skills/brainstorm/12345-1706000000/state"}
 ```

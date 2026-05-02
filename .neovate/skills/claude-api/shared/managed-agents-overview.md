@@ -9,7 +9,7 @@ Managed Agents provisions a container per session as the agent's workspace. The 
 Every session references a pre-created `/v1/agents` object. Create the agent once, store the ID, and reuse it across runs.
 
 | Step | Call | Frequency |
-|:::::::---|:::::::---|:::::::---|
+|::::::::---|::::::::---|::::::::---|
 | 1 | `POST /v1/agents` — `model`, `system`, `tools`, `mcp_servers`, `skills` live here | **ONCE.** Store `agent.id` **and** `agent.version`. |
 | 2 | `POST /v1/sessions` — `agent: "agent_abc123"` or `{type: "agent", id, version}` | **Every run.** String shorthand uses latest version. |
 
@@ -24,7 +24,7 @@ If you're about to write `sessions.create()` with `model`, `system`, or `tools` 
 Managed Agents is in beta. The SDK sets required beta headers automatically:
 
 | Beta Header                    | What it enables                                      |
-| :::::::---:::::::---:::::::---:::::::---:::::::---:::::::---:::::::---:::::::---:::::::---:::::::--- | :::::::---:::::::---:::::::---:::::::---:::::::---:::::::---:::::::---:::::::---:::::::---:::::::---:::::::---:::::::---:::::::---:::::::---:::::::---:::::::---:::::::---- |
+| ::::::::---::::::::---::::::::---::::::::---::::::::---::::::::---::::::::---::::::::---::::::::---::::::::--- | ::::::::---::::::::---::::::::---::::::::---::::::::---::::::::---::::::::---::::::::---::::::::---::::::::---::::::::---::::::::---::::::::---::::::::---::::::::---::::::::---::::::::---- |
 | `managed-agents-2026-04-01`    | Agents, Environments, Sessions, Events, Session Resources, Vaults, Credentials, Memory Stores |
 | `skills-2025-10-02`            | Skills API (for managing custom skill definitions)   |
 | `files-api-2025-04-14`         | Files API for file uploads                           |
@@ -34,7 +34,7 @@ Managed Agents is in beta. The SDK sets required beta headers automatically:
 ## Reading Guide
 
 | User wants to...                       | Read these files                                        |
-| :::::::---:::::::---:::::::---:::::::---:::::::---:::::::---:::::::---:::::::---:::::::---:::::::---:::::::---:::::::----- | :::::::---:::::::---:::::::---:::::::---:::::::---:::::::---:::::::---:::::::---:::::::---:::::::---:::::::---:::::::---:::::::---:::::::---:::::::---:::::::---:::::::---:::::::---- |
+| ::::::::---::::::::---::::::::---::::::::---::::::::---::::::::---::::::::---::::::::---::::::::---::::::::---::::::::---::::::::----- | ::::::::---::::::::---::::::::---::::::::---::::::::---::::::::---::::::::---::::::::---::::::::---::::::::---::::::::---::::::::---::::::::---::::::::---::::::::---::::::::---::::::::---::::::::---- |
 | **Get started from scratch / "help me set up an agent"** | `shared/managed-agents-onboarding.md` — guided interview (WHERE→WHO→WHAT→WATCH), then emit code |
 | Understand how the API works           | `shared/managed-agents-core.md`                         |
 | See the full endpoint reference        | `shared/managed-agents-api-reference.md`                |

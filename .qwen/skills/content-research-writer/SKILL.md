@@ -462,7 +462,7 @@ All added to your outline with proper citations.
 
 ```markdown
 ## Feedback: Common Mistakes Section
-## What Works Well ✓
+## What Works Well ✓ (2)
 - Strong examples (the Slack notification story)
 - Clear structure (3 mistakes, clean layout)
 - Practical advice for each mistake
