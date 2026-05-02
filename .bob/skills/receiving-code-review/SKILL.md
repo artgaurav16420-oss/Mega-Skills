@@ -25,7 +25,7 @@ WHEN receiving code review feedback:
 
 ## Forbidden Responses
 
-#### NEVER:
+#### NEVER
 
 - "You're absolutely right!" (explicit CLAUDE.md violation)
 
@@ -33,7 +33,7 @@ WHEN receiving code review feedback:
 
 - "Let me implement that now" (before verification)
 
-#### INSTEAD:
+#### INSTEAD
 
 - Restate the technical requirement
 
@@ -52,7 +52,7 @@ IF any item is unclear:
 WHY: Items may be related. Partial understanding = wrong implementation.
 ```
 
-#### Example:
+#### Example
 
 ```text
 your human partner: "Fix 1-6"
@@ -132,7 +132,7 @@ Push back when:
 
 - Conflicts with your human partner's architectural decisions
 
-#### How to push back:
+#### How to push back
 
 - Use technical reasoning, not defensiveness
 
@@ -180,7 +180,7 @@ State the correction factually and move on.
 ## Common Mistakes
 
 | Mistake | Fix |
-|:::::::::::::---:::::::::::::---:::::::::::::---|:::::::::::::-----|
+|::::::::::::::---::::::::::::::---::::::::::::::---|::::::::::::::-----|
 | Performative agreement | State requirement or just act |
 | Blind implementation | Verify against codebase first |
 | Batch without testing | One at a time, test each |
@@ -191,28 +191,28 @@ State the correction factually and move on.
 
 ## Real Examples
 
-#### Performative Agreement (Bad):
+#### Performative Agreement (Bad)
 
 ```text
 Reviewer: "Remove legacy code"
 ❌ "You're absolutely right! Let me remove that..."
 ```
 
-#### Technical Verification (Good):
+#### Technical Verification (Good)
 
 ```text
 Reviewer: "Remove legacy code"
 ✅ "Checking... build target is 10.15+, this API needs 13+. Need legacy for backward compat. Current impl has wrong bundle ID - fix it or drop pre-13 support?"
 ```
 
-#### YAGNI (Good):
+#### YAGNI (Good)
 
 ```text
 Reviewer: "Implement proper metrics tracking with database, date filters, CSV export"
 ✅ "Grepped codebase - nothing calls this endpoint. Remove it (YAGNI)? Or is there usage I'm missing?"
 ```
 
-#### Unclear Item (Good):
+#### Unclear Item (Good)
 
 ```text
 your human partner: "Fix items 1-6"
@@ -226,7 +226,7 @@ When replying to inline review comments on GitHub, reply in the comment thread (
 
 ## The Bottom Line
 
-#### External feedback = suggestions to evaluate, not orders to follow.
+#### External feedback = suggestions to evaluate, not orders to follow
 
 Verify. Question. Then implement.
 

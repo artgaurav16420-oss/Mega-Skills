@@ -49,7 +49,7 @@ After all tasks complete and verified:
 
 ## When to Stop and Ask for Help
 
-#### STOP executing immediately when:
+#### STOP executing immediately when
 
 - Hit a blocker (missing dependency, test fails, instruction unclear)
 
@@ -59,11 +59,11 @@ After all tasks complete and verified:
 
 - Verification fails repeatedly
 
-#### Ask for clarification rather than guessing.
+#### Ask for clarification rather than guessing
 
 ## When to Revisit Earlier Steps
 
-#### Return to Review (Step 1) when:
+#### Return to Review (Step 1) when
 
 - Partner updates the plan based on your feedback
 
@@ -87,7 +87,7 @@ After all tasks complete and verified:
 
 ## Integration
 
-#### Required workflow skills:
+#### Required workflow skills
 
 - **mega-skills:using-git-worktrees** - REQUIRED: Set up isolated workspace before starting
 

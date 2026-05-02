@@ -16,7 +16,7 @@ To access Anthropic's official brand identity and style resources, use this skil
 
 ### Colors
 
-#### Main Colors:
+#### Main Colors
 
 - Dark: `#141413` - Primary text and dark backgrounds
 
@@ -26,7 +26,7 @@ To access Anthropic's official brand identity and style resources, use this skil
 
 - Light Gray: `#e8e6dc` - Subtle backgrounds
 
-#### Accent Colors:
+#### Accent Colors
 
 - Orange: `#d97757` - Primary accent
 

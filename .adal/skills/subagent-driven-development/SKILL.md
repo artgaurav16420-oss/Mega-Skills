@@ -30,7 +30,7 @@ digraph when_to_use {
 }
 ```
 
-#### vs. Executing Plans (parallel session):
+#### vs. Executing Plans (parallel session)
 
 - Same session (no context switch)
 
@@ -94,7 +94,7 @@ Use the least powerful model that can handle each role to conserve cost and incr
 
 **Architecture, design, and review tasks**: use the most capable available model.
 
-#### Task complexity signals:
+#### Task complexity signals
 
 - Touches 1-2 files with a complete spec → cheap model
 
@@ -188,7 +188,7 @@ Done!
 
 ## Advantages
 
-#### vs. Manual execution:
+#### vs. Manual execution
 
 - Subagents follow TDD naturally
 
@@ -198,7 +198,7 @@ Done!
 
 - Subagent can ask questions (before AND during work)
 
-#### vs. Executing Plans:
+#### vs. Executing Plans
 
 - Same session (no handoff)
 
@@ -206,7 +206,7 @@ Done!
 
 - Review checkpoints automatic
 
-#### Efficiency gains:
+#### Efficiency gains
 
 - No file reading overhead (controller provides full text)
 
@@ -216,7 +216,7 @@ Done!
 
 - Questions surfaced before work begins (not after)
 
-#### Quality gates:
+#### Quality gates
 
 - Self-review catches issues before handoff
 
@@ -228,7 +228,7 @@ Done!
 
 - Code quality ensures implementation is well-built
 
-#### Cost:
+#### Cost
 
 - More subagent invocations (implementer + 2 reviewers per task)
 
@@ -240,7 +240,7 @@ Done!
 
 ## Red Flags
 
-#### Never:
+#### Never
 
 - Start implementation on main/master branch without explicit user consent
 
@@ -266,7 +266,7 @@ Done!
 
 - Move to next task while either review has open issues
 
-#### If subagent asks questions:
+#### If subagent asks questions
 
 - Answer clearly and completely
 
@@ -274,7 +274,7 @@ Done!
 
 - Don't rush them into implementation
 
-#### If reviewer finds issues:
+#### If reviewer finds issues
 
 - Implementer (same subagent) fixes them
 
@@ -284,7 +284,7 @@ Done!
 
 - Don't skip the re-review
 
-#### If subagent fails task:
+#### If subagent fails task
 
 - Dispatch fix subagent with specific instructions
 
@@ -292,7 +292,7 @@ Done!
 
 ## Integration
 
-#### Required workflow skills:
+#### Required workflow skills
 
 - **mega-skills:using-git-worktrees** - REQUIRED: Set up isolated workspace before starting
 
@@ -302,10 +302,10 @@ Done!
 
 - **mega-skills:finishing-a-development-branch** - Complete development after all tasks
 
-#### Subagents should use:
+#### Subagents should use
 
 - **mega-skills:test-driven-development** - Subagents follow TDD for each task
 
-#### Alternative workflow:
+#### Alternative workflow
 
 - **mega-skills:executing-plans** - Use for parallel session instead of same-session execution

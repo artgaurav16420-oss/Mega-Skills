@@ -62,7 +62,7 @@ To capture the ALGORITHMIC essence, express how this philosophy manifests throug
 
 - Parametric variation and emergent complexity?
 
-#### CRITICAL GUIDELINES:
+#### CRITICAL GUIDELINES
 
 - **Avoid redundancy**: Each algorithmic aspect should be mentioned once. Avoid repeating concepts about noise theory, particle dynamics, or mathematical principles unless adding new depth.
 
@@ -75,22 +75,27 @@ The philosophy must guide the next version to express ideas ALGORITHMICALLY, not
 ### PHILOSOPHY EXAMPLES
 
 #### "Organic Turbulence"
+
 Philosophy: Chaos constrained by natural law, order emerging from disorder.
 Algorithmic expression: Flow fields driven by layered Perlin noise. Thousands of particles following vector forces, their trails accumulating into organic density maps. Multiple noise octaves create turbulent regions and calm zones. Color emerges from velocity and density - fast particles burn bright, slow ones fade to shadow. The algorithm runs until equilibrium - a meticulously tuned balance where every parameter was refined through countless iterations by a master of computational aesthetics.
 
 #### "Quantum Harmonics"
+
 Philosophy: Discrete entities exhibiting wave-like interference patterns.
 Algorithmic expression: Particles initialized on a grid, each carrying a phase value that evolves through sine waves. When particles are near, their phases interfere - constructive interference creates bright nodes, destructive creates voids. Simple harmonic motion generates complex emergent mandalas. The result of painstaking frequency calibration where every ratio was carefully chosen to produce resonant beauty.
 
 #### "Recursive Whispers"
+
 Philosophy: Self-similarity across scales, infinite depth in finite space.
 Algorithmic expression: Branching structures that subdivide recursively. Each branch slightly randomized but constrained by golden ratios. L-systems or recursive subdivision generate tree-like forms that feel both mathematical and organic. Subtle noise perturbations break perfect symmetry. Line weights diminish with each recursion level. Every branching angle the product of deep mathematical exploration.
 
 #### "Field Dynamics"
+
 Philosophy: Invisible forces made visible through their effects on matter.
 Algorithmic expression: Vector fields constructed from mathematical functions or noise. Particles born at edges, flowing along field lines, dying when they reach equilibrium or boundaries. Multiple fields can attract, repel, or rotate particles. The visualization shows only the traces - ghost-like evidence of invisible forces. A computational dance meticulously choreographed through force balance.
 
 #### "Stochastic Crystallization"
+
 Philosophy: Random processes crystallizing into ordered structures.
 Algorithmic expression: Randomized circle packing or Voronoi tessellation. Start with random points, let them evolve through relaxation algorithms. Cells push apart until equilibrium. Color based on cell size, neighbor count, or distance from center. The organic tiling that emerges feels both random and inevitable. Every seed produces unique crystalline beauty - the mark of a master-level generative algorithm.
 
@@ -131,7 +136,7 @@ With the philosophy AND conceptual framework established, express it through cod
 
 ### ⚠️ STEP 0: READ THE TEMPLATE FIRST ⚠️
 
-#### CRITICAL: BEFORE writing any HTML:
+#### CRITICAL: BEFORE writing any HTML
 
 1. **Read** `templates/viewer.html` using the Read tool
 
@@ -143,7 +148,7 @@ With the philosophy AND conceptual framework established, express it through cod
 
 1. **Replace only the VARIABLE sections** marked in the file's comments (algorithm, parameters, UI controls for parameters)
 
-#### Avoid:
+#### Avoid
 
 - ❌ Creating HTML from scratch
 
@@ -153,7 +158,7 @@ With the philosophy AND conceptual framework established, express it through cod
 
 - ❌ Changing the sidebar structure
 
-#### Follow these practices:
+#### Follow these practices
 
 - ✅ Copy the template's exact HTML structure
 
@@ -198,7 +203,7 @@ let params = {
 };
 ```
 
-#### To design effective parameters, focus on the properties the system needs to be tunable rather than thinking in terms of "pattern types".
+#### To design effective parameters, focus on the properties the system needs to be tunable rather than thinking in terms of "pattern types"
 
 **Core Algorithm - EXPRESS THE PHILOSOPHY**:
 
@@ -230,7 +235,7 @@ If the philosophy is about **controlled chaos**, consider using:
 
 - Order emerging from disorder
 
-#### The algorithm flows from the philosophy, not from a menu of options.
+#### The algorithm flows from the philosophy, not from a menu of options
 
 To guide the implementation, let the conceptual essence inform creative and original choices. Build something that expresses the vision for this particular request.
 
@@ -275,7 +280,7 @@ The HTML artifact contains everything: p5.js (from CDN), the algorithm, paramete
 
 ## INTERACTIVE ARTIFACT CREATION
 
-#### REMINDER: `templates/viewer.html` should have already been read (see STEP 0). Use that file as the starting point.
+#### REMINDER: `templates/viewer.html` should have already been read (see STEP 0). Use that file as the starting point
 
 To allow exploration of the generative art, create a single, self-contained HTML artifact. Ensure this artifact works immediately in claude.ai or any browser - no setup required. Embed everything inline.
 
@@ -283,7 +288,7 @@ To allow exploration of the generative art, create a single, self-contained HTML
 
 The `templates/viewer.html` file is the foundation. It contains the exact structure and styling needed.
 
-#### FIXED (always include exactly as shown):
+#### FIXED (always include exactly as shown)
 
 - Layout structure (header, sidebar, main canvas area)
 
@@ -299,7 +304,7 @@ The `templates/viewer.html` file is the foundation. It contains the exact struct
   - Regenerate button
   - Reset button
 
-#### VARIABLE (customize for each artwork):
+#### VARIABLE (customize for each artwork)
 
 - The entire p5.js algorithm (setup/draw/classes)
 

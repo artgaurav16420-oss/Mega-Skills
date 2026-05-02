@@ -11,7 +11,7 @@ Dispatch code-reviewer subagent to catch issues before they cascade. The reviewe
 
 ## When to Request Review
 
-#### Mandatory:
+#### Mandatory
 
 - After each task in subagent-driven development
 
@@ -19,7 +19,7 @@ Dispatch code-reviewer subagent to catch issues before they cascade. The reviewe
 
 - Before merge to main
 
-#### Optional but valuable:
+#### Optional but valuable
 
 - When stuck (fresh perspective)
 
@@ -29,18 +29,18 @@ Dispatch code-reviewer subagent to catch issues before they cascade. The reviewe
 
 ## How to Request
 
-#### 1. Get git SHAs:
+#### 1. Get git SHAs
 
 ```bash
 BASE_SHA=$(git rev-parse HEAD~1)  # or origin/main
 HEAD_SHA=$(git rev-parse HEAD)
 ```
 
-#### 2. Dispatch code-reviewer subagent:
+#### 2. Dispatch code-reviewer subagent
 
 Use Task tool with code-reviewer role, fill template at `code-reviewer.md`
 
-#### Placeholders:
+#### Placeholders
 
 - `{WHAT_WAS_IMPLEMENTED}` - What you just built
 
@@ -52,7 +52,7 @@ Use Task tool with code-reviewer role, fill template at `code-reviewer.md`
 
 - `{DESCRIPTION}` - Brief summary
 
-#### 3. Act on feedback:
+#### 3. Act on feedback
 
 - Fix Critical issues immediately
 
@@ -87,7 +87,7 @@ You: [Fix progress indicators]
 
 ## Integration with Workflows
 
-#### Subagent-Driven Development:
+#### Subagent-Driven Development
 
 - Review after EACH task
 
@@ -95,13 +95,13 @@ You: [Fix progress indicators]
 
 - Fix before moving to next task
 
-#### Executing Plans:
+#### Executing Plans
 
 - Review after each batch (3 tasks)
 
 - Get feedback, apply, continue
 
-#### Ad-Hoc Development:
+#### Ad-Hoc Development
 
 - Review before merge
 
@@ -109,7 +109,7 @@ You: [Fix progress indicators]
 
 ## Red Flags
 
-#### Never:
+#### Never
 
 - Skip review because "it's simple"
 
@@ -119,7 +119,7 @@ You: [Fix progress indicators]
 
 - Argue with valid technical feedback
 
-#### If reviewer wrong:
+#### If reviewer wrong
 
 - Push back with technical reasoning
 

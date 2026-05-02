@@ -12,7 +12,7 @@ A toolkit for creating animated GIFs optimized for Slack. Provides validators fo
 
 Slack has specific requirements for GIFs based on their use:
 
-#### Message GIFs:
+#### Message GIFs
 
 - Max size: ~2MB
 
@@ -24,7 +24,7 @@ Slack has specific requirements for GIFs based on their use:
 
 - Duration: 2-5s
 
-#### Emoji GIFs:
+#### Emoji GIFs
 
 - Max size: 64KB (strict limit)
 
@@ -58,7 +58,7 @@ This skill provides three types of tools:
 
 1. **Helper Utilities** - Optional functions for common needs (text, colors, effects)
 
-#### Complete creative freedom is available in how these tools are applied.
+#### Complete creative freedom is available in how these tools are applied
 
 ## Core Validators
 
@@ -68,7 +68,7 @@ To ensure a GIF meets Slack's constraints, use these validators:
 from core.gif_builder import GIFBuilder
 ## After creating your GIF, check if it meets requirements
 builder = GIFBuilder(width=128, height=128, fps=10)
-## ... add your frames however you want ...
+## ... add your frames however you want 
 ## Save and check size
 info = builder.save('emoji.gif', num_colors=48, optimize_for_emoji=True)
 ## The save method automatically warns if file exceeds limits
@@ -352,7 +352,7 @@ mirrored = apply_simple_mirror(frame, mode='quad')  # 4-way mirror
 ## modes: 'horizontal', 'vertical', 'quad', 'radial'
 ```
 
-#### To compose primitives freely, follow these patterns:
+#### To compose primitives freely, follow these patterns
 
 ```python
 ## Example: Bounce + shake for impact
@@ -493,7 +493,7 @@ draw_emoji_enhanced(frame, '🎉', position=(200, 200), size=80, shadow=True)
 
 When your GIF is too large:
 
-#### For Message GIFs (>2MB):
+#### For Message GIFs (>2MB)
 
 1. Reduce frames (lower FPS or shorter duration)
 
@@ -503,7 +503,7 @@ When your GIF is too large:
 
 1. Enable duplicate frame removal
 
-#### For Emoji GIFs (>64KB) - be aggressive:
+#### For Emoji GIFs (>64KB) - be aggressive
 
 1. Limit to 10-12 frames total
 
@@ -606,7 +606,7 @@ This toolkit provides building blocks, not rigid recipes. To work with a GIF req
 
 1. **Iterate if needed** - Reduce frames/colors if over size limits
 
-#### The goal is creative freedom within Slack's technical constraints.
+#### The goal is creative freedom within Slack's technical constraints
 
 ## Dependencies
 

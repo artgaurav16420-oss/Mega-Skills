@@ -9,7 +9,7 @@ license: Proprietary. LICENSE.txt has complete terms
 ## Quick Reference
 
 | Task | Guide |
-|:::::::::::::---:::::::::::::---|:::::::::::::---:::::::::::::----|
+|::::::::::::::---::::::::::::::---|::::::::::::::---::::::::::::::----|
 | Read/analyze content | `python -m markitdown presentation.pptx` |
 
 | Edit or create from template | Read [editing.md](editing.md) |
@@ -32,7 +32,7 @@ python scripts/office/unpack.py presentation.pptx unpacked/
 
 ## Editing Workflow
 
-#### Read [editing.md](editing.md) for full details.
+#### Read [editing.md](editing.md) for full details
 
 1. Analyze template with `thumbnail.py`
 
@@ -42,7 +42,7 @@ python scripts/office/unpack.py presentation.pptx unpacked/
 
 ## Creating from Scratch
 
-#### Read [pptxgenjs.md](pptxgenjs.md) for full details.
+#### Read [pptxgenjs.md](pptxgenjs.md) for full details
 
 Use when no template or reference presentation is available.
 
@@ -67,7 +67,7 @@ Use when no template or reference presentation is available.
 Choose colors that match your topic — don't default to generic blue. Use these palettes as inspiration:
 
 | Theme | Primary | Secondary | Accent |
-|:::::::::::::---:::::::::::::----|:::::::::::::---:::::::::::::---:::::::::::::---|:::::::::::::---:::::::::::::---:::::::::::::-----|:::::::::::::---:::::::::::::-----|
+|::::::::::::::---::::::::::::::----|::::::::::::::---::::::::::::::---::::::::::::::---|::::::::::::::---::::::::::::::---::::::::::::::-----|::::::::::::::---::::::::::::::-----|
 | **Midnight Executive** | `1E2761` (navy) | `CADCFC` (ice blue) | `FFFFFF` (white) |
 
 | **Forest & Moss** | `2C5F2D` (forest) | `97BC62` (moss) | `F5F5F5` (cream) |
@@ -92,7 +92,7 @@ Choose colors that match your topic — don't default to generic blue. Use these
 
 **Every slide needs a visual element** — image, chart, icon, or shape. Text-only slides are forgettable.
 
-#### Layout options:
+#### Layout options
 
 - Two-column (text left, illustration on right)
 
@@ -102,7 +102,7 @@ Choose colors that match your topic — don't default to generic blue. Use these
 
 - Half-bleed image (full left or right side) with content overlay
 
-#### Data display:
+#### Data display
 
 - Large stat callouts (big numbers 60-72pt with small labels below)
 
@@ -110,7 +110,7 @@ Choose colors that match your topic — don't default to generic blue. Use these
 
 - Timeline or process flow (numbered steps, arrows)
 
-#### Visual polish:
+#### Visual polish
 
 - Icons in small colored circles next to section headers
 
@@ -121,7 +121,7 @@ Choose colors that match your topic — don't default to generic blue. Use these
 **Choose an interesting font pairing** — don't default to Arial. Pick a header font with personality and pair it with a clean body font.
 
 | Header Font | Body Font |
-|:::::::::::::---:::::::::::::---:::::::::::::---:::::::::::::----|:::::::::::::---:::::::::::::---:::::::::::::-----|
+|::::::::::::::---::::::::::::::---::::::::::::::---::::::::::::::----|::::::::::::::---::::::::::::::---::::::::::::::-----|
 | Georgia | Calibri |
 | Arial Black | Arial |
 | Calibri | Calibri Light |
@@ -132,7 +132,7 @@ Choose colors that match your topic — don't default to generic blue. Use these
 | Consolas | Calibri |
 
 | Element | Size |
-|:::::::::::::---:::::::::::::---:::::::::::::---|:::::::::::::---:::::::::::::---|
+|::::::::::::::---::::::::::::::---::::::::::::::---|::::::::::::::---::::::::::::::---|
 | Slide title | 36-44pt bold |
 | Section header | 20-24pt bold |
 | Body text | 14-16pt |
@@ -172,7 +172,7 @@ Choose colors that match your topic — don't default to generic blue. Use these
 
 ## QA (Required)
 
-#### Assume there are problems. Your job is to find them.
+#### Assume there are problems. Your job is to find them
 
 Your first render is almost never correct. Approach QA as a bug hunt, not a confirmation step. If you found zero issues on first inspection, you weren't looking hard enough.
 
@@ -184,7 +184,7 @@ python -m markitdown output.pptx
 
 Check for missing content, typos, wrong order.
 
-#### When using templates, check for leftover placeholder text:
+#### When using templates, check for leftover placeholder text
 
 ```bash
 python -m markitdown output.pptx | grep -iE "xxxx|lorem|ipsum|this.*(page|slide).*layout"
@@ -232,7 +232,7 @@ Report ALL issues found, including minor ones.
 
 1. Repeat until a full pass reveals no new issues
 
-#### Do not declare success until you've completed at least one fix-and-verify cycle.
+#### Do not declare success until you've completed at least one fix-and-verify cycle
 
 ---
 

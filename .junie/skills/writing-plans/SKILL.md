@@ -39,7 +39,7 @@ This structure informs the task decomposition. Each task should produce self-con
 
 ## Bite-Sized Task Granularity
 
-#### Each step is one action (2-5 minutes):
+#### Each step is one action (2-5 minutes)
 
 - "Write the failing test" - step
 
@@ -53,7 +53,7 @@ This structure informs the task decomposition. Each task should produce self-con
 
 ## Plan Document Header
 
-#### Every plan MUST start with this header:
+#### Every plan MUST start with this header
 
 ```markdown
 ## [Feature Name] Implementation Plan
@@ -144,7 +144,7 @@ If you find issues, fix them inline. No need to re-review — just fix and move 
 
 After saving the plan, offer execution choice:
 
-#### "Plan complete and saved to `docs/mega-skills/plans/<filename>.md`. Two execution options:
+#### "Plan complete and saved to `docs/mega-skills/plans/<filename>.md`. Two execution options
 
 **1. Subagent-Driven (recommended)** - I dispatch a fresh subagent per task, review between tasks, fast iteration
 
@@ -152,13 +152,13 @@ After saving the plan, offer execution choice:
 
 #### Which approach?"
 
-#### If Subagent-Driven chosen:
+#### If Subagent-Driven chosen
 
 - **REQUIRED SUB-SKILL:** Use mega-skills:subagent-driven-development
 
 - Fresh subagent per task + two-stage review
 
-#### If Inline Execution chosen:
+#### If Inline Execution chosen
 
 - **REQUIRED SUB-SKILL:** Use mega-skills:executing-plans
 

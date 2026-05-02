@@ -9,7 +9,7 @@ This skill provides a structured workflow for guiding users through collaborativ
 
 ## When to Offer This Workflow
 
-#### Trigger conditions:
+#### Trigger conditions
 
 - User mentions writing documentation: "write a doc", "draft a proposal", "create a spec", "write up"
 
@@ -17,7 +17,8 @@ This skill provides a structured workflow for guiding users through collaborativ
 
 - User seems to be starting a substantial writing task
 
-#### Initial offer:
+#### Initial offer
+
 Offer the user a structured workflow for co-authoring the document. Explain the three stages:
 
 1. **Context Gathering**: User provides all relevant context while Claude asks clarifying questions
@@ -50,7 +51,7 @@ Start by asking the user for meta-context about the document:
 
 Inform them they can answer in shorthand or dump information however works best for them.
 
-#### If user provides a template or mentions a doc type:
+#### If user provides a template or mentions a doc type
 
 - Ask if they have a template document to share
 
@@ -58,7 +59,7 @@ Inform them they can answer in shorthand or dump information however works best 
 
 - If they provide a file, read it
 
-#### If user mentions editing an existing shared document:
+#### If user mentions editing an existing shared document
 
 - Use the appropriate integration to read the current state
 
@@ -98,7 +99,7 @@ Advise them not to worry about organizing it - just get it all out. Offer multip
 
 Inform them clarifying questions will be asked once they've done their initial dump.
 
-#### During context gathering:
+#### During context gathering
 
 - If user mentions team channels or shared documents:
   - If integrations available: Inform them the content will be read now, then use the appropriate integration
@@ -110,7 +111,7 @@ Inform them clarifying questions will be asked once they've done their initial d
 
 - As user provides context, track what's being learned and what's still unclear
 
-#### Asking clarifying questions:
+#### Asking clarifying questions
 
 When user signals they've done their initial dump (or after substantial context provided), ask clarifying questions to ensure understanding:
 
@@ -118,10 +119,12 @@ Generate 5-10 numbered questions based on gaps in the context.
 
 Inform them they can use shorthand to answer (e.g., "1: yes, 2: see #channel, 3: no because backwards compat"), link to more docs, point to channels to read, or just keep info-dumping. Whatever's most efficient for them.
 
-#### Exit condition:
+#### Exit condition
+
 Sufficient context has been gathered when questions show understanding - when edge cases and trade-offs can be asked about without needing basics explained.
 
-#### Transition:
+#### Transition
+
 Ask if there's any more context they want to provide at this stage, or if it's time to move on to drafting the document.
 
 If user wants to add more, let them. When ready, proceed to Stage 2.
@@ -130,7 +133,8 @@ If user wants to add more, let them. When ready, proceed to Stage 2.
 
 **Goal:** Build the document section by section through brainstorming, curation, and iterative refinement.
 
-#### Instructions to user:
+#### Instructions to user
+
 Explain that the document will be built section by section. For each section:
 
 1. Clarifying questions will be asked about what to include
@@ -145,7 +149,7 @@ Explain that the document will be built section by section. For each section:
 
 Start with whichever section has the most unknowns (usually the core decision/proposal), then work through the rest.
 
-#### Section ordering:
+#### Section ordering
 
 If the document structure is clear:
 Ask which section they'd like to start with.
@@ -157,11 +161,12 @@ Based on the type of document and template, suggest 3-5 sections appropriate for
 
 Ask if this structure works, or if they want to adjust it.
 
-#### Once structure is agreed:
+#### Once structure is agreed
 
 Create the initial document structure with placeholder text for all sections.
 
-#### If access to artifacts is available:
+#### If access to artifacts is available
+
 Use `create_file` to create an artifact. This gives both Claude and the user a scaffold to work from.
 
 Inform them that the initial structure with placeholders for all sections will be created.
@@ -170,7 +175,8 @@ Create artifact with all section headers and brief placeholder text like "[To be
 
 Provide the scaffold link and indicate it's time to fill in each section.
 
-#### If no access to artifacts:
+#### If no access to artifacts
+
 Create a markdown file in the working directory. Name it appropriately (e.g., `decision-doc.md`, `technical-spec.md`).
 
 Inform them that the initial structure with placeholders for all sections will be created.
@@ -179,7 +185,7 @@ Create file with all section headers and placeholder text.
 
 Confirm the filename has been created and indicate it's time to fill in each section.
 
-#### For each section:
+#### For each section
 
 ### Step 1: Clarifying Questions
 
@@ -225,17 +231,20 @@ Use `str_replace` to replace the placeholder text for this section with the actu
 
 Announce the [SECTION NAME] section will be drafted now based on what they've selected.
 
-#### If using artifacts:
+#### If using artifacts
+
 After drafting, provide a link to the artifact.
 
 Ask them to read through it and indicate what to change. Note that being specific helps learning for the next sections.
 
-#### If using a file (no artifacts):
+#### If using a file (no artifacts)
+
 After drafting, confirm completion.
 
 Inform them the [SECTION NAME] section has been drafted in [filename]. Ask them to read through it and indicate what to change. Note that being specific helps learning for the next sections.
 
-#### Key instruction for user (include when drafting the first section):
+#### Key instruction for user (include when drafting the first section)
+
 Provide a note: Instead of editing the doc directly, ask them to indicate what to change. This helps learning of their style for future sections. For example: "Remove the X bullet - already covered by Y" or "Make the third paragraph more concise".
 
 ### Step 6: Iterative Refinement
@@ -258,7 +267,7 @@ After 3 consecutive iterations with no substantial changes, ask if anything can 
 
 When section is done, confirm [SECTION NAME] is complete. Ask if ready to move to the next section.
 
-#### Repeat for all sections.
+#### Repeat for all sections
 
 ### Near Completion
 
@@ -274,7 +283,8 @@ As approaching completion (80%+ of sections done), announce intention to re-read
 
 Read entire document and provide feedback.
 
-#### When all sections are drafted and refined:
+#### When all sections are drafted and refined
+
 Announce all sections are drafted. Indicate intention to review the complete document one more time.
 
 Review for overall coherence, flow, completeness.
@@ -287,12 +297,13 @@ Ask if ready to move to Reader Testing, or if they want to refine anything else.
 
 **Goal:** Test the document with a fresh Claude (no context bleed) to verify it works for readers.
 
-#### Instructions to user:
+#### Instructions to user
+
 Explain that testing will now occur to see if the document actually works for readers. This catches blind spots - things that make sense to the authors but might confuse others.
 
 ### Testing Approach
 
-#### If access to sub-agents is available (e.g., in Claude Code):
+#### If access to sub-agents is available (e.g., in Claude Code)
 
 Perform the testing directly without user involvement.
 
@@ -331,7 +342,7 @@ Loop back to refinement for problematic sections.
 
 ---
 
-#### If no access to sub-agents (e.g., claude.ai web interface):
+#### If no access to sub-agents (e.g., claude.ai web interface)
 
 The user will need to do the testing manually.
 
@@ -396,7 +407,8 @@ Announce the doc has passed Reader Claude testing. Before completion:
 
 Ask if they want one more review, or if the work is done.
 
-#### If user wants final review, provide it. Otherwise:
+#### If user wants final review, provide it. Otherwise
+
 Announce document completion. Provide a few final tips:
 
 - Consider linking this conversation in an appendix so readers can see how the doc was developed
@@ -407,7 +419,7 @@ Announce document completion. Provide a few final tips:
 
 ## Tips for Effective Guidance
 
-#### Tone:
+#### Tone
 
 - Be direct and procedural
 
@@ -415,7 +427,7 @@ Announce document completion. Provide a few final tips:
 
 - Don't try to "sell" the approach - just execute it
 
-#### Handling Deviations:
+#### Handling Deviations
 
 - If user wants to skip a stage: Ask if they want to skip this and write freeform
 
@@ -423,13 +435,13 @@ Announce document completion. Provide a few final tips:
 
 - Always give user agency to adjust the process
 
-#### Context Management:
+#### Context Management
 
 - Throughout, if context is missing on something mentioned, proactively ask
 
 - Don't let gaps accumulate - address them as they come up
 
-#### Artifact Management:
+#### Artifact Management
 
 - Use `create_file` for drafting full sections
 
@@ -439,7 +451,7 @@ Announce document completion. Provide a few final tips:
 
 - Never use artifacts for brainstorming lists - that's just conversation
 
-#### Quality over Speed:
+#### Quality over Speed
 
 - Don't rush through stages
 

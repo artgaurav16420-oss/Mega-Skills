@@ -11,11 +11,11 @@ Write the test first. Watch it fail. Write minimal code to pass.
 
 **Core principle:** If you didn't watch the test fail, you don't know if it tests the right thing.
 
-#### Violating the letter of the rules is violating the spirit of the rules.
+#### Violating the letter of the rules is violating the spirit of the rules
 
 ## When to Use
 
-#### Always:
+#### Always
 
 - New features
 
@@ -25,7 +25,7 @@ Write the test first. Watch it fail. Write minimal code to pass.
 
 - Behavior changes
 
-#### Exceptions (ask your human partner):
+#### Exceptions (ask your human partner)
 
 - Throwaway prototypes
 
@@ -43,7 +43,7 @@ NO PRODUCTION CODE WITHOUT A FAILING TEST FIRST
 
 Write code before the test? Delete it. Start over.
 
-#### No exceptions:
+#### No exceptions
 
 - Don't keep it as "reference"
 
@@ -117,7 +117,7 @@ test('retry works', async () => {
 Vague name, tests mock not code
 </Bad>
 
-#### Requirements:
+#### Requirements
 
 - One behavior
 
@@ -127,7 +127,7 @@ Vague name, tests mock not code
 
 ### Verify RED - Watch It Fail
 
-#### MANDATORY. Never skip.
+#### MANDATORY. Never skip
 
 ```bash
 npm test path/to/test.test.ts
@@ -189,7 +189,7 @@ Don't add features, refactor other code, or "improve" beyond the test.
 
 ### Verify GREEN - Watch It Pass
 
-#### MANDATORY.
+#### MANDATORY
 
 ```bash
 npm test path/to/test.test.ts
@@ -226,7 +226,7 @@ Next failing test for next feature.
 ## Good Tests
 
 | Quality | Good | Bad |
-|:::::::::::::---:::::::::::::---:::::::::::::---|:::::::::::::---:::::::::::::---|:::::::::::::-----|
+|::::::::::::::---::::::::::::::---::::::::::::::---|::::::::::::::---::::::::::::::---|::::::::::::::-----|
 | **Minimal** | One thing. "and" in name? Split it. | `test('validates email and domain and whitespace')` |
 
 | **Clear** | Name describes behavior | `test('test1')` |
@@ -300,7 +300,7 @@ Tests-first force edge case discovery before implementing. Tests-after verify yo
 ## Common Rationalizations
 
 | Excuse | Reality |
-|:::::::::::::---:::::::::::::-----|:::::::::::::---:::::::::::::---:::::::::::::---|
+|::::::::::::::---::::::::::::::-----|::::::::::::::---::::::::::::::---::::::::::::::---|
 | "Too simple to test" | Simple code breaks. Test takes 30 seconds. |
 | "I'll test after" | Tests passing immediately prove nothing. |
 | "Tests after achieve same goals" | Tests-after = "what does this do?" Tests-first = "what should this do?" |
@@ -341,7 +341,7 @@ Tests-first force edge case discovery before implementing. Tests-after verify yo
 
 - "This is different because..."
 
-#### All of these mean: Delete code. Start over with TDD.
+#### All of these mean: Delete code. Start over with TDD
 
 ## Example: Bug Fix
 
@@ -382,6 +382,7 @@ PASS
 ```
 
 #### REFACTOR
+
 Extract validation for multiple fields if needed.
 
 ## Verification Checklist
@@ -409,7 +410,7 @@ Can't check all boxes? You skipped TDD. Start over.
 ## When Stuck
 
 | Problem | Solution |
-|:::::::::::::---:::::::::::::---:::::::::::::---|:::::::::::::---:::::::::::::---:::::::::::::----|
+|::::::::::::::---::::::::::::::---::::::::::::::---|::::::::::::::---::::::::::::::---::::::::::::::----|
 | Don't know how to test | Write wished-for API. Write assertion first. Ask your human partner. |
 | Test too complicated | Design too complicated. Simplify interface. |
 | Must mock everything | Code too coupled. Use dependency injection. |

@@ -13,7 +13,7 @@ A .docx file is a ZIP archive containing XML files.
 ## Quick Reference
 
 | Task | Approach |
-|:::::::::::::---:::::::::::::---|:::::::::::::---:::::::::::::---:::::::::::::----|
+|::::::::::::::---::::::::::::::---|::::::::::::::---::::::::::::::---::::::::::::::----|
 | Read/analyze content | `pandoc` or unpack for raw XML |
 
 | Create new document | Use `docx-js` - see Creating New Documents below |
@@ -99,10 +99,10 @@ sections: [{
 }]
 ```
 
-#### Common page sizes (DXA units, 1440 DXA = 1 inch):
+#### Common page sizes (DXA units, 1440 DXA = 1 inch)
 
 | Paper | Width | Height | Content Width (1" margins) |
-|:::::::::::::---:::::::::::::----|:::::::::::::---:::::::::::::----|:::::::::::::---:::::::::::::-----|:::::::::::::---:::::::::::::---:::::::::::::---:::::::::::::---:::::::::::::---:::::::::::::---:::::::::::::---:::::::::::::---:::::::::::::---|
+|::::::::::::::---::::::::::::::----|::::::::::::::---::::::::::::::----|::::::::::::::---::::::::::::::-----|::::::::::::::---::::::::::::::---::::::::::::::---::::::::::::::---::::::::::::::---::::::::::::::---::::::::::::::---::::::::::::::---::::::::::::::---|
 | US Letter | 12,240 | 15,840 | 9,360 |
 | A4 (default) | 11,906 | 16,838 | 9,026 |
 
@@ -203,7 +203,7 @@ new Table({
 })
 ```
 
-#### Table width calculation:
+#### Table width calculation
 
 Always use `WidthType.DXA` — `WidthType.PERCENTAGE` breaks in Google Docs.
 
@@ -214,7 +214,7 @@ width: { size: 9360, type: WidthType.DXA },
 columnWidths: [7000, 2360]  // Must sum to table width
 ```
 
-#### Width rules:
+#### Width rules
 
 - **Always use `WidthType.DXA`** — never `WidthType.PERCENTAGE` (incompatible with Google Docs)
 
@@ -413,7 +413,7 @@ sections: [{
 
 ## Editing Existing Documents
 
-#### Follow all 3 steps in order.
+#### Follow all 3 steps in order
 
 ### Step 1: Unpack
 
@@ -439,7 +439,7 @@ Edit files in `unpacked/word/`. See XML Reference below for patterns.
 ```
 
 | Entity | Character |
-|:::::::::::::---:::::::::::::-----|:::::::::::::---:::::::::::::---:::::::::::::-----|
+|::::::::::::::---::::::::::::::-----|::::::::::::::---::::::::::::::---::::::::::::::-----|
 | `&#x2018;` | ‘ (left single) |
 
 | `&#x2019;` | ’ (right single / apostrophe) |
@@ -466,13 +466,13 @@ python scripts/office/pack.py unpacked/ output.docx --original document.docx
 
 Validates with auto-repair, condenses XML, and creates DOCX. Use `--validate false` to skip.
 
-#### Auto-repair will fix:
+#### Auto-repair will fix
 
 - `durableId` >= 0x7FFFFFFF (regenerates valid ID)
 
 - Missing `xml:space="preserve"` on `<w:t>` with whitespace
 
-#### Auto-repair won't fix:
+#### Auto-repair won't fix
 
 - Malformed XML, invalid element nesting, missing relationships, schema violations
 
@@ -496,7 +496,7 @@ Validates with auto-repair, condenses XML, and creates DOCX. Use `--validate fal
 
 ### Tracked Changes
 
-#### Insertion:
+#### Insertion
 
 ```xml
 <w:ins w:id="1" w:author="Claude" w:date="2025-01-01T00:00:00Z">
@@ -504,7 +504,7 @@ Validates with auto-repair, condenses XML, and creates DOCX. Use `--validate fal
 </w:ins>
 ```
 
-#### Deletion:
+#### Deletion
 
 ```xml
 <w:del w:id="2" w:author="Claude" w:date="2025-01-01T00:00:00Z">
@@ -571,7 +571,7 @@ Without the `<w:del/>` in `<w:pPr><w:rPr>`, accepting changes leaves an empty pa
 
 After running `comment.py` (see Step 2), add markers to document.xml. For replies, use `--parent` flag and nest markers inside the parent's.
 
-#### CRITICAL: `<w:commentRangeStart>` and `<w:commentRangeEnd>` are siblings of `<w:r>`, never inside `<w:r>`.
+#### CRITICAL: `<w:commentRangeStart>` and `<w:commentRangeEnd>` are siblings of `<w:r>`, never inside `<w:r>`
 
 ```xml
 <!-- Comment markers are direct children of w:p, never inside w:r -->

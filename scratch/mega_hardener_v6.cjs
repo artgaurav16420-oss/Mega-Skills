@@ -88,13 +88,19 @@ function fixMarkdown(filePath) {
         // MD036 Remediation
         const boldMatch = stripped.match(/^\*\*([^*]+)\*\*$/);
         if (boldMatch && !stripped.startsWith('#') && !stripped.startsWith('-')) {
-            // Further check to make sure it's not a list item starting with * (like "* **bold**")
-            // But stripped already removed the leading * if it was a list item? 
-            // No, if it's "* **bold**", stripped starts with *.
-            // If it's "**bold**", stripped starts with **.
             if (!stripped.match(/^\*\s+/)) { 
                 const indent = line.match(/^(\s*)/)[0];
-                newLines.push(`${indent}#### ${boldMatch[1]}`);
+                // Strip trailing punctuation for MD026
+                let headingText = boldMatch[1].trim().replace(/[:.!?;]+$/, '');
+                
+                // MD022: Ensure blank lines around new heading
+                if (newLines.length > 0 && newLines[newLines.length - 1].trim() !== '') {
+                    newLines.push('');
+                }
+                newLines.push(`${indent}#### ${headingText}`);
+                if (i + 1 < lines.length && lines[i + 1].trim() !== '') {
+                    newLines.push('');
+                }
                 continue;
             }
         }
@@ -141,7 +147,16 @@ function fixMarkdown(filePath) {
 
     let result = newLines.join('\n');
 
-    // MD025
+    // MD026: No trailing punctuation in headings
+    result = result.split('\n').map(line => {
+        if (line.trim().startsWith('#')) {
+            // Only strip if it's not a URL inside a heading (rare but possible)
+            return line.replace(/[:.!?;]+$/, '');
+        }
+        return line;
+    }).join('\n');
+
+    // MD025: Multiple H1s
     let h1Found = false;
     result = result.split('\n').map(line => {
         if (line.startsWith('# ')) {

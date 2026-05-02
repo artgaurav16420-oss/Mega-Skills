@@ -78,7 +78,7 @@ My transferable experience:
 
 ## Example
 
-#### User Request:
+#### User Request
 
 ```text
 I need a tailored resume for this job:
@@ -98,7 +98,7 @@ My background:
 - Also did 1 year internship at HealthPlus clinic
 ```
 
-#### Generated Output:
+#### Generated Output
 
 ```markdown
 ## JOHN DOE
@@ -138,7 +138,7 @@ State University | Graduated 2018
 - Created data visualization system now used across entire organization
 ```
 
-#### Additional Recommendations:
+#### Additional Recommendations
 
 - Consider adding any specific healthcare projects or certifications
 

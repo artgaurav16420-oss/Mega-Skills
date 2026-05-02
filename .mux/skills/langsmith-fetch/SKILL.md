@@ -38,7 +38,7 @@ export LANGSMITH_API_KEY="your_langsmith_api_key"
 export LANGSMITH_PROJECT="your_project_name"
 ```
 
-#### Verify setup:
+#### Verify setup
 
 ```bash
 echo $LANGSMITH_API_KEY
@@ -51,13 +51,13 @@ echo $LANGSMITH_PROJECT
 
 **When user asks:** "What just happened?" or "Debug my agent"
 
-#### Execute:
+#### Execute
 
 ```bash
 langsmith-fetch traces --last-n-minutes 5 --limit 5 --format pretty
 ```
 
-#### Analyze and report:
+#### Analyze and report
 
 1. ✅ Number of traces found
 
@@ -69,7 +69,7 @@ langsmith-fetch traces --last-n-minutes 5 --limit 5 --format pretty
 
 1. 💰 Token usage
 
-#### Example response format:
+#### Example response format
 
 ```text
 Found 3 traces in the last 5 minutes:
@@ -97,13 +97,13 @@ Trace 3: ✅ Success
 
 **When user provides:** Trace ID or says "investigate that error"
 
-#### Execute:
+#### Execute
 
 ```bash
 langsmith-fetch trace <trace-id> --format json
 ```
 
-#### Analyze JSON and report:
+#### Analyze JSON and report
 
 1. 🎯 What the agent was trying to do
 
@@ -117,7 +117,7 @@ langsmith-fetch trace <trace-id> --format json
 
 1. 🔧 Suggested fix
 
-#### Example response format:
+#### Example response format
 
 ```text
 Deep Dive Analysis - Trace abc123
@@ -146,7 +146,7 @@ Execution Time: 8.7 seconds
 
 **When user says:** "Save this session" or "Export traces"
 
-#### Execute:
+#### Execute
 
 ```bash
 ## Create session folder with timestamp
@@ -158,7 +158,7 @@ langsmith-fetch traces "$SESSION_DIR/traces" --last-n-minutes 30 --limit 50 --in
 langsmith-fetch threads "$SESSION_DIR/threads" --limit 20
 ```
 
-#### Report:
+#### Report
 
 ```text
 ✅ Session exported successfully!
@@ -179,7 +179,7 @@ Session size: 2.3 MB
 
 **When user asks:** "Show me errors" or "What's failing?"
 
-#### Execute:
+#### Execute
 
 ```bash
 ## Fetch recent traces
@@ -188,7 +188,7 @@ langsmith-fetch traces --last-n-minutes 30 --limit 50 --format json > recent-tra
 grep -i "error\|failed\|exception" recent-traces.json
 ```
 
-#### Analyze and report:
+#### Analyze and report
 
 1. 📊 Total errors found
 
@@ -200,7 +200,7 @@ grep -i "error\|failed\|exception" recent-traces.json
 
 1. 💡 Common patterns
 
-#### Example response format:
+#### Example response format
 
 ```text
 Error Analysis - Last 30 Minutes
@@ -236,7 +236,7 @@ Error Breakdown:
 
 **User says:** "My agent isn't doing anything"
 
-#### Steps:
+#### Steps
 
 1. Check if traces exist:
 
@@ -263,7 +263,7 @@ Error Breakdown:
 
 **User says:** "Why did it use the wrong tool?"
 
-#### Steps:
+#### Steps
 
 1. Get the specific trace
 
@@ -281,7 +281,7 @@ Error Breakdown:
 
 **User says:** "Agent doesn't remember things"
 
-#### Steps:
+#### Steps
 
 1. Search for memory operations:
 
@@ -301,7 +301,7 @@ Error Breakdown:
 
 **User says:** "Agent is too slow"
 
-#### Steps:
+#### Steps
 
 1. Export with metadata:
 
@@ -380,7 +380,7 @@ langsmith-fetch traces ./output --limit 100 --concurrent 10
 
 ### "No traces found matching criteria"
 
-#### Possible causes:
+#### Possible causes
 
 1. No agent activity in the timeframe
 
@@ -390,7 +390,7 @@ langsmith-fetch traces ./output --limit 100 --concurrent 10
 
 1. API key issues
 
-#### Solutions:
+#### Solutions
 
 ```bash
 ## 1. Try longer timeframe
@@ -406,7 +406,7 @@ langsmith-fetch threads --limit 10
 
 ### "Project not found"
 
-#### Solution:
+#### Solution
 
 ```bash
 ## View current config
@@ -419,7 +419,7 @@ langsmith-fetch config set project "your-project-name"
 
 ### Environment variables not persisting
 
-#### Solution:
+#### Solution
 
 ```bash
 ## Add to shell config file (~/.bashrc or ~/.zshrc)

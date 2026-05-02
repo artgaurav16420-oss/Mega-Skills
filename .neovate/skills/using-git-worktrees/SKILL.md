@@ -50,14 +50,14 @@ Which would you prefer?
 
 ### For Project-Local Directories (.worktrees or worktrees)
 
-#### MUST verify directory is ignored before creating worktree:
+#### MUST verify directory is ignored before creating worktree
 
 ```bash
 ## Check if directory is ignored (respects local, global, and system gitignore)
 git check-ignore -q .worktrees 2>/dev/null || git check-ignore -q worktrees 2>/dev/null
 ```
 
-#### If NOT ignored:
+#### If NOT ignored
 
 Per Jesse's rule "Fix broken things immediately":
 
@@ -141,7 +141,7 @@ Ready to implement <feature-name>
 ## Quick Reference
 
 | Situation | Action |
-|:::::::::::::---:::::::::::::---:::::::::::::-----|:::::::::::::---:::::::::::::-----|
+|::::::::::::::---::::::::::::::---::::::::::::::-----|::::::::::::::---::::::::::::::-----|
 | `.worktrees/` exists | Use it (verify ignored) |
 
 | `worktrees/` exists | Use it (verify ignored) |
@@ -195,7 +195,7 @@ Ready to implement auth feature
 
 ## Red Flags
 
-#### Never:
+#### Never
 
 - Create worktree without verifying it's ignored (project-local)
 
@@ -207,7 +207,7 @@ Ready to implement auth feature
 
 - Skip CLAUDE.md check
 
-#### Always:
+#### Always
 
 - Follow directory priority: existing > CLAUDE.md > ask
 
@@ -219,7 +219,7 @@ Ready to implement auth feature
 
 ## Integration
 
-#### Called by:
+#### Called by
 
 - **brainstorming** (Phase 4) - REQUIRED when design is approved and implementation follows
 
@@ -229,6 +229,6 @@ Ready to implement auth feature
 
 - Any skill needing isolated workspace
 
-#### Pairs with:
+#### Pairs with
 
 - **finishing-a-development-branch** - REQUIRED for cleanup after work complete

@@ -15,7 +15,7 @@ Write code review comments terse and actionable. One line per finding. Location,
 
 **Format:** `L<line>: <problem>. <fix>.` — or `<file>:L<line>: ...` when reviewing multi-file diffs.
 
-#### Severity prefix (optional, when mixed):
+#### Severity prefix (optional, when mixed)
 
 - `🔴 bug:` — broken behavior, will cause incident
 
@@ -25,7 +25,7 @@ Write code review comments terse and actionable. One line per finding. Location,
 
 - `❓ q:` — genuine question, not a suggestion
 
-#### Drop:
+#### Drop
 
 - "I noticed that...", "It seems like...", "You might want to consider..."
 
@@ -37,7 +37,7 @@ Write code review comments terse and actionable. One line per finding. Location,
 
 - Hedging ("perhaps", "maybe", "I think") — if unsure use `q:`
 
-#### Keep:
+#### Keep
 
 - Exact line numbers
 

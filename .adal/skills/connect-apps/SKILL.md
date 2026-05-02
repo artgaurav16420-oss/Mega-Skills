@@ -29,7 +29,7 @@ This will:
 
 - Take about 60 seconds
 
-### Step 3: Try It!
+### Step 3: Try It
 
 After setup, restart Claude Code and try:
 
@@ -42,7 +42,7 @@ If it works, you're connected!
 ## What You Can Do
 
 | Ask Claude to... | What happens |
-|:::::::::::::---:::::::::::::---:::::::::::::---:::::::::::::---:::::::::::::---:::::::::::::---|:::::::::::::---:::::::::::::---:::::::::::::---:::::::::::::-----|
+|::::::::::::::---::::::::::::::---::::::::::::::---::::::::::::::---::::::::::::::---::::::::::::::---|::::::::::::::---::::::::::::::---::::::::::::::---::::::::::::::-----|
 | "Send email to sarah@acme.com about the launch" | Actually sends the email |
 | "Create GitHub issue: fix login bug" | Creates the issue |
 | "Post to Slack #general: deploy complete" | Posts the message |
@@ -55,7 +55,8 @@ If it works, you're connected!
 **Dev:** GitHub, GitLab, Jira, Linear
 **Docs:** Notion, Google Docs, Confluence
 **Data:** Sheets, Airtable, PostgreSQL
-#### And 1000+ more...
+
+#### And 1000+ more
 
 ## How It Works
 

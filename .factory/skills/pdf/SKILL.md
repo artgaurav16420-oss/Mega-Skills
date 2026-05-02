@@ -253,7 +253,7 @@ with open("watermarked.pdf", "wb") as output:
 ```bash
 ## Using pdfimages (poppler-utils)
 pdfimages -j input.pdf output_prefix
-## This extracts all images as output_prefix-000.jpg, output_prefix-001.jpg, etc.
+## This extracts all images as output_prefix-000.jpg, output_prefix-001.jpg, etc
 ```
 
 ### Password Protection
@@ -273,7 +273,7 @@ with open("encrypted.pdf", "wb") as output:
 ## Quick Reference
 
 | Task | Best Tool | Command/Code |
-|:::::::::::::---:::::::::::::---|:::::::::::::---:::::::::::::---:::::::::::::-----|:::::::::::::---:::::::::::::---:::::::::::::---:::::::::::::-----|
+|::::::::::::::---::::::::::::::---|::::::::::::::---::::::::::::::---::::::::::::::-----|::::::::::::::---::::::::::::::---::::::::::::::---::::::::::::::-----|
 | Merge PDFs | pypdf | `writer.add_page(page)` |
 
 | Split PDFs | pypdf | One page per file |

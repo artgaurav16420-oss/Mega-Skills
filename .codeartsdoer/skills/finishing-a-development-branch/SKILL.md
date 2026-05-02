@@ -17,14 +17,14 @@ Guide completion of development work by presenting clear options and handling ch
 
 ### Step 1: Verify Tests
 
-#### Before presenting options, verify tests pass:
+#### Before presenting options, verify tests pass
 
 ```bash
 ## Run project's test suite
 npm test / cargo test / pytest / go test ./...
 ```
 
-#### If tests fail:
+#### If tests fail
 
 ```text
 Tests failing (<N> failures). Must fix before completing:
@@ -100,11 +100,11 @@ Then: Cleanup worktree (Step 5)
 
 Report: "Keeping branch <name>. Worktree preserved at <path>."
 
-#### Don't cleanup worktree.
+#### Don't cleanup worktree
 
 #### Option 4: Discard
 
-#### Confirm first:
+#### Confirm first
 
 ```text
 This will permanently delete:
@@ -127,7 +127,7 @@ Then: Cleanup worktree (Step 5)
 
 ### Step 5: Cleanup Worktree
 
-#### For Options 1, 2, 4:
+#### For Options 1, 2, 4
 
 Check if in worktree:
 
@@ -146,7 +146,7 @@ git worktree remove <worktree-path>
 ## Quick Reference
 
 | Option | Merge | Push | Keep Worktree | Cleanup Branch |
-|:::::::::::::---:::::::::::::-----|:::::::::::::---:::::::::::::----|:::::::::::::---:::::::::::::---|:::::::::::::---:::::::::::::---:::::::::::::---:::::::::::::---:::::::::::::---|:::::::::::::---:::::::::::::---:::::::::::::---:::::::::::::---:::::::::::::----|
+|::::::::::::::---::::::::::::::-----|::::::::::::::---::::::::::::::----|::::::::::::::---::::::::::::::---|::::::::::::::---::::::::::::::---::::::::::::::---::::::::::::::---::::::::::::::---|::::::::::::::---::::::::::::::---::::::::::::::---::::::::::::::---::::::::::::::----|
 | 1. Merge locally | ✓ | - | - | ✓ |
 | 2. Create PR | - | ✓ | ✓ | - |
 | 3. Keep as-is | - | - | ✓ | - |
@@ -180,7 +180,7 @@ git worktree remove <worktree-path>
 
 ## Red Flags
 
-#### Never:
+#### Never
 
 - Proceed with failing tests
 
@@ -190,7 +190,7 @@ git worktree remove <worktree-path>
 
 - Force-push without explicit request
 
-#### Always:
+#### Always
 
 - Verify tests before offering options
 
@@ -202,12 +202,12 @@ git worktree remove <worktree-path>
 
 ## Integration
 
-#### Called by:
+#### Called by
 
 - **subagent-driven-development** (Step 7) - After all tasks complete
 
 - **executing-plans** (Step 5) - After all batches complete
 
-#### Pairs with:
+#### Pairs with
 
 - **using-git-worktrees** - Cleans up worktree created by that skill

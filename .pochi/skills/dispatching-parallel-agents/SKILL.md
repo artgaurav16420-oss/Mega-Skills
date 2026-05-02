@@ -32,7 +32,7 @@ digraph when_to_use {
 }
 ```
 
-#### Use when:
+#### Use when
 
 - 3+ test files failing with different root causes
 
@@ -42,7 +42,7 @@ digraph when_to_use {
 
 - No shared state between investigations
 
-#### Don't use when:
+#### Don't use when
 
 - Failures are related (fix one might fix others)
 
@@ -149,7 +149,7 @@ Return: Summary of what you found and what you fixed.
 
 **Scenario:** 6 test failures across 3 files after major refactoring
 
-#### Failures:
+#### Failures
 
 - agent-tool-abort.test.ts: 3 failures (timing issues)
 
@@ -159,7 +159,7 @@ Return: Summary of what you found and what you fixed.
 
 **Decision:** Independent domains - abort logic separate from batch completion separate from race conditions
 
-#### Dispatch:
+#### Dispatch
 
 ```text
 Agent 1 → Fix agent-tool-abort.test.ts
@@ -167,7 +167,7 @@ Agent 2 → Fix batch-completion-behavior.test.ts
 Agent 3 → Fix tool-approval-race-conditions.test.ts
 ```
 
-#### Results:
+#### Results
 
 - Agent 1: Replaced timeouts with event-based waiting
 

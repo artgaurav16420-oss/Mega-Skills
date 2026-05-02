@@ -37,13 +37,13 @@ User task → Is it static HTML?
 
 To start a server, run `--help` first, then use the helper:
 
-#### Single server:
+#### Single server
 
 ```bash
 python scripts/with_server.py --server "npm run dev" --port 5173 -- python your_automation.py
 ```
 
-#### Multiple servers (e.g., backend + frontend):
+#### Multiple servers (e.g., backend + frontend)
 
 ```bash
 python scripts/with_server.py \

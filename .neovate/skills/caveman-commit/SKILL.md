@@ -13,7 +13,7 @@ Write commit messages terse and exact. Conventional Commits format. No fluff. Wh
 
 ## Rules
 
-#### Subject line:
+#### Subject line
 
 - `<type>(<scope>): <imperative summary>` — `<scope>` optional
 
@@ -27,7 +27,7 @@ Write commit messages terse and exact. Conventional Commits format. No fluff. Wh
 
 - Match project convention for capitalization after the colon
 
-#### Body (only if needed):
+#### Body (only if needed)
 
 - Skip entirely when subject is self-explanatory
 
@@ -39,7 +39,7 @@ Write commit messages terse and exact. Conventional Commits format. No fluff. Wh
 
 - Reference issues/PRs at end: `Closes #42`, `Refs #17`
 
-#### What NEVER goes in:
+#### What NEVER goes in
 
 - "This commit does X", "I", "we", "now", "currently" — the diff says what
 

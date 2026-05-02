@@ -7,7 +7,7 @@ description: Use when creating new skills, editing existing skills, or verifying
 
 ## Overview
 
-#### Writing skills IS Test-Driven Development applied to process documentation.
+#### Writing skills IS Test-Driven Development applied to process documentation
 
 #### Personal skills live in agent-specific directories (`~/.claude/skills` for Claude Code, `~/.agents/skills/` for Codex, `C:\Users\agaur\.gemini\antigravity\skills` for Antigravity)
 
@@ -19,7 +19,7 @@ You write test cases (pressure scenarios with subagents), watch them fail (basel
 
 **Official guidance:** For Anthropic's official skill authoring best practices, see anthropic-best-practices.md. This document provides additional patterns and guidelines that complement the TDD-focused approach in this skill.
 
-## What is a Skill?
+## What is a Skill
 
 A **skill** is a reference guide for proven techniques, patterns, or tools. Skills help future Claude instances find and apply effective approaches.
 
@@ -30,7 +30,7 @@ A **skill** is a reference guide for proven techniques, patterns, or tools. Skil
 ## TDD Mapping for Skills
 
 | TDD Concept | Skill Creation |
-|:::::::::::::---:::::::::::::---:::::::::::::---:::::::::::::----|:::::::::::::---:::::::::::::---:::::::::::::---:::::::::::::---:::::::::::::----|
+|::::::::::::::---::::::::::::::---::::::::::::::---::::::::::::::----|::::::::::::::---::::::::::::::---::::::::::::::---::::::::::::::---::::::::::::::----|
 | **Test case** | Pressure scenario with subagent |
 | **Production code** | Skill document (SKILL.md) |
 | **Test fails (RED)** | Agent violates rule without skill (baseline) |
@@ -46,7 +46,7 @@ The entire skill creation process follows RED-GREEN-REFACTOR.
 
 ## When to Create a Skill
 
-#### Create when:
+#### Create when
 
 - Technique wasn't intuitively obvious to you
 
@@ -56,7 +56,7 @@ The entire skill creation process follows RED-GREEN-REFACTOR.
 
 - Others would benefit
 
-#### Don't create for:
+#### Don't create for
 
 - One-off solutions
 
@@ -91,13 +91,13 @@ skills/
 
 **Flat namespace** - all skills in one searchable namespace
 
-#### Separate files for:
+#### Separate files for
 
 1. **Heavy reference** (100+ lines) - API docs, comprehensive syntax
 
 1. **Reusable tools** - Scripts, utilities, templates
 
-#### Keep inline:
+#### Keep inline
 
 - Principles and concepts
 
@@ -107,7 +107,7 @@ skills/
 
 ## SKILL.md Structure
 
-#### Frontmatter (YAML):
+#### Frontmatter (YAML)
 
 - Two required fields: `name` and `description` (see [agentskills.io/specification](https://agentskills.io/specification) for all supported fields)
 
@@ -178,7 +178,7 @@ description: Use when executing implementation plans with independent tasks in t
 description: Use when implementing any feature or bugfix, before writing implementation code
 ```
 
-#### Content:
+#### Content
 
 - Use concrete triggers, symptoms, and situations that signal this skill applies
 
@@ -219,7 +219,7 @@ Use words Claude would search for:
 
 ### 3. Descriptive Naming
 
-#### Use active voice, verb-first:
+#### Use active voice, verb-first
 
 - ✅ `creating-skills` not `skill-creation`
 
@@ -229,7 +229,7 @@ Use words Claude would search for:
 
 **Problem:** getting-started and frequently-referenced skills load into EVERY conversation. Every token counts.
 
-#### Target word counts:
+#### Target word counts
 
 - getting-started workflows: <150 words each
 
@@ -237,9 +237,9 @@ Use words Claude would search for:
 
 - Other skills: <500 words (still be concise)
 
-#### Techniques:
+#### Techniques
 
-#### Move details to tool help:
+#### Move details to tool help
 
 ```bash
 ## ❌ BAD: Document all flags in SKILL.md
@@ -248,7 +248,7 @@ search-conversations supports --text, --both, --after DATE, --before DATE, --lim
 search-conversations supports multiple modes and filters. Run --help for details.
 ```
 
-#### Use cross-references:
+#### Use cross-references
 
 ```markdown
 ## ❌ BAD: Repeat workflow details
@@ -258,7 +258,7 @@ When searching, dispatch subagent with template...
 Always use subagents (50-100x context savings). REQUIRED: Use [other-skill-name] for workflow.
 ```
 
-#### Compress examples:
+#### Compress examples
 
 ```markdown
 ## ❌ BAD: Verbose example (42 words)
@@ -271,7 +271,7 @@ You: Searching...
 [Dispatch subagent → synthesis]
 ```
 
-#### Eliminate redundancy:
+#### Eliminate redundancy
 
 - Don't repeat what's in cross-referenced skills
 
@@ -279,7 +279,7 @@ You: Searching...
 
 - Don't include multiple examples of same pattern
 
-#### Verification:
+#### Verification
 
 ```bash
 wc -w skills/path/SKILL.md
@@ -287,7 +287,7 @@ wc -w skills/path/SKILL.md
 ## Other frequently-loaded: aim for <200 total
 ```
 
-#### Name by what you DO or core insight:
+#### Name by what you DO or core insight
 
 - ✅ `condition-based-waiting` > `async-test-helpers`
 
@@ -297,7 +297,7 @@ wc -w skills/path/SKILL.md
 
 - ✅ `root-cause-tracing` > `debugging-techniques`
 
-#### Gerunds (-ing) work well for processes:
+#### Gerunds (-ing) work well for processes
 
 - `creating-skills`, `testing-skills`, `debugging-with-logs`
 
@@ -305,7 +305,7 @@ wc -w skills/path/SKILL.md
 
 ### 4. Cross-Referencing Other Skills
 
-#### When writing documentation that references other skills:
+#### When writing documentation that references other skills
 
 Use skill name only, with explicit requirement markers:
 
@@ -333,7 +333,7 @@ digraph when_flowchart {
 }
 ```
 
-#### Use flowcharts ONLY for:
+#### Use flowcharts ONLY for
 
 - Non-obvious decision points
 
@@ -341,7 +341,7 @@ digraph when_flowchart {
 
 - "When to use A vs B" decisions
 
-#### Never use flowcharts for:
+#### Never use flowcharts for
 
 - Reference material → Tables, lists
 
@@ -372,7 +372,7 @@ Choose most relevant language:
 
 - Data processing → Python
 
-#### Good example:
+#### Good example
 
 - Complete and runnable
 
@@ -384,7 +384,7 @@ Choose most relevant language:
 
 - Ready to adapt (not generic template)
 
-#### Don't:
+#### Don't
 
 - Implement in 5+ languages
 
@@ -438,7 +438,7 @@ This applies to NEW skills AND EDITS to existing skills.
 Write skill before testing? Delete it. Start over.
 Edit skill without testing? Same violation.
 
-#### No exceptions:
+#### No exceptions
 
 - Not for "simple additions"
 
@@ -462,7 +462,7 @@ Different skill types need different test approaches:
 
 **Examples:** TDD, verification-before-completion, designing-before-coding
 
-#### Test with:
+#### Test with
 
 - Academic questions: Do they understand the rules?
 
@@ -478,7 +478,7 @@ Different skill types need different test approaches:
 
 **Examples:** condition-based-waiting, root-cause-tracing, defensive-programming
 
-#### Test with:
+#### Test with
 
 - Application scenarios: Can they apply the technique correctly?
 
@@ -492,7 +492,7 @@ Different skill types need different test approaches:
 
 **Examples:** reducing-complexity, information-hiding concepts
 
-#### Test with:
+#### Test with
 
 - Recognition scenarios: Do they recognize when pattern applies?
 
@@ -506,7 +506,7 @@ Different skill types need different test approaches:
 
 **Examples:** API documentation, command references, library guides
 
-#### Test with:
+#### Test with
 
 - Retrieval scenarios: Can they find the right information?
 
@@ -519,7 +519,7 @@ Different skill types need different test approaches:
 ## Common Rationalizations for Skipping Testing
 
 | Excuse | Reality |
-|:::::::::::::---:::::::::::::-----|:::::::::::::---:::::::::::::---:::::::::::::---|
+|::::::::::::::---::::::::::::::-----|::::::::::::::---::::::::::::::---::::::::::::::---|
 | "Skill is obviously clear" | Clear to you ≠ clear to other agents. Test it. |
 | "It's just a reference" | References can have gaps, unclear sections. Test retrieval. |
 | "Testing is overkill" | Untested skills have issues. Always. 15 min testing saves hours. |
@@ -529,7 +529,7 @@ Different skill types need different test approaches:
 | "Academic review is enough" | Reading ≠ using. Test application scenarios. |
 | "No time to test" | Deploying untested skill wastes more time fixing it later. |
 
-#### All of these mean: Test before deploying. No exceptions.
+#### All of these mean: Test before deploying. No exceptions
 
 ## Bulletproofing Skills Against Rationalization
 
@@ -578,7 +578,7 @@ Capture rationalizations from baseline testing (see Testing section below). Ever
 
 ```markdown
 | Excuse | Reality |
-|:::::::::::::---:::::::::::::-----|:::::::::::::---:::::::::::::---:::::::::::::---|
+|::::::::::::::---::::::::::::::-----|::::::::::::::---::::::::::::::---::::::::::::::---|
 | "Too simple to test" | Simple code breaks. Test takes 30 seconds. |
 | "I'll test after" | Tests passing immediately prove nothing. |
 | "Tests after achieve same goals" | Tests-after = "what does this do?" Tests-first = "what should this do?" |
@@ -670,9 +670,9 @@ helper1, helper2, step3, pattern4
 
 ## STOP: Before Moving to Next Skill
 
-#### After writing ANY skill, you MUST STOP and complete the deployment process.
+#### After writing ANY skill, you MUST STOP and complete the deployment process
 
-#### Do NOT:
+#### Do NOT
 
 - Create multiple skills in batch without testing each
 
@@ -680,15 +680,15 @@ helper1, helper2, step3, pattern4
 
 - Skip testing because "batching is more efficient"
 
-#### The deployment checklist below is MANDATORY for EACH skill.
+#### The deployment checklist below is MANDATORY for EACH skill
 
 Deploying untested skills = deploying untested code. It's a violation of quality standards.
 
 ## Skill Creation Checklist (TDD Adapted)
 
-#### IMPORTANT: Use TodoWrite to create todos for EACH checklist item below.
+#### IMPORTANT: Use TodoWrite to create todos for EACH checklist item below
 
-#### RED Phase - Write Failing Test:
+#### RED Phase - Write Failing Test
 
 - [ ] Create pressure scenarios (3+ combined pressures for discipline skills)
 
@@ -696,7 +696,7 @@ Deploying untested skills = deploying untested code. It's a violation of quality
 
 - [ ] Identify patterns in rationalizations/failures
 
-#### GREEN Phase - Write Minimal Skill:
+#### GREEN Phase - Write Minimal Skill
 
 - [ ] Name uses only letters, numbers, hyphens (no parentheses/special chars)
 
@@ -718,7 +718,7 @@ Deploying untested skills = deploying untested code. It's a violation of quality
 
 - [ ] Run scenarios WITH skill - verify agents now comply
 
-#### REFACTOR Phase - Close Loopholes:
+#### REFACTOR Phase - Close Loopholes
 
 - [ ] Identify NEW rationalizations from testing
 
@@ -730,7 +730,7 @@ Deploying untested skills = deploying untested code. It's a violation of quality
 
 - [ ] Re-test until bulletproof
 
-#### Quality Checks:
+#### Quality Checks
 
 - [ ] Small flowchart only if decision non-obvious
 
@@ -742,7 +742,7 @@ Deploying untested skills = deploying untested code. It's a violation of quality
 
 - [ ] Supporting files only for tools or heavy reference
 
-#### Deployment:
+#### Deployment
 
 - [ ] Commit skill to git and push to your fork (if configured)
 
@@ -766,7 +766,7 @@ How future Claude finds your skill:
 
 ## The Bottom Line
 
-#### Creating skills IS TDD for process documentation.
+#### Creating skills IS TDD for process documentation
 
 Same Iron Law: No skill without failing test first.
 Same cycle: RED (baseline) → GREEN (write skill) → REFACTOR (close loopholes).

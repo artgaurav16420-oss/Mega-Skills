@@ -74,7 +74,7 @@ digraph brainstorming {
 
 ## The Process
 
-#### Understanding the idea:
+#### Understanding the idea
 
 - Check out the current project state first (files, docs, recent commits)
 
@@ -90,7 +90,7 @@ digraph brainstorming {
 
 - Focus on understanding: purpose, constraints, success criteria
 
-#### Exploring approaches:
+#### Exploring approaches
 
 - Propose 2-3 different approaches with trade-offs
 
@@ -98,7 +98,7 @@ digraph brainstorming {
 
 - Lead with your recommended option and explain why
 
-#### Presenting the design:
+#### Presenting the design
 
 - Once you believe you understand what you're building, present the design
 
@@ -110,7 +110,7 @@ digraph brainstorming {
 
 - Be ready to go back and clarify if something doesn't make sense
 
-#### Design for isolation and clarity:
+#### Design for isolation and clarity
 
 - Break the system into smaller units that each have one clear purpose, communicate through well-defined interfaces, and can be understood and tested independently
 
@@ -120,7 +120,7 @@ digraph brainstorming {
 
 - Smaller, well-bounded units are also easier for you to work with - you reason better about code you can hold in context at once, and your edits are more reliable when files are focused. When a file grows large, that's often a signal that it's doing too much.
 
-#### Working in existing codebases:
+#### Working in existing codebases
 
 - Explore the current structure before proposing changes. Follow existing patterns.
 
@@ -130,7 +130,7 @@ digraph brainstorming {
 
 ## After the Design
 
-#### Documentation:
+#### Documentation
 
 - Write the validated design (spec) to `docs/mega-skills/specs/YYYY-MM-DD-<topic>-design.md`
 
@@ -140,7 +140,8 @@ digraph brainstorming {
 
 - Commit the design document to git
 
-#### Spec Self-Review:
+#### Spec Self-Review
+
 After writing the spec document, look at it with fresh eyes:
 
 1. **Placeholder scan:** Any "TBD", "TODO", incomplete sections, or vague requirements? Fix them.
@@ -153,14 +154,15 @@ After writing the spec document, look at it with fresh eyes:
 
 Fix any issues inline. No need to re-review — just fix and move on.
 
-#### User Review Gate:
+#### User Review Gate
+
 After the spec review loop passes, ask the user to review the written spec before proceeding:
 
 > "Spec written and committed to `<path>`. Please review it and let me know if you want to make any changes before we start writing out the implementation plan."
 
 Wait for the user's response. If they request changes, make them and re-run the spec review loop. Only proceed once the user approves.
 
-#### Implementation:
+#### Implementation
 
 - Invoke the writing-plans skill to create a detailed implementation plan
 

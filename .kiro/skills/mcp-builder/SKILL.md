@@ -24,7 +24,7 @@ Creating a high-quality MCP server involves four main phases:
 
 Before diving into implementation, understand how to design tools for AI agents by reviewing these principles:
 
-#### Build for Workflows, Not Just API Endpoints:
+#### Build for Workflows, Not Just API Endpoints
 
 - Don't simply wrap existing API endpoints - build thoughtful, high-impact workflow tools
 
@@ -34,7 +34,7 @@ Before diving into implementation, understand how to design tools for AI agents 
 
 - Consider what workflows agents actually need to accomplish
 
-#### Optimize for Limited Context:
+#### Optimize for Limited Context
 
 - Agents have constrained context windows - make every token count
 
@@ -46,7 +46,7 @@ Before diving into implementation, understand how to design tools for AI agents 
 
 - Consider the agent's context budget as a scarce resource
 
-#### Design Actionable Error Messages:
+#### Design Actionable Error Messages
 
 - Error messages should guide agents toward correct usage patterns
 
@@ -56,7 +56,7 @@ Before diving into implementation, understand how to design tools for AI agents 
 
 - Help agents learn proper tool usage through clear feedback
 
-#### Follow Natural Task Subdivisions:
+#### Follow Natural Task Subdivisions
 
 - Tool names should reflect how humans think about tasks
 
@@ -64,7 +64,7 @@ Before diving into implementation, understand how to design tools for AI agents 
 
 - Design tools around natural workflows, not just API structure
 
-#### Use Evaluation-Driven Development:
+#### Use Evaluation-Driven Development
 
 - Create realistic evaluation scenarios early
 
@@ -74,7 +74,7 @@ Before diving into implementation, understand how to design tools for AI agents 
 
 #### 1.3 Study MCP Protocol Documentation
 
-#### Fetch the latest MCP protocol documentation:
+#### Fetch the latest MCP protocol documentation
 
 Use WebFetch to load: `https://modelcontextprotocol.io/llms-full.txt`
 
@@ -82,17 +82,17 @@ This comprehensive document contains the complete MCP specification and guidelin
 
 #### 1.4 Study Framework Documentation
 
-#### Load and read the following reference files:
+#### Load and read the following reference files
 
 - **MCP Best Practices**: [📋 View Best Practices](./reference/mcp_best_practices.md) - Core guidelines for all MCP servers
 
-#### For Python implementations, also load:
+#### For Python implementations, also load
 
 - **Python SDK Documentation**: Use WebFetch to load `https://raw.githubusercontent.com/modelcontextprotocol/python-sdk/main/README.md`
 
 - [🐍 Python Implementation Guide](./reference/python_mcp_server.md) - Python-specific best practices and examples
 
-#### For Node/TypeScript implementations, also load:
+#### For Node/TypeScript implementations, also load
 
 - **TypeScript SDK Documentation**: Use WebFetch to load `https://raw.githubusercontent.com/modelcontextprotocol/typescript-sdk/main/README.md`
 
@@ -114,13 +114,13 @@ To integrate a service, read through **ALL** available API documentation:
 
 - Data models and schemas
 
-#### To gather comprehensive information, use web search and the WebFetch tool as needed.
+#### To gather comprehensive information, use web search and the WebFetch tool as needed
 
 #### 1.6 Create a Comprehensive Implementation Plan
 
 Based on your research, create a detailed plan that includes:
 
-#### Tool Selection:
+#### Tool Selection
 
 - List the most valuable endpoints/operations to implement
 
@@ -128,7 +128,7 @@ Based on your research, create a detailed plan that includes:
 
 - Consider which tools work together to enable complex workflows
 
-#### Shared Utilities and Helpers:
+#### Shared Utilities and Helpers
 
 - Identify common API request patterns
 
@@ -138,7 +138,7 @@ Based on your research, create a detailed plan that includes:
 
 - Plan error handling strategies
 
-#### Input/Output Design:
+#### Input/Output Design
 
 - Define input validation models (Pydantic for Python, Zod for TypeScript)
 
@@ -148,7 +148,7 @@ Based on your research, create a detailed plan that includes:
 
 - Implement character limits and truncation strategies (e.g., 25,000 tokens)
 
-#### Error Handling Strategy:
+#### Error Handling Strategy
 
 - Plan graceful failure modes
 
@@ -166,7 +166,7 @@ Now that you have a comprehensive plan, begin implementation following language-
 
 #### 2.1 Set Up Project Structure
 
-#### For Python:
+#### For Python
 
 - Create a single `.py` file or organize into modules if complex (see [🐍 Python Guide](./reference/python_mcp_server.md))
 
@@ -174,7 +174,7 @@ Now that you have a comprehensive plan, begin implementation following language-
 
 - Define Pydantic models for input validation
 
-#### For Node/TypeScript:
+#### For Node/TypeScript
 
 - Create proper project structure (see [⚡ TypeScript Guide](./reference/node_mcp_server.md))
 
@@ -186,7 +186,7 @@ Now that you have a comprehensive plan, begin implementation following language-
 
 #### 2.2 Implement Core Infrastructure First
 
-#### To begin implementation, create shared utilities before implementing tools:
+#### To begin implementation, create shared utilities before implementing tools
 
 - API request helper functions
 
@@ -202,7 +202,7 @@ Now that you have a comprehensive plan, begin implementation following language-
 
 For each tool in the plan:
 
-#### Define Input Schema:
+#### Define Input Schema
 
 - Use Pydantic (Python) or Zod (TypeScript) for validation
 
@@ -212,7 +212,7 @@ For each tool in the plan:
 
 - Include diverse examples in field descriptions
 
-#### Write Comprehensive Docstrings/Descriptions:
+#### Write Comprehensive Docstrings/Descriptions
 
 - One-line summary of what the tool does
 
@@ -226,7 +226,7 @@ For each tool in the plan:
 
 - Error handling documentation, which outlines how to proceed given specific errors
 
-#### Implement Tool Logic:
+#### Implement Tool Logic
 
 - Use shared utilities to avoid code duplication
 
@@ -240,7 +240,7 @@ For each tool in the plan:
 
 - Check character limits and truncate appropriately
 
-#### Add Tool Annotations:
+#### Add Tool Annotations
 
 - `readOnlyHint`: true (for read-only operations)
 
@@ -252,9 +252,9 @@ For each tool in the plan:
 
 #### 2.4 Follow Language-Specific Best Practices
 
-#### At this point, load the appropriate language guide:
+#### At this point, load the appropriate language guide
 
-#### For Python: Load [🐍 Python Implementation Guide](./reference/python_mcp_server.md) and ensure the following:
+#### For Python: Load [🐍 Python Implementation Guide](./reference/python_mcp_server.md) and ensure the following
 
 - Using MCP Python SDK with proper tool registration
 
@@ -268,7 +268,7 @@ For each tool in the plan:
 
 - Module-level constants (CHARACTER_LIMIT, API_BASE_URL)
 
-#### For Node/TypeScript: Load [⚡ TypeScript Implementation Guide](./reference/node_mcp_server.md) and ensure the following:
+#### For Node/TypeScript: Load [⚡ TypeScript Implementation Guide](./reference/node_mcp_server.md) and ensure the following
 
 - Using `server.registerTool` properly
 
@@ -308,7 +308,7 @@ To ensure quality, review the code for:
 
 **Important:** MCP servers are long-running processes that wait for requests over stdio/stdin or sse/http. Running them directly in your main process (e.g., `python server.py` or `node dist/index.js`) will cause your process to hang indefinitely.
 
-#### Safe ways to test the server:
+#### Safe ways to test the server
 
 - Use the evaluation harness (see Phase 4) - recommended approach
 
@@ -316,7 +316,7 @@ To ensure quality, review the code for:
 
 - Use a timeout when testing: `timeout 5s python server.py`
 
-#### For Python:
+#### For Python
 
 - Verify Python syntax: `python -m py_compile your_server.py`
 
@@ -326,7 +326,7 @@ To ensure quality, review the code for:
 
 - Or use the evaluation harness directly (it manages the server for stdio transport)
 
-#### For Node/TypeScript:
+#### For Node/TypeScript
 
 - Run `npm run build` and ensure it completes without errors
 
@@ -350,7 +350,7 @@ To verify implementation quality, load the appropriate checklist from the langua
 
 After implementing your MCP server, create comprehensive evaluations to test its effectiveness.
 
-#### Load [✅ Evaluation Guide](./reference/evaluation.md) for complete evaluation guidelines.
+#### Load [✅ Evaluation Guide](./reference/evaluation.md) for complete evaluation guidelines
 
 #### 4.1 Understand Evaluation Purpose
 
