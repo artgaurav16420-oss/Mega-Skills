@@ -5,10 +5,22 @@ import { readFile } from 'fs/promises';
 const README_PATH = 'README.md';
 const SKILL_PATH = 'skills/auto-skills/SKILL.md';
 
+/**
+ * Appends an issue when required content is missing.
+ * @param {string} content - Source content to scan.
+ * @param {RegExp} pattern - Required pattern.
+ * @param {string} message - Issue message when pattern is absent.
+ * @param {string[]} issues - Mutable issues array.
+ * @returns {void}
+ */
 function mustContain(content, pattern, message, issues) {
   if (!pattern.test(content)) issues.push(message);
 }
 
+/**
+ * Validates README and Auto-Skills spec policy consistency.
+ * @returns {Promise<void>}
+ */
 async function run() {
   const issues = [];
   const [readme, skill] = await Promise.all([

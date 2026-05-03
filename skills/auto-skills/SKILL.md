@@ -22,7 +22,7 @@ description: "Persistent AI skill orchestration mode. Automatically selects and 
 
 1. **Identify Task**: Determine the core objective of the user's message.
 2. **List & Match**:
-   - Run `rg "^description:" skills/**/SKILL.md` to see available skills quickly.
+   - Run `rg "^description:" skills -g 'SKILL.md'` to see available skills quickly.
    - OR run `node scripts/cli.js auto "[task]"` if you want embedding-based precision.
 3. **Activate**:
    - Read the chosen `SKILL.md` using `view_file`.
