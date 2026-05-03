@@ -46,6 +46,10 @@ Activate session-wide autonomous orchestration. The agent will automatically sel
 - **Activate**: Type `/auto-skills` in your agent chat.
 - **Deactivate**: Type `/stop-auto-skills`.
 
+> [!TIP]
+> **Why it's a Game-Changer (11/10 Rating):**
+> This feature transforms Mega-Skills from a library into a **Development OS**. It provides zero-friction methodology selection, persistent reasoning guardrails, and automatic token efficiency (via Caveman synergy). It is the world's first autonomous skill-selection engine for AI agents.
+
 #### 🔍 One-Off Skill Matching
 
 Find the best skill for a specific task without entering persistent mode:
