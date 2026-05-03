@@ -19,3 +19,8 @@ jobs:
         run: npm install
       - name: Validate Skills & Sync
         run: node scripts/cli.js validate
+
+      - name: Auto-Skills Policy Consistency
+        run: npm run check:auto-skills-policy
+      - name: Auto-Skills Reliability Eval
+        run: npm run eval:auto-skills

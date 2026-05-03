@@ -8,7 +8,10 @@
     "mega-skills": "scripts/cli.js"
   },
   "scripts": {
-    "index-skills": "node scripts/index_skills.cjs"
+    "index-skills": "node scripts/index_skills.cjs",
+    "eval:auto-skills": "node scripts/eval_auto_skills.js",
+    "check:auto-skills-policy": "node scripts/check_auto_skills_policy.js",
+    "verify:harness": "node scripts/verify_harness.js"
   },
   "keywords": [
     "ai",

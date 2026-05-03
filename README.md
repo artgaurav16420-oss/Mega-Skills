@@ -25,6 +25,9 @@ npm install -g https://github.com/artgaurav16420-oss/Mega-Skills
 mega-skills sync
 ```
 
+> [!IMPORTANT]
+> `npm install -g ...` + `mega-skills sync` installs the CLI and syncs skills for generic/local workflows. For harness-native loading (for example **Antigravity**), you must also run that harness's extension install command from the Supported Platforms table below.
+
 ### System Health Check
 
 Ensure your environment is ready for "Beast Mode" skills:
@@ -38,6 +41,8 @@ mega-skills doctor
 **This repo combines useful AI Skills in one AUTO skill. No more manually selecting skills.**
 
 Mega-Skills features an **Autonomous Orchestrator** not found in any other agent library. It eliminates manual skill selection by using semantic embeddings to trigger the right workflow at the right time.
+
+Learn more in the dedicated skill spec: [`skills/auto-skills/SKILL.md`](skills/auto-skills/SKILL.md).
 
 #### ⚡ Persistent Auto Mode (Agent Mode)
 
@@ -66,17 +71,66 @@ Create the semantic index for the orchestrator (only needed once):
 npm run index-skills
 ```
 
+### 🧪 Verify Installation
+
+After installing for your harness, run:
+
+```bash
+mega-skills verify antigravity
+```
+
+This checks core Auto-Skills files and status-prefix contract and exits non-zero if required pieces are missing.
+
 ### Supported Platforms
 
-| Harness | Installation Command |
-| :--- | :--- |
-| **Antigravity** | `antigravity extension install https://github.com/artgaurav16420-oss/Mega-Skills` |
-| **Claude Code** | `/plugin install https://github.com/artgaurav16420-oss/Mega-Skills` |
-| **GitHub Copilot** | `copilot plugin install https://github.com/artgaurav16420-oss/Mega-Skills` |
-| **Gemini CLI** | `gemini extensions install https://github.com/artgaurav16420-oss/Mega-Skills` |
-| **Other / Generic** | `git clone https://github.com/artgaurav16420-oss/Mega-Skills` |
+| Harness | Install | Update | Uninstall | Verify |
+| :--- | :--- | :--- | :--- | :--- |
+| **Antigravity** | `antigravity extension install https://github.com/artgaurav16420-oss/Mega-Skills` | Re-run install command, then `mega-skills sync` | `antigravity extension remove Mega-Skills` *(if supported by your version)* | Start chat, run `/auto-skills`, confirm `[Auto-Skills: ...]` prefix appears |
+| **Claude Code** | `/plugin install https://github.com/artgaurav16420-oss/Mega-Skills` | Re-run install command, then `mega-skills sync` | `/plugin remove Mega-Skills` *(if supported)* | Start chat, run `/auto-skills`, confirm skill auto-selection message |
+| **GitHub Copilot** | `copilot plugin install https://github.com/artgaurav16420-oss/Mega-Skills` | Re-run install command, then `mega-skills sync` | `copilot plugin remove Mega-Skills` *(if supported)* | Start session, activate auto mode, confirm orchestration response tag |
+| **Gemini CLI** | `gemini extensions install https://github.com/artgaurav16420-oss/Mega-Skills` | Re-run install command, then `mega-skills sync` | `gemini extensions remove Mega-Skills` *(if supported)* | Start chat, enable auto mode, confirm automatic skill activation |
+| **Other / Generic** | `git clone https://github.com/artgaurav16420-oss/Mega-Skills` | Pull latest repo changes, then `mega-skills sync` | Delete cloned folder and remove local plugin wiring | Run `mega-skills auto "test task"` and confirm a skill match |
+
+### 🧭 Troubleshooting Decision Tree
+
+1. Skills not appearing in harness chat? → Run harness install command from the table.
+2. Installed but still not loading? → Run `mega-skills sync`, then restart harness session.
+3. Auto-Skills active but behavior drifting? → Run `mega-skills /auto-skills` again and confirm status prefix appears.
+4. Still failing? → Run `mega-skills verify antigravity` and inspect failing checks.
+
+#### ⚠️ Known Pitfalls
+
+1. `npm install -g ...` + `mega-skills sync` alone does **not** register harness-native extensions.
+2. Harnesses usually need their own install command (table above) before skills appear in chat.
+3. If updates do not appear, re-run harness install command first, then `mega-skills sync`.
+
+#### 🔄 Updating After Installation
+
+To pull the latest skills and orchestration updates, re-run your harness install command (this refreshes the extension registration) and then sync:
+
+```bash
+# Antigravity example
+antigravity extension install https://github.com/artgaurav16420-oss/Mega-Skills
+mega-skills sync
+```
+
+> Tip: Re-running the same install command is the safest cross-harness update path when a dedicated `update` subcommand is not available.
 
 ---
+
+### 📘 Auto-Skills Example Transcript
+
+```text
+User: /auto-skills
+CLI: [Auto-Skills: Activating persistent mode + caveman lock]
+
+User: mega-skills auto "build auth flow then add tests"
+CLI:
+[Auto-Skills Status]
+Mode: active
+Prefix: [Auto-Skills: auto-skills + caveman | escalation:on]
+Turn: 1
+```
 
 ## 💎 Why Mega-Skills
 
