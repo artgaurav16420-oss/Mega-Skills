@@ -2,7 +2,7 @@
 
 ![Mega-Skills Banner](https://raw.githubusercontent.com/artgaurav16420-oss/Mega-Skills/main/assets/mega_skills_banner.png)
 
-## Transform any LLM into an elite Software Engineer. 65+ executable skills for the agentic era.
+## Transform any LLM into an elite Software Engineer. 62+ executable skills for the agentic era.
 
 [![GitHub stars](https://img.shields.io/github/stars/artgaurav16420-oss/Mega-Skills?style=for-the-badge&color=yellow)](https://github.com/artgaurav16420-oss/Mega-Skills/stargazers)
 [![GitHub forks](https://img.shields.io/github/forks/artgaurav16420-oss/Mega-Skills?style=for-the-badge&color=blue)](https://github.com/artgaurav16420-oss/Mega-Skills/network/members)
@@ -46,12 +46,12 @@ npx mega-skills doctor
 
 ## 💎 Why Mega-Skills
 
-Most AI agents fail because they lack a **methodology**. They guess, they hallucinate, and they ignore edge cases. **Mega-Skills** fixes this by injecting 65+ high-fidelity workflows directly into the agent's reasoning loop.
+Most AI agents fail because they lack a **methodology**. They guess, they hallucinate, and they ignore edge cases. **Mega-Skills** fixes this by injecting 62+ high-fidelity workflows directly into the agent's reasoning loop.
 
-1. **🔥 65+ Specialized Skills**: From cinematic presentations to autonomous subagent swarms.
+1. **🔥 62+ Specialized Skills**: From cinematic presentations to autonomous subagent swarms.
 2. **⚡ Lightning Fast**: Native Git symlinks reduce repository size by **99%** (from ~22,000 files to <600).
 3. **🛠️ Universal Compatibility**: Natively supports **Cursor, Windsurf, Claude Code, Aider, Devin,** and more.
-4. **🏗️ Industrial Grade**: Includes system-level shims and **Self-Healing Diagnostics (`doctor`)**.
+4. **🏗️ Industrial Grade**: Includes system-level shims, **Self-Healing Diagnostics (`doctor`)**, and a **Code Knowledge Graph Wiki**.
 
 ---
 
@@ -61,6 +61,10 @@ Most AI agents fail because they lack a **methodology**. They guess, they halluc
 
 **The ultimate token-saver.** Forces agents to communicate in ultra-compressed, technical language. Cuts token usage by ~75% while maintaining 100% precision.
 > "Why use many word when few word do trick?"
+
+### 🕸️ Code Knowledge Graph (`docs/graph-wiki`)
+
+**The repo's semantic nervous system.** An auto-generated knowledge base extracted from the codebase's community structure. Provides a portable, cross-linked wiki of functions, classes, and execution flows with zero manual documentation overhead.
 
 ### 🛡️ Security Auditor (`security-auditor`)
 
@@ -84,6 +88,7 @@ Mega-Skills are designed to be **stacked**. Combine these skills to turn your ag
 | :--- | :--- | :--- |
 | **The "Fortress"** | `security-auditor` + `test-driven-development` | Zero-vulnerability code with 100% test coverage. |
 | **The "Scientist"** | `paper-to-code` + `advanced-rag-optimizer` | Implement state-of-the-art research with perfect retrieval grounding. |
+| **The "Architect"** | `brainstorming` + `docs/graph-wiki` | Map out complex legacy codebases and design new systems with full context. |
 | **The "Executive"** | `brainstorming` + `writing-plans` + `elite-pptx` | Turn a vague idea into a professional roadmap and a board-ready slide deck. |
 | **The "Ghost"** | `caveman` + `memory-management` + `sequential-thinking` | Run 100+ turn sessions with zero context drift and minimal token cost. |
 
