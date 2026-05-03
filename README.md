@@ -35,6 +35,8 @@ mega-skills doctor
 
 ### 🧠 Automatic Skill Orchestration (World First)
 
+**This repo combines useful AI Skills in one AUTO skill. No more manually selecting skills.**
+
 Mega-Skills features an **Autonomous Orchestrator** not found in any other agent library. It eliminates manual skill selection by using semantic embeddings to trigger the right workflow at the right time.
 
 #### ⚡ Persistent Auto Mode (Agent Mode)
