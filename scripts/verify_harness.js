@@ -2,9 +2,19 @@
 
 import { existsSync, readFileSync } from 'fs';
 import path from 'path';
+import { fileURLToPath } from 'node:url';
 
 const harness = (process.argv[2] || 'generic').toLowerCase();
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+const packageRoot = path.resolve(__dirname, '..');
 
+/**
+ * Runs a file existence check for a harness invariant.
+ * @param {string} filePath - File path to validate.
+ * @param {string} description - Human readable check description.
+ * @returns {{description: string, ok: boolean, filePath: string}} Check result.
+ */
 function check(filePath, description) {
   return {
     description,
@@ -13,18 +23,26 @@ function check(filePath, description) {
   };
 }
 
+/**
+ * Executes harness verification checks and emits machine-readable JSON output.
+ * @returns {void}
+ */
 function run() {
   const checks = [];
-  checks.push(check(path.resolve('skills/auto-skills/SKILL.md'), 'Auto-Skills spec exists'));
-  checks.push(check(path.resolve('scripts/cli.js'), 'CLI entry exists'));
+  const skillFile = path.join(packageRoot, 'skills', 'auto-skills', 'SKILL.md');
+  const cliFile = path.join(packageRoot, 'scripts', 'cli.js');
+  const agentsFile = path.join(packageRoot, 'AGENTS.md');
+
+  checks.push(check(skillFile, 'Auto-Skills spec exists'));
+  checks.push(check(cliFile, 'CLI entry exists'));
 
   if (harness === 'antigravity') {
-    checks.push(check(path.resolve('AGENTS.md'), 'AGENTS mapping file exists'));
+    checks.push(check(agentsFile, 'AGENTS mapping file exists'));
   }
 
   let statusPrefixFound = false;
   try {
-    const skill = readFileSync(path.resolve('skills/auto-skills/SKILL.md'), 'utf-8');
+    const skill = readFileSync(skillFile, 'utf-8');
     statusPrefixFound = skill.includes('escalation:on/off');
   } catch {
     statusPrefixFound = false;

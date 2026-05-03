@@ -6,12 +6,23 @@ import {
   getAutoModeState,
   recordTurn,
   setAutoModeState,
+  shouldEscalate,
 } from '../lib/auto_mode_state.js';
 
+/**
+ * Calculates percentage with fixed precision.
+ * @param {number} n - Numerator.
+ * @param {number} d - Denominator.
+ * @returns {number} Percentage value.
+ */
 function pct(n, d) {
   return d === 0 ? 0 : Number(((n / d) * 100).toFixed(2));
 }
 
+/**
+ * Runs deterministic auto-skills evaluation scenarios.
+ * @returns {Promise<void>}
+ */
 async function run() {
   const originalState = await getAutoModeState();
 
@@ -56,7 +67,7 @@ async function run() {
 
         if (state.cavemanLocked) cavemanLockTurns += 1;
 
-        const expectedEscalation = state.turnCount > 8 || /(then|after that|next|step by step|plan|roadmap|multi-step|refactor|migrate)/i.test(prompt);
+        const expectedEscalation = shouldEscalate(state.turnCount, prompt);
         if (expectedEscalation) escalationExpectedTurns += 1;
         if (state.escalationOn === expectedEscalation) escalationCorrectTurns += 1;
         if (state.escalationOn) scenarioEscalations += 1;
@@ -91,4 +102,7 @@ async function run() {
   }
 }
 
-run();
+run().catch((error) => {
+  console.error('Evaluation failed:', error);
+  process.exit(1);
+});
