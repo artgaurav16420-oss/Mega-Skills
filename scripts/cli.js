@@ -16,7 +16,7 @@ const rootDir = path.resolve(__dirname, '..');
 const args = process.argv.slice(2);
 const command = args[0] || 'help';
 
-import orchestrator from '../lib/orchestrator.cjs';
+import orchestrator from '../lib/orchestrator.js';
 
 const scripts = {
     sync: path.join(rootDir, 'scripts', 'sync_skills.cjs'),
@@ -59,6 +59,7 @@ Commands:
   doctor         Run system diagnostics to check "Beast Mode" dependencies
   index-skills   Create the semantic index for all skills
   auto "<prompt>" Find the best skill for a given task prompt
+  /auto-skills   Activate persistent AI skill orchestration (AI mode)
   help           Show this help message
 
 Example:
@@ -69,6 +70,8 @@ Example:
 
 switch (command) {
     case 'auto':
+    case '/auto-skill':
+    case '/auto-skills':
         const prompt = args.slice(1).join(' ');
         if (!prompt) {
             console.error('Please provide a prompt for the "auto" command.');

@@ -46,10 +46,10 @@ Mega-Skills now includes a powerful **Skill Orchestrator** that automatically se
     ```bash
     mega-skills auto "Your task description here"
     ```
-    For example:
-    ```bash
-    mega-skills auto "create a new react component from scratch"
-    ```
+
+3.  **Persistent Auto Mode (Agent Mode):** Activate session-wide orchestration within your agent chat.
+    - Type `/auto-skills` to activate.
+    - Type `/stop-auto-skills` to deactivate.
 
 ### Supported Platforms
 

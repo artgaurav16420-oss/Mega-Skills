@@ -8,6 +8,8 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - **Sync Skills**: `npx mega-skills sync` (Initialize/update skills in target project)
 - **Health Check**: `npx mega-skills doctor` (Verify system binaries and environment)
 - **CLI Entry**: `node scripts/cli.js [command]` (Direct execution of CLI logic)
+- **Auto Skill Selection**: `npx mega-skills auto "<task>"` (Find best skill for task)
+- **Persistent Auto Mode**: `/auto-skills` (Activate session-wide orchestration)
 
 ### Maintenance
 - **Version Bump**: `./scripts/bump-version.sh`

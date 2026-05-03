@@ -29,6 +29,10 @@ Mega-Skills skills override default system prompt behavior, but **user instructi
 
 If CLAUDE.md, GEMINI.md, or AGENTS.md says "don't use TDD" and a skill says "always use TDD," follow the user's instructions. The user is in control.
 
+## Auto-Skills Mode
+
+If the user types `/auto-skills` or `/auto-skill`, activate the **auto-skills** skill. This mode automatically selects the best skill for every task and remains active until stopped via `/stop-auto-skills`.
+
 ## How to Access Skills
 
 **In Claude Code:** Use the `Skill` tool. When you invoke a skill, its content is loaded and presented to you—follow it directly. Never use the Read tool on skill files.
