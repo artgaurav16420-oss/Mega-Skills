@@ -2,7 +2,7 @@
 
 ![Mega-Skills Banner](https://raw.githubusercontent.com/artgaurav16420-oss/Mega-Skills/main/assets/mega_skills_banner.png)
 
-## Transform any LLM into an elite Software Engineer. 62+ executable skills for the agentic era.
+## Transform any LLM into an elite Software Engineer. 62+ executable skills for the agentic era
 
 [![GitHub stars](https://img.shields.io/github/stars/artgaurav16420-oss/Mega-Skills?style=for-the-badge&color=yellow)](https://github.com/artgaurav16420-oss/Mega-Skills/stargazers)
 [![GitHub forks](https://img.shields.io/github/forks/artgaurav16420-oss/Mega-Skills?style=for-the-badge&color=blue)](https://github.com/artgaurav16420-oss/Mega-Skills/network/members)
@@ -33,23 +33,32 @@ Ensure your environment is ready for "Beast Mode" skills:
 mega-skills doctor
 ```
 
-### 🧠 Automatic Skill Selection
+### 🧠 Automatic Skill Orchestration (World First)
 
-Mega-Skills now includes a powerful **Skill Orchestrator** that automatically selects the best skill for your task.
+Mega-Skills features an **Autonomous Orchestrator** not found in any other agent library. It eliminates manual skill selection by using semantic embeddings to trigger the right workflow at the right time.
 
-1.  **Index Your Skills:** First, create a semantic index of your skills. This only needs to be run once, or when you add new skills.
-    ```bash
-    npm run index-skills
-    ```
+#### ⚡ Persistent Auto Mode (Agent Mode)
 
-2.  **Run the Orchestrator:** Use the `auto` command to find the best skill for any task.
-    ```bash
-    mega-skills auto "Your task description here"
-    ```
+Activate session-wide autonomous orchestration. The agent will automatically select and follow the best skill for every subsequent task.
 
-3.  **Persistent Auto Mode (Agent Mode):** Activate session-wide orchestration within your agent chat.
-    - Type `/auto-skills` to activate.
-    - Type `/stop-auto-skills` to deactivate.
+- **Activate**: Type `/auto-skills` in your agent chat.
+- **Deactivate**: Type `/stop-auto-skills`.
+
+#### 🔍 One-Off Skill Matching
+
+Find the best skill for a specific task without entering persistent mode:
+
+```bash
+mega-skills auto "Your task description here"
+```
+
+#### 🛠️ Setup & Indexing
+
+Create the semantic index for the orchestrator (only needed once):
+
+```bash
+npm run index-skills
+```
 
 ### Supported Platforms
 
@@ -68,9 +77,10 @@ Mega-Skills now includes a powerful **Skill Orchestrator** that automatically se
 Most AI agents fail because they lack a **methodology**. They guess, they hallucinate, and they ignore edge cases. **Mega-Skills** fixes this by injecting 62+ high-fidelity workflows directly into the agent's reasoning loop.
 
 1. **🔥 62+ Specialized Skills**: From cinematic presentations to autonomous subagent swarms.
-2. **⚡ Lightning Fast**: Native Git symlinks reduce repository size by **99%** (from ~22,000 files to <600).
-3. **🛠️ Universal Compatibility**: Natively supports **Cursor, Windsurf, Claude Code, Aider, Devin,** and more.
-4. **🏗️ Industrial Grade**: Includes system-level shims, **Self-Healing Diagnostics (`doctor`)**, and a **Code Knowledge Graph Wiki**.
+2. **🧠 Autonomous Orchestration**: The only repo with semantic skill-triggering via `/auto-skills`.
+3. **⚡ Lightning Fast**: Native Git symlinks reduce repository size by **99%** (from ~22,000 files to <600).
+4. **🛠️ Universal Compatibility**: Natively supports **Cursor, Windsurf, Claude Code, Aider, Devin,** and more.
+5. **🏗️ Industrial Grade**: Includes system-level shims, **Self-Healing Diagnostics (`doctor`)**, and a **Code Knowledge Graph Wiki**.
 
 ---
 
