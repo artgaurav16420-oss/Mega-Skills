@@ -1,0 +1,4 @@
+I have a plan at docs/mega-skills/plans/auth-system.md that's ready to implement.
+
+subagent-driven-development, please
+

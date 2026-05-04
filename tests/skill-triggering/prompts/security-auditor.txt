@@ -1,0 +1,1 @@
+I've written a new script to automate some system tasks, but I'm worried about security. Can you review this code for any potential vulnerabilities like SQL injection or privilege escalation? I want to make sure I'm not accidentally leaking any environment variables or creating a back door for attackers. Please do a thorough audit.

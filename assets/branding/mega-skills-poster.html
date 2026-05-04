@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mega-Skills: Agentic Grid Poster (Vertical)</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/p5.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Lora:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --anthropic-dark: #141413;
+            --anthropic-light: #faf9f5;
+            --anthropic-mid-gray: #b0aea5;
+            --anthropic-light-gray: #e8e6dc;
+            --anthropic-orange: #d97757;
+            --anthropic-blue: #6a9bcc;
+            --anthropic-green: #788c5d;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, var(--anthropic-light) 0%, #f5f3ee 100%);
+            min-height: 100vh;
+            color: var(--anthropic-dark);
+        }
+        .container { display: flex; min-height: 100vh; padding: 20px; gap: 20px; }
+        .sidebar {
+            width: 320px;
+            flex-shrink: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 24px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(20, 20, 19, 0.1);
+            overflow-y: auto;
+        }
+        .sidebar h1 { font-family: 'Lora', serif; font-size: 24px; font-weight: 500; margin-bottom: 8px; }
+        .sidebar .subtitle { color: var(--anthropic-mid-gray); font-size: 14px; margin-bottom: 32px; line-height: 1.4; }
+        .control-section { margin-bottom: 32px; }
+        .control-section h3 { font-size: 16px; font-weight: 600; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+        .control-section h3::before { content: '•'; color: var(--anthropic-orange); }
+        .seed-input { width: 100%; background: var(--anthropic-light); padding: 12px; border-radius: 8px; border: 1px solid var(--anthropic-light-gray); text-align: center; margin-bottom: 12px; }
+        .seed-controls { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 8px; }
+        .control-group { margin-bottom: 20px; }
+        .control-group label { display: block; font-size: 14px; font-weight: 500; margin-bottom: 8px; }
+        .slider-container { display: flex; align-items: center; gap: 12px; }
+        .slider-container input[type="range"] { flex: 1; height: 4px; background: var(--anthropic-light-gray); border-radius: 2px; outline: none; -webkit-appearance: none; }
+        .slider-container input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; width: 16px; height: 16px; background: var(--anthropic-orange); border-radius: 50%; cursor: pointer; }
+        .value-display { font-family: 'Courier New', monospace; font-size: 12px; color: var(--anthropic-mid-gray); min-width: 60px; text-align: right; }
+        .button { background: var(--anthropic-orange); color: white; border: none; padding: 10px 16px; border-radius: 6px; cursor: pointer; transition: all 0.2s ease; width: 100%; font-weight: 500; }
+        .button:hover { background: #c86641; transform: translateY(-1px); }
+        .button.secondary { background: var(--anthropic-blue); }
+        .button.tertiary { background: var(--anthropic-green); }
+        .canvas-area { flex: 1; display: flex; align-items: center; justify-content: center; min-width: 0; }
+        #canvas-container { 
+            width: 100%; 
+            max-width: 600px; 
+            aspect-ratio: 1 / 2;
+            border-radius: 12px; 
+            overflow: hidden; 
+            box-shadow: 0 20px 40px rgba(20, 20, 19, 0.1); 
+            background: #141413; 
+        }
+        #canvas-container canvas { display: block; width: 100% !important; height: auto !important; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <h1>Agentic Grid</h1>
+            <div class="subtitle">Official Mega-Skills "Beast Mode" Poster (1:2 Ratio)</div>
+
+            <div class="control-section">
+                <h3>Seed</h3>
+                <input type="number" id="seed-input" class="seed-input" value="100000" onchange="updateSeed()">
+                <div class="seed-controls">
+                    <button class="button secondary" onclick="previousSeed()">← Prev</button>
+                    <button class="button secondary" onclick="nextSeed()">Next →</button>
+                </div>
+                <button class="button tertiary" onclick="randomSeedAndUpdate()">↻ Random</button>
+            </div>
+
+            <div class="control-section">
+                <h3>Parameters</h3>
+                <div class="control-group">
+                    <label>Grid Complexity</label>
+                    <div class="slider-container">
+                        <input type="range" id="complexity" min="2" max="10" step="1" value="6" oninput="updateParam('complexity', this.value)">
+                        <span class="value-display" id="complexity-value">6</span>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label>Flow Density</label>
+                    <div class="slider-container">
+                        <input type="range" id="density" min="0.1" max="1.0" step="0.1" value="0.5" oninput="updateParam('density', this.value)">
+                        <span class="value-display" id="density-value">0.5</span>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label>Accent Weight</label>
+                    <div class="slider-container">
+                        <input type="range" id="accent" min="1" max="5" step="1" value="2" oninput="updateParam('accent', this.value)">
+                        <span class="value-display" id="accent-value">2</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="control-section">
+                <h3>Actions</h3>
+                <button class="button" onclick="resetParameters()">Reset</button>
+                <button class="button secondary" style="margin-top:8px" onclick="saveCanvas('Mega-Skills-Poster', 'png')">Download PNG</button>
+            </div>
+        </div>
+
+        <div class="canvas-area">
+            <div id="canvas-container"></div>
+        </div>
+    </div>
+
+    <script>
+        let params = {
+            seed: 100000,
+            complexity: 6,
+            density: 0.5,
+            accent: 2,
+            colors: {
+                dark: '#141413',
+                light: '#FAF9F5',
+                gold: '#D97757'
+            }
+        };
+
+        let defaultParams = {...params};
+
+        function setup() {
+            // 1:2 Ratio (Portrait)
+            let canvas = createCanvas(1000, 2000);
+            canvas.parent('canvas-container');
+            noLoop();
+            initializeSystem();
+        }
+
+        function initializeSystem() {
+            randomSeed(params.seed);
+            noiseSeed(params.seed);
+            draw();
+        }
+
+        function draw() {
+            background(params.colors.dark);
+            
+            // Draw Grid logic
+            drawGridSubdivision(0, 0, width, height, params.complexity);
+            
+            // Draw Flow lines
+            drawFlowLines();
+            
+            // Draw Branding
+            drawBranding();
+        }
+
+        function drawGridSubdivision(x, y, w, h, depth) {
+            if (depth <= 0) return;
+            
+            stroke(255, 15);
+            strokeWeight(1);
+            noFill();
+            rect(x, y, w, h);
+            
+            if (random() > 0.4) {
+                let split = random(0.3, 0.7);
+                if (w > h) {
+                    drawGridSubdivision(x, y, w * split, h, depth - 1);
+                    drawGridSubdivision(x + w * split, y, w * (1 - split), h, depth - 1);
+                } else {
+                    drawGridSubdivision(x, y, w, h * split, depth - 1);
+                    drawGridSubdivision(x, y + h * split, w, h * (1 - split), depth - 1);
+                }
+            }
+        }
+
+        function drawFlowLines() {
+            let count = floor(height * params.density * 0.1);
+            for (let i = 0; i < count; i++) {
+                let startX = floor(random(width) / 50) * 50;
+                let startY = floor(random(height) / 50) * 50;
+                
+                stroke(i % 10 === 0 ? params.colors.gold : params.colors.light + '44');
+                strokeWeight(i % 10 === 0 ? params.accent : 1);
+                
+                beginShape();
+                let curX = startX;
+                let curY = startY;
+                for (let j = 0; j < 15; j++) {
+                    vertex(curX, curY);
+                    if (random() > 0.5) curX += 50 * (random() > 0.5 ? 1 : -1);
+                    else curY += 50 * (random() > 0.5 ? 1 : -1);
+                    
+                    curX = constrain(curX, 0, width);
+                    curY = constrain(curY, 0, height);
+                }
+                endShape();
+                
+                if (i % 20 === 0) {
+                    fill(params.colors.gold);
+                    noStroke();
+                    circle(startX, startY, 6);
+                }
+            }
+        }
+
+        function drawBranding() {
+            fill(params.colors.light);
+            noStroke();
+            textFont('Poppins');
+            
+            push();
+            translate(width/2, height/2);
+            
+            // Vertical Stack Branding
+            textSize(80);
+            textStyle(BOLD);
+            textAlign(CENTER, CENTER);
+            text("MEGA", 0, -120);
+            text("SKILLS", 0, -40);
+            
+            textSize(28);
+            textStyle(NORMAL);
+            fill(params.colors.gold);
+            text("THE OS FOR AI AGENTS", 0, 40);
+            
+            pop();
+            
+            // Metadata
+            textAlign(LEFT, BOTTOM);
+            textSize(18);
+            fill(params.colors.light + '88');
+            text("VERSION: 5.0.7-MEGA", 80, height - 120);
+            text("RATIO: 1:2 H:L (1000x2000)", 80, height - 90);
+            
+            textAlign(RIGHT, BOTTOM);
+            text("65+ ELITE SKILLS", width - 80, height - 120);
+            text("AGENTIC OS", width - 80, height - 90);
+            
+            // Corner Accents
+            stroke(params.colors.gold);
+            strokeWeight(3);
+            line(40, 40, 120, 40);
+            line(40, 40, 40, 120);
+            
+            line(width - 40, height - 40, width - 120, height - 40);
+            line(width - 40, height - 40, width - 40, height - 120);
+        }
+
+        function updateParam(name, val) {
+            params[name] = parseFloat(val);
+            document.getElementById(name + '-value').textContent = val;
+            initializeSystem();
+        }
+
+        function updateSeed() {
+            let val = parseInt(document.getElementById('seed-input').value);
+            if (val) { params.seed = val; initializeSystem(); }
+        }
+
+        function previousSeed() { params.seed--; document.getElementById('seed-input').value = params.seed; initializeSystem(); }
+        function nextSeed() { params.seed++; document.getElementById('seed-input').value = params.seed; initializeSystem(); }
+        function randomSeedAndUpdate() { params.seed = floor(random(1000000)); document.getElementById('seed-input').value = params.seed; initializeSystem(); }
+        function resetParameters() { params = {...defaultParams}; document.getElementById('seed-input').value = params.seed; initializeSystem(); }
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+# Mega-Skills: Standard Ignores
+.worktrees/
+.private-journal/
+.DS_Store
+node_modules/
+inspo/
+triage/
+
+# Auto-Generated Local Deployment (Managed via npx mega-skills sync)
+.*
+!.github/
+!.git/
+!.gitignore
+!.gitattributes
+agents/
+commands/
+hooks/
+
+# Build artifacts
+dist/
+build/
+*.db
+*.db-shm
+*.db-wal

@@ -1,0 +1,46 @@
+{
+  "name": "mega-skills",
+  "version": "5.0.7",
+  "description": "An agentic skills framework & software development methodology that works: planning, TDD, debugging, and collaboration workflows.",
+  "author": {
+    "name": "Jesse Vincent",
+    "email": "jesse@fsck.com",
+    "url": "https://github.com/obra"
+  },
+  "homepage": "https://github.com/artgaurav16420-oss/Mega-Skills",
+  "repository": "https://github.com/artgaurav16420-oss/Mega-Skills",
+  "license": "MIT",
+  "keywords": [
+    "brainstorming",
+    "subagent-driven-development",
+    "skills",
+    "planning",
+    "tdd",
+    "debugging",
+    "code-review",
+    "workflow"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Mega-Skills",
+    "shortDescription": "Planning, TDD, debugging, and delivery workflows for coding agents",
+    "longDescription": "Use Mega-Skills to guide agent work through brainstorming, implementation planning, test-driven development, systematic debugging, parallel execution, code review, and finish-the-branch workflows.",
+    "developerName": "Jesse Vincent",
+    "category": "Coding",
+    "capabilities": [
+      "Interactive",
+      "Read",
+      "Write"
+    ],
+    "defaultPrompt": [
+      "I've got an idea for something I'd like to build.",
+      "Let's add a feature to this project."
+    ],
+    "brandColor": "#F59E0B",
+    "composerIcon": "./assets/mega-skills-small.svg",
+    "logo": "./assets/app-icon.png",
+    "screenshots": []
+  }
+}
+
+
